@@ -1,0 +1,230 @@
+<!-- Prompts Detail Page Content -->
+<div class="dashboard-container">
+  <div class="dashboard-header-row">
+    <h1 class="dashboard-header-title">All Prompts</h1>
+    <a href="/usage-metrics" class="dashboard-back-btn">&larr; Back to Dashboard</a>
+  </div>
+  
+  <div class="section-card">
+    <h2>All Prompts</h2>
+    <div class="table-responsive">
+      <table id="promptsTable" class="table table-striped table-hover">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Prompt</th>
+            <th>Category</th>
+            <th>Type</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Data will be populated by JavaScript -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<!-- Include DataTables CSS and JS -->
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.13.7/css/jquery.dataTables.css">
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/responsive/2.5.0/css/responsive.dataTables.min.css">
+<script type="text/javascript" charset="utf8" src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.js"></script>
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/responsive/2.5.0/js/dataTables.responsive.min.js"></script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Function to categorize prompts
+  function categorizePrompt(promptText) {
+    if (!promptText) return 'Other';
+    const text = promptText.toLowerCase();
+    
+    if (/code|function|class|method|variable|refactor|bug|fix|error|exception/.test(text)) return 'Code';
+    if (/test|unit test|integration test|coverage/.test(text)) return 'Testing';
+    if (/doc|documentation|comment|explain|describe/.test(text)) return 'Documentation';
+    if (/install|setup|config|configuration|env|environment|dependency|package/.test(text)) return 'Setup';
+    if (/deploy|build|release|pipeline|ci|cd/.test(text)) return 'DevOps';
+    if (/performance|optimi[sz]e|speed|slow|fast/.test(text)) return 'Performance';
+    if (/ui|ux|interface|design|layout|style|css|html/.test(text)) return 'UI/UX';
+    if (/database|sql|query|schema|migration/.test(text)) return 'Database';
+    if (/api|endpoint|request|response|http|rest|graphql/.test(text)) return 'API';
+    if (/ai|ml|machine learning|model|data science/.test(text)) return 'AI/ML';
+    if (/project|task|ticket|issue|story|epic/.test(text)) return 'Project Mgmt';
+    
+    return 'Other';
+  }
+
+  // Function to populate prompts table
+  function populatePromptsTable(prompts) {
+    const table = document.querySelector('#promptsTable tbody');
+    
+    if (!table) {
+      console.error('Table body not found');
+      return;
+    }
+    
+    // Clear the table
+    table.innerHTML = '';
+    
+    if (!prompts || prompts.length === 0) {
+      table.innerHTML = '<tr><td colspan="4" class="text-center">No prompts found</td></tr>';
+      return;
+    }
+    
+    // Add all prompts to table
+    prompts.forEach((prompt, index) => {
+      // Skip invalid prompts
+      if (!prompt || typeof prompt !== 'object') {
+        console.warn(`Skipping invalid prompt at index ${index}:`, prompt);
+        return;
+      }
+      
+      const row = document.createElement('tr');
+      const promptText = prompt.text || 'No text';
+      const category = categorizePrompt(promptText);
+      const commandType = prompt.commandType || 'Unknown';
+      
+      // Create cells individually to ensure proper structure
+      const cell1 = document.createElement('td');
+      cell1.textContent = index + 1;
+      
+      const cell2 = document.createElement('td');
+      cell2.textContent = promptText;
+      
+      const cell3 = document.createElement('td');
+      cell3.textContent = category;
+      
+      const cell4 = document.createElement('td');
+      cell4.textContent = commandType;
+      
+      // Append cells to row
+      row.appendChild(cell1);
+      row.appendChild(cell2);
+      row.appendChild(cell3);
+      row.appendChild(cell4);
+      
+      // Verify row has exactly 4 cells
+      const cells = row.querySelectorAll('td');
+      if (cells.length !== 4) {
+        console.error(`Row ${index + 1} has ${cells.length} cells instead of 4`);
+        return; // Skip this row if it's malformed
+      }
+      
+      table.appendChild(row);
+    });
+    
+    console.log(`Populated table with ${prompts.length} prompts`);
+  }
+
+  // Function to load prompts data
+  async function loadPromptsData() {
+    try {
+      // Fetch all prompts with a large limit to get all data
+      const response = await fetch('/api/metrics/prompts?days=30&limit=10000');
+      
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+      
+      const data = await response.json();
+      
+            // Simply reverse the array to get most recent first (assuming newer items are at the end)
+      const sortedPrompts = data.prompts.reverse();
+      
+      // Populate table with sorted prompts
+      populatePromptsTable(sortedPrompts);
+      
+      // Wait a moment for DOM to be ready, then initialize DataTable
+      setTimeout(() => {
+        // Initialize DataTable with pagination
+        if (typeof $ !== 'undefined' && $.fn.DataTable) {
+          try {
+            // Destroy existing DataTable if it exists
+            if ($.fn.DataTable.isDataTable('#promptsTable')) {
+              $('#promptsTable').DataTable().destroy();
+            }
+            
+                      // Verify table structure before initializing
+          const table = document.querySelector('#promptsTable');
+          const headerCells = table.querySelectorAll('thead tr th');
+          const dataRows = table.querySelectorAll('tbody tr');
+          
+          console.log(`Header columns: ${headerCells.length}`);
+          console.log(`Total data rows: ${dataRows.length}`);
+          
+          // Check each row for consistency
+          dataRows.forEach((row, index) => {
+            const cells = row.querySelectorAll('td');
+            if (cells.length !== headerCells.length) {
+              console.error(`Row ${index + 1} has ${cells.length} cells, expected ${headerCells.length}`);
+            }
+          });
+          
+          // Only proceed if we have consistent structure
+          if (dataRows.length > 0) {
+            const firstDataRow = dataRows[0];
+            const dataCells = firstDataRow.querySelectorAll('td');
+            console.log(`First data row columns: ${dataCells.length}`);
+            
+            if (dataCells.length !== headerCells.length) {
+              console.error('Column count mismatch! Header:', headerCells.length, 'Data:', dataCells.length);
+              return; // Don't initialize DataTable if structure is inconsistent
+            }
+            
+            // Additional check: ensure all rows have the same number of columns
+            let allRowsConsistent = true;
+            dataRows.forEach((row, index) => {
+              const cells = row.querySelectorAll('td');
+              if (cells.length !== headerCells.length) {
+                console.error(`Row ${index + 1} has inconsistent column count: ${cells.length} vs ${headerCells.length}`);
+                allRowsConsistent = false;
+              }
+            });
+            
+            if (!allRowsConsistent) {
+              console.error('Table has inconsistent row structure, skipping DataTable initialization');
+              return;
+            }
+          }
+            
+                    // Initialize new DataTable with full pagination
+        $('#promptsTable').DataTable({
+          pageLength: 25,
+          order: [[0, 'desc']], // Sort by first column (row number) in descending order
+          responsive: true,
+          lengthMenu: [[25, 50, 100, 250, -1], [25, 50, 100, 250, "All"]],
+              language: {
+                search: "Search prompts:",
+                lengthMenu: "Show _MENU_ prompts per page",
+                info: "Showing _START_ to _END_ of _TOTAL_ prompts",
+                paginate: {
+                  first: "First",
+                  last: "Last",
+                  next: "Next",
+                  previous: "Previous"
+                }
+              }
+            });
+            
+            console.log('DataTable initialized successfully');
+          } catch (error) {
+            console.error('Error initializing DataTable:', error);
+          }
+        } else {
+          console.error('DataTables not available');
+        }
+      }, 100);
+      
+    } catch (error) {
+      console.error('Error loading prompts data:', error);
+      const table = document.querySelector('#promptsTable tbody');
+      if (table) {
+        table.innerHTML = '<tr><td colspan="4" class="text-center text-danger">Error loading data: ' + error.message + '</td></tr>';
+      }
+    }
+  }
+
+  // Load data when page loads
+  loadPromptsData();
+});
+</script> 

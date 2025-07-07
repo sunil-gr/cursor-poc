@@ -1,0 +1,15 @@
+<div class="login-container">
+  <h2 class="login-title">Login</h2>
+  <form method="POST" action="/login" class="login-form">
+    <label class="login-label">Username:
+      <input type="text" name="username" required class="login-input">
+    </label>
+    <label class="login-label">Password:
+      <input type="password" name="password" required class="login-input">
+    </label>
+    <button type="submit" class="login-btn">Login</button>
+  </form>
+  <% if (error) { %>
+    <p class="login-error">Invalid credentials</p>
+  <% } %>
+</div> 

@@ -1,0 +1,39 @@
+<!-- Sensitive Info Report Page -->
+<div class="dashboard-container">
+  <div class="dashboard-header-row">
+    <h1 class="dashboard-header-title">Sensitive Info Report</h1>
+    <a href="/usage-metrics" class="dashboard-back-btn">&larr; Back to Dashboard</a>
+  </div>
+  <div class="section-card">
+    <h2>Keyword Counts</h2>
+    <ul style="columns: 2; -webkit-columns: 2; -moz-columns: 2;">
+      <% Object.entries(keywordCounts).forEach(([keyword, count]) => { %>
+        <% if (count > 0) { %>
+          <li><%= keyword %>: <%= count %></li>
+        <% } %>
+      <% }) %>
+    </ul>
+  </div>
+  <div class="section-card">
+    <h2>All Sensitive Findings (<%= results.length %>)</h2>
+    <% if (results && results.length) { %>
+      <table style="width:100%; font-size: 0.95em;">
+        <thead>
+          <tr><th>#</th><th>Keyword</th><th>Context</th><th>Entry</th></tr>
+        </thead>
+        <tbody>
+          <% results.forEach(function(finding, idx) { %>
+            <tr>
+              <td><%= idx+1 %></td>
+              <td><%= finding.keyword %></td>
+              <td><%= finding.context %></td>
+              <td><%= finding.entry %></td>
+            </tr>
+          <% }) %>
+        </tbody>
+      </table>
+    <% } else { %>
+      <div style="color: #4caf50;">No sensitive data found in logs.</div>
+    <% } %>
+  </div>
+</div> 
