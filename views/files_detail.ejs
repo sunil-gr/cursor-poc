@@ -1,0 +1,202 @@
+<!-- Files Detail Page Content -->
+<div class="dashboard-container">
+  <div class="dashboard-header-row">
+    <h1 class="dashboard-header-title">All Files</h1>
+    <a href="/usage-metrics" class="dashboard-back-btn">&larr; Back to Dashboard</a>
+  </div>
+  
+  <div class="section-card">
+    <h2>All Files Opened/Edited</h2>
+    <div class="table-responsive">
+      <table id="filesTable" class="table table-striped table-hover">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>File Path</th>
+            <th>File Type</th>
+            <th>Last Modified</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Data will be populated by JavaScript -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<!-- Include DataTables CSS and JS -->
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.13.7/css/jquery.dataTables.css">
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/responsive/2.5.0/css/responsive.dataTables.min.css">
+<script type="text/javascript" charset="utf8" src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.js"></script>
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/responsive/2.5.0/js/dataTables.responsive.min.js"></script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Function to get file extension
+  function getFileExtension(filePath) {
+    if (!filePath) return 'Unknown';
+    const parts = filePath.split('.');
+    return parts.length > 1 ? parts[parts.length - 1].toUpperCase() : 'No Extension';
+  }
+
+  // Function to get file name from path
+  function getFileName(filePath) {
+    if (!filePath) return 'Unknown';
+    const parts = filePath.split('/');
+    return parts[parts.length - 1] || parts[parts.length - 2] || 'Unknown';
+  }
+
+  // Function to populate files table
+  function populateFilesTable(files) {
+    const table = document.querySelector('#filesTable tbody');
+    
+    if (!table) {
+      return;
+    }
+    
+    // Clear the table
+    table.innerHTML = '';
+    
+    if (!files || files.length === 0) {
+      table.innerHTML = '<tr><td colspan="5" class="text-center">No files found</td></tr>';
+      return;
+    }
+    
+    // Add all files to table
+    files.forEach((file, index) => {
+      // console.log('File object:', file); // DEBUG LOG
+      const row = document.createElement('tr');
+      
+      // Handle different file object structures
+      let fileName = 'Unknown file';
+      let filePath = '';
+      
+      if (typeof file === 'string') {
+        fileName = file;
+        filePath = file;
+      } else if (file && typeof file === 'object') {
+        if (file.fileName) {
+          fileName = file.fileName;
+          filePath = file.path || file.fileName;
+        } else if (file.path) {
+          fileName = file.path.split('/').pop() || file.path;
+          filePath = file.path;
+        } else if (file.editor && file.editor.resource) {
+          fileName = file.editor.resource;
+          filePath = file.editor.resource;
+        } else {
+          fileName = 'Unknown file';
+          filePath = JSON.stringify(file);
+        }
+      }
+      
+      const fileType = getFileExtension(filePath);
+      const displayName = getFileName(filePath);
+      
+      // Format the last modified timestamp
+      let lastModified = 'Unknown';
+      if (file.lastModified || file.timestamp) {
+        const timestamp = file.lastModified || file.timestamp;
+        if (typeof timestamp === 'number') {
+          lastModified = new Date(timestamp).toLocaleString();
+        } else if (typeof timestamp === 'string') {
+          const date = new Date(timestamp);
+          if (!isNaN(date.getTime())) {
+            lastModified = date.toLocaleString();
+          }
+        }
+      }
+      
+      row.innerHTML = `
+        <td>${index + 1}</td>
+        <td title="${filePath}">${displayName}</td>
+        <td><span class="badge badge-info">${fileType}</span></td>
+        <td>${lastModified}</td>
+        <td>
+          <button class="btn btn-sm btn-outline-primary" onclick="copyToClipboard('${filePath}')">
+            Copy Path
+          </button>
+        </td>
+      `;
+      table.appendChild(row);
+    });
+  }
+
+  // Function to copy file path to clipboard
+  window.copyToClipboard = function(text) {
+    navigator.clipboard.writeText(text).then(function() {
+      // Show a temporary success message
+      const button = event.target;
+      const originalText = button.textContent;
+      button.textContent = 'Copied!';
+      button.classList.remove('btn-outline-primary');
+      button.classList.add('btn-success');
+      
+      setTimeout(() => {
+        button.textContent = originalText;
+        button.classList.remove('btn-success');
+        button.classList.add('btn-outline-primary');
+      }, 2000);
+    }).catch(function(err) {
+      console.error('Could not copy text: ', err);
+    });
+  };
+
+  // Function to load files data
+  async function loadFilesData() {
+    try {
+      // Fetch all files with a large limit to get all data
+      const response = await fetch('/api/metrics/files?days=30&limit=10000');
+      
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+      
+      const data = await response.json();
+      
+      // Populate table with all files
+      populateFilesTable(data.files);
+      
+      // Initialize DataTable with pagination
+      if (typeof $ !== 'undefined' && $.fn.DataTable) {
+        // Destroy existing DataTable if it exists
+        if ($.fn.DataTable.isDataTable('#filesTable')) {
+          $('#filesTable').DataTable().destroy();
+        }
+        
+        // Initialize new DataTable with full pagination
+        $('#filesTable').DataTable({
+          pageLength: 50,
+          order: [[0, 'desc']],
+          responsive: true,
+          lengthMenu: [[25, 50, 100, 250, -1], [25, 50, 100, 250, "All"]],
+          language: {
+            search: "Search files:",
+            lengthMenu: "Show _MENU_ files per page",
+            info: "Showing _START_ to _END_ of _TOTAL_ files",
+            paginate: {
+              first: "First",
+              last: "Last",
+              next: "Next",
+              previous: "Previous"
+            }
+          }
+        });
+      }
+      
+    } catch (error) {
+      console.error('Error loading files data:', error);
+      const table = document.querySelector('#filesTable tbody');
+      if (table) {
+        table.innerHTML = '<tr><td colspan="5" class="text-center text-danger">Error loading data: ' + error.message + '</td></tr>';
+      }
+    }
+  }
+
+  // Load data when page loads
+  loadFilesData();
+});
+</script> 

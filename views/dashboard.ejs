@@ -1,0 +1,210 @@
+<!-- Dashboard Page Content -->
+<div id="metricsData" data-json="<%= encodeURIComponent(JSON.stringify(metricsData || {})) %>"></div>
+<div class="dashboard-container">
+  <div class="dashboard-header-row">
+    <h1 class="dashboard-header-title">Usage Metrics Dashboard</h1>
+    <a href="/dashboard" class="dashboard-back-btn">&larr; Back</a>
+  </div>
+  
+  <!-- System Information Section -->
+  <div class="section-card">
+    <h2>System Information</h2>
+    <div id="systemInfo" class="system-info-grid">
+      <div class="info-item">
+        <span class="info-label">Workspace ID:</span>
+        <span id="workspaceId" class="info-value">-</span>
+      </div>
+      <div class="info-item">
+        <span class="info-label">Workspace Opened:</span>
+        <span id="workspaceOpened" class="info-value">-</span>
+      </div>
+      <div class="info-item">
+        <span class="info-label">IP Address:</span>
+        <span id="ipAddress" class="info-value">-</span>
+      </div>
+      <div class="info-item">
+        <span class="info-label">Total Sessions:</span>
+        <span id="totalSessions" class="info-value">-</span>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Network Information Section -->
+  <div class="section-card">
+    <h2>Network & Connection Info</h2>
+    <div id="networkInfo" class="network-info-grid">
+      <div class="info-item">
+        <span class="info-label">User Agent:</span>
+        <span id="userAgent" class="info-value">-</span>
+      </div>
+      <div class="info-item">
+        <span class="info-label">Remote Connections:</span>
+        <span id="remoteConnections" class="info-value">-</span>
+      </div>
+      <div class="info-item">
+        <span class="info-label">Git Integration:</span>
+        <span id="gitIntegration" class="info-value">-</span>
+      </div>
+    </div>
+    
+
+  </div>
+  
+
+  
+  <!-- Performance Metrics Section (Summary Grid) -->
+  <div class="section-card">
+    <h2>Performance Metrics</h2>
+    <div id="performanceMetrics" class="performance-grid">
+      <div class="metric-item">
+        <span class="metric-label">AI Interactions:</span>
+        <span id="responseTimes" class="metric-value">-</span>
+      </div>
+      <div class="metric-item">
+        <span class="metric-label">Issues Detected:</span>
+        <span id="errorRate" class="metric-value">-</span>
+      </div>
+      <div class="metric-item">
+        <span class="metric-label">File Activity:</span>
+        <span id="fileOperations" class="metric-value">-</span>
+      </div>
+      <div class="metric-item">
+        <span class="metric-label">Workspace Files:</span>
+        <span id="workspaceFiles" class="metric-value">-</span>
+      </div>
+      <div class="metric-item">
+        <span class="metric-label">Search Queries:</span>
+        <span id="searchQueries" class="metric-value">-</span>
+      </div>
+      <div class="metric-item">
+        <span class="metric-label">Terminal Sessions:</span>
+        <span id="terminalSessions" class="metric-value">-</span>
+      </div>
+      <div class="metric-item">
+        <span class="metric-label">Composer Sessions:</span>
+        <span id="composerSessions" class="metric-value">-</span>
+      </div>
+      <div class="metric-item">
+        <span class="metric-label">Editor States:</span>
+        <span id="editorStates" class="metric-value">-</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Performance Metrics and Sensitive Data Report Charts (Two Column Layout) -->
+  <div class="dashboard-row" style="display: flex; flex-wrap: wrap; gap: 2em; margin-bottom: 2em;">
+    <div class="dashboard-col" style="flex: 1 1 300px; min-width: 250px;">
+      <div class="section-card">
+        <h2>Performance Metrics (Chart)</h2>
+        <div style="position: relative; height: 300px; width: 100%; max-width: 500px; margin: 0 auto;">
+          <canvas id="performanceChart"></canvas>
+        </div>
+      </div>
+    </div>
+    <div class="dashboard-col" style="flex: 1 1 300px; min-width: 250px;">
+      <div class="section-card">
+        <h2>Sensitive Data Report</h2>
+        <div style="position: relative; height: 300px; width: 100%; max-width: 500px; margin: 0 auto;">
+          <canvas id="sensitiveChart"></canvas>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Sensitive Data Report (List) Section -->
+  <div class="section-card">
+    <h2>Sensitive Data Report (List)</h2>
+    <% if (metricsData && metricsData.sensitiveResults && metricsData.sensitiveResults.length) { %>
+      <table style="width:100%; font-size: 0.95em;" id="sensitiveTable">
+        <thead>
+          <tr><th>#</th><th>Keyword</th><th>Context</th><th>Entry</th></tr>
+        </thead>
+        <tbody>
+          <% metricsData.sensitiveResults.slice(0, 10).forEach(function(finding, idx) { %>
+            <tr>
+              <td><%= idx+1 %></td>
+              <td><%= finding.keyword %></td>
+              <td><%= finding.context %></td>
+              <td><%= finding.entry %></td>
+            </tr>
+          <% }) %>
+        </tbody>
+      </table>
+      <% if (metricsData.sensitiveResults.length > 10) { %>
+        <div class="view-more-container" style="margin-top: 1em;">
+          <a href="/usage-metrics/sensitive-report" class="view-more-btn">View All <%= metricsData.sensitiveResults.length %> Sensitive Findings</a>
+        </div>
+      <% } %>
+    <% } else { %>
+      <div style="color: #4caf50;">No sensitive data found in logs.</div>
+    <% } %>
+  </div>
+  
+  <!-- Combined Section: Section Record Distribution & Languages Used -->
+  <div class="dashboard-row" style="display: flex; flex-wrap: wrap; gap: 2em; margin-bottom: 2em;">
+    <div class="dashboard-col" style="flex: 1 1 300px; min-width: 250px;">
+      <div class="section-card">
+        <h2>Section Record Distribution</h2>
+        <div style="position: relative; height: 300px; width: 100%; max-width: 400px; margin: 0 auto;">
+          <canvas id="sectionPieChart"></canvas>
+        </div>
+      </div>
+    </div>
+    <div class="dashboard-col" style="flex: 1 1 300px; min-width: 250px;">
+      <div class="section-card">
+        <h2>Languages Used</h2>
+        <div style="position: relative; height: 300px; width: 100%; max-width: 400px; margin: 0 auto;">
+          <canvas id="languagesChart"></canvas>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="section-card">
+    <h2>Most Common Prompts</h2>
+    <div id="commonPrompts" class="common-prompts-tags"></div>
+  </div>
+  <div class="section-card">
+    <h2>Recent Prompts</h2>
+    <table id="promptsTable">
+      <thead><tr><th>#</th><th>Prompt</th><th>Category</th><th>Type</th></tr></thead>
+      <tbody></tbody>
+    </table>
+  </div>
+  
+  <!-- Combined Section: Recent Generations & Recent Files Opened/Edited -->
+  <div class="dashboard-row" style="display: flex; flex-wrap: wrap; gap: 2em; margin-bottom: 2em;">
+    <div class="dashboard-col" style="flex: 0 1 70%; min-width: 250px;">
+      <div class="section-card">
+        <h2>Recent Generations</h2>
+        <table id="generationsTable">
+          <thead><tr><th>#</th><th>Description</th><th>Type</th><th>Time</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+    <div class="dashboard-col" style="flex: 0 1 25%; min-width: 120px;">
+      <div class="section-card">
+        <h2>Recent Files Opened/Edited</h2>
+        <table id="filesTable">
+          <thead><tr><th>#</th><th>File</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <!-- <div class="section-card">
+    <h2>Recent Search Queries</h2>
+    <div id="searchQueries" class="search-tags"></div>
+  </div> -->
+  <div class="section-card">
+    <h2>Generations Timeline</h2>
+    <div style="position: relative; height: 300px; width: 100%; margin: 0 auto;">
+      <canvas id="generationTimeline"></canvas>
+    </div>
+  </div>
+</div>
+<!-- Include Chart.js for charts -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js"></script>
+<!-- Dashboard logic is now in public/js/dashboard.js -->
+<script src="/public/js/dashboard.js"></script> 

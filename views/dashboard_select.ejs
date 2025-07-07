@@ -1,0 +1,90 @@
+<div class="dashboard-container">
+  <h1>Select Metrics Date Range</h1>
+  <form method="POST" action="/dashboard" class="metrics-form" onsubmit="return validateDateRange()">
+    <label for="startDate">Start date:
+      <input type="date" name="startDate" id="startDate" class="metrics-date" required max="<%= new Date().toISOString().slice(0,10) %>" value="<%= new Date().toISOString().slice(0,10) %>" onchange="updateEndDateLimit()">
+    </label>
+    <label for="endDate">End date:
+      <input type="date" name="endDate" id="endDate" class="metrics-date" required max="<%= new Date().toISOString().slice(0,10) %>" value="<%= new Date().toISOString().slice(0,10) %>">
+    </label>
+    <button type="submit" class="metrics-btn">Generate Metrics</button>
+  </form>
+  <script>
+    // Get today's date in YYYY-MM-DD format
+    const today = new Date().toISOString().slice(0,10);
+    
+    // Function to update end date limit based on start date
+    function updateEndDateLimit() {
+      const startDate = document.getElementById('startDate').value;
+      const endDateInput = document.getElementById('endDate');
+      
+      if (startDate) {
+        // Set the minimum end date to the selected start date
+        endDateInput.min = startDate;
+        
+        // Set the maximum end date to today
+        endDateInput.max = today;
+        
+        // If current end date is before start date, clear it
+        if (endDateInput.value && endDateInput.value < startDate) {
+          endDateInput.value = '';
+        }
+        
+        // If current end date is after today, reset it to today
+        if (endDateInput.value && endDateInput.value > today) {
+          endDateInput.value = today;
+        }
+      } else {
+        // If no start date selected, allow up to today
+        endDateInput.min = '';
+        endDateInput.max = today;
+      }
+    }
+    
+    // Function to validate the date range
+    function validateDateRange() {
+      const start = document.getElementById('startDate').value;
+      const end = document.getElementById('endDate').value;
+      
+      if (!start || !end) {
+        alert('Please select both start and end dates.');
+        return false;
+      }
+      
+      if (start > end) {
+        alert('Start date cannot be after end date.');
+        return false;
+      }
+      
+      if (start > today || end > today) {
+        alert('Dates cannot be in the future.');
+        return false;
+      }
+      
+      // Check if the date range is reasonable (not more than 1 year)
+      const startDate = new Date(start);
+      const endDate = new Date(end);
+      const diffTime = Math.abs(endDate - startDate);
+      const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+      
+      if (diffDays > 365) {
+        const confirmLargeRange = confirm('You have selected a date range of more than 1 year. This may take a while to process. Do you want to continue?');
+        if (!confirmLargeRange) {
+          return false;
+        }
+      }
+      
+      return true;
+    }
+    
+    // Initialize the form when page loads
+    document.addEventListener('DOMContentLoaded', function() {
+      // Set initial max date to today
+      document.getElementById('startDate').max = today;
+      document.getElementById('endDate').max = today;
+      
+      // Add event listener to start date to update end date limits
+      document.getElementById('startDate').addEventListener('change', updateEndDateLimit);
+    });
+  </script>
+</div> 
