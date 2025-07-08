@@ -1,0 +1,242 @@
+[
+  {
+    "key": "__$__isNewStorageMarker",
+    "value": "true"
+  },
+  {
+    "key": "cursorAuth/workspaceOpenedDate",
+    "value": "2025-07-01T08:33:14.543Z"
+  },
+  {
+    "key": "workbench.explorer.views.state",
+    "value": "{\"notepad\":{\"collapsed\":true,\"isHidden\":true},\"outline\":{\"collapsed\":true,\"isHidden\":true,\"size\":22},\"timeline\":{\"collapsed\":true,\"isHidden\":true,\"size\":22},\"workbench.explorer.openEditorsView\":{\"collapsed\":false,\"isHidden\":true},\"workbench.explorer.fileView\":{\"collapsed\":false,\"isHidden\":true}}"
+  },
+  {
+    "key": "workbench.view.search.state",
+    "value": "{\"workbench.view.search\":{\"collapsed\":false,\"isHidden\":true}}"
+  },
+  {
+    "key": "workbench.scm.views.state",
+    "value": "{\"workbench.scm.repositories\":{\"collapsed\":false,\"isHidden\":true},\"workbench.scm\":{\"collapsed\":false,\"isHidden\":true},\"workbench.scm.history\":{\"collapsed\":false,\"isHidden\":true}}"
+  },
+  {
+    "key": "workbench.panel.markers",
+    "value": "{\"workbench.panel.markers.view\":{\"collapsed\":false,\"isHidden\":true}}"
+  },
+  {
+    "key": "workbench.panel.output",
+    "value": "{\"workbench.panel.output\":{\"collapsed\":false,\"isHidden\":true}}"
+  },
+  {
+    "key": "terminal",
+    "value": "{\"terminal\":{\"collapsed\":false,\"isHidden\":true}}"
+  },
+  {
+    "key": "workbench.auxiliarybar.initialViewContainers",
+    "value": "[\"workbench.panel.aichat\"]"
+  },
+  {
+    "key": "workbench.auxiliarybar.viewContainersWorkspaceState",
+    "value": "[{\"id\":\"workbench.panel.aichat\",\"visible\":true},{\"id\":\"workbench.panel.composerViewPane2\",\"visible\":false},{\"id\":\"workbench.panel.aipaneaaaiBugFinder\",\"visible\":false},{\"id\":\"workbench.panel.chat\",\"visible\":false},{\"id\":\"workbench.panel.chatEditing\",\"visible\":false}]"
+  },
+  {
+    "key": "workbench.panel.composerChatViewPane",
+    "value": "{\"workbench.panel.aichat.view.6c6c7a46-7e9e-4a80-adf5-06e18130e86c\":{\"collapsed\":false,\"isHidden\":false},\"workbench.panel.aichat.view.335524f9-b023-440d-b349-a11eace3a2b3\":{\"collapsed\":false,\"isHidden\":false}}"
+  },
+  {
+    "key": "workbench.editor.centered",
+    "value": "false"
+  },
+  {
+    "key": "workbench.zenMode.active",
+    "value": "false"
+  },
+  {
+    "key": "workbench.zenMode.exitInfo",
+    "value": "{\"transitionedToCenteredEditorLayout\":false,\"transitionedToFullScreen\":false,\"handleNotificationsDoNotDisturbMode\":false,\"wasVisible\":{\"auxiliaryBar\":false,\"panel\":false,\"sideBar\":false}}"
+  },
+  {
+    "key": "workbench.panel.wasLastMaximized",
+    "value": "false"
+  },
+  {
+    "key": "workbench.sideBar.position",
+    "value": "0"
+  },
+  {
+    "key": "workbench.panel.position",
+    "value": "2"
+  },
+  {
+    "key": "workbench.activityBar.hidden",
+    "value": "true"
+  },
+  {
+    "key": "workbench.sideBar.hidden",
+    "value": "false"
+  },
+  {
+    "key": "workbench.editor.hidden",
+    "value": "false"
+  },
+  {
+    "key": "workbench.statusBar.hidden",
+    "value": "false"
+  },
+  {
+    "key": "notepad.reactiveStorageId",
+    "value": "{\"notepads\":{},\"notepadDataVersion\":0}"
+  },
+  {
+    "key": "workbench.auxiliarybar.activepanelid",
+    "value": "workbench.panel.aichat"
+  },
+  {
+    "key": "debug.selectedroot",
+    "value": "file:///d%3A/xampp/htdocs/hm/go-assignment/.vscode/launch.json"
+  },
+  {
+    "key": "output.activechannel",
+    "value": "tasks"
+  },
+  {
+    "key": "workbench.view.remote.state",
+    "value": "{\"github.codespaces.explorer\":{\"collapsed\":false,\"isHidden\":false},\"github.codespaces.warnExplorer\":{\"collapsed\":false,\"isHidden\":false},\"github.codespaces.performanceExplorer\":{\"collapsed\":false,\"isHidden\":false}}"
+  },
+  {
+    "key": "workbench.view.extension.github-pull-requests.state",
+    "value": "{\"github:login\":{\"collapsed\":false,\"isHidden\":true},\"pr:github\":{\"collapsed\":false,\"isHidden\":true},\"issues:github\":{\"collapsed\":false,\"isHidden\":true},\"notifications:github\":{\"collapsed\":false,\"isHidden\":true},\"github:conflictResolution\":{\"collapsed\":false,\"isHidden\":true}}"
+  },
+  {
+    "key": "workbench.view.extension.workspaceViewer.state",
+    "value": "{\"workspaceViewer\":{\"collapsed\":false,\"isHidden\":true},\"rHelpPages\":{\"collapsed\":false,\"isHidden\":true},\"rLiveShare\":{\"collapsed\":true,\"isHidden\":true}}"
+  },
+  {
+    "key": "workbench.panel.viewContainersWorkspaceState",
+    "value": "[{\"id\":\"workbench.panel.markers\",\"visible\":true},{\"id\":\"workbench.panel.output\",\"visible\":true},{\"id\":\"workbench.panel.repl\",\"visible\":true},{\"id\":\"terminal\",\"visible\":true},{\"id\":\"workbench.panel.testResults\",\"visible\":false},{\"id\":\"~remote.forwardedPortsContainer\",\"visible\":true},{\"id\":\"refactorPreview\",\"visible\":false}]"
+  },
+  {
+    "key": "~remote.forwardedPortsContainer",
+    "value": "{\"~remote.forwardedPorts\":{\"collapsed\":false,\"isHidden\":true}}"
+  },
+  {
+    "key": "workbench.panel.repl",
+    "value": "{\"workbench.panel.repl.view\":{\"collapsed\":false,\"isHidden\":true}}"
+  },
+  {
+    "key": "workbench.view.debug.state",
+    "value": "{\"workbench.debug.welcome\":{\"collapsed\":false,\"isHidden\":true},\"workbench.debug.variablesView\":{\"collapsed\":false,\"isHidden\":true},\"workbench.debug.watchExpressionsView\":{\"collapsed\":false,\"isHidden\":true},\"workbench.debug.callStackView\":{\"collapsed\":false,\"isHidden\":true},\"workbench.debug.loadedScriptsView\":{\"collapsed\":true,\"isHidden\":true},\"workbench.debug.breakPointsView\":{\"collapsed\":false,\"isHidden\":true},\"jsBrowserBreakpoints\":{\"collapsed\":true,\"isHidden\":true},\"jsExcludedCallers\":{\"collapsed\":true,\"isHidden\":true},\"jsDebugNetworkTree\":{\"collapsed\":true,\"isHidden\":true},\"CppSshTargetsView\":{\"collapsed\":true,\"isHidden\":true},\"lldb.loadedModules\":{\"collapsed\":true,\"isHidden\":true},\"lldb.excludedCallers\":{\"collapsed\":true,\"isHidden\":true}}"
+  },
+  {
+    "key": "debug.uxstate",
+    "value": "simple"
+  },
+  {
+    "key": "vscode.git",
+    "value": "{\"closedRepositories\":[]}"
+  },
+  {
+    "key": "terminal.integrated.environmentVariableCollectionsV2",
+    "value": "[{\"extensionIdentifier\":\"vscode.git\",\"collection\":[[\"GIT_ASKPASS\",{\"variable\":\"GIT_ASKPASS\",\"value\":\"c:\\\\Users\\\\suniv\\\\AppData\\\\Local\\\\Programs\\\\cursor\\\\resources\\\\app\\\\extensions\\\\git\\\\dist\\\\askpass.sh\",\"type\":1,\"options\":{\"applyAtProcessCreation\":true,\"applyAtShellIntegration\":false}}],[\"VSCODE_GIT_ASKPASS_NODE\",{\"variable\":\"VSCODE_GIT_ASKPASS_NODE\",\"value\":\"c:\\\\Users\\\\suniv\\\\AppData\\\\Local\\\\Programs\\\\cursor\\\\Cursor.exe\",\"type\":1,\"options\":{\"applyAtProcessCreation\":true,\"applyAtShellIntegration\":false}}],[\"VSCODE_GIT_ASKPASS_EXTRA_ARGS\",{\"variable\":\"VSCODE_GIT_ASKPASS_EXTRA_ARGS\",\"value\":\"\",\"type\":1,\"options\":{\"applyAtProcessCreation\":true,\"applyAtShellIntegration\":false}}],[\"VSCODE_GIT_ASKPASS_MAIN\",{\"variable\":\"VSCODE_GIT_ASKPASS_MAIN\",\"value\":\"c:\\\\Users\\\\suniv\\\\AppData\\\\Local\\\\Programs\\\\cursor\\\\resources\\\\app\\\\extensions\\\\git\\\\dist\\\\askpass-main.js\",\"type\":1,\"options\":{\"applyAtProcessCreation\":true,\"applyAtShellIntegration\":false}}],[\"VSCODE_GIT_IPC_HANDLE\",{\"variable\":\"VSCODE_GIT_IPC_HANDLE\",\"value\":\"\\\\\\\\.\\\\pipe\\\\vscode-git-2413f18559-sock\",\"type\":1,\"options\":{\"applyAtProcessCreation\":true,\"applyAtShellIntegration\":false}}]],\"description\":[[\"\",{\"description\":\"Enables the following features: git auth provider\"}]]}]"
+  },
+  {
+    "key": "GitHub.vscode-pull-request-github",
+    "value": "{}"
+  },
+  {
+    "key": "workbench.view.explorer.numberOfVisibleViews",
+    "value": "4"
+  },
+  {
+    "key": "workbench.auxiliaryBar.hidden",
+    "value": "false"
+  },
+  {
+    "key": "interactive.sessions",
+    "value": "[]"
+  },
+  {
+    "key": "workbench.panel.aichat.numberOfVisibleViews",
+    "value": "1"
+  },
+  {
+    "key": "notepadData",
+    "value": "{\"notepads\":{}}"
+  },
+  {
+    "key": "comments.continueOnComments",
+    "value": "[]"
+  },
+  {
+    "key": "workbench.editor.languageDetectionOpenedLanguages.workspace",
+    "value": "[[\"go\",true]]"
+  },
+  {
+    "key": "history.entries",
+    "value": "[{\"editor\":{\"resource\":\"file:///d%3A/xampp/htdocs/hm/go-assignment/internal/db/mysql.go\",\"forceFile\":true,\"options\":{\"override\":\"default\"}}},{\"editor\":{\"resource\":\"file:///d%3A/xampp/htdocs/hm/go-assignment/internal/book/model.go\",\"forceFile\":true,\"options\":{\"override\":\"default\"}}}]"
+  },
+  {
+    "key": "memento/workbench.editors.files.textFileEditor",
+    "value": "{\"textEditorViewState\":[[\"file:///d%3A/xampp/htdocs/hm/go-assignment/internal/book/model.go\",{\"0\":{\"cursorState\":[{\"inSelectionMode\":false,\"selectionStart\":{\"lineNumber\":12,\"column\":3},\"position\":{\"lineNumber\":12,\"column\":3}}],\"viewState\":{\"scrollLeft\":0,\"firstPosition\":{\"lineNumber\":1,\"column\":1},\"firstPositionDeltaTop\":0},\"contributionsState\":{\"editor.contrib.folding\":{\"lineCount\":12,\"provider\":\"indent\",\"foldedImports\":false},\"editor.contrib.wordHighlighter\":false}}}],[\"file:///d%3A/xampp/htdocs/hm/go-assignment/internal/db/mysql.go\",{\"0\":{\"cursorState\":[{\"inSelectionMode\":false,\"selectionStart\":{\"lineNumber\":19,\"column\":3},\"position\":{\"lineNumber\":19,\"column\":3}}],\"viewState\":{\"scrollLeft\":0,\"firstPosition\":{\"lineNumber\":1,\"column\":1},\"firstPositionDeltaTop\":0},\"contributionsState\":{\"editor.contrib.folding\":{\"lineCount\":19,\"provider\":\"indent\",\"foldedImports\":false},\"editor.contrib.wordHighlighter\":false}}}]]}"
+  },
+  {
+    "key": "aiService.prompts",
+    "value": "[{\"text\":\"Build a RESTful API implementing CRUD operations for an entity like Book, User, or Product.\\n·       Use Gin framework.\\n·       JSON request/response handling with encoding/json pkg.\\n·       Store data in memory.\\nHandle proper HTTP error responses and validation\\n\\nAdd secure authentication to your Go API using JWT.\\n·       Implement user login/logout and token generation.\\n·       Use github.com/golang-jwt/jwt/v5 pkg.\\n·       Protect routes using custom middleware.\\n·       Bonus: Implement refresh tokens and role-based access control.\\n \\n3. Go Modules and Project Structure\\nObjective: Organize your application using the idiomatic Go project layout.\\n·       Initialize with go mod init.\\n·       Use clean architecture: cmd/, internal/, pkg/.\\n·       Demonstrate versioned dependency management.\\n\\nBuild a job queue system using goroutines and channels.\\n·       Accept and queue tasks via HTTP or CLI.\\n·       Create a worker pool to process jobs.\\n·       Use context for cancellation and graceful shutdown.\\n·       Implement structured logging.\\n\\nPersist data using relational databases.\\n·       UseMySQL with GORM.\\n·       Implement complete CRUD with persistent storage.\\n·       Use transactions for data integrity.\\n·       Handle database migrations and connection pooling.\\n\\nUnit Testing and TDD\\nObjective: Write clean, tested, and test-driven code.\\n·       Use Go's testing package and httptest.\\n·       Write unit tests for handlers and business logic.\\n·       Apply table-driven tests.\\n·       Cover 80% code coverage.\\n\\nMiddleware and Context Handling\\nObjective: Build reusable components for cross-cutting concerns.\\n·       Create custom middleware for logging, authentication, etc.\\n·       Use context.Context pkg to manage request data and timeouts.\\n·       Handle panic recovery and graceful termination.\\n \\n8. File Upload and File Handling\\nObjective: Accept and manage file uploads on a Go server.\\n·       Use multipart form handling to accept files.\\n·       Save files to disk or cloud (optional).\\n·       Perform basic file I/O using os and io.\\n9. gRPC Integration\\nObjective: Add real-time or high-performance communication.\\n·       gRPC server and client using Protocol Buffers.\\n·       Include sample client implementation.\\n \\n10. Dockerize a Go Application\\nObjective: Containerize your application for deployment.\\n·       Create a multi-stage Dockerfile to build and run your app.\\n·       Use docker-compose for local setup with DB services.\\n·       Optimize for small image size and fast startup.\\n \\n11. Scheduled Jobs / Cron Tasks\\nObjective: Run background jobs on a schedule.\\n·       Use any cron pkg.\\n·       Implement cleanup, email sending, or reporting tasks.\\n·       Include error handling and logging.\\n\\n\",\"commandType\":4},{\"text\":\"Please complete complete code with proper folder strtcure \",\"commandType\":4},{\"text\":\"mysql crud\",\"commandType\":4},{\"text\":\"add those files into this project\",\"commandType\":4},{\"text\":\"Complete code with all the featurs\",\"commandType\":4},{\"text\":\"apply\",\"commandType\":4},{\"text\":\"go ahead\",\"commandType\":4},{\"text\":\"run commands\",\"commandType\":4},{\"text\":\"yes\",\"commandType\":4},{\"text\":\"run the mysql directly on my machine\",\"commandType\":4}]"
+  },
+  {
+    "key": "composer.composerData",
+    "value": "{\"allComposers\":[{\"type\":\"head\",\"composerId\":\"6c6c7a46-7e9e-4a80-adf5-06e18130e86c\",\"name\":\"Build a comprehensive Go application\",\"lastUpdatedAt\":1751359582079,\"createdAt\":1751358794574,\"unifiedMode\":\"agent\",\"forceMode\":\"edit\"},{\"type\":\"head\",\"composerId\":\"c3c10d9d-c86b-4639-92ca-00849a6bf0f4\",\"createdAt\":1751358794574,\"unifiedMode\":\"chat\",\"forceMode\":\"edit\"}],\"selectedComposerIds\":[\"6c6c7a46-7e9e-4a80-adf5-06e18130e86c\"],\"hasMigratedComposerData\":false,\"hasMigratedMultipleComposers\":true}"
+  },
+  {
+    "key": "aiService.generations",
+    "value": "[{\"unixMs\":1751358846604,\"generationUUID\":\"a414d240-9ff8-49a0-a974-36a5ada3854f\",\"type\":\"composer\",\"textDescription\":\"Build a RESTful API implementing CRUD operations for an entity like Book, User, or Product.\\n·       Use Gin framework.\\n·       JSON request/response handling with encoding/json pkg.\\n·       Store data in memory.\\nHandle proper HTTP error responses and validation\\n\\nAdd secure authentication to your Go API using JWT.\\n·       Implement user login/logout and token generation.\\n·       Use github.com/golang-jwt/jwt/v5 pkg.\\n·       Protect routes using custom middleware.\\n·       Bonus: Implement refresh tokens and role-based access control.\\n \\n3. Go Modules and Project Structure\\nObjective: Organize your application using the idiomatic Go project layout.\\n·       Initialize with go mod init.\\n·       Use clean architecture: cmd/, internal/, pkg/.\\n·       Demonstrate versioned dependency management.\\n\\nBuild a job queue system using goroutines and channels.\\n·       Accept and queue tasks via HTTP or CLI.\\n·       Create a worker pool to process jobs.\\n·       Use context for cancellation and graceful shutdown.\\n·       Implement structured logging.\\n\\nPersist data using relational databases.\\n·       UseMySQL with GORM.\\n·       Implement complete CRUD with persistent storage.\\n·       Use transactions for data integrity.\\n·       Handle database migrations and connection pooling.\\n\\nUnit Testing and TDD\\nObjective: Write clean, tested, and test-driven code.\\n·       Use Go's testing package and httptest.\\n·       Write unit tests for handlers and business logic.\\n·       Apply table-driven tests.\\n·       Cover 80% code coverage.\\n\\nMiddleware and Context Handling\\nObjective: Build reusable components for cross-cutting concerns.\\n·       Create custom middleware for logging, authentication, etc.\\n·       Use context.Context pkg to manage request data and timeouts.\\n·       Handle panic recovery and graceful termination.\\n \\n8. File Upload and File Handling\\nObjective: Accept and manage file uploads on a Go server.\\n·       Use multipart form handling to accept files.\\n·       Save files to disk or cloud (optional).\\n·       Perform basic file I/O using os and io.\\n9. gRPC Integration\\nObjective: Add real-time or high-performance communication.\\n·       gRPC server and client using Protocol Buffers.\\n·       Include sample client implementation.\\n \\n10. Dockerize a Go Application\\nObjective: Containerize your application for deployment.\\n·       Create a multi-stage Dockerfile to build and run your app.\\n·       Use docker-compose for local setup with DB services.\\n·       Optimize for small image size and fast startup.\\n \\n11. Scheduled Jobs / Cron Tasks\\nObjective: Run background jobs on a schedule.\\n·       Use any cron pkg.\\n·       Implement cleanup, email sending, or reporting tasks.\\n·       Include error handling and logging.\\n\\n\"},{\"unixMs\":1751358912665,\"generationUUID\":\"8f42328a-bf3a-446a-b574-64b0e5aa9492\",\"type\":\"composer\",\"textDescription\":\"Please complete complete code with proper folder strtcure \"},{\"unixMs\":1751359001685,\"generationUUID\":\"e73be8ff-770f-4406-a5b2-b09bd7055ce9\",\"type\":\"composer\",\"textDescription\":\"mysql crud\"},{\"unixMs\":1751359038783,\"generationUUID\":\"4e3e2325-8751-41b6-8bd1-64895cffe138\",\"type\":\"composer\",\"textDescription\":\"add those files into this project\"},{\"unixMs\":1751359070292,\"generationUUID\":\"4874e6e2-bf4d-4480-9efe-69642b40a87c\",\"type\":\"apply\",\"textDescription\":\"model.go\"},{\"unixMs\":1751359077123,\"generationUUID\":\"624a755b-aee4-4b81-b13a-591dcbf9019a\",\"type\":\"apply\",\"textDescription\":\"repository.go\"},{\"unixMs\":1751359083974,\"generationUUID\":\"f4557332-3fdd-4ec3-bdcb-cd4d60f69206\",\"type\":\"apply\",\"textDescription\":\"book_handler.go\"},{\"unixMs\":1751359092511,\"generationUUID\":\"3189e66c-811d-4d9b-9388-51916cd018b5\",\"type\":\"apply\",\"textDescription\":\"mysql.go\"},{\"unixMs\":1751359099108,\"generationUUID\":\"fee80dd9-0bff-4e0d-8684-b953d2082356\",\"type\":\"apply\",\"textDescription\":\"main.go\"},{\"unixMs\":1751359132121,\"generationUUID\":\"563dd8a6-8806-4538-87de-ba8391678dc7\",\"type\":\"composer\",\"textDescription\":\"Complete code with all the featurs\"},{\"unixMs\":1751359201741,\"generationUUID\":\"7c24c72c-eca4-48aa-8387-a422debc27c9\",\"type\":\"composer\",\"textDescription\":\"apply\"},{\"unixMs\":1751359206870,\"generationUUID\":\"ee24027a-2428-48d5-8651-38ed81473bcd\",\"type\":\"apply\",\"textDescription\":\"user_handler.go\"},{\"unixMs\":1751359215366,\"generationUUID\":\"437c9fe9-edf4-4e36-87de-feb78dc040da\",\"type\":\"apply\",\"textDescription\":\"job_handler.go\"},{\"unixMs\":1751359222704,\"generationUUID\":\"02dc2b7d-1591-4dac-b000-edd33eceb535\",\"type\":\"composer\",\"textDescription\":\"go ahead\"},{\"unixMs\":1751359305044,\"generationUUID\":\"e6ccf30f-7e74-4fde-9e81-f6a63c3453aa\",\"type\":\"apply\",\"textDescription\":\"job_handler.go\"},{\"unixMs\":1751359312767,\"generationUUID\":\"8f178c5c-7efa-4412-920f-c743ce40007e\",\"type\":\"apply\",\"textDescription\":\"queue.go\"},{\"unixMs\":1751359340392,\"generationUUID\":\"85a7fd75-7a10-4195-af3d-94ed1aaaa1bd\",\"type\":\"apply\",\"textDescription\":\"upload.go\"},{\"unixMs\":1751359349817,\"generationUUID\":\"f4a153af-3e26-4a38-891a-8da42eb1ddd3\",\"type\":\"composer\",\"textDescription\":\"go ahead\"},{\"unixMs\":1751359361632,\"generationUUID\":\"203827fb-7cbc-47ff-a491-a7348a253129\",\"type\":\"apply\",\"textDescription\":\"job_handler.go\"},{\"unixMs\":1751359368439,\"generationUUID\":\"c6e8c8d4-effd-4cdf-bf3f-493a866e9afc\",\"type\":\"apply\",\"textDescription\":\"router.go\"},{\"unixMs\":1751359405463,\"generationUUID\":\"198f409b-4d83-445e-ac89-e3dc0feb6b23\",\"type\":\"apply\",\"textDescription\":\"queue.go\"},{\"unixMs\":1751359415870,\"generationUUID\":\"f6313764-e9a3-4d06-b5dd-2907005731a2\",\"type\":\"apply\",\"textDescription\":\"upload.go\"},{\"unixMs\":1751359422033,\"generationUUID\":\"be2abcc5-d7c6-424b-9919-d50708578000\",\"type\":\"apply\",\"textDescription\":\"server.go\"},{\"unixMs\":1751359428721,\"generationUUID\":\"f6373136-50c6-456b-b27c-0909d9c9fbbe\",\"type\":\"apply\",\"textDescription\":\"client.go\"},{\"unixMs\":1751359451823,\"generationUUID\":\"aa4a35c3-327a-4cae-9adf-ac6f25a77fd1\",\"type\":\"apply\",\"textDescription\":\"scheduler.go\"},{\"unixMs\":1751359460684,\"generationUUID\":\"11e5db87-cb19-4e6d-8d07-894d03e558ad\",\"type\":\"apply\",\"textDescription\":\"logger.go\"},{\"unixMs\":1751359467861,\"generationUUID\":\"c47a15b6-d785-40f5-a1b3-a00eb4c336f5\",\"type\":\"apply\",\"textDescription\":\"book.proto\"},{\"unixMs\":1751359509833,\"generationUUID\":\"da68c130-96b3-40a8-9b0e-881f658209ca\",\"type\":\"composer\",\"textDescription\":\"run commands\"},{\"unixMs\":1751359532170,\"generationUUID\":\"239a301e-68df-4069-8b96-9ebfb37f82b9\",\"type\":\"apply\",\"textDescription\":\"mysql.go\"},{\"unixMs\":1751359547324,\"generationUUID\":\"28f422aa-6981-4734-98a7-c3c02a572f3b\",\"type\":\"composer\",\"textDescription\":\"yes\"},{\"unixMs\":1751359582079,\"generationUUID\":\"92944203-aa74-4193-a51a-91a0113897ac\",\"type\":\"composer\",\"textDescription\":\"run the mysql directly on my machine\"},{\"unixMs\":1751359715774,\"generationUUID\":\"128df15e-f7a5-497d-bda6-f53eaac5027c\",\"type\":\"apply\",\"textDescription\":\"mysql.go\"}]"
+  },
+  {
+    "key": "memento/workbench.parts.editor",
+    "value": "{\"editorpart.state\":{\"serializedGrid\":{\"root\":{\"type\":\"branch\",\"data\":[{\"type\":\"leaf\",\"data\":{\"id\":0,\"editors\":[{\"id\":\"workbench.editors.files.fileEditorInput\",\"value\":\"{\\\"resourceJSON\\\":{\\\"$mid\\\":1,\\\"external\\\":\\\"file:///d%3A/xampp/htdocs/hm/go-assignment/internal/book/model.go\\\",\\\"path\\\":\\\"/D:/xampp/htdocs/hm/go-assignment/internal/book/model.go\\\",\\\"scheme\\\":\\\"file\\\"},\\\"encoding\\\":\\\"utf8\\\"}\"},{\"id\":\"workbench.editors.files.fileEditorInput\",\"value\":\"{\\\"resourceJSON\\\":{\\\"$mid\\\":1,\\\"external\\\":\\\"file:///d%3A/xampp/htdocs/hm/go-assignment/internal/api/handler/user_handler.go\\\",\\\"path\\\":\\\"/D:/xampp/htdocs/hm/go-assignment/internal/api/handler/user_handler.go\\\",\\\"scheme\\\":\\\"file\\\"}}\"},{\"id\":\"workbench.editors.files.fileEditorInput\",\"value\":\"{\\\"resourceJSON\\\":{\\\"$mid\\\":1,\\\"external\\\":\\\"file:///d%3A/xampp/htdocs/hm/go-assignment/cmd/server/main.go\\\",\\\"path\\\":\\\"/D:/xampp/htdocs/hm/go-assignment/cmd/server/main.go\\\",\\\"scheme\\\":\\\"file\\\"}}\"},{\"id\":\"workbench.editors.files.fileEditorInput\",\"value\":\"{\\\"resourceJSON\\\":{\\\"$mid\\\":1,\\\"fsPath\\\":\\\"d:\\\\\\\\xampp\\\\\\\\htdocs\\\\\\\\hm\\\\\\\\go-assignment\\\\\\\\internal\\\\\\\\db\\\\\\\\mysql.go\\\",\\\"_sep\\\":1,\\\"external\\\":\\\"file:///d%3A/xampp/htdocs/hm/go-assignment/internal/db/mysql.go\\\",\\\"path\\\":\\\"/D:/xampp/htdocs/hm/go-assignment/internal/db/mysql.go\\\",\\\"scheme\\\":\\\"file\\\"},\\\"encoding\\\":\\\"utf8\\\"}\"},{\"id\":\"workbench.editors.files.fileEditorInput\",\"value\":\"{\\\"resourceJSON\\\":{\\\"$mid\\\":1,\\\"external\\\":\\\"file:///d%3A/xampp/htdocs/hm/go-assignment/proto/book.proto\\\",\\\"path\\\":\\\"/D:/xampp/htdocs/hm/go-assignment/proto/book.proto\\\",\\\"scheme\\\":\\\"file\\\"}}\"},{\"id\":\"workbench.editors.files.fileEditorInput\",\"value\":\"{\\\"resourceJSON\\\":{\\\"$mid\\\":1,\\\"external\\\":\\\"file:///d%3A/xampp/htdocs/hm/go-assignment/pkg/logger/logger.go\\\",\\\"path\\\":\\\"/D:/xampp/htdocs/hm/go-assignment/pkg/logger/logger.go\\\",\\\"scheme\\\":\\\"file\\\"}}\"},{\"id\":\"workbench.editors.files.fileEditorInput\",\"value\":\"{\\\"resourceJSON\\\":{\\\"$mid\\\":1,\\\"external\\\":\\\"file:///d%3A/xampp/htdocs/hm/go-assignment/internal/cron/scheduler.go\\\",\\\"path\\\":\\\"/D:/xampp/htdocs/hm/go-assignment/internal/cron/scheduler.go\\\",\\\"scheme\\\":\\\"file\\\"}}\"},{\"id\":\"workbench.editors.files.fileEditorInput\",\"value\":\"{\\\"resourceJSON\\\":{\\\"$mid\\\":1,\\\"external\\\":\\\"file:///d%3A/xampp/htdocs/hm/go-assignment/internal/grpc/client.go\\\",\\\"path\\\":\\\"/D:/xampp/htdocs/hm/go-assignment/internal/grpc/client.go\\\",\\\"scheme\\\":\\\"file\\\"}}\"},{\"id\":\"workbench.editors.files.fileEditorInput\",\"value\":\"{\\\"resourceJSON\\\":{\\\"$mid\\\":1,\\\"external\\\":\\\"file:///d%3A/xampp/htdocs/hm/go-assignment/internal/grpc/server.go\\\",\\\"path\\\":\\\"/D:/xampp/htdocs/hm/go-assignment/internal/grpc/server.go\\\",\\\"scheme\\\":\\\"file\\\"}}\"},{\"id\":\"workbench.editors.files.fileEditorInput\",\"value\":\"{\\\"resourceJSON\\\":{\\\"$mid\\\":1,\\\"external\\\":\\\"file:///d%3A/xampp/htdocs/hm/go-assignment/internal/jobqueue/queue.go\\\",\\\"path\\\":\\\"/D:/xampp/htdocs/hm/go-assignment/internal/jobqueue/queue.go\\\",\\\"scheme\\\":\\\"file\\\"}}\"},{\"id\":\"workbench.editors.files.fileEditorInput\",\"value\":\"{\\\"resourceJSON\\\":{\\\"$mid\\\":1,\\\"external\\\":\\\"file:///d%3A/xampp/htdocs/hm/go-assignment/internal/file/upload.go\\\",\\\"path\\\":\\\"/D:/xampp/htdocs/hm/go-assignment/internal/file/upload.go\\\",\\\"scheme\\\":\\\"file\\\"}}\"},{\"id\":\"workbench.editors.files.fileEditorInput\",\"value\":\"{\\\"resourceJSON\\\":{\\\"$mid\\\":1,\\\"external\\\":\\\"file:///d%3A/xampp/htdocs/hm/go-assignment/internal/api/handler/job_handler.go\\\",\\\"path\\\":\\\"/D:/xampp/htdocs/hm/go-assignment/internal/api/handler/job_handler.go\\\",\\\"scheme\\\":\\\"file\\\"}}\"},{\"id\":\"workbench.editors.files.fileEditorInput\",\"value\":\"{\\\"resourceJSON\\\":{\\\"$mid\\\":1,\\\"external\\\":\\\"file:///d%3A/xampp/htdocs/hm/go-assignment/internal/api/handler/book_handler.go\\\",\\\"path\\\":\\\"/D:/xampp/htdocs/hm/go-assignment/internal/api/handler/book_handler.go\\\",\\\"scheme\\\":\\\"file\\\"}}\"},{\"id\":\"workbench.editors.files.fileEditorInput\",\"value\":\"{\\\"resourceJSON\\\":{\\\"$mid\\\":1,\\\"external\\\":\\\"file:///d%3A/xampp/htdocs/hm/go-assignment/internal/book/repository.go\\\",\\\"path\\\":\\\"/D:/xampp/htdocs/hm/go-assignment/internal/book/repository.go\\\",\\\"scheme\\\":\\\"file\\\"}}\"}],\"mru\":[3,4,5,6,7,8,9,10,11,0,1,2,12,13]},\"size\":649}],\"size\":916},\"orientation\":0,\"width\":916,\"height\":649},\"activeGroup\":0,\"mostRecentActiveGroups\":[0]}}"
+  },
+  {
+    "key": "workbench.panel.hidden",
+    "value": "false"
+  },
+  {
+    "key": "workbench.explorer.treeViewState",
+    "value": "{\"focus\":[\"file:///d%3A/xampp/htdocs/hm/go-assignment::file:///d%3A/xampp/htdocs/hm/go-assignment/cmd\"],\"selection\":[],\"expanded\":[],\"scrollTop\":0}"
+  },
+  {
+    "key": "terminal.numberOfVisibleViews",
+    "value": "1"
+  },
+  {
+    "key": "anysphere.cursor-retrieval",
+    "value": "{\"cursor-retrieval-state-version\":1,\"map/6fc1a4f8512a90a6da493f8a51e5e141f0ed0acd7952c586d476c47fd4073a66-go-assignment/repoKeys\":{\"repoName\":\"5226e3fc-8703-4d5a-a797-da48be278537\",\"orthogonalTransformationSeed\":3609637189525995,\"pathEncryptionKey\":\"RYs3Fi3B0_W8bnb1kSdkbvJmzcqQFXrILz3iyWfJaRM\",\"pathEncryptionScheme\":\"aes-256-ctr\",\"canUpdateKey\":false},\"map/6fc1a4f8512a90a6da493f8a51e5e141f0ed0acd7952c586d476c47fd4073a66-go-assignment/google-oauth2|user_01JE9GMZAZSQBF883XR5KV60FJ/indexingStatus\":{\"globalStatus\":{\"case\":\"synced\",\"numFiles\":15},\"progress\":100}}"
+  },
+  {
+    "key": "__$__targetStorageMarker",
+    "value": "{\"cursorAuth/workspaceOpenedDate\":1,\"workbench.explorer.views.state\":1,\"workbench.view.search.state\":1,\"workbench.scm.views.state\":1,\"workbench.panel.markers\":1,\"workbench.panel.output\":1,\"terminal\":1,\"workbench.panel.viewContainersWorkspaceState\":1,\"workbench.auxiliarybar.initialViewContainers\":1,\"workbench.auxiliarybar.viewContainersWorkspaceState\":1,\"workbench.panel.composerChatViewPane\":1,\"workbench.explorer.treeViewState\":1,\"src.vs.platform.reactivestorage.browser.reactiveStorageServiceImpl.persistentStorage.workspaceUser\":0,\"workbench.view.explorer.numberOfVisibleViews\":1,\"workbench.editor.centered\":1,\"workbench.zenMode.active\":1,\"workbench.zenMode.exitInfo\":1,\"workbench.panel.wasLastMaximized\":1,\"workbench.sideBar.position\":1,\"workbench.panel.position\":1,\"workbench.activityBar.hidden\":1,\"workbench.sideBar.hidden\":1,\"workbench.editor.hidden\":1,\"workbench.panel.hidden\":1,\"workbench.auxiliaryBar.hidden\":1,\"workbench.statusBar.hidden\":1,\"notepad.reactiveStorageId\":1,\"aiService.generations\":1,\"aiService.prompts\":1,\"composer.composerData\":1,\"workbench.auxiliarybar.activepanelid\":1,\"debug.selectedroot\":1,\"workbench.view.debug.state\":1,\"output.activechannel\":1,\"workbench.view.remote.state\":1,\"workbench.view.extension.github-pull-requests.state\":1,\"workbench.view.extension.workspaceViewer.state\":1,\"~remote.forwardedPortsContainer\":1,\"workbench.panel.repl\":1,\"debug.uxstate\":1,\"terminal.integrated.environmentVariableCollectionsV2\":1,\"vscode.git\":1,\"anysphere.cursor-retrieval\":1,\"GitHub.vscode-pull-request-github\":1,\"history.entries\":1,\"interactive.sessions\":1,\"workbench.panel.aichat.numberOfVisibleViews\":1,\"notepadData\":1,\"comments.continueOnComments\":0,\"workbench.editor.languageDetectionOpenedLanguages.workspace\":1,\"memento/workbench.parts.editor\":0,\"memento/workbench.editors.files.textFileEditor\":1,\"terminal.integrated.layoutInfo\":1,\"terminal.numberOfVisibleViews\":1,\"chat.editing.autosaveDisabled\":1,\"lifecyle.lastShutdownReason\":1,\"codelens/cache2\":1,\"workbench.backgroundComposer.workspacePersistentData\":1}"
+  },
+  {
+    "key": "chat.editing.autosaveDisabled",
+    "value": "[]"
+  },
+  {
+    "key": "lifecyle.lastShutdownReason",
+    "value": "1"
+  },
+  {
+    "key": "src.vs.platform.reactivestorage.browser.reactiveStorageServiceImpl.persistentStorage.workspaceUser",
+    "value": "{\"tasksData\":{\"tasksDataSchemaVersion\":1,\"tasks\":[{\"type\":\"draft\",\"taskId\":\"09efb27b-dbd3-4a23-af0c-c954cab076e2\",\"instruction\":\"\"}],\"displayedTaskId\":\"09efb27b-dbd3-4a23-af0c-c954cab076e2\",\"showTabs\":false,\"activeServerTaskUuids\":[]},\"onboardingMetadata\":{\"shouldAskToIndex\":true,\"shouldHideWarning\":false},\"persistentChatMetadata\":[],\"aiPanePosition\":\"sidebar\",\"shouldRerankByDefault\":false,\"indexingData\":{\"preferredEmbeddingModel\":0},\"composerState\":{\"position\":{\"x\":0,\"y\":0},\"horizontalBarSize\":0,\"tabHeight\":0,\"selectedView\":\"suggested\",\"devToolsPosition\":{\"x\":0,\"y\":0},\"memories\":[],\"isComposerBarChatCollapsed\":false,\"composerBarPosition\":null,\"enableDataHandleDebugging\":false,\"shouldExplicitlyShowFgComposerInBg\":false},\"isCursorPredictionOutOfRangeIndicatorMinimized2\":true,\"needsComposerInitialOpening\":false,\"approvedProjectMcpServers\":[],\"disabledMcpServers\":[],\"eligibleForSnippetLearning\":true,\"solidJSLeakRecords\":[],\"exampleCodebaseQuestions\":[],\"SPECIAL_KEY_id\":\"0bf176ec-b5df-4181-96ab-179bfd0da4f2\"}"
+  },
+  {
+    "key": "codelens/cache2",
+    "value": "{\"file:///d%3A/xampp/htdocs/hm/go-assignment/internal/book/model.go\":{\"lineCount\":12,\"lines\":[]},\"file:///d%3A/xampp/htdocs/hm/go-assignment/internal/db/mysql.go\":{\"lineCount\":19,\"lines\":[]}}"
+  },
+  {
+    "key": "workbench.backgroundComposer.workspacePersistentData",
+    "value": "{\"setupPath2\":\"default\",\"terminals\":[],\"ranTerminalCommands\":[],\"installScript\":\"\",\"startScript\":\"\",\"currentSetupStep\":\"start-default-vm\",\"furthestSetupStep\":\"start-default-vm\",\"customDockerfileContents\":\"\",\"cachedSelectedGitState\":{\"type\":\"ref\",\"ref\":\"master\"}}"
+  },
+  {
+    "key": "terminal.integrated.layoutInfo",
+    "value": "{\"workspaceId\":\"c4883a97e2a01608a9c403128157535b\",\"tabs\":[]}"
+  }
+]
