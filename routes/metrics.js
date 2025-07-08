@@ -16,7 +16,7 @@ router.use('/usage-metrics', requireLogin);
 // New endpoint to generate logs manually
 router.post('/usage-metrics/generate-logs', async (req, res) => {
   try {
-    const { startDate, endDate } = req.body;
+    const { startDate, endDate, user } = req.body;
     
     if (!startDate || !endDate) {
       return res.status(400).json({ 
@@ -39,13 +39,14 @@ router.post('/usage-metrics/generate-logs', async (req, res) => {
     // Trigger log processing for the specified date range
     const sqliteFolderPath = process.env.SQLITE_FOLDER_PATH || './cursorlogs';
     
-    await processAllStateVscdbRecursive(sqliteFolderPath, startDate, endDate);
+    await processAllStateVscdbRecursive(sqliteFolderPath, startDate, endDate, user);
     console.log(`Generated logs for date range: ${startDate} to ${endDate}`);
     
     res.json({ 
       success: true, 
       message: `Logs generated successfully for ${startDate} to ${endDate}`,
-      dateRange: { startDate, endDate }
+      dateRange: { startDate, endDate },
+      user: user || null
     });
   } catch (error) {
     console.error('Error generating logs:', error);
@@ -139,7 +140,7 @@ router.get('/api/metrics/composer-data', metricsController.getComposerDataMetric
 router.get('/usage-metrics', (req, res) => {
   const logsDir = require('path').join(process.cwd(), 'cursorlogs');
   const fs = require('fs');
-  const { startDate, endDate } = req.query;
+  const { startDate, endDate, user } = req.query;
   let start = startDate ? new Date(startDate).getTime() : 0;
   let end = endDate ? new Date(endDate).getTime() : Date.now();
   
@@ -154,12 +155,23 @@ router.get('/usage-metrics', (req, res) => {
       metricsData: {},
       startDate,
       endDate,
+      user: user || '',
       noLogsFound: true
     });
   }
   
+  // Build file name pattern based on user and date
   const allLogs = fs.readdirSync(logsDir)
-    .filter(f => f.endsWith('.json'))
+    .filter(f => {
+      if (!f.endsWith('.json')) return false;
+      // Only filter by user if user is a non-empty string
+      if (user && user !== '') {
+        const userPattern = new RegExp(`-${user}-`);
+        if (!userPattern.test(f)) return false;
+      }
+      // Do not filter by date/timestamp anymore
+      return true;
+    })
     .map(f => {
       const fullPath = require('path').join(logsDir, f);
       return { name: f, path: fullPath };
@@ -246,6 +258,7 @@ router.get('/usage-metrics', (req, res) => {
     metricsData,
     startDate,
     endDate,
+    user: user || '',
     noLogsFound: allLogs.length === 0
   });
 });

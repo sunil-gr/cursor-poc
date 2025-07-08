@@ -17,14 +17,15 @@ const {
 
 let processedFiles = new Set();
 
-const writeDataToCursorLogs = (baseName, data, ext = 'json') => {
+const writeDataToCursorLogs = (baseName, data, ext = 'json', user = null) => {
   const logsDir = path.join(process.cwd(), 'cursorlogs');
   if (!fs.existsSync(logsDir)) {
     fs.mkdirSync(logsDir);
   }
   let jsonStr = typeof data === 'string' ? data : JSON.stringify(data, null, 2);
   const timestamp = new Date().toISOString().replace(/[:.]/g, '-');
-  const outPath = path.join(logsDir, `${baseName}-${timestamp}.${ext}`);
+  const userPart = user ? `-${user}` : '';
+  const outPath = path.join(logsDir, `${baseName}${userPart}-${timestamp}.${ext}`);
   fs.writeFileSync(outPath, jsonStr, 'utf-8');
   logger.info(`[LogProcessor] Wrote log: ${outPath}`);
 };
@@ -42,7 +43,7 @@ const listTablesInDb = (dbPath) => {
   });
 };
 
-const runQueryAndSend = async (filePath) => {
+const runQueryAndSend = async (filePath, user = null) => {
   // List all tables for debug and process all tables
   let tables = [];
   try {
@@ -69,8 +70,8 @@ const runQueryAndSend = async (filePath) => {
           }
           if (Array.isArray(rows) && rows.length > 0) {
             try {
-              // Write log to cursorlogs for this table
-              writeDataToCursorLogs(`${path.basename(filePath, '.vscdb')}_${table}`, rows, 'json');
+              // Write log to cursorlogs for this table, include user in filename if provided
+              writeDataToCursorLogs(`${path.basename(filePath, '.vscdb')}_${table}`, rows, 'json', user);
               logger.info(`[LogProcessor] Wrote log for table ${table} in ${filePath}`);
             } catch (apiErr) {
               logger.error(`[LogProcessor] Error writing log for table ${table} in ${filePath}: ${apiErr.message}`);
@@ -110,10 +111,11 @@ function getRecentStateVscdbFiles(baseDir, days = 5) {
   });
 }
 
-async function processAllStateVscdbRecursive(baseDir, startDate, endDate) {
+async function processAllStateVscdbRecursive(baseDir, startDate, endDate, user = null) {
   logger.info(`[LogProcessor] Starting log generation for baseDir: ${baseDir}`);
   // Clear all old logs before generating new ones
   const logsDir = path.join(process.cwd(), 'cursorlogs');
+  /*
   if (fs.existsSync(logsDir)) {
     logger.info(`[LogProcessor] Clearing old logs in ${logsDir}`);
     fs.readdirSync(logsDir).forEach(file => {
@@ -123,6 +125,11 @@ async function processAllStateVscdbRecursive(baseDir, startDate, endDate) {
       }
     });
   } else {
+    logger.info(`[LogProcessor] Creating logs directory: ${logsDir}`);
+    fs.mkdirSync(logsDir);
+  }
+  */
+  if (!fs.existsSync(logsDir)) {
     logger.info(`[LogProcessor] Creating logs directory: ${logsDir}`);
     fs.mkdirSync(logsDir);
   }
@@ -154,7 +161,7 @@ async function processAllStateVscdbRecursive(baseDir, startDate, endDate) {
     logger.info(`[LogProcessor] Processing: ${filePath}`);
     if (!processedFiles.has(filePath)) {
       try {
-        await runQueryAndSend(filePath);
+        await runQueryAndSend(filePath, user);
         processedFiles.add(filePath);
         logger.info(`[LogProcessor] Finished and logged: ${filePath}`);
       } catch (err) {
@@ -165,7 +172,7 @@ async function processAllStateVscdbRecursive(baseDir, startDate, endDate) {
     }
   }
   logger.info(`[LogProcessor] Log generation complete.`);
-};
+}
 
 // Function to extract system information from cursorlogs
 function extractSystemInfo(logData) {

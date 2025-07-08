@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
   const startDateInput = document.getElementById('startDate');
   const endDateInput = document.getElementById('endDate');
   const userSelect = document.getElementById('userSelect');
+  const reloadPageBtn = document.getElementById('reloadPageBtn');
   
   if (generateLogsBtn) {
     generateLogsBtn.addEventListener('click', async function() {
@@ -63,6 +64,19 @@ document.addEventListener('DOMContentLoaded', function() {
       const url = new URL(window.location);
       if (startDate) url.searchParams.set('startDate', startDate);
       if (endDate) url.searchParams.set('endDate', endDate);
+      window.location.href = url.toString();
+    });
+  }
+  
+  if (reloadPageBtn) {
+    reloadPageBtn.addEventListener('click', function() {
+      const startDate = startDateInput.value;
+      const endDate = endDateInput.value;
+      const user = userSelect ? userSelect.value : '';
+      const url = new URL(window.location.origin + window.location.pathname);
+      if (startDate) url.searchParams.set('startDate', startDate);
+      if (endDate) url.searchParams.set('endDate', endDate);
+      if (user) url.searchParams.set('user', user);
       window.location.href = url.toString();
     });
   }

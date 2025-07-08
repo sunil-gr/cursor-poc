@@ -11,23 +11,45 @@
     <h2>Log Management</h2>
     <div class="log-management-container">
       <div class="date-inputs">
+        <% const today = new Date().toISOString().slice(0, 10); %>
         <label for="startDate">Start Date:</label>
-        <input type="date" id="startDate" value="<%= startDate || '' %>">
+        <input type="date" id="startDate" value="<%= startDate || today %>" max="<%= today %>">
         
         <label for="endDate">End Date:</label>
-        <input type="date" id="endDate" value="<%= endDate || '' %>">
+        <input type="date" id="endDate" value="<%= endDate || today %>" max="<%= today %>">
+        <script>
+          document.addEventListener('DOMContentLoaded', function() {
+            var startDateInput = document.getElementById('startDate');
+            var endDateInput = document.getElementById('endDate');
+            // Set min for endDate based on startDate
+            function updateEndDateMin() {
+              endDateInput.min = startDateInput.value;
+              if (endDateInput.value < startDateInput.value) {
+                endDateInput.value = startDateInput.value;
+              }
+            }
+            startDateInput.addEventListener('change', updateEndDateMin);
+            // On load
+            updateEndDateMin();
+          });
+        </script>
         
+        <% const selectedUser = typeof user !== 'undefined' ? user : ''; %>
         <label for="userSelect">User:</label>
         <select id="userSelect">
-          <option value="happiest_user_1">Happiest User 1</option>
-          <option value="happiest_user_2">Happiest User 2</option>
-          <option value="happiest_user_3">Happiest User 3</option>
-          <option value="happiest_user_4">Happiest User 4</option>
-          <option value="happiest_user_5">Happiest User 5</option>
+          <option value="" <%= selectedUser === '' ? 'selected' : '' %>>All Users</option>
+          <option value="happiest_user_1" <%= selectedUser === 'happiest_user_1' ? 'selected' : '' %>>Happiest User 1</option>
+          <option value="happiest_user_2" <%= selectedUser === 'happiest_user_2' ? 'selected' : '' %>>Happiest User 2</option>
+          <option value="happiest_user_3" <%= selectedUser === 'happiest_user_3' ? 'selected' : '' %>>Happiest User 3</option>
+          <option value="happiest_user_4" <%= selectedUser === 'happiest_user_4' ? 'selected' : '' %>>Happiest User 4</option>
+          <option value="happiest_user_5" <%= selectedUser === 'happiest_user_5' ? 'selected' : '' %>>Happiest User 5</option>
         </select>
         <button id="generateLogsBtn" class="generate-logs-btn">
           <span class="btn-text">Generate Logs</span>
           <span class="btn-loading" style="display: none;">Generating...</span>
+        </button>
+        <button id="reloadPageBtn" class="refresh-page-btn" type="button">
+          Reload
         </button>
         <button id="refreshPageBtn" class="refresh-page-btn" style="display: none;">
           Refresh Page

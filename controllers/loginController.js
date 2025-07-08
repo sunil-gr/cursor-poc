@@ -22,7 +22,7 @@ exports.handleLogin = (req, res) => {
     password === process.env.LOGIN_PASSWORD
   ) {
     req.session.authenticated = true;
-    return res.redirect('/dashboard');
+    return res.redirect('/usage-metrics');
   }
   res.redirect('/login?error=1');
 };
