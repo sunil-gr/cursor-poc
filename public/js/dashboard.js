@@ -3,6 +3,70 @@
 // Handles fetching data, rendering charts, tables, and pagination
 
 document.addEventListener('DOMContentLoaded', function() {
+  // Generate Logs Functionality
+  const generateLogsBtn = document.getElementById('generateLogsBtn');
+  const refreshPageBtn = document.getElementById('refreshPageBtn');
+  const generateLogsStatus = document.getElementById('generateLogsStatus');
+  const startDateInput = document.getElementById('startDate');
+  const endDateInput = document.getElementById('endDate');
+  const userSelect = document.getElementById('userSelect');
+  
+  if (generateLogsBtn) {
+    generateLogsBtn.addEventListener('click', async function() {
+      const startDate = startDateInput.value;
+      const endDate = endDateInput.value;
+      const user = userSelect ? userSelect.value : '';
+      
+      if (!startDate || !endDate) {
+        generateLogsStatus.innerHTML = '<div class="error-message">Please select both start and end dates.</div>';
+        return;
+      }
+      
+      // Show loading state
+      generateLogsBtn.disabled = true;
+      generateLogsBtn.querySelector('.btn-text').style.display = 'none';
+      generateLogsBtn.querySelector('.btn-loading').style.display = 'inline';
+      generateLogsStatus.innerHTML = '<div class="info-message">Generating logs...</div>';
+      
+      try {
+        const response = await fetch('/usage-metrics/generate-logs', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ startDate, endDate, user })
+        });
+        
+        const result = await response.json();
+        
+        if (response.ok) {
+          generateLogsStatus.innerHTML = `<div class="success-message">${result.message}</div>`;
+          refreshPageBtn.style.display = 'inline-block';
+        } else {
+          generateLogsStatus.innerHTML = `<div class="error-message">Error: ${result.message || result.error}</div>`;
+        }
+      } catch (error) {
+        generateLogsStatus.innerHTML = `<div class="error-message">Network error: ${error.message}</div>`;
+      } finally {
+        // Reset button state
+        generateLogsBtn.disabled = false;
+        generateLogsBtn.querySelector('.btn-text').style.display = 'inline';
+        generateLogsBtn.querySelector('.btn-loading').style.display = 'none';
+      }
+    });
+  }
+  
+  if (refreshPageBtn) {
+    refreshPageBtn.addEventListener('click', function() {
+      const startDate = startDateInput.value;
+      const endDate = endDateInput.value;
+      const url = new URL(window.location);
+      if (startDate) url.searchParams.set('startDate', startDate);
+      if (endDate) url.searchParams.set('endDate', endDate);
+      window.location.href = url.toString();
+    });
+  }
+  
   // Track if DataTables have been initialized to prevent reinitialization
   const initializedTables = new Set();
   let dashboardPopulated = false;

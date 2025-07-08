@@ -13,6 +13,49 @@ const { processAllStateVscdbRecursive, getAllMetrics, scanLogsForSensitiveInfo }
 // Protect all /usage-metrics routes
 router.use('/usage-metrics', requireLogin);
 
+// New endpoint to generate logs manually
+router.post('/usage-metrics/generate-logs', async (req, res) => {
+  try {
+    const { startDate, endDate } = req.body;
+    
+    if (!startDate || !endDate) {
+      return res.status(400).json({ 
+        error: 'Missing required parameters',
+        message: 'Please provide both startDate and endDate in YYYY-MM-DD format'
+      });
+    }
+    
+    // Validate dates
+    const start = new Date(startDate);
+    const end = new Date(endDate);
+    
+    if (isNaN(start.getTime()) || isNaN(end.getTime())) {
+      return res.status(400).json({ 
+        error: 'Invalid date format',
+        message: 'Please provide valid dates in YYYY-MM-DD format'
+      });
+    }
+    
+    // Trigger log processing for the specified date range
+    const sqliteFolderPath = process.env.SQLITE_FOLDER_PATH || './cursorlogs';
+    
+    await processAllStateVscdbRecursive(sqliteFolderPath, startDate, endDate);
+    console.log(`Generated logs for date range: ${startDate} to ${endDate}`);
+    
+    res.json({ 
+      success: true, 
+      message: `Logs generated successfully for ${startDate} to ${endDate}`,
+      dateRange: { startDate, endDate }
+    });
+  } catch (error) {
+    console.error('Error generating logs:', error);
+    res.status(500).json({ 
+      error: 'Failed to generate logs', 
+      details: error.message 
+    });
+  }
+});
+
 // JSON API for usage metrics (aggregate last 5 days, newest logs first)
 router.get('/usage-metrics/data', metricsController.getUsageMetricsData);
 
@@ -36,17 +79,6 @@ router.get('/api/metrics', async (req, res) => {
       
       // Set end date to end of day
       endDate.setHours(23, 59, 59, 999);
-      
-      // Trigger log processing for the specified date range
-      const sqliteFolderPath = process.env.SQLITE_FOLDER_PATH || './cursorlogs';
-      
-      try {
-        await processAllStateVscdbRecursive(sqliteFolderPath, startDate.toISOString().split('T')[0], endDate.toISOString().split('T')[0]);
-        console.log(`Processed logs for date range: ${startDate.toISOString().split('T')[0]} to ${endDate.toISOString().split('T')[0]}`);
-      } catch (processingError) {
-        console.error('Error processing logs:', processingError);
-        // Continue even if processing fails, as there might be existing logs
-      }
     } else {
       // Fallback to days parameter
       const days = parseInt(req.query.days) || 5;
@@ -103,19 +135,36 @@ router.get('/api/metrics/workspace-settings', metricsController.getWorkspaceSett
 router.get('/api/metrics/dev-environment', metricsController.getDevEnvironmentMetrics);
 router.get('/api/metrics/composer-data', metricsController.getComposerDataMetrics);
 
-// Dashboard page
+// Dashboard page - Modified to only read existing logs without regenerating
 router.get('/usage-metrics', (req, res) => {
   const logsDir = require('path').join(process.cwd(), 'cursorlogs');
   const fs = require('fs');
   const { startDate, endDate } = req.query;
   let start = startDate ? new Date(startDate).getTime() : 0;
   let end = endDate ? new Date(endDate).getTime() : Date.now();
+  
+  // Check if cursorlogs directory exists
+  if (!fs.existsSync(logsDir)) {
+    console.log('No cursorlogs directory found. Please generate logs first.');
+    return res.render('dashboard', {
+      title: 'AI Service Usage Metrics',
+      bodyClass: 'dashboard-bg',
+      head: '<script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js"></script>',
+      session: req.session,
+      metricsData: {},
+      startDate,
+      endDate,
+      noLogsFound: true
+    });
+  }
+  
   const allLogs = fs.readdirSync(logsDir)
     .filter(f => f.endsWith('.json'))
     .map(f => {
       const fullPath = require('path').join(logsDir, f);
       return { name: f, path: fullPath };
     });
+    
   let metricsData = {};
   if (allLogs.length) {
     let prompts = [], generations = [], historyEntries = [], languages = [];
@@ -196,7 +245,8 @@ router.get('/usage-metrics', (req, res) => {
     session: req.session,
     metricsData,
     startDate,
-    endDate
+    endDate,
+    noLogsFound: allLogs.length === 0
   });
 });
 

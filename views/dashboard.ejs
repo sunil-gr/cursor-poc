@@ -6,6 +6,45 @@
     <a href="/dashboard" class="dashboard-back-btn">&larr; Back</a>
   </div>
   
+  <!-- Generate Logs Section -->
+  <div class="section-card">
+    <h2>Log Management</h2>
+    <div class="log-management-container">
+      <div class="date-inputs">
+        <label for="startDate">Start Date:</label>
+        <input type="date" id="startDate" value="<%= startDate || '' %>">
+        
+        <label for="endDate">End Date:</label>
+        <input type="date" id="endDate" value="<%= endDate || '' %>">
+        
+        <label for="userSelect">User:</label>
+        <select id="userSelect">
+          <option value="happiest_user_1">Happiest User 1</option>
+          <option value="happiest_user_2">Happiest User 2</option>
+          <option value="happiest_user_3">Happiest User 3</option>
+          <option value="happiest_user_4">Happiest User 4</option>
+          <option value="happiest_user_5">Happiest User 5</option>
+        </select>
+        <button id="generateLogsBtn" class="generate-logs-btn">
+          <span class="btn-text">Generate Logs</span>
+          <span class="btn-loading" style="display: none;">Generating...</span>
+        </button>
+        <button id="refreshPageBtn" class="refresh-page-btn" style="display: none;">
+          Refresh Page
+        </button>
+      </div>
+      <div id="generateLogsStatus" class="status-message"></div>
+    </div>
+  </div>
+  
+  <% if (typeof noLogsFound !== 'undefined' && noLogsFound) { %>
+    <div class="section-card no-logs-found">
+      <h2>No Logs Found</h2>
+      <p>No log files were found in the cursorlogs directory. Please generate logs first using the button above.</p>
+      <p><strong>Current Date Range:</strong> <%= startDate || 'Not specified' %> to <%= endDate || 'Not specified' %></p>
+    </div>
+  <% } else { %>
+  
   <!-- System Information Section -->
   <div class="section-card">
     <h2>System Information</h2>
@@ -203,6 +242,7 @@
       <canvas id="generationTimeline"></canvas>
     </div>
   </div>
+  <% } %>
 </div>
 <!-- Include Chart.js for charts -->
 <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js"></script>

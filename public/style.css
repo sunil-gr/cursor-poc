@@ -1269,7 +1269,185 @@ body.dashboard-bg {
 }
 
 @keyframes pulse {
-  0% { opacity: 1; }
-  50% { opacity: 0.7; }
-  100% { opacity: 1; }
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+/* Log Management Styles */
+.log-management-container {
+  background: #f8fafc;
+  padding: 1.5rem;
+  border-radius: 12px;
+  border: 1px solid #e1e8ed;
+  margin-bottom: 1rem;
+}
+
+.date-inputs {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 0;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.date-inputs label {
+  font-weight: 500;
+  color: #2a4d7a;
+  font-size: 0.9rem;
+}
+
+.date-inputs input[type="date"],
+.date-inputs select {
+  padding: 0.5rem 0.75rem;
+  border: 2px solid #e1e8ed;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  background: #ffffff;
+  transition: all 0.3s ease;
+  min-width: 140px;
+  margin-right: 0.5rem;
+}
+
+.date-inputs input[type="date"]:focus,
+.date-inputs select:focus {
+  border-color: #4f8cff;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(79, 140, 255, 0.1);
+}
+
+.date-inputs select {
+  color: #2a4d7a;
+  cursor: pointer;
+  min-width: 160px;
+}
+
+.generate-logs-btn,
+.refresh-page-btn {
+  margin-left: 0.5rem;
+  margin-right: 0;
+  background: linear-gradient(135deg, #4f8cff 0%, #1cc88a 100%);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(79, 140, 255, 0.15);
+  transition: all 0.3s ease;
+  font-family: inherit;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.generate-logs-btn:hover:not(:disabled),
+.refresh-page-btn:hover:not(:disabled) {
+  background: linear-gradient(135deg, #1cc88a 0%, #4f8cff 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(79, 140, 255, 0.2);
+}
+
+.generate-logs-btn:disabled,
+.refresh-page-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+@media (max-width: 900px) {
+  .date-inputs {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.5rem;
+  }
+  .generate-logs-btn,
+  .refresh-page-btn {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    justify-content: center;
+  }
+  .date-inputs input[type="date"],
+  .date-inputs select {
+    min-width: 0;
+    width: 100%;
+  }
+}
+
+.status-message {
+  margin-top: 1rem;
+  padding: 0.75rem;
+  border-radius: 8px;
+  font-size: 0.9rem;
+}
+
+.success-message {
+  background: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.error-message {
+  background: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
+.info-message {
+  background: #d1ecf1;
+  color: #0c5460;
+  border: 1px solid #bee5eb;
+}
+
+.no-logs-found {
+  background: #fff3cd;
+  border: 1px solid #ffeaa7;
+  color: #856404;
+}
+
+.no-logs-found h2 {
+  color: #856404;
+}
+
+.no-logs-found p {
+  margin-bottom: 0.5rem;
+}
+
+/* Responsive adjustments for log management */
+@media (max-width: 768px) {
+  .date-inputs {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .date-inputs label {
+    margin-bottom: 0.25rem;
+  }
+  
+  .generate-logs-btn,
+  .refresh-page-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .log-management-container {
+    padding: 1rem;
+  }
+  
+  .date-inputs input[type="date"] {
+    font-size: 0.85rem;
+  }
+  
+  .generate-logs-btn,
+  .refresh-page-btn {
+    font-size: 0.9rem;
+    padding: 0.6rem 1.2rem;
+  }
 } 
