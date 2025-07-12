@@ -1,0 +1,92 @@
+<div id="metricsData" data-json="<%= encodeURIComponent(JSON.stringify(metricsData || {})) %>"></div>
+<div class="dashboard-container">
+  <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem;">
+    <h2>Usage Metrics Graph</h2>
+    <a href="/usage-metrics" class="dashboard-back-btn">&larr; Back to Dashboard</a>
+  </div>
+  
+  <div class="metrics-grid">
+    <!-- Generations Heatmap Section -->
+    <div class="metric-card">
+      <h3>Generations Heatmap</h3>
+      <p>Visual representation of AI generation activity over time, showing when generations occurred throughout the day.</p>
+      <div class="chart-wrapper">
+        <canvas id="generationHeatmap"></canvas>
+        <div id="generationHeatmapWarning" style="display:none;color:red;text-align:center;margin-top:1em;"></div>
+      </div>
+    </div>
+    
+    <!-- Performance Metrics Section -->
+    <div class="metric-card">
+      <h3>Performance Metrics</h3>
+      <p>Overview of system performance indicators including file activity, search queries, and terminal sessions.</p>
+      <div class="chart-wrapper">
+        <canvas id="performanceChart"></canvas>
+      </div>
+    </div>
+    
+    <!-- Sensitive Data Report Section -->
+    <div class="metric-card">
+      <h3>Sensitive Data Report</h3>
+      <p>Analysis of potentially sensitive information found in the logs, including passwords, tokens, and credentials.</p>
+      <div class="chart-wrapper">
+        <canvas id="sensitiveChart"></canvas>
+      </div>
+    </div>
+    
+    <!-- Section Record Distribution Section -->
+    <div class="metric-card">
+      <h3>Section Record Distribution</h3>
+      <p>Distribution of data across different sections including prompts, generations, and file activities.</p>
+      <div class="chart-wrapper">
+        <canvas id="sectionPieChart"></canvas>
+      </div>
+    </div>
+    
+    <!-- Languages Used Section -->
+    <div class="metric-card">
+      <h3>Languages Used</h3>
+      <p>Programming languages detected in the workspace and their usage frequency.</p>
+      <div class="chart-wrapper">
+        <canvas id="languagesChart"></canvas>
+      </div>
+    </div>
+
+    <!-- Line Changes from Chat Section -->
+    <div class="metric-card">
+      <h3>Total Line Changes from Chat</h3>
+      <p>Track the number of line changes applied from chat interactions over time, showing AI-assisted code modifications.</p>
+      <div class="chart-wrapper">
+        <canvas id="lineChangesChart"></canvas>
+      </div>
+    </div>
+
+    <!-- Tab Acceptance Section -->
+    <div class="metric-card">
+      <h3>Total Tabs Accepted</h3>
+      <p>Monitor the frequency of tab acceptance actions, indicating user interaction with AI-generated code suggestions.</p>
+      <div class="chart-wrapper">
+        <canvas id="tabAcceptanceChart"></canvas>
+      </div>
+    </div>
+  </div>
+
+  <!-- Chart.js Matrix plugin required for heatmap -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.js"></script>
+  <script>
+    // Wait for Chart.js to load, then load the matrix plugin
+    if (typeof Chart !== 'undefined') {
+    } else {
+      console.error('Chart.js failed to load');
+    }
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-chart-matrix@2.0.1/dist/chartjs-chart-matrix.min.js"></script>
+  <script>
+    // Verify matrix plugin loaded
+    if (typeof Chart !== 'undefined' && Chart.registry && Chart.registry.getController('matrix')) {
+    } else {
+      console.error('Matrix plugin failed to load');
+    }
+  </script>
+  <script src="/public/js/usage_metric_graph.js"></script>
+</div>

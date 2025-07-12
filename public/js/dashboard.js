@@ -163,6 +163,32 @@ document.addEventListener('DOMContentLoaded', function() {
       return;
     }
     
+    // Create section header with "View All" button if needed
+    const sectionCard = table.closest('.section-card');
+    if (sectionCard) {
+      const existingHeader = sectionCard.querySelector('.section-header');
+      if (existingHeader) {
+        existingHeader.remove();
+      }
+      
+      // Always create the header, add "View All" button if there are any items
+      const headerDiv = document.createElement('div');
+      headerDiv.className = 'section-header';
+      headerDiv.style.cssText = 'display: flex; justify-content: space-between; align-items: center; margin-bottom: 1em;';
+      
+      if (prompts && prompts.length > 0) {
+        headerDiv.innerHTML = `
+          <h2>Recent Prompts</h2>
+          <a href="/usage-metrics/prompts" class="view-more-btn">View All</a>
+        `;
+      } else {
+        headerDiv.innerHTML = `
+          <h2>Recent Prompts</h2>
+        `;
+      }
+      sectionCard.insertBefore(headerDiv, sectionCard.firstChild);
+    }
+    
     // Clear the entire table and rebuild structure
     table.innerHTML = `
       <thead>
@@ -183,9 +209,8 @@ document.addEventListener('DOMContentLoaded', function() {
       return;
     }
     
-    // Simply reverse the array to get most recent first and show only first 10
-    const sortedPrompts = prompts.reverse();
-    const recentPrompts = sortedPrompts.slice(0, 10);
+    // Use all prompts since API already provides the last 10 (most recent)
+    const recentPrompts = prompts;
     
     // Add recent prompts to table
     recentPrompts.forEach((prompt, index) => {
@@ -214,19 +239,69 @@ document.addEventListener('DOMContentLoaded', function() {
         info: "Showing _TOTAL_ recent prompts"
       }
     });
-    
-    // Add "View More" button if there are more than 10 prompts (after DataTable initialization)
-    if (prompts.length > 10) {
-      // Create a container for the button outside the table
-      const tableContainer = table.parentElement;
-      const viewMoreDiv = document.createElement('div');
-      viewMoreDiv.className = 'view-more-container';
-      viewMoreDiv.innerHTML = `
-        <a href="/usage-metrics/prompts" class="view-more-btn">
-          View All ${prompts.length} Prompts
-        </a>
-      `;
-      tableContainer.appendChild(viewMoreDiv);
+  }
+
+  // Function to populate prompt acceptance report table
+  function populatePromptAcceptanceTable(report) {
+    const table = document.querySelector('#promptAcceptanceTable');
+    if (!table) return;
+    // Attach event listeners for 'View' buttons (re-attach every time table is rendered)
+    setTimeout(() => {
+      const viewBtns = table.querySelectorAll('.view-response-btn');
+      viewBtns.forEach(btn => {
+        btn.addEventListener('click', function(e) {
+          e.stopPropagation();
+          const responseRaw = btn.getAttribute('data-response');
+          let responseObj = {};
+          try {
+            responseObj = JSON.parse(responseRaw);
+          } catch (e) {
+            responseObj = responseRaw;
+          }
+          const modal = document.getElementById('responseModal');
+          const modalContent = document.getElementById('modalResponseContent');
+          if (modal && modalContent) {
+            // Show all relevant fields in a readable format
+            if (typeof responseObj === 'object' && responseObj !== null) {
+              let html = '';
+              if (responseObj.textDescription) {
+                html += `<div><b>AI Suggestion:</b><pre style="white-space:pre-wrap;">${responseObj.textDescription}</pre></div>`;
+              }
+              if (responseObj.description && responseObj.description !== responseObj.textDescription) {
+                html += `<div><b>Description:</b><pre style="white-space:pre-wrap;">${responseObj.description}</pre></div>`;
+              }
+              if (responseObj.code) {
+                html += `<div><b>Code:</b><pre style="background:#f0f0f0;">${responseObj.code}</pre></div>`;
+              }
+              // Show all other fields
+              const skip = ['textDescription','description','code'];
+              Object.keys(responseObj).forEach(key => {
+                if (!skip.includes(key)) {
+                  html += `<div><b>${key}:</b> <pre style="white-space:pre-wrap;">${JSON.stringify(responseObj[key], null, 2)}</pre></div>`;
+                }
+              });
+              if (!html) html = '<i>No additional response data.</i>';
+              modalContent.innerHTML = html;
+            } else {
+              modalContent.textContent = responseObj;
+            }
+            modal.style.display = 'flex';
+          }
+        });
+      });
+    }, 0);
+    // Close modal logic
+    const closeModalBtn = document.getElementById('closeModalBtn');
+    const modal = document.getElementById('responseModal');
+    if (closeModalBtn && modal) {
+      closeModalBtn.onclick = function() { modal.style.display = 'none'; };
+    }
+    if (modal) {
+      modal.addEventListener('click', function(event) {
+        if (event.target === modal) {
+          modal.style.display = 'none';
+        }
+      });
     }
   }
 
@@ -236,6 +311,32 @@ document.addEventListener('DOMContentLoaded', function() {
     
     if (!table) {
       return;
+    }
+    
+    // Create section header with "View All" button if needed
+    const sectionCard = table.closest('.section-card');
+    if (sectionCard) {
+      const existingHeader = sectionCard.querySelector('.section-header');
+      if (existingHeader) {
+        existingHeader.remove();
+      }
+      
+      // Always create the header, add "View All" button if there are any items
+      const headerDiv = document.createElement('div');
+      headerDiv.className = 'section-header';
+      headerDiv.style.cssText = 'display: flex; justify-content: space-between; align-items: center; margin-bottom: 1em;';
+      
+      if (generations && generations.length > 0) {
+        headerDiv.innerHTML = `
+          <h2>Recent Generations</h2>
+          <a href="/usage-metrics/generations" class="view-more-btn">View All</a>
+        `;
+      } else {
+        headerDiv.innerHTML = `
+          <h2>Recent Generations</h2>
+        `;
+      }
+      sectionCard.insertBefore(headerDiv, sectionCard.firstChild);
     }
     
     // Clear the entire table and rebuild structure
@@ -258,9 +359,8 @@ document.addEventListener('DOMContentLoaded', function() {
       return;
     }
     
-    // Simply reverse the array to get most recent first and show only first 10
-    const sortedGenerations = generations.reverse();
-    const recentGenerations = sortedGenerations.slice(0, 10);
+    // Use all generations since API already provides the last 10 (most recent)
+    const recentGenerations = generations;
     
     // Add recent generations to table
     recentGenerations.forEach((generation, index) => {
@@ -286,20 +386,6 @@ document.addEventListener('DOMContentLoaded', function() {
         info: "Showing _TOTAL_ recent generations"
       }
     });
-    
-    // Add "View More" button if there are more than 10 generations (after DataTable initialization)
-    if (generations.length > 10) {
-      // Create a container for the button outside the table
-      const tableContainer = table.parentElement;
-      const viewMoreDiv = document.createElement('div');
-      viewMoreDiv.className = 'view-more-container';
-      viewMoreDiv.innerHTML = `
-        <a href="/usage-metrics/generations" class="view-more-btn">
-          View All ${generations.length} Generations
-        </a>
-      `;
-      tableContainer.appendChild(viewMoreDiv);
-    }
   }
 
   // Function to populate files table
@@ -308,6 +394,32 @@ document.addEventListener('DOMContentLoaded', function() {
     
     if (!table) {
       return;
+    }
+    
+    // Create section header with "View All" button if needed
+    const sectionCard = table.closest('.section-card');
+    if (sectionCard) {
+      const existingHeader = sectionCard.querySelector('.section-header');
+      if (existingHeader) {
+        existingHeader.remove();
+      }
+      
+      // Always create the header, add "View All" button if there are any items
+      const headerDiv = document.createElement('div');
+      headerDiv.className = 'section-header';
+      headerDiv.style.cssText = 'display: flex; justify-content: space-between; align-items: center; margin-bottom: 1em;';
+      
+      if (files && files.length > 0) {
+        headerDiv.innerHTML = `
+          <h2>Recent Files Opened/Edited</h2>
+          <a href="/usage-metrics/files" class="view-more-btn">View All</a>
+        `;
+      } else {
+        headerDiv.innerHTML = `
+          <h2>Recent Files Opened/Edited</h2>
+        `;
+      }
+      sectionCard.insertBefore(headerDiv, sectionCard.firstChild);
     }
     
     // Clear the entire table and rebuild structure
@@ -328,9 +440,8 @@ document.addEventListener('DOMContentLoaded', function() {
       return;
     }
     
-    // Simply reverse the array to get most recent first and show only first 10
-    const sortedFiles = files.reverse();
-    const recentFiles = sortedFiles.slice(0, 10);
+    // Use all files since API already provides the last 10 (most recent)
+    const recentFiles = files;
     
     // Add recent files to table
     recentFiles.forEach((file, index) => {
@@ -368,20 +479,6 @@ document.addEventListener('DOMContentLoaded', function() {
         info: "Showing _TOTAL_ recent files"
       }
     });
-    
-    // Add "View More" button if there are more than 10 files (after DataTable initialization)
-    if (files.length > 10) {
-      // Create a container for the button outside the table
-      const tableContainer = table.parentElement;
-      const viewMoreDiv = document.createElement('div');
-      viewMoreDiv.className = 'view-more-container';
-      viewMoreDiv.innerHTML = `
-        <a href="/usage-metrics/files" class="view-more-btn">
-          View All ${files.length} Files
-        </a>
-      `;
-      tableContainer.appendChild(viewMoreDiv);
-    }
   }
 
   // Function to populate search queries
@@ -549,16 +646,17 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   }
 
-  // Function to populate system information
-  function populateSystemInfo(systemInfo) {
-    if (systemInfo) {
+  // Function to populate system and network information
+  function populateSystemNetworkInfo(systemNetworkInfo) {
+    if (systemNetworkInfo) {
+      // Populate system information
       const systemContainer = document.getElementById('systemInfo');
       if (systemContainer) {
         // Build system info HTML dynamically based on available data
         let systemInfoHTML = '';
         
         // Only show workspace ID if it's meaningful
-        const workspaceId = systemInfo.workspaceId;
+        const workspaceId = systemNetworkInfo.workspaceId;
         if (workspaceId && workspaceId !== 'Local Workspace' && workspaceId !== '-') {
           systemInfoHTML += `
             <div class="info-item">
@@ -569,7 +667,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         
         // Only show workspace opened date if it's meaningful
-        const workspaceOpened = systemInfo.workspaceOpenedDate;
+        const workspaceOpened = systemNetworkInfo.workspaceOpenedDate;
         if (workspaceOpened && workspaceOpened !== 'Recent' && workspaceOpened !== '-') {
           systemInfoHTML += `
             <div class="info-item">
@@ -580,7 +678,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         
         // Only show IP address if it's meaningful
-        const ipAddress = systemInfo.ipAddress;
+        const ipAddress = systemNetworkInfo.ipAddress;
         if (ipAddress && ipAddress !== 'Local Development' && ipAddress !== '-') {
           systemInfoHTML += `
             <div class="info-item">
@@ -591,7 +689,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         
         // Only show total sessions if it's meaningful (greater than 0)
-        const sessionCount = systemInfo.sessionInfo ? Object.keys(systemInfo.sessionInfo).length : 0;
+        const sessionCount = systemNetworkInfo.totalSessions || 0;
         if (sessionCount > 0) {
           systemInfoHTML += `
             <div class="info-item">
@@ -601,18 +699,35 @@ document.addEventListener('DOMContentLoaded', function() {
           `;
         }
         
-        // If no meaningful system info, hide the entire section
-        if (!systemInfoHTML.trim()) {
-          const systemInfoSection = document.querySelector('.section-card h2');
-          if (systemInfoSection && systemInfoSection.textContent === 'System Information') {
-            const sectionCard = systemInfoSection.closest('.section-card');
-            if (sectionCard) {
-              sectionCard.style.display = 'none';
-            }
-          }
-        } else {
-          systemContainer.innerHTML = systemInfoHTML;
-        }
+        systemContainer.innerHTML = systemInfoHTML;
+      }
+      
+      // Populate network information
+      const networkContainer = document.getElementById('networkInfo');
+      if (networkContainer) {
+        const userAgent = systemNetworkInfo.userAgent || 'Cursor IDE (Electron-based)';
+        const remoteConnections = systemNetworkInfo.remoteConnectionsCount || 0;
+        const gitIntegration = systemNetworkInfo.gitIntegration || 'Not detected';
+        
+        networkContainer.innerHTML = `
+          <div class="info-item">
+            <span class="info-label">User Agent:</span>
+            <span class="info-value">${userAgent}</span>
+          </div>
+          <div class="info-item">
+            <span class="info-label">Remote Connections:</span>
+            <span class="info-value">
+              ${remoteConnections > 0 ? 
+                `<a href="/usage-metrics/remote-connections" class="connection-link">${remoteConnections} connections</a>` : 
+                `${remoteConnections} connections`
+              }
+            </span>
+          </div>
+          <div class="info-item">
+            <span class="info-label">Git Integration:</span>
+            <span class="info-value">${gitIntegration}</span>
+          </div>
+        `;
       }
     }
   }
@@ -635,27 +750,16 @@ document.addEventListener('DOMContentLoaded', function() {
       sectionsToHide.push('Recent Files Opened/Edited');
     }
     
-    // Check System Info
-    if (!data.systemInfo || 
-        ((!data.systemInfo.searchHistory || data.systemInfo.searchHistory.length === 0) &&
-         (!data.systemInfo.languageUsage || data.systemInfo.languageUsage.length === 0) &&
-         (!data.systemInfo.activityTimeline || data.systemInfo.activityTimeline.length === 0) &&
-         (!data.systemInfo.workspaceOpenedDate || data.systemInfo.workspaceOpenedDate === 'Recent') &&
-         (!data.systemInfo.userAgent) &&
-         (!data.systemInfo.platform) &&
-         (!data.systemInfo.os) &&
-         (!data.systemInfo.cursorVersion) &&
-         (!data.systemInfo.workspaceId || data.systemInfo.workspaceId === 'Local Workspace') &&
-         (!data.systemInfo.machineId) &&
-         (!data.systemInfo.ipAddress || data.systemInfo.ipAddress === 'Local Development') &&
-         (!data.systemInfo.sessionInfo || Object.keys(data.systemInfo.sessionInfo).length === 0))) {
-      sectionsToHide.push('Recent Search Queries', 'System Information');
-    }
-    
-    // Check Dev Environment
-    if (!data.devEnvironment || 
-        (!data.devEnvironment.languageDetection || data.devEnvironment.languageDetection.length === 0)) {
-      sectionsToHide.push('Languages Used');
+    // Check System & Network Info
+    if (!data.systemNetworkInfo || 
+        ((!data.systemNetworkInfo.workspaceId || data.systemNetworkInfo.workspaceId === 'Local Workspace') &&
+         (!data.systemNetworkInfo.workspaceOpenedDate || data.systemNetworkInfo.workspaceOpenedDate === 'Recent') &&
+         (!data.systemNetworkInfo.ipAddress || data.systemNetworkInfo.ipAddress === 'Local Development') &&
+         (!data.systemNetworkInfo.totalSessions || data.systemNetworkInfo.totalSessions === 0) &&
+         (!data.systemNetworkInfo.userAgent || data.systemNetworkInfo.userAgent === 'Cursor IDE (Electron-based)') &&
+         (!data.systemNetworkInfo.remoteConnectionsCount || data.systemNetworkInfo.remoteConnectionsCount === 0) &&
+         (!data.systemNetworkInfo.gitIntegration || data.systemNetworkInfo.gitIntegration === 'Not detected'))) {
+      sectionsToHide.push('System & Network Information');
     }
     
     // Check Performance Metrics - hide if no meaningful data
@@ -815,112 +919,34 @@ document.addEventListener('DOMContentLoaded', function() {
         populateFilesTable(data.editorActivity.openedFiles);
       }
       
-      // Populate other sections only if they have meaningful data
-      if (data.systemInfo && data.systemInfo.searchHistory && data.systemInfo.searchHistory.length > 0) {
-        populateSearchQueries(data.systemInfo.searchHistory);
-      }
-      
       if (data.aiServiceMetrics && data.aiServiceMetrics.recentPrompts && data.aiServiceMetrics.recentPrompts.length > 0) {
         populateCommonPrompts(data.aiServiceMetrics.recentPrompts);
       }
       
       // Create charts only if they have meaningful data
       if (data.devEnvironment && data.devEnvironment.languageDetection && data.devEnvironment.languageDetection.length > 0) {
-        createLanguagesChart(data.devEnvironment.languageDetection);
+
       }
       
       if (data.aiServiceMetrics && data.aiServiceMetrics.recentGenerations && data.aiServiceMetrics.recentGenerations.length > 0) {
         createGenerationTimeline(data.aiServiceMetrics.recentGenerations);
       }
       
-      // Populate system information if available and has meaningful data
-      if (data.systemInfo && (
-          (data.systemInfo.searchHistory && data.systemInfo.searchHistory.length > 0) ||
-          (data.systemInfo.languageUsage && data.systemInfo.languageUsage.length > 0) ||
-          (data.systemInfo.activityTimeline && data.systemInfo.activityTimeline.length > 0) ||
-          (data.systemInfo.workspaceOpenedDate && data.systemInfo.workspaceOpenedDate !== 'Recent') ||
-          data.systemInfo.userAgent ||
-          data.systemInfo.platform ||
-          data.systemInfo.os ||
-          data.systemInfo.cursorVersion ||
-          (data.systemInfo.workspaceId && data.systemInfo.workspaceId !== 'Local Workspace') ||
-          data.systemInfo.machineId ||
-          (data.systemInfo.ipAddress && data.systemInfo.ipAddress !== 'Local Development') ||
-          (data.systemInfo.sessionInfo && Object.keys(data.systemInfo.sessionInfo).length > 0)
+      // Populate system and network information if available and has meaningful data
+      if (data.systemNetworkInfo && (
+          (data.systemNetworkInfo.workspaceId && data.systemNetworkInfo.workspaceId !== 'Local Workspace') ||
+          (data.systemNetworkInfo.workspaceOpenedDate && data.systemNetworkInfo.workspaceOpenedDate !== 'Recent') ||
+          (data.systemNetworkInfo.ipAddress && data.systemNetworkInfo.ipAddress !== 'Local Development') ||
+          (data.systemNetworkInfo.totalSessions && data.systemNetworkInfo.totalSessions > 0)
       )) {
-        // Enhance systemInfo with network data if available
-        if (data.networkInfo && data.networkInfo.ipAddress) {
-          data.systemInfo.ipAddress = data.networkInfo.ipAddress;
-        }
-        populateSystemInfo(data.systemInfo);
-      }
-      
-      // Populate network information if available and has meaningful data
-      if (data.networkInfo && (
-          data.networkInfo.userAgent ||
-          data.networkInfo.ipAddress ||
-          (data.networkInfo.remoteConnections && data.networkInfo.remoteConnections.length > 0) ||
-          (data.networkInfo.connectionHistory && data.networkInfo.connectionHistory.length > 0)
-      )) {
-        const networkContainer = document.getElementById('networkInfo');
-        if (networkContainer) {
-          // Parse and format User Agent properly
-          let userAgent = 'Cursor IDE (Electron-based)';
-          if (data.networkInfo.userAgent) {
-            try {
-              // If it's a JSON string, parse it
-              if (typeof data.networkInfo.userAgent === 'string' && data.networkInfo.userAgent.startsWith('{')) {
-                const parsedUserAgent = JSON.parse(data.networkInfo.userAgent);
-                if (typeof parsedUserAgent === 'string') {
-                  userAgent = parsedUserAgent;
-                } else if (parsedUserAgent.userAgent && typeof parsedUserAgent.userAgent === 'string') {
-                  userAgent = parsedUserAgent.userAgent;
-                } else if (parsedUserAgent.ua && typeof parsedUserAgent.ua === 'string') {
-                  userAgent = parsedUserAgent.ua;
-                } else {
-                  userAgent = 'Cursor IDE (Electron-based)';
-                }
-              } else if (typeof data.networkInfo.userAgent === 'string') {
-                userAgent = data.networkInfo.userAgent;
-              } else {
-                userAgent = 'Cursor IDE (Electron-based)';
-              }
-            } catch (e) {
-              // If parsing fails, use default
-              userAgent = 'Cursor IDE (Electron-based)';
-            }
-          }
-          
-          const remoteConnections = data.networkInfo.remoteConnections ? data.networkInfo.remoteConnections.length : 0;
-          const ipAddress = data.networkInfo.ipAddress || 'Local Development';
-          
-          networkContainer.innerHTML = `
-            <div class="info-item">
-              <span class="info-label">User Agent:</span>
-              <span class="info-value">${userAgent}</span>
-            </div>
-            <div class="info-item">
-              <span class="info-label">Remote Connections:</span>
-              <span class="info-value">
-                ${remoteConnections > 0 ? 
-                  `<a href="/usage-metrics/remote-connections" class="connection-link">${remoteConnections} connections</a>` : 
-                  `${remoteConnections} connections`
-                }
-              </span>
-            </div>
-            <div class="info-item">
-              <span class="info-label">IP Address:</span>
-              <span class="info-value">${ipAddress}</span>
-            </div>
-          `;
-        }
+        populateSystemNetworkInfo(data.systemNetworkInfo);
       }
       
       // Populate performance metrics if available and has meaningful data
       if (data.performanceMetrics && (
-          (data.performanceMetrics.responseTimes && data.performanceMetrics.responseTimes.length > 0) ||
-          (data.performanceMetrics.errorRates && data.performanceMetrics.errorRates.length > 0) ||
-          (data.performanceMetrics.fileOperations && data.performanceMetrics.fileOperations.length > 0) ||
+          (data.performanceMetrics.responseTimesCount && data.performanceMetrics.responseTimesCount > 0) ||
+          (data.performanceMetrics.errorRatesCount && data.performanceMetrics.errorRatesCount > 0) ||
+          (data.performanceMetrics.fileOperationsCount && data.performanceMetrics.fileOperationsCount > 0) ||
           (data.performanceMetrics.workspaceActivity && 
            (data.performanceMetrics.workspaceActivity.totalFiles > 0 || 
             data.performanceMetrics.workspaceActivity.uniqueFileTypes > 0 || 
@@ -945,23 +971,21 @@ document.addEventListener('DOMContentLoaded', function() {
         const editorStatesElement = document.getElementById('editorStates');
         
         if (responseTimesElement) {
-          const responseTimes = data.performanceMetrics.responseTimes || [];
-          const avgResponseTime = responseTimes.length > 0 ? 
-            (responseTimes.reduce((sum, item) => sum + (item.time || 0), 0) / responseTimes.length).toFixed(2) : 0;
-          responseTimesElement.textContent = responseTimes.length > 0 ? 
-            `${responseTimes.length} AI interactions tracked` : 'No AI interactions tracked';
+          const responseTimesCount = data.performanceMetrics.responseTimesCount || 0;
+          responseTimesElement.textContent = responseTimesCount > 0 ? 
+            `${responseTimesCount} AI interactions tracked` : 'No AI interactions tracked';
         }
         
         if (errorRateElement) {
-          const errorRates = data.performanceMetrics.errorRates || [];
-          errorRateElement.textContent = errorRates.length > 0 ? 
-            `${errorRates.length} issues detected` : 'No issues detected';
+          const errorRatesCount = data.performanceMetrics.errorRatesCount || 0;
+          errorRateElement.textContent = errorRatesCount > 0 ? 
+            `${errorRatesCount} issues detected` : 'No issues detected';
         }
         
         if (fileOperationsElement) {
-          const fileOps = data.performanceMetrics.fileOperations || [];
-          fileOperationsElement.textContent = fileOps.length > 0 ? 
-            `${fileOps.length} files accessed` : 'No file activity tracked';
+          const fileOpsCount = data.performanceMetrics.fileOperationsCount || 0;
+          fileOperationsElement.textContent = fileOpsCount > 0 ? 
+            `${fileOpsCount} files accessed` : 'No file activity tracked';
         }
         
         if (workspaceFilesElement) {
@@ -1004,146 +1028,8 @@ document.addEventListener('DOMContentLoaded', function() {
         }
       }
       
-      if (data.sensitiveKeywordCounts) {
-        const labels = Object.keys(data.sensitiveKeywordCounts).filter(k => data.sensitiveKeywordCounts[k] > 0);
-        const chartData = labels.map(k => data.sensitiveKeywordCounts[k]);
-        if (window.sensitiveChartInstance) {
-          window.sensitiveChartInstance.destroy();
-        }
-        if (labels.length > 0) {
-          window.sensitiveChartInstance = new Chart(document.getElementById('sensitiveChart').getContext('2d'), {
-            type: 'bar',
-            data: {
-              labels: labels,
-              datasets: [{
-                label: 'Sensitive Keyword Count',
-                data: chartData,
-                backgroundColor: 'rgba(255, 99, 132, 0.5)',
-                borderColor: 'rgba(255, 99, 132, 1)',
-                borderWidth: 1
-              }]
-            },
-            options: {
-              responsive: true,
-              plugins: {
-                legend: { display: false },
-                title: { display: true, text: 'Sensitive Keyword Distribution' }
-              },
-              scales: {
-                y: { beginAtZero: true, ticks: { precision:0 } }
-              }
-            }
-          });
-        } else {
-          // If all values are zero, clear the canvas
-          const ctx = document.getElementById('sensitiveChart').getContext('2d');
-          ctx.clearRect(0, 0, 500, 300);
-        }
-      }
-      
-      // Section Distribution Pie Chart
-      if (window.Chart && document.getElementById('sectionPieChart')) {
-        // Gather counts for each section
-        const sectionLabels = [
-          'Sensitive Data Report',
-          'Most Common Prompts',
-          'Recent Prompts',
-          'Recent Generations',
-          'Recent Files Opened/Edited'
-        ];
-        const sensitiveCount = data.sensitiveResults ? data.sensitiveResults.length : 0;
-        const commonPromptsCount = data.prompts ? (Array.isArray(data.prompts) ? data.prompts.reduce((acc, p) => {
-          if (p.text) acc[p.text] = (acc[p.text]||0)+1; return acc;
-        }, {}) : {}) : {};
-        const mostCommonPromptsCount = Object.keys(commonPromptsCount).length;
-        const recentPromptsCount = data.prompts ? data.prompts.length : 0;
-        const recentGenerationsCount = data.generations ? data.generations.length : 0;
-        const recentFilesCount = data.historyEntries ? data.historyEntries.length : 0;
-        const sectionData = [
-          sensitiveCount,
-          mostCommonPromptsCount,
-          recentPromptsCount,
-          recentGenerationsCount,
-          recentFilesCount
-        ];
-        if (sectionData.some(v => v > 0)) {
-          window.sensitiveChartInstance = new Chart(document.getElementById('sectionPieChart').getContext('2d'), {
-            type: 'pie',
-            data: {
-              labels: sectionLabels,
-              datasets: [{
-                data: sectionData,
-                backgroundColor: ['#4e73df', '#1cc88a', '#36b9cc', '#f6c23e', '#e74a3b'],
-                borderWidth: 1
-              }]
-            },
-            options: {
-              responsive: true,
-              maintainAspectRatio: false,
-              plugins: {
-                legend: {
-                  position: 'bottom',
-                  labels: {
-                    padding: 20,
-                    usePointStyle: true
-                  }
-                }
-              }
-            }
-          });
-        }
-      }
-      
-      // Performance Metrics Bar Chart
-      if (window.Chart && document.getElementById('performanceChart') && data.performanceMetrics) {
-        const perf = data.performanceMetrics;
-        const labels = [
-          //'AI Interactions', // Ignore this metric
-          'Issues Detected',
-          'File Activity',
-          'Workspace Files',
-          'Search Queries',
-          'Terminal Sessions',
-          'Composer Sessions',
-          'Editor States'
-        ];
-        const perfData = [
-          //perf.responseTimes ? perf.responseTimes.length : 0, // Ignore AI Interactions
-          perf.errorRates ? perf.errorRates.length : 0,
-          perf.fileOperations ? perf.fileOperations.length : 0,
-          perf.workspaceActivity && perf.workspaceActivity.totalFiles ? perf.workspaceActivity.totalFiles : 0,
-          perf.searchActivity && perf.searchActivity.searchQueries ? perf.searchActivity.searchQueries : 0,
-          perf.terminalActivity && perf.terminalActivity.terminalSessions ? perf.terminalActivity.terminalSessions : 0,
-          perf.composerActivity && perf.composerActivity.totalComposers ? perf.composerActivity.totalComposers : 0,
-          perf.workspaceActivity && perf.workspaceActivity.editorStates ? perf.workspaceActivity.editorStates : 0
-        ];
-        if (window.performanceChartInstance) {
-          window.performanceChartInstance.destroy();
-        }
-        window.performanceChartInstance = new Chart(document.getElementById('performanceChart').getContext('2d'), {
-          type: 'bar',
-          data: {
-            labels: labels,
-            datasets: [{
-              label: 'Count',
-              data: perfData,
-              backgroundColor: [
-                '#4e73df','#1cc88a','#36b9cc','#f6c23e','#e74a3b','#858796','#5a5c69','#ff6384'
-              ],
-              borderWidth: 1
-            }]
-          },
-          options: {
-            responsive: true,
-            plugins: {
-              legend: { display: false },
-              title: { display: true, text: 'Performance Metrics' }
-            },
-            scales: {
-              y: { beginAtZero: true, ticks: { precision:0 } }
-            }
-          }
-        });
+      if (data.promptAcceptanceReport && data.promptAcceptanceReport.length > 0) {
+        populatePromptAcceptanceTable(data.promptAcceptanceReport);
       }
       
     } catch (error) {
@@ -1166,6 +1052,106 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // Call populateDashboard when the page loads (only once)
   populateDashboard();
+
+  // Add CSS for .btn and .btn-view if not present
+  (function addPromptAcceptanceBtnStyles() {
+    if (!document.getElementById('prompt-acceptance-btn-styles')) {
+      const style = document.createElement('style');
+      style.id = 'prompt-acceptance-btn-styles';
+      style.innerHTML = `
+        .btn {
+          padding: 0.4em 1.1em;
+          border: none;
+          border-radius: 4px;
+          background: #4e73df;
+          color: #fff;
+          font-weight: 500;
+          cursor: pointer;
+          transition: background 0.2s;
+          font-size: 1em;
+        }
+        .btn-view {
+          background: #36b9cc;
+          color: #fff;
+          margin: 0 0.2em;
+        }
+        .btn-view:hover {
+          background: #259fae;
+        }
+        .view-more-btn {
+          display: inline-block;
+          padding: 0.4em 1.1em;
+          background: #1cc88a;
+          color: #fff;
+          border-radius: 4px;
+          text-decoration: none;
+          font-weight: 500;
+          margin-top: 0.5em;
+          transition: background 0.2s;
+          font-size: 0.9em;
+        }
+        .view-more-btn:hover {
+          background: #17a673;
+          color: #fff;
+          text-decoration: none;
+        }
+        .section-header {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin-bottom: 1em;
+        }
+        .section-header h2 {
+          margin: 0;
+          font-size: 1.5em;
+          font-weight: 600;
+        }
+        .section-header .view-more-btn {
+          margin-top: 0;
+          padding: 0.3em 0.8em;
+          font-size: 0.85em;
+        }
+      `;
+      document.head.appendChild(style);
+    }
+  })();
+
+  // Ensure modal logic for Prompt Acceptance Report is attached on page load (for SSR table)
+  const promptAcceptanceTable = document.getElementById('promptAcceptanceTable');
+  if (promptAcceptanceTable) {
+    // Call with empty array to attach listeners to existing buttons
+    populatePromptAcceptanceTable([]);
+  }
+
+  // Initialize DataTables for Sensitive Data Report and Prompt Acceptance Report
+  if (window.$ && $.fn.DataTable) {
+    if (document.getElementById('sensitiveTable')) {
+      $('#sensitiveTable').DataTable({
+        paging: true,
+        searching: true,
+        ordering: true,
+        responsive: true,
+        pageLength: 10,
+        language: {
+          search: "Search sensitive data:",
+          info: "Showing _TOTAL_ sensitive entries"
+        }
+      });
+    }
+    if (document.getElementById('promptAcceptanceTable')) {
+      $('#promptAcceptanceTable').DataTable({
+        paging: true,
+        searching: true,
+        ordering: true,
+        responsive: true,
+        pageLength: 10,
+        language: {
+          search: "Search prompts:",
+          info: "Showing _TOTAL_ prompt acceptance records"
+        }
+      });
+    }
+  }
 });
 
 // End of dashboard.js

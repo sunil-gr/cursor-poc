@@ -1,0 +1,306 @@
+{
+    "systemNetworkInfo": {
+        "workspaceId": "82867a36098d655bd93bffa081fd0ed0",
+        "workspaceOpenedDate": "2025-07-01T09:18:32.298Z",
+        "ipAddress": "127.0.0.1",
+        "totalSessions": 20,
+        "userAgent": "Cursor IDE (Electron-based)",
+        "remoteConnectionsCount": 54,
+        "gitIntegration": "Active"
+    },
+    "performanceMetrics": {
+        "responseTimesCount": 580,
+        "errorRatesCount": 3,
+        "fileOperationsCount": 93,
+        "workspaceActivity": {
+            "totalFiles": 19,
+            "uniqueFileTypes": 7,
+            "activeSessions": 9,
+            "editorStates": 44
+        },
+        "searchActivity": {
+            "searchQueries": 33,
+            "findHistory": 50
+        },
+        "terminalActivity": {
+            "terminalSessions": 1,
+            "commands": 0
+        },
+        "composerActivity": {
+            "totalComposers": 10,
+            "activeComposers": 1
+        }
+    },
+    "aiServiceMetrics": {
+        "recentPrompts": [
+            {
+                "text": "lets do one thing dont compare the timestap. just find the file name has user is linked fetch",
+                "commandType": 4,
+                "timestamp": 1752299899799,
+                "unixMs": 1752299899799,
+                "createdAt": 1752299899799,
+                "date": 1752299899799,
+                "time": 1752299899799
+            },
+            {
+                "text": "Why it is taking so long",
+                "commandType": 4,
+                "timestamp": 1752299898799,
+                "unixMs": 1752299898799,
+                "createdAt": 1752299898799,
+                "date": 1752299898799,
+                "time": 1752299898799
+            },
+            {
+                "text": "lets do one thing dont compare the timestap. just find the file name has user is linked fetch",
+                "commandType": 4,
+                "timestamp": 1752299897799,
+                "unixMs": 1752299897799,
+                "createdAt": 1752299897799,
+                "date": 1752299897799,
+                "time": 1752299897799
+            },
+            {
+                "text": "still it is not working",
+                "commandType": 4,
+                "timestamp": 1752299896799,
+                "unixMs": 1752299896799,
+                "createdAt": 1752299896799,
+                "date": 1752299896799,
+                "time": 1752299896799
+            },
+            {
+                "text": "While generating the logs it will delete all old logs, just comment that section as of now",
+                "commandType": 4,
+                "timestamp": 1752299895799,
+                "unixMs": 1752299895799,
+                "createdAt": 1752299895799,
+                "date": 1752299895799,
+                "time": 1752299895799
+            },
+            {
+                "text": "After login redirect to below link\nhttp://localhost:3000/usage-metrics",
+                "commandType": 4,
+                "timestamp": 1752299894799,
+                "unixMs": 1752299894799,
+                "createdAt": 1752299894799,
+                "date": 1752299894799,
+                "time": 1752299894799
+            },
+            {
+                "text": "Default date set to current date if the date are no in get params \nlimit the future date selection d...",
+                "commandType": 4,
+                "timestamp": 1752299893799,
+                "unixMs": 1752299893799,
+                "createdAt": 1752299893799,
+                "date": 1752299893799,
+                "time": 1752299893799
+            },
+            {
+                "text": "Default date set to current date if the date are no in get params \nlimit the future date selection d...",
+                "commandType": 4,
+                "timestamp": 1752299892799,
+                "unixMs": 1752299892799,
+                "createdAt": 1752299892799,
+                "date": 1752299892799,
+                "time": 1752299892799
+            },
+            {
+                "text": "okay",
+                "commandType": 4,
+                "timestamp": 1752299891799,
+                "unixMs": 1752299891799,
+                "createdAt": 1752299891799,
+                "date": 1752299891799,
+                "time": 1752299891799
+            },
+            {
+                "text": "Test for happiest minds 3",
+                "commandType": 4,
+                "timestamp": 1752299890799,
+                "unixMs": 1752299890799,
+                "createdAt": 1752299890799,
+                "date": 1752299890799,
+                "time": 1752299890799
+            }
+        ],
+        "recentGenerations": [
+            {
+                "description": "Test generation 1",
+                "type": "unknown",
+                "timestamp": "2025-07-08T08:00:00.000Z",
+                "originalTimestamp": "2025-07-08T08:00:00.000Z"
+            },
+            {
+                "description": "Test generation 2",
+                "type": "unknown",
+                "timestamp": "2025-07-08T09:00:00.000Z",
+                "originalTimestamp": "2025-07-08T09:00:00.000Z"
+            },
+            {
+                "description": "Test generation 3",
+                "type": "unknown",
+                "timestamp": "2025-07-08T10:00:00.000Z",
+                "originalTimestamp": "2025-07-08T10:00:00.000Z"
+            },
+            {
+                "description": "Test generation 4",
+                "type": "unknown",
+                "timestamp": "2025-07-08T11:00:00.000Z",
+                "originalTimestamp": "2025-07-08T11:00:00.000Z"
+            },
+            {
+                "description": "Test generation 5",
+                "type": "unknown",
+                "timestamp": "2025-07-08T12:00:00.000Z",
+                "originalTimestamp": "2025-07-08T12:00:00.000Z"
+            }
+        ]
+    },
+    "editorActivity": {
+        "openedFiles": [
+            {
+                "path": "file:///d%3A/xampp/htdocs/hm/cursorpoc/README.md",
+                "fileName": "README.md",
+                "fileType": "md",
+                "timestamp": 1752300168799,
+                "lastModified": 1752300168799
+            },
+            {
+                "path": "file:///d%3A/xampp/htdocs/hm/cursorpoc/controllers/logProcessor.js",
+                "fileName": "logProcessor.js",
+                "fileType": "js",
+                "timestamp": 1752300168800,
+                "lastModified": 1752300168800
+            },
+            {
+                "path": "file:///d%3A/xampp/htdocs/hm/cursorpoc/views/files_detail.ejs",
+                "fileName": "files_detail.ejs",
+                "fileType": "ejs",
+                "timestamp": 1752300168800,
+                "lastModified": 1752300168800
+            },
+            {
+                "path": "file:///d%3A/xampp/htdocs/hm/cursorpoc/.gitignore",
+                "fileName": ".gitignore",
+                "fileType": "gitignore",
+                "timestamp": 1752300168800,
+                "lastModified": 1752300168800
+            },
+            {
+                "path": "file:///d%3A/xampp/htdocs/hm/cursorpoc/views/sensitive_report.ejs",
+                "fileName": "sensitive_report.ejs",
+                "fileType": "ejs",
+                "timestamp": 1752300168800,
+                "lastModified": 1752300168800
+            },
+            {
+                "path": "file:///d%3A/xampp/htdocs/hm/Working%20Backup/cursorpoc/public/js/dashboard.js",
+                "fileName": "dashboard.js",
+                "fileType": "js",
+                "timestamp": 1752300168800,
+                "lastModified": 1752300168800
+            },
+            {
+                "path": "file:///d%3A/xampp/htdocs/hm/cursorpoc/old/views/dashboard.ejs",
+                "fileName": "dashboard.ejs",
+                "fileType": "ejs",
+                "timestamp": 1752300168800,
+                "lastModified": 1752300168800
+            },
+            {
+                "path": "file:///d%3A/xampp/htdocs/hm/cursorpoc/old/public/js/dashboard.js",
+                "fileName": "dashboard.js",
+                "fileType": "js",
+                "timestamp": 1752300168800,
+                "lastModified": 1752300168800
+            },
+            {
+                "path": "file:///d%3A/xampp/htdocs/hm/cursorpoc/old/routes/metrics.js",
+                "fileName": "metrics.js",
+                "fileType": "js",
+                "timestamp": 1752300168800,
+                "lastModified": 1752300168800
+            },
+            {
+                "path": "file:///c%3A/Users/suniv/AppData/Roaming/Cursor/User/workspaceStorage/ac8a968b7ccb1bec5879fb46c9ae46d1/state.vscdb",
+                "fileName": "state.vscdb",
+                "fileType": "vscdb",
+                "timestamp": 1752300168800,
+                "lastModified": 1752300168800
+            }
+        ]
+    },
+    "sensitiveResults": [
+        {
+            "keyword": "pass",
+            "context": "dtype\\\":4},{\\\"text\\\":\\\"when i pass same date as start and end th",
+            "entry": "aiService.prompts",
+            "file": ""
+        },
+        {
+            "keyword": "database",
+            "context": "g realetd to \\\\ntoken\\\\njwt\\\\ndatabase\\\\nsecurity\\\\npassword\\\\n\\\\nth",
+            "entry": "aiService.prompts",
+            "file": ""
+        },
+        {
+            "keyword": "db",
+            "context": "1bec5879fb46c9ae46d1/state.vscdb\\\\\\\",\\\\n            \\\\\\\"file:/",
+            "entry": "aiService.prompts",
+            "file": ""
+        },
+        {
+            "keyword": "token",
+            "context": "n find anything realetd to \\\\ntoken\\\\njwt\\\\ndatabase\\\\nsecurity\\\\",
+            "entry": "aiService.prompts",
+            "file": ""
+        },
+        {
+            "keyword": "jwt",
+            "context": "nything realetd to \\\\ntoken\\\\njwt\\\\ndatabase\\\\nsecurity\\\\npassw",
+            "entry": "aiService.prompts",
+            "file": ""
+        },
+        {
+            "keyword": "auth",
+            "context": "s the following features: git auth provider\\\\\\\"\\\\n              ",
+            "entry": "aiService.prompts",
+            "file": ""
+        },
+        {
+            "keyword": "security",
+            "context": "o \\\\ntoken\\\\njwt\\\\ndatabase\\\\nsecurity\\\\npassword\\\\n\\\\nthis kind of ",
+            "entry": "aiService.prompts",
+            "file": ""
+        },
+        {
+            "keyword": "refresh",
+            "context": "application and now for eevry refresh it is clearing the cursorlogs",
+            "entry": "aiService.prompts",
+            "file": ""
+        },
+        {
+            "keyword": "session",
+            "context": "environment\\\\ncomposer & chat sessions\\\\n\\\\nremove the above sectio",
+            "entry": "aiService.prompts",
+            "file": ""
+        },
+        {
+            "keyword": "db",
+            "context": "\\\"head\\\",\\\"composerid\\\":\\\"e5cbdb45-314a-45cb-ada4-4b3efc404079",
+            "entry": "composer.composerData",
+            "file": ""
+        }
+    ],
+    "summary": {
+        "totalPrompts": 1021,
+        "totalGenerations": 585,
+        "totalFiles": 19,
+        "showingTop": 10,
+        "dateRange": {
+            "start": "2025-07-07T06:02:48.693Z",
+            "end": "2025-07-12T06:02:48.693Z"
+        }
+    }
+}
