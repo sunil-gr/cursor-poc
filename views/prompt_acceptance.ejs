@@ -1,0 +1,150 @@
+<!-- Prompt Acceptance Report - View All Page -->
+<div class="dashboard-container">
+  <div class="dashboard-header-row">
+    <h1 class="dashboard-header-title">Prompt Acceptance Report</h1>
+    <a href="/usage-metrics" class="dashboard-back-btn">&larr; Back to Dashboard</a>
+  </div>
+  <div class="section-card">
+    <h2>All Prompt Acceptance Records</h2>
+    <% if (records && records.length) { %>
+      <table style="width:100%; font-size: 0.95em;" id="promptAcceptanceAllTable">
+        <thead>
+          <tr><th>#</th><th>Prompt</th><th>Status</th><th>Response</th></tr>
+        </thead>
+        <tbody>
+          <% records.forEach(function(item, idx) { %>
+            <tr>
+              <td><%= idx+1 %></td>
+              <td><%= item.prompt %></td>
+              <td><%= item.status %></td>
+              <td>
+                <% if (item.status === 'Accepted') { %>
+                  <button class="view-response-btn btn btn-view" data-response='<%- JSON.stringify(item.responseRaw) %>'>View</button>
+                <% } else { %>
+                  <span style="color: #aaa;">-</span>
+                <% } %>
+              </td>
+            </tr>
+          <% }) %>
+        </tbody>
+      </table>
+    <% } else { %>
+      <div style="color: #4caf50;">No prompt acceptance data found in logs.</div>
+    <% } %>
+  </div>
+  <!-- Modal Dialog for Viewing Response -->
+  <div id="responseModal" class="modal" style="display:none; position:fixed; z-index:9999; left:0; top:0; width:100vw; height:100vh; background:rgba(0,0,0,0.4); align-items:center; justify-content:center;">
+    <div class="modal-content" style="background:#fff; padding:2em; border-radius:8px; max-width:600px; margin:5vh auto; position:relative;">
+      <span id="closeModalBtn" style="position:absolute; top:10px; right:20px; font-size:1.5em; cursor:pointer;">&times;</span>
+      <h3>Prompt Response</h3>
+      <pre id="modalResponseContent" style="white-space:pre-wrap; word-break:break-all; background:#f5f5f5; padding:1em; border-radius:4px; max-height:400px; overflow:auto;"></pre>
+    </div>
+  </div>
+</div>
+<script>
+(function addPromptAcceptanceBtnStyles() {
+  if (!document.getElementById('prompt-acceptance-btn-styles')) {
+    const style = document.createElement('style');
+    style.id = 'prompt-acceptance-btn-styles';
+    style.innerHTML = `
+      .btn {
+        padding: 0.4em 1.1em;
+        border: none;
+        border-radius: 4px;
+        background: #4e73df;
+        color: #fff;
+        font-weight: 500;
+        cursor: pointer;
+        transition: background 0.2s;
+        font-size: 1em;
+      }
+      .btn-view {
+        background: #36b9cc;
+        color: #fff;
+        margin: 0 0.2em;
+      }
+      .btn-view:hover {
+        background: #259fae;
+      }
+      .view-more-btn {
+        display: inline-block;
+        padding: 0.4em 1.1em;
+        background: #1cc88a;
+        color: #fff;
+        border-radius: 4px;
+        text-decoration: none;
+        font-weight: 500;
+        margin-top: 0.5em;
+        transition: background 0.2s;
+      }
+      .view-more-btn:hover {
+        background: #17a673;
+      }
+    `;
+    document.head.appendChild(style);
+  }
+})();
+
+function attachPromptAcceptanceModalListeners() {
+  const table = document.getElementById('promptAcceptanceAllTable');
+  if (!table) return;
+  setTimeout(() => {
+    const viewBtns = table.querySelectorAll('.view-response-btn');
+    viewBtns.forEach(btn => {
+      btn.addEventListener('click', function(e) {
+        e.stopPropagation();
+        const responseRaw = btn.getAttribute('data-response');
+        let responseObj = {};
+        try {
+          responseObj = JSON.parse(responseRaw);
+        } catch (e) {
+          responseObj = responseRaw;
+        }
+        const modal = document.getElementById('responseModal');
+        const modalContent = document.getElementById('modalResponseContent');
+        if (modal && modalContent) {
+          // Show all relevant fields in a readable format
+          if (typeof responseObj === 'object' && responseObj !== null) {
+            let html = '';
+            if (responseObj.textDescription) {
+              html += `<div><b>AI Suggestion:</b><pre style=\"white-space:pre-wrap;\">${responseObj.textDescription}</pre></div>`;
+            }
+            if (responseObj.description && responseObj.description !== responseObj.textDescription) {
+              html += `<div><b>Description:</b><pre style=\"white-space:pre-wrap;\">${responseObj.description}</pre></div>`;
+            }
+            if (responseObj.code) {
+              html += `<div><b>Code:</b><pre style=\"background:#f0f0f0;\">${responseObj.code}</pre></div>`;
+            }
+            // Show all other fields
+            const skip = ['textDescription','description','code'];
+            Object.keys(responseObj).forEach(key => {
+              if (!skip.includes(key)) {
+                html += `<div><b>${key}:</b> <pre style=\"white-space:pre-wrap;\">${JSON.stringify(responseObj[key], null, 2)}</pre></div>`;
+              }
+            });
+            if (!html) html = '<i>No additional response data.</i>';
+            modalContent.innerHTML = html;
+          } else {
+            modalContent.textContent = responseObj;
+          }
+          modal.style.display = 'flex';
+        }
+      });
+    });
+  }, 0);
+  // Close modal logic
+  const closeModalBtn = document.getElementById('closeModalBtn');
+  const modal = document.getElementById('responseModal');
+  if (closeModalBtn && modal) {
+    closeModalBtn.onclick = function() { modal.style.display = 'none'; };
+  }
+  if (modal) {
+    modal.addEventListener('click', function(event) {
+      if (event.target === modal) {
+        modal.style.display = 'none';
+      }
+    });
+  }
+}
+document.addEventListener('DOMContentLoaded', attachPromptAcceptanceModalListeners);
+</script> 

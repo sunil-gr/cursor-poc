@@ -1,8 +1,6 @@
 // routes/metrics.js
 // Handles usage metrics dashboard and API routes
 
-console.log('=== METRICS ROUTE LOADED ===');
-
 const express = require('express');
 const router = express.Router();
 // Import requireLogin directly from the controller for authentication middleware
@@ -40,8 +38,6 @@ router.post('/usage-metrics/generate-logs', async (req, res) => {
     const sqliteFolderPath = process.env.SQLITE_FOLDER_PATH || './cursorlogs';
     
     await processAllStateVscdbRecursive(sqliteFolderPath, startDate, endDate, user);
-    console.log(`Generated logs for date range: ${startDate} to ${endDate}`);
-    
     res.json({ 
       success: true, 
       message: `Logs generated successfully for ${startDate} to ${endDate}`,
@@ -49,7 +45,6 @@ router.post('/usage-metrics/generate-logs', async (req, res) => {
       user: user || null
     });
   } catch (error) {
-    console.error('Error generating logs:', error);
     res.status(500).json({ 
       error: 'Failed to generate logs', 
       details: error.message 
@@ -91,9 +86,94 @@ router.get('/api/metrics', async (req, res) => {
     // Use the enhanced getAllMetrics function
     const data = getAllMetrics(startDate, endDate);
     
+    // Optimize data to return only what's actually displayed in the view
+    const optimizedData = {
+      // System & Network Information - combined section
+      systemNetworkInfo: {
+        // System Information
+        workspaceId: data.systemInfo?.workspaceId || 'Local Workspace',
+        workspaceOpenedDate: data.workspaceSettings?.workspaceOpenedDate || 'Recent',
+        ipAddress: data.networkInfo?.ipAddress || 'Local Development',
+        totalSessions: (() => {
+          // Calculate total sessions from available session data
+          const terminalSessions = data.performanceMetrics?.terminalActivity?.terminalSessions || 0;
+          const composerSessions = data.performanceMetrics?.composerActivity?.totalComposers || 0;
+          const aiChatSessions = data.performanceMetrics?.workspaceActivity?.activeSessions || 0;
+          return terminalSessions + composerSessions + aiChatSessions;
+        })(),
+        // Network Information
+        userAgent: (() => {
+          const userAgent = data.networkInfo?.userAgent;
+          if (!userAgent) return 'Cursor IDE (Electron-based)';
+          
+          try {
+            // If it's a JSON string, parse it
+            if (typeof userAgent === 'string' && userAgent.startsWith('{')) {
+              const parsedUserAgent = JSON.parse(userAgent);
+              if (typeof parsedUserAgent === 'string') {
+                return parsedUserAgent;
+              } else if (parsedUserAgent.userAgent && typeof parsedUserAgent.userAgent === 'string') {
+                return parsedUserAgent.userAgent;
+              } else if (parsedUserAgent.ua && typeof parsedUserAgent.ua === 'string') {
+                return parsedUserAgent.ua;
+              } else {
+                return 'Cursor IDE (Electron-based)';
+              }
+            } else if (typeof userAgent === 'string') {
+              return userAgent;
+            } else {
+              return 'Cursor IDE (Electron-based)';
+            }
+          } catch (e) {
+            // If parsing fails, use default
+            return 'Cursor IDE (Electron-based)';
+          }
+        })(),
+        remoteConnectionsCount: data.networkInfo?.remoteConnections ? data.networkInfo.remoteConnections.length : 0,
+        gitIntegration: data.systemInfo?.gitInfo ? 'Active' : 'Not detected'
+      },
+      
+      // Performance Metrics - only the counts that are displayed
+      performanceMetrics: {
+        responseTimesCount: data.performanceMetrics?.responseTimes ? data.performanceMetrics.responseTimes.length : 0,
+        errorRatesCount: data.performanceMetrics?.errorRates ? data.performanceMetrics.errorRates.length : 0,
+        fileOperationsCount: data.performanceMetrics?.fileOperations ? data.performanceMetrics.fileOperations.length : 0,
+        workspaceActivity: data.performanceMetrics?.workspaceActivity || {
+          totalFiles: 0,
+          uniqueFileTypes: 0,
+          editorStates: 0
+        },
+        searchActivity: data.performanceMetrics?.searchActivity || {
+          searchQueries: 0,
+          findHistory: 0
+        },
+        terminalActivity: data.performanceMetrics?.terminalActivity || {
+          terminalSessions: 0
+        },
+        composerActivity: data.performanceMetrics?.composerActivity || {
+          totalComposers: 0,
+          activeComposers: 0
+        }
+      },
+      
+      // AI Service Metrics - limit to last 10 (most recent)
+      aiServiceMetrics: {
+        recentPrompts: data.aiServiceMetrics?.recentPrompts?.slice(-10) || [],
+        recentGenerations: data.aiServiceMetrics?.recentGenerations?.slice(-10) || []
+      },
+      
+      // Editor Activity - limit to last 10 (most recent)
+      editorActivity: {
+        openedFiles: data.editorActivity?.openedFiles?.slice(-10) || []
+      },
+      
+      // Sensitive data - limit to last 10 (most recent)
+      sensitiveResults: data.sensitiveResults ? data.sensitiveResults.slice(-10) : []
+    };
+    
     // Check if there's any meaningful data
-    const hasAnyData = Object.keys(data).length > 0 && 
-      Object.values(data).some(metric => {
+    const hasAnyData = Object.keys(optimizedData).length > 0 && 
+      Object.values(optimizedData).some(metric => {
         if (!metric) return false;
         if (Array.isArray(metric)) return metric.length > 0;
         if (typeof metric === 'object') {
@@ -110,7 +190,7 @@ router.get('/api/metrics', async (req, res) => {
       return res.status(404).json({ 
         error: 'No meaningful metrics data found',
         message: 'No metrics data was found for the specified time period. This could be because no log files exist or the data format has changed.',
-        availableMetrics: Object.keys(data),
+        availableMetrics: Object.keys(optimizedData),
         dateRange: {
           start: startDate.toISOString(),
           end: endDate.toISOString()
@@ -118,12 +198,21 @@ router.get('/api/metrics', async (req, res) => {
       });
     }
     
-    // Before sending metrics data to the frontend, add debug log
-    console.log('Sending metrics data to frontend:', data);
-    
-    res.json(data);
+    // Return optimized data with summary info
+    res.json({
+      ...optimizedData,
+      summary: {
+        totalPrompts: data.prompts?.length || 0,
+        totalGenerations: data.generations?.length || 0,
+        totalFiles: data.editorActivity?.openedFiles?.length || 0,
+        showingTop: 10,
+        dateRange: {
+          start: startDate.toISOString(),
+          end: endDate.toISOString()
+        }
+      }
+    });
   } catch (error) {
-    console.error('Error fetching metrics:', error);
     res.status(500).json({ error: 'Failed to fetch metrics', details: error.message });
   }
 });
@@ -136,17 +225,143 @@ router.get('/api/metrics/workspace-settings', metricsController.getWorkspaceSett
 router.get('/api/metrics/dev-environment', metricsController.getDevEnvironmentMetrics);
 router.get('/api/metrics/composer-data', metricsController.getComposerDataMetrics);
 
+// New endpoints for line changes and tab acceptance
+router.get('/api/metrics/line-changes', metricsController.getLineChangesFromChat);
+router.get('/api/metrics/tab-acceptance', metricsController.getTabAcceptanceData);
+
 // Dashboard page - Modified to only read existing logs without regenerating
-router.get('/usage-metrics', (req, res) => {
-  const logsDir = require('path').join(process.cwd(), 'cursorlogs');
-  const fs = require('fs');
-  const { startDate, endDate, user } = req.query;
-  let start = startDate ? new Date(startDate).getTime() : 0;
-  let end = endDate ? new Date(endDate).getTime() : Date.now();
+router.get('/usage-metrics', async (req, res) => {
+  const { startDate, endDate } = req.query;
+  // Use the same logic as the API to get metrics data
+  const metricsController = require('../controllers/metricsController');
+  // Use the same date logic as the API
+  let start, end;
+  if (startDate && endDate) {
+    start = new Date(startDate);
+    end = new Date(endDate);
+    if (isNaN(start.getTime()) || isNaN(end.getTime())) {
+      return res.render('dashboard', {
+        title: 'AI Service Usage Metrics',
+        bodyClass: 'dashboard-bg',
+        head: '<script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js"></script>',
+        session: req.session,
+        metricsData: {},
+        startDate,
+        endDate,
+        user: req.query.user || '',
+        noLogsFound: true
+      });
+    }
+    end.setHours(23, 59, 59, 999);
+  } else {
+    // Fallback to last 5 days
+    start = new Date();
+    start.setDate(start.getDate() - 5);
+    end = new Date();
+  }
+  // Use the getAllMetrics function for aggregation
+  const { getAllMetrics } = require('../controllers/logProcessor');
+  const data = getAllMetrics(start, end);
   
-  // Check if cursorlogs directory exists
-  if (!fs.existsSync(logsDir)) {
-    console.log('No cursorlogs directory found. Please generate logs first.');
+  // Structure the data to match what the view expects
+  const metricsData = {
+    // System & Network Information - combined section
+    systemNetworkInfo: {
+      // System Information
+      workspaceId: data.systemInfo?.workspaceId || 'Local Workspace',
+      workspaceOpenedDate: data.workspaceSettings?.workspaceOpenedDate || 'Recent',
+      ipAddress: data.networkInfo?.ipAddress || 'Local Development',
+      totalSessions: (() => {
+        // Calculate total sessions from available session data
+        const terminalSessions = data.performanceMetrics?.terminalActivity?.terminalSessions || 0;
+        const composerSessions = data.performanceMetrics?.composerActivity?.totalComposers || 0;
+        const aiChatSessions = data.performanceMetrics?.workspaceActivity?.activeSessions || 0;
+        return terminalSessions + composerSessions + aiChatSessions;
+      })(),
+      // Network Information
+      userAgent: (() => {
+        const userAgent = data.networkInfo?.userAgent;
+        if (!userAgent) return 'Cursor IDE (Electron-based)';
+        
+        try {
+          // If it's a JSON string, parse it
+          if (typeof userAgent === 'string' && userAgent.startsWith('{')) {
+            const parsedUserAgent = JSON.parse(userAgent);
+            if (typeof parsedUserAgent === 'string') {
+              return parsedUserAgent;
+            } else if (parsedUserAgent.userAgent && typeof parsedUserAgent.userAgent === 'string') {
+              return parsedUserAgent.userAgent;
+            } else if (parsedUserAgent.ua && typeof parsedUserAgent.ua === 'string') {
+              return parsedUserAgent.ua;
+            } else {
+              return 'Cursor IDE (Electron-based)';
+            }
+          } else if (typeof userAgent === 'string') {
+            return userAgent;
+          } else {
+            return 'Cursor IDE (Electron-based)';
+          }
+        } catch (e) {
+          // If parsing fails, use default
+          return 'Cursor IDE (Electron-based)';
+        }
+      })(),
+      remoteConnectionsCount: data.networkInfo?.remoteConnections ? data.networkInfo.remoteConnections.length : 0,
+      gitIntegration: data.systemInfo?.gitInfo ? 'Active' : 'Not detected'
+    },
+    
+    // Performance Metrics - only the counts that are displayed
+    performanceMetrics: {
+      responseTimesCount: data.performanceMetrics?.responseTimes ? data.performanceMetrics.responseTimes.length : 0,
+      errorRatesCount: data.performanceMetrics?.errorRates ? data.performanceMetrics.errorRates.length : 0,
+      fileOperationsCount: data.performanceMetrics?.fileOperations ? data.performanceMetrics.fileOperations.length : 0,
+      workspaceActivity: data.performanceMetrics?.workspaceActivity || {
+        totalFiles: 0,
+        uniqueFileTypes: 0,
+        editorStates: 0
+      },
+      searchActivity: data.performanceMetrics?.searchActivity || {
+        searchQueries: 0,
+        findHistory: 0
+      },
+      terminalActivity: data.performanceMetrics?.terminalActivity || {
+        terminalSessions: 0
+      },
+      composerActivity: data.performanceMetrics?.composerActivity || {
+        totalComposers: 0,
+        activeComposers: 0
+      }
+    },
+    
+    // AI Service Metrics - limit to last 10 (most recent)
+    aiServiceMetrics: {
+      recentPrompts: data.aiServiceMetrics?.recentPrompts?.slice(-10) || [],
+      recentGenerations: data.aiServiceMetrics?.recentGenerations?.slice(-10) || []
+    },
+    
+    // Editor Activity - limit to last 10 (most recent)
+    editorActivity: {
+      openedFiles: data.editorActivity?.openedFiles?.slice(-10) || []
+    },
+    
+    // Sensitive data - limit to last 10 (most recent)
+    sensitiveResults: data.sensitiveResults ? data.sensitiveResults.slice(-10) : []
+  };
+  
+  const hasAnyData = Object.keys(metricsData).length > 0 && 
+    Object.values(metricsData).some(metric => {
+      if (!metric) return false;
+      if (Array.isArray(metric)) return metric.length > 0;
+      if (typeof metric === 'object') {
+        return Object.values(metric).some(val => {
+          if (Array.isArray(val)) return val.length > 0;
+          if (typeof val === 'object' && val !== null) return Object.keys(val).length > 0;
+          return val && val !== '' && val !== '-' && val !== 0;
+        });
+      }
+      return metric && metric !== '' && metric !== '-' && metric !== 0;
+    });
+  if (!hasAnyData) {
     return res.render('dashboard', {
       title: 'AI Service Usage Metrics',
       bodyClass: 'dashboard-bg',
@@ -155,101 +370,37 @@ router.get('/usage-metrics', (req, res) => {
       metricsData: {},
       startDate,
       endDate,
-      user: user || '',
+      user: req.query.user || '',
       noLogsFound: true
     });
   }
   
-  // Build file name pattern based on user and date
-  const allLogs = fs.readdirSync(logsDir)
-    .filter(f => {
-      if (!f.endsWith('.json')) return false;
-      // Only filter by user if user is a non-empty string
-      if (user && user !== '') {
-        const userPattern = new RegExp(`-${user}-`);
-        if (!userPattern.test(f)) return false;
-      }
-      // Do not filter by date/timestamp anymore
-      return true;
-    })
-    .map(f => {
-      const fullPath = require('path').join(logsDir, f);
-      return { name: f, path: fullPath };
-    });
-    
-  let metricsData = {};
-  if (allLogs.length) {
-    let prompts = [], generations = [], historyEntries = [], languages = [];
-    let composerData = null, searchHistory = null, aichatViews = 0, terminalViews = 0;
-    for (const log of allLogs) {
-      const logData = JSON.parse(fs.readFileSync(log.path, 'utf-8'));
-      let items = [];
-      if (Array.isArray(logData)) {
-        items = logData;
-      } else if (logData.ItemTable && Array.isArray(logData.ItemTable)) {
-        items = logData.ItemTable;
-      }
-      let filtered = items;
-      if (items.length && typeof items[0] === 'object') {
-        const dateField = Object.keys(items[0]).find(field => /date|time|created|updated/i.test(field));
-        if (dateField) {
-          filtered = items.filter(row => {
-            const val = row[dateField];
-            if (!val) return false;
-            let dateVal = null;
-            if (typeof val === 'number') {
-              dateVal = val > 1e12 ? val : val * 1000;
-            } else if (typeof val === 'string') {
-              const parsed = Date.parse(val);
-              if (!isNaN(parsed)) dateVal = parsed;
-            }
-            if (!dateVal) return false;
-            return dateVal >= start && dateVal <= end;
-          });
-        }
-      }
-      const getVal = key => {
-        if (!filtered) return null;
-        const entry = filtered.find(e => e.key === key);
-        if (!entry) return null;
-        try { return JSON.parse(entry.value); } catch { return entry.value; }
-      };
-      prompts = prompts.concat(getVal('aiService.prompts') || []);
-      generations = generations.concat(getVal('aiService.generations') || []);
-      historyEntries = historyEntries.concat(getVal('history.entries') || []);
-      const langs = getVal('workbench.editor.languageDetectionOpenedLanguages.workspace') || [];
-      langs.forEach(l => {
-        if (!languages.some(existing => existing[0] === l[0])) languages.push(l);
+  // Also aggregate prompt acceptance report using the same logic as in metricsController
+  const prompts = data.prompts || [];
+  const generations = data.generations || [];
+  const promptAcceptanceReport = prompts.map((prompt, idx) => {
+    let matchedGen = null;
+    if (prompt.text) {
+      matchedGen = generations.find(gen => {
+        if (gen.textDescription && gen.textDescription.includes(prompt.text)) return true;
+        if (gen.description && gen.description.includes(prompt.text)) return true;
+        return false;
       });
-      if (!composerData) composerData = getVal('composer.composerData');
-      if (!searchHistory) searchHistory = getVal('workbench.search.history');
-      aichatViews = Math.max(aichatViews, parseInt(getVal('workbench.panel.aichat.numberOfVisibleViews') || 0));
-      terminalViews = Math.max(terminalViews, parseInt(getVal('workbench.numberOfVisibleViews') || 0));
     }
-    prompts = prompts.reverse();
-    generations = generations.reverse();
-    historyEntries = historyEntries.reverse();
-    // Add sensitive info scan results
-    const { results: sensitiveResults, keywordCounts: sensitiveKeywordCounts } = scanLogsForSensitiveInfo();
-    // Add performance metrics from getAllMetrics
-    const allMetrics = getAllMetrics(startDate, endDate);
-    const performanceMetrics = allMetrics.performanceMetrics || {};
-    metricsData = {
-      prompts,
-      generations,
-      composerData: composerData || {},
-      historyEntries,
-      searchHistory: searchHistory || {},
-      languages,
-      aichatViews,
-      terminalViews,
-      sensitiveResults,
-      sensitiveKeywordCounts,
-      performanceMetrics
+    if (!matchedGen && generations[idx]) {
+      matchedGen = generations[idx];
+    }
+    return {
+      prompt: prompt.text || '',
+      status: matchedGen ? 'Accepted' : 'Rejected',
+      response: matchedGen ? (matchedGen.textDescription || matchedGen.description || '') : '',
+      responseRaw: matchedGen || null
     };
-  }
-  // Before sending metrics data to the frontend, add debug log
-  console.log('Sending metrics data to frontend:', metricsData);
+  });
+  
+  // Add prompt acceptance report to metricsData - limit to last 10 (most recent)
+  metricsData.promptAcceptanceReport = promptAcceptanceReport.slice(-10);
+  
   res.render('dashboard', {
     title: 'AI Service Usage Metrics',
     bodyClass: 'dashboard-bg',
@@ -258,8 +409,8 @@ router.get('/usage-metrics', (req, res) => {
     metricsData,
     startDate,
     endDate,
-    user: user || '',
-    noLogsFound: allLogs.length === 0
+    user: req.query.user || '',
+    noLogsFound: false
   });
 });
 
@@ -312,7 +463,7 @@ router.get('/usage-metrics/remote-connections', requireLogin, (req, res) => {
 router.get('/api/metrics/prompts', async (req, res) => {
   try {
     const page = parseInt(req.query.page) || 1;
-    const limit = parseInt(req.query.limit) || 50;
+    const limit = parseInt(req.query.limit) || 10;
     const days = parseInt(req.query.days) || 30;
     
     const startDate = new Date();
@@ -337,7 +488,6 @@ router.get('/api/metrics/prompts', async (req, res) => {
       totalPages: Math.ceil(prompts.length / limit)
     });
   } catch (error) {
-    console.error('Error fetching prompts:', error);
     res.status(500).json({ error: 'Failed to fetch prompts' });
   }
 });
@@ -345,7 +495,7 @@ router.get('/api/metrics/prompts', async (req, res) => {
 router.get('/api/metrics/generations', async (req, res) => {
   try {
     const page = parseInt(req.query.page) || 1;
-    const limit = parseInt(req.query.limit) || 50;
+    const limit = parseInt(req.query.limit) || 10;
     const days = parseInt(req.query.days) || 30;
     
     const startDate = new Date();
@@ -370,7 +520,6 @@ router.get('/api/metrics/generations', async (req, res) => {
       totalPages: Math.ceil(generations.length / limit)
     });
   } catch (error) {
-    console.error('Error fetching generations:', error);
     res.status(500).json({ error: 'Failed to fetch generations' });
   }
 });
@@ -378,7 +527,7 @@ router.get('/api/metrics/generations', async (req, res) => {
 router.get('/api/metrics/files', async (req, res) => {
   try {
     const page = parseInt(req.query.page) || 1;
-    const limit = parseInt(req.query.limit) || 50;
+    const limit = parseInt(req.query.limit) || 10;
     const days = parseInt(req.query.days) || 30;
     
     const startDate = new Date();
@@ -403,7 +552,6 @@ router.get('/api/metrics/files', async (req, res) => {
       totalPages: Math.ceil(files.length / limit)
     });
   } catch (error) {
-    console.error('Error fetching files:', error);
     res.status(500).json({ error: 'Failed to fetch files' });
   }
 });
@@ -448,6 +596,117 @@ router.get('/usage-metrics/sensitive-report', requireLogin, (req, res) => {
     results,
     keywordCounts
   });
+});
+
+// Add route for viewing all prompt acceptance records
+router.get('/usage-metrics/prompt-acceptance', async (req, res) => {
+  const { startDate, endDate } = req.query;
+  let start, end;
+  if (startDate && endDate) {
+    start = new Date(startDate);
+    end = new Date(endDate);
+    if (isNaN(start.getTime()) || isNaN(end.getTime())) {
+      return res.render('prompt_acceptance', {
+        title: 'Prompt Acceptance Report',
+        bodyClass: 'dashboard-bg',
+        session: req.session,
+        records: [],
+        startDate,
+        endDate,
+        user: req.query.user || ''
+      });
+    }
+    end.setHours(23, 59, 59, 999);
+  } else {
+    start = new Date();
+    start.setDate(start.getDate() - 5);
+    end = new Date();
+  }
+  const { getAllMetrics } = require('../controllers/logProcessor');
+  const data = getAllMetrics(start, end);
+  const prompts = data.prompts || [];
+  const generations = data.generations || [];
+  const promptAcceptanceReport = prompts.map((prompt, idx) => {
+    let matchedGen = null;
+    if (prompt.text) {
+      matchedGen = generations.find(gen => {
+        if (gen.textDescription && gen.textDescription.includes(prompt.text)) return true;
+        if (gen.description && gen.description.includes(prompt.text)) return true;
+        return false;
+      });
+    }
+    if (!matchedGen && generations[idx]) {
+      matchedGen = generations[idx];
+    }
+    return {
+      prompt: prompt.text || '',
+      status: matchedGen ? 'Accepted' : 'Rejected',
+      response: matchedGen ? (matchedGen.textDescription || matchedGen.description || '') : '',
+      responseRaw: matchedGen || null
+    };
+  });
+  res.render('prompt_acceptance', {
+    title: 'Prompt Acceptance Report',
+    bodyClass: 'dashboard-bg',
+    session: req.session,
+    records: promptAcceptanceReport,
+    startDate,
+    endDate,
+    user: req.query.user || ''
+  });
+});
+
+// Route for Generations Heatmap page
+router.get('/usage-metrics/graph', async (req, res) => {
+  try {
+    // Use the same date/user logic as dashboard
+    let start, end;
+    const { startDate, endDate, user } = req.query;
+    if (startDate && endDate) {
+      start = new Date(startDate);
+      end = new Date(endDate);
+      if (isNaN(start.getTime()) || isNaN(end.getTime())) {
+        return res.render('usage_metric_graph', {
+          title: 'Usage Metrics Graph',
+          bodyClass: 'dashboard-bg',
+          session: req.session,
+          metricsData: {},
+          startDate,
+          endDate,
+          user: user || ''
+        });
+      }
+      end.setHours(23, 59, 59, 999);
+    } else {
+      start = new Date();
+      start.setDate(start.getDate() - 5); // Default to last 5 days
+      end = new Date();
+    }
+    
+    // Use getAllMetrics directly instead of the controller
+    const { getAllMetrics } = require('../controllers/logProcessor');
+    const metricsData = getAllMetrics(start, end);
+    
+    res.render('usage_metric_graph', {
+      title: 'Usage Metrics Graph',
+      bodyClass: 'dashboard-bg',
+      session: req.session,
+      metricsData,
+      startDate: start.toISOString().slice(0,10),
+      endDate: end.toISOString().slice(0,10),
+      user: user || ''
+    });
+  } catch (err) {
+    res.render('usage_metric_graph', {
+      title: 'Usage Metrics Graph',
+      bodyClass: 'dashboard-bg',
+      session: req.session,
+      metricsData: {},
+      startDate: '',
+      endDate: '',
+      user: ''
+    });
+  }
 });
 
 module.exports = router; 

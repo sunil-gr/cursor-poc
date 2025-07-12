@@ -15,7 +15,9 @@ const {
   extractComposerData,
   getAllMetrics,
   loadLogs,
-  filterLogsByDateRange
+  filterLogsByDateRange,
+  extractLineChangesFromChat,
+  extractTabAcceptanceData
 } = require('./logProcessor');
 const winston = require('winston');
 
@@ -135,6 +137,31 @@ function getUsageMetricsData(req, res) {
     generations = generations.reverse();
     historyEntries = historyEntries.reverse();
     
+    // Prompt Acceptance Report Aggregation
+    // For each prompt, determine if it was accepted (has a matching response in generations)
+    const promptAcceptanceReport = prompts.map((prompt, idx) => {
+      // Try to find a matching generation by text or close timestamp
+      let matchedGen = null;
+      if (prompt.text) {
+        matchedGen = generations.find(gen => {
+          // Match by textDescription or description containing the prompt text
+          if (gen.textDescription && gen.textDescription.includes(prompt.text)) return true;
+          if (gen.description && gen.description.includes(prompt.text)) return true;
+          return false;
+        });
+      }
+      // Fallback: match by order if no text match
+      if (!matchedGen && generations[idx]) {
+        matchedGen = generations[idx];
+      }
+      return {
+        prompt: prompt.text || '',
+        status: matchedGen ? 'Accepted' : 'Rejected',
+        response: matchedGen ? (matchedGen.textDescription || matchedGen.description || '') : '',
+        responseRaw: matchedGen || null
+      };
+    });
+    
     // Check if there's any meaningful data
     const hasMeaningfulData = prompts.length > 0 || generations.length > 0 || 
                              historyEntries.length > 0 || languages.length > 0 ||
@@ -147,15 +174,48 @@ function getUsageMetricsData(req, res) {
       });
     }
     
+    // Limit sensitiveResults and promptAcceptanceReport to 10 most recent by default for API response
+    const showAll = req.query.all === 'true';
+    const limitedSensitiveResults = showAll ? (metricsData.sensitiveResults || []) : (metricsData.sensitiveResults || []).slice().reverse().slice(0, 10);
+    const limitedPromptAcceptanceReport = showAll ? promptAcceptanceReport : promptAcceptanceReport.slice().reverse().slice(0, 10);
+
+    // Limit all main array fields in the API response to 10 most recent by default
+    function limitArr(arr) {
+      return showAll ? arr : (Array.isArray(arr) ? arr.slice().reverse().slice(0, 10) : arr);
+    }
+    // Limit aiServiceMetrics array fields: sort by timestamp descending, then slice 0-10
+    let limitedAiServiceMetrics = { ...data.aiServiceMetrics };
+    if (limitedAiServiceMetrics) {
+      Object.keys(limitedAiServiceMetrics).forEach(key => {
+        if (Array.isArray(limitedAiServiceMetrics[key])) {
+          if (!showAll) {
+            // Only sort and slice if the array has timestamp or unixMs
+            const arr = limitedAiServiceMetrics[key];
+            if (arr.length && (arr[0].timestamp || arr[0].unixMs)) {
+              limitedAiServiceMetrics[key] = arr.slice().sort((a, b) => {
+                const ta = a.timestamp || a.unixMs || 0;
+                const tb = b.timestamp || b.unixMs || 0;
+                return tb - ta;
+              }).slice(0, 10);
+            } else {
+              limitedAiServiceMetrics[key] = arr.slice(0, 10);
+            }
+          }
+        }
+      });
+    }
     const response = {
-      prompts,
-      generations,
+      prompts: limitArr(prompts),
+      generations: limitArr(generations),
       composerData: composerData || {},
-      historyEntries,
-      searchHistory: searchHistory || {},
-      languages,
+      historyEntries: limitArr(historyEntries),
+      searchHistory: limitArr(searchHistory),
+      languages: limitArr(languages),
       aichatViews,
-      terminalViews
+      terminalViews,
+      promptAcceptanceReport: limitedPromptAcceptanceReport,
+      sensitiveResults: limitedSensitiveResults,
+      aiServiceMetrics: limitedAiServiceMetrics
     };
     res.json(response);
   } catch (err) {
@@ -268,12 +328,7 @@ async function getEnhancedMetrics(req, res) {
         });
         
     } catch (error) {
-        console.error('Error getting enhanced metrics:', error);
-        res.status(500).json({ 
-            success: false, 
-            error: 'Failed to get enhanced metrics',
-            details: error.message 
-        });
+        res.status(500).json({ error: 'Failed to get enhanced metrics', details: error.message });
     }
 }
 
@@ -303,12 +358,7 @@ async function getAIServiceMetrics(req, res) {
         });
         
     } catch (error) {
-        console.error('Error getting AI service metrics:', error);
-        res.status(500).json({ 
-            success: false, 
-            error: 'Failed to get AI service metrics',
-            details: error.message 
-        });
+        res.status(500).json({ error: 'Failed to get AI service metrics', details: error.message });
     }
 }
 
@@ -338,12 +388,7 @@ async function getEditorActivityMetrics(req, res) {
         });
         
     } catch (error) {
-        console.error('Error getting editor activity metrics:', error);
-        res.status(500).json({ 
-            success: false, 
-            error: 'Failed to get editor activity metrics',
-            details: error.message 
-        });
+        res.status(500).json({ error: 'Failed to get editor activity metrics', details: error.message });
     }
 }
 
@@ -373,12 +418,7 @@ async function getWorkspaceSettingsMetrics(req, res) {
         });
         
     } catch (error) {
-        console.error('Error getting workspace settings metrics:', error);
-        res.status(500).json({ 
-            success: false, 
-            error: 'Failed to get workspace settings metrics',
-            details: error.message 
-        });
+        res.status(500).json({ error: 'Failed to get workspace settings metrics', details: error.message });
     }
 }
 
@@ -408,12 +448,7 @@ async function getDevEnvironmentMetrics(req, res) {
         });
         
     } catch (error) {
-        console.error('Error getting development environment metrics:', error);
-        res.status(500).json({ 
-            success: false, 
-            error: 'Failed to get development environment metrics',
-            details: error.message 
-        });
+        res.status(500).json({ error: 'Failed to get development environment metrics', details: error.message });
     }
 }
 
@@ -443,13 +478,120 @@ async function getComposerDataMetrics(req, res) {
         });
         
     } catch (error) {
-        console.error('Error getting composer data metrics:', error);
-        res.status(500).json({ 
-            success: false, 
-            error: 'Failed to get composer data metrics',
-            details: error.message 
-        });
+        res.status(500).json({ error: 'Failed to get composer data metrics', details: error.message });
     }
+}
+
+/**
+ * Get line changes from chat data
+ * @param {Request} req
+ * @param {Response} res
+ */
+async function getLineChangesFromChat(req, res) {
+  try {
+    const { startDate, endDate, user } = req.query;
+    const logsDir = path.join(process.cwd(), 'cursorlogs');
+    
+    if (!fs.existsSync(logsDir)) {
+      return res.status(404).json({ error: 'No cursorlogs directory found' });
+    }
+
+    // Get all log files
+    const logFiles = fs.readdirSync(logsDir)
+      .filter(f => f.endsWith('.json'))
+      .map(f => path.join(logsDir, f));
+
+    if (logFiles.length === 0) {
+      return res.status(404).json({ error: 'No log files found' });
+    }
+
+    // Load and parse all logs
+    const allLogs = [];
+    for (const logFile of logFiles) {
+      try {
+        const logData = JSON.parse(fs.readFileSync(logFile, 'utf8'));
+        allLogs.push(logData);
+      } catch (parseError) {
+        console.error(`Error parsing log file ${logFile}:`, parseError);
+      }
+    }
+
+    if (allLogs.length === 0) {
+      return res.status(404).json({ error: 'No valid log data found' });
+    }
+
+    // Extract line changes data
+    const lineChangesData = extractLineChangesFromChat(allLogs);
+
+    res.json({
+      success: true,
+      data: lineChangesData,
+      message: 'Line changes from chat data retrieved successfully'
+    });
+
+  } catch (error) {
+    res.status(500).json({
+      success: false,
+      error: 'Failed to retrieve line changes from chat data',
+      details: error.message
+    });
+  }
+}
+
+/**
+ * Get tab acceptance data
+ * @param {Request} req
+ * @param {Response} res
+ */
+async function getTabAcceptanceData(req, res) {
+  try {
+    const { startDate, endDate, user } = req.query;
+    const logsDir = path.join(process.cwd(), 'cursorlogs');
+    
+    if (!fs.existsSync(logsDir)) {
+      return res.status(404).json({ error: 'No cursorlogs directory found' });
+    }
+
+    // Get all log files
+    const logFiles = fs.readdirSync(logsDir)
+      .filter(f => f.endsWith('.json'))
+      .map(f => path.join(logsDir, f));
+
+    if (logFiles.length === 0) {
+      return res.status(404).json({ error: 'No log files found' });
+    }
+
+    // Load and parse all logs
+    const allLogs = [];
+    for (const logFile of logFiles) {
+      try {
+        const logData = JSON.parse(fs.readFileSync(logFile, 'utf8'));
+        allLogs.push(logData);
+      } catch (parseError) {
+        console.error(`Error parsing log file ${logFile}:`, parseError);
+      }
+    }
+
+    if (allLogs.length === 0) {
+      return res.status(404).json({ error: 'No valid log data found' });
+    }
+
+    // Extract tab acceptance data
+    const tabAcceptanceData = extractTabAcceptanceData(allLogs);
+
+    res.json({
+      success: true,
+      data: tabAcceptanceData,
+      message: 'Tab acceptance data retrieved successfully'
+    });
+
+  } catch (error) {
+    res.status(500).json({
+      success: false,
+      error: 'Failed to retrieve tab acceptance data',
+      details: error.message
+    });
+  }
 }
 
 module.exports = {
@@ -460,5 +602,7 @@ module.exports = {
   getEditorActivityMetrics,
   getWorkspaceSettingsMetrics,
   getDevEnvironmentMetrics,
-  getComposerDataMetrics
+  getComposerDataMetrics,
+  getLineChangesFromChat,
+  getTabAcceptanceData
 }; 

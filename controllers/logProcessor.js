@@ -748,7 +748,7 @@ function extractAIServiceMetrics(logs) {
                     aiMetrics.promptTypes[type] = (aiMetrics.promptTypes[type] || 0) + 1;
                 });
             } catch (e) {
-                console.error('Error parsing AI prompts:', e);
+                // Ignore parsing errors
             }
         }
 
@@ -756,18 +756,34 @@ function extractAIServiceMetrics(logs) {
             try {
                 const generations = JSON.parse(log.value);
                 aiMetrics.totalGenerations = generations.length;
-                aiMetrics.recentGenerations = generations.map(g => ({
-                    description: g.textDescription ? (g.textDescription.substring(0, 100) + (g.textDescription.length > 100 ? '...' : '')) : 'No description',
-                    type: g.type || 'unknown',
-                    timestamp: g.unixMs ? new Date(g.unixMs).toLocaleString() : 'Unknown'
-                }));
+                aiMetrics.recentGenerations = generations.map(g => {
+                    // Use the first available timestamp field, and always output ISO string
+                    let ts = g.timestamp || g.unixMs || g.createdAt || g.date || g.time;
+                    let isoTs = 'Unknown';
+                    if (ts) {
+                        if (typeof ts === 'string' && !isNaN(Date.parse(ts))) {
+                            isoTs = new Date(ts).toISOString();
+                        } else if (typeof ts === 'number') {
+                            isoTs = new Date(ts).toISOString();
+                        }
+                    }
+                    return {
+                        description: g.textDescription ? (g.textDescription.substring(0, 100) + (g.textDescription.length > 100 ? '...' : '')) : 'No description',
+                        type: g.type || 'unknown',
+                        timestamp: isoTs,
+                        // Optionally include original fields for debugging
+                        originalTimestamp: g.timestamp,
+                        originalUnixMs: g.unixMs,
+                        originalCreatedAt: g.createdAt
+                    };
+                });
                 
                 generations.forEach(gen => {
                     const type = gen.type || 'unknown';
                     aiMetrics.generationTypes[type] = (aiMetrics.generationTypes[type] || 0) + 1;
                 });
             } catch (e) {
-                console.error('Error parsing AI generations:', e);
+                // Ignore parsing errors
             }
         }
     });
@@ -808,7 +824,7 @@ function extractEditorActivity(logs) {
                     editorMetrics.fileTypes[file.fileType] = (editorMetrics.fileTypes[file.fileType] || 0) + 1;
                 });
             } catch (e) {
-                console.error('Error parsing editor history:', e);
+                // Ignore parsing errors
             }
         }
 
@@ -830,7 +846,7 @@ function extractEditorActivity(logs) {
                     });
                 }
             } catch (e) {
-                console.error('Error parsing editor state:', e);
+                // Ignore parsing errors
             }
         }
     });
@@ -879,7 +895,7 @@ function extractWorkspaceSettings(logs) {
             try {
                 workspaceMetrics.sidebarStates.explorer = JSON.parse(log.value);
             } catch (e) {
-                console.error('Error parsing explorer state:', e);
+                // Ignore parsing errors
             }
         }
 
@@ -887,7 +903,7 @@ function extractWorkspaceSettings(logs) {
             try {
                 workspaceMetrics.panelStates = JSON.parse(log.value);
             } catch (e) {
-                console.error('Error parsing panel state:', e);
+                // Ignore parsing errors
             }
         }
     });
@@ -918,7 +934,7 @@ function extractDevEnvironment(logs) {
             try {
                 devMetrics.gitInfo = JSON.parse(log.value);
             } catch (e) {
-                console.error('Error parsing git info:', e);
+                // Ignore parsing errors
             }
         }
 
@@ -926,7 +942,7 @@ function extractDevEnvironment(logs) {
             try {
                 devMetrics.languageDetection = JSON.parse(log.value);
             } catch (e) {
-                console.error('Error parsing language detection:', e);
+                // Ignore parsing errors
             }
         }
 
@@ -958,7 +974,7 @@ function extractComposerData(logs) {
                 composerMetrics.composers = composerData.allComposers || [];
                 composerMetrics.activeComposer = composerData.selectedComposerIds?.[0] || null;
             } catch (e) {
-                console.error('Error parsing composer data:', e);
+                // Ignore parsing errors
             }
         }
 
@@ -966,7 +982,7 @@ function extractComposerData(logs) {
             try {
                 composerMetrics.chatSessions = JSON.parse(log.value);
             } catch (e) {
-                console.error('Error parsing interactive sessions:', e);
+                // Ignore parsing errors
             }
         }
 
@@ -974,7 +990,7 @@ function extractComposerData(logs) {
             try {
                 composerMetrics.composerStates = JSON.parse(log.value);
             } catch (e) {
-                console.error('Error parsing composer states:', e);
+                // Ignore parsing errors
             }
         }
     });
@@ -1225,7 +1241,7 @@ function getAllMetrics(startDate, endDate) {
 
 // --- Sensitive Info Scan ---
 const SENSITIVE_KEYWORDS = [
-  'username', 'user', 'password', 'pass', 'database', 'db', 'token', 'jwt', 'secret', 'key', 'credential', 'auth', 'security', 'access', 'apikey', 'api_key', 'refresh', 'session', 'cookie', 'bearer'
+  'username', 'user', 'password', 'pass', 'database', 'db', 'token', 'jwt', 'secret', 'credential', 'auth', 'security', 'access', 'apikey', 'api_key', 'refresh', 'session', 'cookie', 'bearer'
 ];
 
 function scanLogsForSensitiveInfo() {
@@ -1262,6 +1278,144 @@ function scanLogsForSensitiveInfo() {
   return { results, keywordCounts };
 }
 
+/**
+ * Extract line changes from chat data from cursorlogs
+ * @param {Array} logs - Array of log data
+ * @returns {Object} Line changes metrics
+ */
+function extractLineChangesFromChat(logs) {
+  const lineChangesData = {
+    totalLineChanges: 0,
+    lineChangesByDate: {},
+    lineChangesByType: {},
+    lineChangesByFile: {},
+    lineChangesTimeline: []
+  };
+
+  try {
+    logs.forEach(log => {
+      // Each log is an array of {key, value} objects
+      if (Array.isArray(log)) {
+        log.forEach(entry => {
+          if (entry.key === 'aiService.generations' && entry.value) {
+            try {
+              const generations = JSON.parse(entry.value);
+              if (Array.isArray(generations)) {
+                generations.forEach(generation => {
+                  if (generation.type === 'apply') {
+                    // Count this as a line change
+                    lineChangesData.totalLineChanges++;
+                    
+                    // Add to timeline
+                    const timestamp = generation.unixMs || generation.timestamp || Date.now();
+                    const date = new Date(timestamp);
+                    const dateKey = date.toISOString().split('T')[0];
+                    
+                    // Count by date
+                    lineChangesData.lineChangesByDate[dateKey] = (lineChangesData.lineChangesByDate[dateKey] || 0) + 1;
+                    
+                    // Count by type
+                    const type = generation.type || 'unknown';
+                    lineChangesData.lineChangesByType[type] = (lineChangesData.lineChangesByType[type] || 0) + 1;
+                    
+                    // Count by file if available
+                    if (generation.file) {
+                      lineChangesData.lineChangesByFile[generation.file] = (lineChangesData.lineChangesByFile[generation.file] || 0) + 1;
+                    }
+                    
+                    // Add to timeline
+                    lineChangesData.lineChangesTimeline.push({
+                      timestamp: timestamp,
+                      date: dateKey,
+                      type: type,
+                      file: generation.file || 'unknown'
+                    });
+                  }
+                });
+              }
+            } catch (parseError) {
+              // Ignore parsing errors
+            }
+          }
+        });
+      }
+    });
+  } catch (error) {
+    // Ignore parsing errors
+  }
+
+  return lineChangesData;
+}
+
+/**
+ * Extract tab acceptance data from cursorlogs
+ * @param {Array} logs - Array of log data
+ * @returns {Object} Tab acceptance metrics
+ */
+function extractTabAcceptanceData(logs) {
+  const tabAcceptanceData = {
+    totalTabsAccepted: 0,
+    tabsAcceptedByDate: {},
+    tabsAcceptedByType: {},
+    tabsAcceptedByFile: {},
+    tabsAcceptedTimeline: []
+  };
+
+  try {
+    logs.forEach(log => {
+      // Each log is an array of {key, value} objects
+      if (Array.isArray(log)) {
+        log.forEach(entry => {
+          if (entry.key === 'aiService.generations' && entry.value) {
+            try {
+              const generations = JSON.parse(entry.value);
+              if (Array.isArray(generations)) {
+                generations.forEach(generation => {
+                  if (generation.type === 'composer') {
+                    // Count this as a tab acceptance
+                    tabAcceptanceData.totalTabsAccepted++;
+                    
+                    // Add to timeline
+                    const timestamp = generation.unixMs || generation.timestamp || Date.now();
+                    const date = new Date(timestamp);
+                    const dateKey = date.toISOString().split('T')[0];
+                    
+                    // Count by date
+                    tabAcceptanceData.tabsAcceptedByDate[dateKey] = (tabAcceptanceData.tabsAcceptedByDate[dateKey] || 0) + 1;
+                    
+                    // Count by type
+                    const type = generation.type || 'unknown';
+                    tabAcceptanceData.tabsAcceptedByType[type] = (tabAcceptanceData.tabsAcceptedByType[type] || 0) + 1;
+                    
+                    // Count by file if available
+                    if (generation.file) {
+                      tabAcceptanceData.tabsAcceptedByFile[generation.file] = (tabAcceptanceData.tabsAcceptedByFile[generation.file] || 0) + 1;
+                    }
+                    
+                    // Add to timeline
+                    tabAcceptanceData.tabsAcceptedTimeline.push({
+                      timestamp: timestamp,
+                      date: dateKey,
+                      type: type,
+                      file: generation.file || 'unknown'
+                    });
+                  }
+                });
+              }
+            } catch (parseError) {
+              // Ignore parsing errors
+            }
+          }
+        });
+      }
+    });
+  } catch (error) {
+    // Ignore parsing errors
+  }
+
+  return tabAcceptanceData;
+}
+
 // Export the enhanced function
 module.exports = {
   processAllStateVscdbRecursive,
@@ -1276,5 +1430,7 @@ module.exports = {
   getAllMetrics,
   loadLogs,
   filterLogsByDateRange,
-  scanLogsForSensitiveInfo
+  scanLogsForSensitiveInfo,
+  extractLineChangesFromChat,
+  extractTabAcceptanceData
 }; 

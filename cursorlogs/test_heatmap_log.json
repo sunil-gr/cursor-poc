@@ -1,0 +1,6 @@
+[
+  {
+    "key": "aiService.generations",
+    "value": "[\n      {\"timestamp\": \"2025-07-08T08:00:00.000Z\", \"textDescription\": \"Test generation 1\"},\n      {\"timestamp\": \"2025-07-08T09:00:00.000Z\", \"textDescription\": \"Test generation 2\"},\n      {\"timestamp\": \"2025-07-08T10:00:00.000Z\", \"textDescription\": \"Test generation 3\"},\n      {\"timestamp\": \"2025-07-08T11:00:00.000Z\", \"textDescription\": \"Test generation 4\"},\n      {\"timestamp\": \"2025-07-08T12:00:00.000Z\", \"textDescription\": \"Test generation 5\"}\n    ]"
+  }
+] 
