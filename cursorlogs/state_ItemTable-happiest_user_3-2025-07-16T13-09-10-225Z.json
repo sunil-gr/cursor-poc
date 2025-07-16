@@ -1,0 +1,250 @@
+[
+  {
+    "key": "__$__isNewStorageMarker",
+    "value": "true"
+  },
+  {
+    "key": "cursorAuth/workspaceOpenedDate",
+    "value": "2025-07-07T13:05:33.332Z"
+  },
+  {
+    "key": "workbench.view.search.state",
+    "value": "{\"workbench.view.search\":{\"collapsed\":false,\"isHidden\":true}}"
+  },
+  {
+    "key": "workbench.scm.views.state",
+    "value": "{\"workbench.scm.repositories\":{\"collapsed\":false,\"isHidden\":true},\"workbench.scm\":{\"collapsed\":false,\"isHidden\":true},\"workbench.scm.history\":{\"collapsed\":false,\"isHidden\":true}}"
+  },
+  {
+    "key": "workbench.panel.markers",
+    "value": "{\"workbench.panel.markers.view\":{\"collapsed\":false,\"isHidden\":true}}"
+  },
+  {
+    "key": "workbench.panel.output",
+    "value": "{\"workbench.panel.output\":{\"collapsed\":false,\"isHidden\":true}}"
+  },
+  {
+    "key": "workbench.auxiliarybar.initialViewContainers",
+    "value": "[\"workbench.panel.aichat\"]"
+  },
+  {
+    "key": "workbench.auxiliarybar.viewContainersWorkspaceState",
+    "value": "[{\"id\":\"workbench.panel.aichat\",\"visible\":true},{\"id\":\"workbench.panel.composerViewPane2\",\"visible\":false},{\"id\":\"workbench.panel.aipaneaaaiBugFinder\",\"visible\":false},{\"id\":\"workbench.panel.chat\",\"visible\":false},{\"id\":\"workbench.panel.chatEditing\",\"visible\":false}]"
+  },
+  {
+    "key": "workbench.auxiliarybar.activepanelid",
+    "value": "workbench.panel.aichat"
+  },
+  {
+    "key": "debug.selectedroot",
+    "value": "file:///d%3A/xampp/htdocs/hm-github/cursor-poc/.vscode/launch.json"
+  },
+  {
+    "key": "output.activechannel",
+    "value": "tasks"
+  },
+  {
+    "key": "workbench.view.remote.state",
+    "value": "{\"sshHosts\":{\"collapsed\":false,\"isHidden\":false},\"github.codespaces.explorer\":{\"collapsed\":false,\"isHidden\":false},\"github.codespaces.warnExplorer\":{\"collapsed\":false,\"isHidden\":false},\"github.codespaces.performanceExplorer\":{\"collapsed\":false,\"isHidden\":false}}"
+  },
+  {
+    "key": "workbench.view.extension.github-pull-requests.state",
+    "value": "{\"github:login\":{\"collapsed\":false,\"isHidden\":true},\"pr:github\":{\"collapsed\":false,\"isHidden\":true},\"issues:github\":{\"collapsed\":false,\"isHidden\":true},\"notifications:github\":{\"collapsed\":false,\"isHidden\":true},\"github:conflictResolution\":{\"collapsed\":false,\"isHidden\":true}}"
+  },
+  {
+    "key": "workbench.view.extension.workspaceViewer.state",
+    "value": "{\"workspaceViewer\":{\"collapsed\":false,\"isHidden\":true},\"rHelpPages\":{\"collapsed\":false,\"isHidden\":true},\"rLiveShare\":{\"collapsed\":true,\"isHidden\":true}}"
+  },
+  {
+    "key": "~remote.forwardedPortsContainer",
+    "value": "{\"~remote.forwardedPorts\":{\"collapsed\":false,\"isHidden\":true}}"
+  },
+  {
+    "key": "workbench.panel.repl",
+    "value": "{\"workbench.panel.repl.view\":{\"collapsed\":false,\"isHidden\":true}}"
+  },
+  {
+    "key": "workbench.panel.viewContainersWorkspaceState",
+    "value": "[{\"id\":\"workbench.panel.markers\",\"visible\":true},{\"id\":\"workbench.panel.output\",\"visible\":true},{\"id\":\"workbench.panel.repl\",\"visible\":true},{\"id\":\"terminal\",\"visible\":true},{\"id\":\"workbench.panel.testResults\",\"visible\":false},{\"id\":\"~remote.forwardedPortsContainer\",\"visible\":true},{\"id\":\"refactorPreview\",\"visible\":false}]"
+  },
+  {
+    "key": "workbench.view.debug.state",
+    "value": "{\"workbench.debug.welcome\":{\"collapsed\":false,\"isHidden\":true},\"workbench.debug.variablesView\":{\"collapsed\":false,\"isHidden\":true},\"workbench.debug.watchExpressionsView\":{\"collapsed\":false,\"isHidden\":true},\"workbench.debug.callStackView\":{\"collapsed\":false,\"isHidden\":true},\"workbench.debug.loadedScriptsView\":{\"collapsed\":true,\"isHidden\":true},\"workbench.debug.breakPointsView\":{\"collapsed\":false,\"isHidden\":true},\"jsBrowserBreakpoints\":{\"collapsed\":true,\"isHidden\":true},\"jsExcludedCallers\":{\"collapsed\":true,\"isHidden\":true},\"jsDebugNetworkTree\":{\"collapsed\":true,\"isHidden\":true},\"CppSshTargetsView\":{\"collapsed\":true,\"isHidden\":true},\"lldb.loadedModules\":{\"collapsed\":true,\"isHidden\":true},\"lldb.excludedCallers\":{\"collapsed\":true,\"isHidden\":true}}"
+  },
+  {
+    "key": "debug.uxstate",
+    "value": "simple"
+  },
+  {
+    "key": "vscode.git",
+    "value": "{\"closedRepositories\":[]}"
+  },
+  {
+    "key": "workbench.view.explorer.numberOfVisibleViews",
+    "value": "4"
+  },
+  {
+    "key": "workbench.editor.centered",
+    "value": "false"
+  },
+  {
+    "key": "workbench.zenMode.active",
+    "value": "false"
+  },
+  {
+    "key": "workbench.zenMode.exitInfo",
+    "value": "{\"transitionedToCenteredEditorLayout\":false,\"transitionedToFullScreen\":false,\"handleNotificationsDoNotDisturbMode\":false,\"wasVisible\":{\"auxiliaryBar\":false,\"panel\":false,\"sideBar\":false}}"
+  },
+  {
+    "key": "workbench.panel.wasLastMaximized",
+    "value": "false"
+  },
+  {
+    "key": "workbench.sideBar.position",
+    "value": "0"
+  },
+  {
+    "key": "workbench.panel.position",
+    "value": "2"
+  },
+  {
+    "key": "workbench.activityBar.hidden",
+    "value": "true"
+  },
+  {
+    "key": "workbench.sideBar.hidden",
+    "value": "false"
+  },
+  {
+    "key": "workbench.editor.hidden",
+    "value": "false"
+  },
+  {
+    "key": "workbench.auxiliaryBar.hidden",
+    "value": "false"
+  },
+  {
+    "key": "workbench.statusBar.hidden",
+    "value": "false"
+  },
+  {
+    "key": "workbench.panel.aichat.numberOfVisibleViews",
+    "value": "1"
+  },
+  {
+    "key": "workbench.panel.chat.numberOfVisibleViews",
+    "value": "0"
+  },
+  {
+    "key": "aiService.generations",
+    "value": "[]"
+  },
+  {
+    "key": "aiService.prompts",
+    "value": "[]"
+  },
+  {
+    "key": "notepad.reactiveStorageId",
+    "value": "{\"notepads\":{},\"notepadDataVersion\":0}"
+  },
+  {
+    "key": "interactive.sessions",
+    "value": "[]"
+  },
+  {
+    "key": "notepadData",
+    "value": "{\"notepads\":{}}"
+  },
+  {
+    "key": "comments.continueOnComments",
+    "value": "[]"
+  },
+  {
+    "key": "composer.composerData",
+    "value": "{\"allComposers\":[{\"type\":\"head\",\"composerId\":\"525b6c0b-fb8c-4b82-a988-04d8a0e1eee1\",\"createdAt\":1751893533360,\"unifiedMode\":\"agent\",\"forceMode\":\"edit\",\"hasUnreadMessages\":false},{\"type\":\"head\",\"composerId\":\"834d01d0-f25d-45b5-bcbe-7baa164c1a2c\",\"createdAt\":1751893533361,\"unifiedMode\":\"chat\",\"forceMode\":\"edit\",\"hasUnreadMessages\":false}],\"selectedComposerIds\":[\"525b6c0b-fb8c-4b82-a988-04d8a0e1eee1\"],\"hasMigratedComposerData\":false,\"hasMigratedMultipleComposers\":true}"
+  },
+  {
+    "key": "terminal.integrated.environmentVariableCollectionsV2",
+    "value": "[{\"extensionIdentifier\":\"vscode.git\",\"collection\":[[\"GIT_ASKPASS\",{\"variable\":\"GIT_ASKPASS\",\"value\":\"c:\\\\Users\\\\suniv\\\\AppData\\\\Local\\\\Programs\\\\cursor\\\\resources\\\\app\\\\extensions\\\\git\\\\dist\\\\askpass.sh\",\"type\":1,\"options\":{\"applyAtProcessCreation\":true,\"applyAtShellIntegration\":false}}],[\"VSCODE_GIT_ASKPASS_NODE\",{\"variable\":\"VSCODE_GIT_ASKPASS_NODE\",\"value\":\"c:\\\\Users\\\\suniv\\\\AppData\\\\Local\\\\Programs\\\\cursor\\\\Cursor.exe\",\"type\":1,\"options\":{\"applyAtProcessCreation\":true,\"applyAtShellIntegration\":false}}],[\"VSCODE_GIT_ASKPASS_EXTRA_ARGS\",{\"variable\":\"VSCODE_GIT_ASKPASS_EXTRA_ARGS\",\"value\":\"\",\"type\":1,\"options\":{\"applyAtProcessCreation\":true,\"applyAtShellIntegration\":false}}],[\"VSCODE_GIT_ASKPASS_MAIN\",{\"variable\":\"VSCODE_GIT_ASKPASS_MAIN\",\"value\":\"c:\\\\Users\\\\suniv\\\\AppData\\\\Local\\\\Programs\\\\cursor\\\\resources\\\\app\\\\extensions\\\\git\\\\dist\\\\askpass-main.js\",\"type\":1,\"options\":{\"applyAtProcessCreation\":true,\"applyAtShellIntegration\":false}}],[\"VSCODE_GIT_IPC_HANDLE\",{\"variable\":\"VSCODE_GIT_IPC_HANDLE\",\"value\":\"\\\\\\\\.\\\\pipe\\\\vscode-git-54ac410e6b-sock\",\"type\":1,\"options\":{\"applyAtProcessCreation\":true,\"applyAtShellIntegration\":false}}]],\"description\":[[\"\",{\"description\":\"Enables the following features: git auth provider\"}]]}]"
+  },
+  {
+    "key": "terminal.integrated.layoutInfo",
+    "value": "{\"workspaceId\":\"e7e5f2d6515ac3ff1d3efaad172714eb\",\"tabs\":[{\"isActive\":true,\"activePersistentProcessId\":4,\"terminals\":[{\"relativeSize\":1,\"terminal\":4}]}]}"
+  },
+  {
+    "key": "workbench.panel.hidden",
+    "value": "false"
+  },
+  {
+    "key": "scm:view:visibleRepositories",
+    "value": "{\"all\":[\"git:Git:file:///d%3A/xampp/htdocs/hm-github/cursor-poc\"],\"sortKey\":\"discoveryTime\",\"visible\":[0]}"
+  },
+  {
+    "key": "terminal.numberOfVisibleViews",
+    "value": "1"
+  },
+  {
+    "key": "GitHub.vscode-pull-request-github",
+    "value": "{\"github:focusedReview\":true}"
+  },
+  {
+    "key": "anysphere.cursor-retrieval",
+    "value": "{\"cursor-retrieval-state-version\":1,\"map/bc4f3fc96595faa57699479d7394b564cc1be2bf427aa4a7f6bae92d1896388e-cursor-poc/repoKeys\":{\"repoName\":\"30cf411c-9fc5-47e6-8b32-ccc8c70ced75\",\"orthogonalTransformationSeed\":5421007562603595,\"pathEncryptionKey\":\"RYs3Fi3B0_W8bnb1kSdkbvJmzcqQFXrILz3iyWfJaRM\",\"pathEncryptionScheme\":\"aes-256-ctr\",\"canUpdateKey\":false},\"map/bc4f3fc96595faa57699479d7394b564cc1be2bf427aa4a7f6bae92d1896388e-cursor-poc/google-oauth2|user_01JE9GMZAZSQBF883XR5KV60FJ/indexingStatus\":{\"globalStatus\":{\"case\":\"synced\",\"numFiles\":22},\"progress\":100}}"
+  },
+  {
+    "key": "workbench.editor.languageDetectionOpenedLanguages.workspace",
+    "value": "[[\"ignore\",true],[\"gcc-md\",true]]"
+  },
+  {
+    "key": "history.entries",
+    "value": "[{\"editor\":{\"resource\":\"file:///d%3A/xampp/htdocs/hm-github/cursor-poc/README.md\",\"forceFile\":true,\"options\":{\"override\":\"default\"}}},{\"editor\":{\"resource\":\"file:///d%3A/xampp/htdocs/hm-github/cursor-poc/.gitignore\",\"forceFile\":true,\"options\":{\"override\":\"default\"}}}]"
+  },
+  {
+    "key": "memento/workbench.editors.files.textFileEditor",
+    "value": "{\"textEditorViewState\":[[\"file:///d%3A/xampp/htdocs/hm-github/cursor-poc/.gitignore\",{\"0\":{\"cursorState\":[{\"inSelectionMode\":false,\"selectionStart\":{\"lineNumber\":7,\"column\":28},\"position\":{\"lineNumber\":7,\"column\":28}}],\"viewState\":{\"scrollLeft\":0,\"firstPosition\":{\"lineNumber\":1,\"column\":1},\"firstPositionDeltaTop\":0},\"contributionsState\":{\"editor.contrib.folding\":{\"lineCount\":7,\"provider\":\"indent\",\"foldedImports\":false},\"editor.contrib.wordHighlighter\":false}}}],[\"file:///d%3A/xampp/htdocs/hm-github/cursor-poc/README.md\",{\"0\":{\"cursorState\":[{\"inSelectionMode\":true,\"selectionStart\":{\"lineNumber\":1,\"column\":33},\"position\":{\"lineNumber\":1,\"column\":1}}],\"viewState\":{\"scrollLeft\":0,\"firstPosition\":{\"lineNumber\":1,\"column\":1},\"firstPositionDeltaTop\":0},\"contributionsState\":{\"editor.contrib.folding\":{\"lineCount\":107,\"provider\":\"indent\",\"foldedImports\":false},\"editor.contrib.wordHighlighter\":false}}}]]}"
+  },
+  {
+    "key": "workbench.explorer.treeViewState",
+    "value": "{\"focus\":[\"file:///d%3A/xampp/htdocs/hm-github/cursor-poc::file:///d%3A/xampp/htdocs/hm-github/cursor-poc/cursorlogs\"],\"selection\":[\"file:///d%3A/xampp/htdocs/hm-github/cursor-poc::file:///d%3A/xampp/htdocs/hm-github/cursor-poc/README.md\"],\"expanded\":[],\"scrollTop\":0}"
+  },
+  {
+    "key": "workbench.explorer.views.state",
+    "value": "{\"notepad\":{\"collapsed\":true,\"isHidden\":true,\"size\":22},\"outline\":{\"collapsed\":true,\"isHidden\":true,\"size\":22},\"timeline\":{\"collapsed\":true,\"isHidden\":true,\"size\":22},\"workbench.explorer.openEditorsView\":{\"collapsed\":false,\"isHidden\":true},\"workbench.explorer.fileView\":{\"collapsed\":false,\"isHidden\":true,\"size\":615},\"npm\":{\"collapsed\":true,\"isHidden\":true}}"
+  },
+  {
+    "key": "terminal",
+    "value": "{\"terminal\":{\"collapsed\":false,\"isHidden\":true,\"size\":503}}"
+  },
+  {
+    "key": "workbench.panel.composerChatViewPane",
+    "value": "{\"workbench.panel.aichat.view.525b6c0b-fb8c-4b82-a988-04d8a0e1eee1\":{\"collapsed\":false,\"isHidden\":false,\"size\":681}}"
+  },
+  {
+    "key": "__$__targetStorageMarker",
+    "value": "{\"cursorAuth/workspaceOpenedDate\":1,\"workbench.explorer.views.state\":1,\"workbench.view.search.state\":1,\"workbench.scm.views.state\":1,\"workbench.panel.markers\":1,\"workbench.panel.output\":1,\"terminal\":1,\"workbench.panel.viewContainersWorkspaceState\":1,\"workbench.auxiliarybar.initialViewContainers\":1,\"workbench.auxiliarybar.viewContainersWorkspaceState\":1,\"workbench.panel.composerChatViewPane\":1,\"workbench.auxiliarybar.activepanelid\":1,\"workbench.explorer.treeViewState\":1,\"debug.selectedroot\":1,\"workbench.view.debug.state\":1,\"output.activechannel\":1,\"workbench.view.remote.state\":1,\"workbench.view.extension.github-pull-requests.state\":1,\"workbench.view.extension.workspaceViewer.state\":1,\"~remote.forwardedPortsContainer\":1,\"workbench.panel.repl\":1,\"debug.uxstate\":1,\"terminal.integrated.environmentVariableCollectionsV2\":1,\"vscode.git\":1,\"src.vs.platform.reactivestorage.browser.reactiveStorageServiceImpl.persistentStorage.workspaceUser\":0,\"history.entries\":1,\"workbench.view.explorer.numberOfVisibleViews\":1,\"workbench.editor.centered\":1,\"workbench.zenMode.active\":1,\"workbench.zenMode.exitInfo\":1,\"workbench.panel.wasLastMaximized\":1,\"workbench.sideBar.position\":1,\"workbench.panel.position\":1,\"workbench.activityBar.hidden\":1,\"workbench.sideBar.hidden\":1,\"workbench.editor.hidden\":1,\"workbench.panel.hidden\":1,\"workbench.auxiliaryBar.hidden\":1,\"workbench.statusBar.hidden\":1,\"workbench.panel.aichat.numberOfVisibleViews\":1,\"workbench.panel.chat.numberOfVisibleViews\":1,\"aiService.generations\":1,\"aiService.prompts\":1,\"notepad.reactiveStorageId\":1,\"interactive.sessions\":1,\"notepadData\":1,\"comments.continueOnComments\":0,\"composer.composerData\":1,\"anysphere.cursor-retrieval\":1,\"GitHub.vscode-pull-request-github\":1,\"terminal.integrated.layoutInfo\":1,\"scm:view:visibleRepositories\":1,\"terminal.numberOfVisibleViews\":1,\"workbench.editor.languageDetectionOpenedLanguages.workspace\":1,\"memento/workbench.parts.editor\":0,\"memento/workbench.editors.files.textFileEditor\":1,\"terminal.integrated.bufferState\":1,\"lifecyle.lastShutdownReason\":1,\"codelens/cache2\":1,\"workbench.backgroundComposer.workspacePersistentData\":1}"
+  },
+  {
+    "key": "terminal.integrated.bufferState",
+    "value": "{\"version\":1,\"state\":[{\"id\":4,\"shellLaunchConfig\":{\"shellIntegrationEnvironmentReporting\":false,\"icon\":{\"id\":\"terminal-powershell\"},\"executable\":\"C:\\\\WINDOWS\\\\System32\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe\",\"color\":null,\"useShellEnvironment\":true},\"processDetails\":{\"id\":4,\"title\":\"powershell\",\"titleSource\":1,\"pid\":32424,\"workspaceId\":\"e7e5f2d6515ac3ff1d3efaad172714eb\",\"workspaceName\":\"cursor-poc\",\"cwd\":\"D:\\\\xampp\\\\htdocs\\\\hm-github\\\\cursor-poc\",\"isOrphan\":false,\"icon\":{\"id\":\"terminal-powershell\"},\"environmentVariableCollections\":[[\"vscode.git\",[[\"GIT_ASKPASS\",{\"variable\":\"GIT_ASKPASS\",\"value\":\"c:\\\\Users\\\\suniv\\\\AppData\\\\Local\\\\Programs\\\\cursor\\\\resources\\\\app\\\\extensions\\\\git\\\\dist\\\\askpass.sh\",\"type\":1,\"options\":{\"applyAtProcessCreation\":true,\"applyAtShellIntegration\":false}}],[\"VSCODE_GIT_ASKPASS_NODE\",{\"variable\":\"VSCODE_GIT_ASKPASS_NODE\",\"value\":\"c:\\\\Users\\\\suniv\\\\AppData\\\\Local\\\\Programs\\\\cursor\\\\Cursor.exe\",\"type\":1,\"options\":{\"applyAtProcessCreation\":true,\"applyAtShellIntegration\":false}}],[\"VSCODE_GIT_ASKPASS_EXTRA_ARGS\",{\"variable\":\"VSCODE_GIT_ASKPASS_EXTRA_ARGS\",\"value\":\"\",\"type\":1,\"options\":{\"applyAtProcessCreation\":true,\"applyAtShellIntegration\":false}}],[\"VSCODE_GIT_ASKPASS_MAIN\",{\"variable\":\"VSCODE_GIT_ASKPASS_MAIN\",\"value\":\"c:\\\\Users\\\\suniv\\\\AppData\\\\Local\\\\Programs\\\\cursor\\\\resources\\\\app\\\\extensions\\\\git\\\\dist\\\\askpass-main.js\",\"type\":1,\"options\":{\"applyAtProcessCreation\":true,\"applyAtShellIntegration\":false}}],[\"VSCODE_GIT_IPC_HANDLE\",{\"variable\":\"VSCODE_GIT_IPC_HANDLE\",\"value\":\"\\\\\\\\.\\\\pipe\\\\vscode-git-54ac410e6b-sock\",\"type\":1,\"options\":{\"applyAtProcessCreation\":true,\"applyAtShellIntegration\":false}}]],[[\"\",{\"description\":\"Enables the following features: git auth provider\"}]]]],\"hasChildProcesses\":false,\"shellIntegrationNonce\":\"979eb19c-fa3b-4e86-8210-64eea9de6b9d\"},\"processLaunchConfig\":{\"env\":{\"ALLUSERSPROFILE\":\"C:\\\\ProgramData\",\"APPDATA\":\"C:\\\\Users\\\\suniv\\\\AppData\\\\Roaming\",\"asl.log\":\"Destination=file\",\"ChocolateyInstall\":\"C:\\\\ProgramData\\\\chocolatey\",\"ChocolateyLastPathUpdate\":\"133522741943072927\",\"CHROME_CRASHPAD_PIPE_NAME\":\"\\\\\\\\.\\\\pipe\\\\crashpad_31672_ENXZTEBACEFIJQIK\",\"CommonProgramFiles\":\"C:\\\\Program Files\\\\Common Files\",\"CommonProgramFiles(x86)\":\"C:\\\\Program Files (x86)\\\\Common Files\",\"CommonProgramW6432\":\"C:\\\\Program Files\\\\Common Files\",\"COMPUTERNAME\":\"SUNILGR\",\"ComSpec\":\"C:\\\\WINDOWS\\\\system32\\\\cmd.exe\",\"CURSOR_TRACE_ID\":\"5beb2e44206c4a3f96c906741b86db16\",\"DriverData\":\"C:\\\\Windows\\\\System32\\\\Drivers\\\\DriverData\",\"EFC_12232_1592913036\":\"1\",\"FPS_BROWSER_APP_PROFILE_STRING\":\"Internet Explorer\",\"FPS_BROWSER_USER_PROFILE_STRING\":\"Default\",\"HOMEDRIVE\":\"C:\",\"HOMEPATH\":\"\\\\Users\\\\suniv\",\"IGCCSVC_DB\":\"AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAx8E9cQXDmU2n+ayhxJ9qTwQAAAACAAAAAAAQZgAAAAEAACAAAAATdb354ZOtjEmZG7NABUTAkAHaXZt3gCU/d7uR/zAXRAAAAAAOgAAAAAIAACAAAADpQYRM0VTQAFzv8fE6U5BlODTAjsq3ZxqjnqemBpUgVWAAAADzTxqjgf2isNarWjCJuj60HwKxhot1eJFD7CrU9jmjhpTqImR79jXq8Pdt7zqmWHfDc8xx0ZU1pTLG5Cpy7IBHZyQcU0gqBtaCIitbpKjYhjqo/23OsFceBYC3P3+JIfpAAAAAKHYd/djJzVw3jbj4k6y3VOTas3d22sXRAoKdwHpgSF/J4+8RZxzHA1n03G+olSGQ2Z53CzYLNBjHQe8pkVhnyQ==\",\"LOCALAPPDATA\":\"C:\\\\Users\\\\suniv\\\\AppData\\\\Local\",\"LOGONSERVER\":\"\\\\\\\\SUNILGR\",\"NUMBER_OF_PROCESSORS\":\"12\",\"NVM_HOME\":\"C:\\\\Users\\\\suniv\\\\AppData\\\\Local\\\\nvm\",\"NVM_SYMLINK\":\"C:\\\\nvm4w\\\\nodejs\",\"OneDrive\":\"C:\\\\Users\\\\suniv\\\\OneDrive\",\"OneDriveConsumer\":\"C:\\\\Users\\\\suniv\\\\OneDrive\",\"OnlineServices\":\"Online Services\",\"ORIGINAL_XDG_CURRENT_DESKTOP\":\"undefined\",\"OS\":\"Windows_NT\",\"Path\":\"c:\\\\Users\\\\suniv\\\\AppData\\\\Local\\\\Programs\\\\cursor\\\\resources\\\\app\\\\bin;C:\\\\Python312\\\\Scripts\\\\;C:\\\\Python312\\\\;C:\\\\WINDOWS\\\\system32;C:\\\\WINDOWS;C:\\\\WINDOWS\\\\System32\\\\Wbem;C:\\\\WINDOWS\\\\System32\\\\WindowsPowerShell\\\\v1.0\\\\;C:\\\\WINDOWS\\\\System32\\\\OpenSSH\\\\;C:\\\\MinGW\\\\bin;D:\\\\xampp\\\\php;C:\\\\composer;C:\\\\ProgramData\\\\chocolatey\\\\bin;C:\\\\Program Files\\\\PuTTY\\\\;C:\\\\Program Files\\\\HP\\\\HP One Agent;C:\\\\Users\\\\suniv\\\\AppData\\\\Local\\\\Microsoft\\\\WindowsApps;C:\\\\ProgramData\\\\suniv\\\\GitHubDesktop\\\\bin;C:\\\\Users\\\\suniv\\\\AppData\\\\Roaming\\\\Composer\\\\vendor\\\\bin;C:\\\\Users\\\\suniv\\\\AppData\\\\Roaming\\\\npm;C:\\\\Program Files\\\\JetBrains\\\\PyCharm Community Edition 2023.3.4\\\\bin;C:\\\\WINDOWS\\\\system32;C:\\\\WINDOWS;C:\\\\WINDOWS\\\\System32\\\\Wbem;C:\\\\WINDOWS\\\\System32\\\\WindowsPowerShell\\\\v1.0\\\\;C:\\\\WINDOWS\\\\System32\\\\OpenSSH\\\\;C:\\\\Program Files\\\\cursor\\\\resources\\\\app\\\\bin;C:\\\\Program Files\\\\Git\\\\cmd;%NVM_HOME%;%NVM_SYMLINK%;C:\\\\Program Files (x86)\\\\Windows Kits\\\\10\\\\Windows Performance Toolkit\\\\;C:\\\\Users\\\\suniv\\\\.cargo\\\\bin;C:\\\\Users\\\\suniv\\\\AppData\\\\Local\\\\Microsoft\\\\WindowsApps;C:\\\\Users\\\\suniv\\\\AppData\\\\Local\\\\Programs\\\\Microsoft VS Code\\\\bin;C:\\\\MinGW\\\\bin;C:\\\\ProgramData\\\\suniv\\\\GitHubDesktop\\\\bin;C:\\\\Users\\\\suniv\\\\AppData\\\\Roaming\\\\Composer\\\\vendor\\\\bin;C:\\\\Users\\\\suniv\\\\AppData\\\\Roaming\\\\npm;C:\\\\Program Files\\\\JetBrains\\\\PyCharm Community Edition 2023.3.4\\\\bin;;C:\\\\Users\\\\suniv\\\\AppData\\\\Local\\\\Programs\\\\cursor\\\\resources\\\\app\\\\bin;C:\\\\Users\\\\suniv\\\\.cargo\\\\bin;C:\\\\Program Files\\\\Git\\\\bin;C:\\\\msys64\\\\usr\\\\bin;C:\\\\Users\\\\suniv\\\\AppData\\\\Local\\\\nvm;C:\\\\nvm4w\\\\nodejs;C:\\\\Users\\\\suniv\\\\AppData\\\\Local\\\\nvm;\",\"PATHEXT\":\".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW\",\"platformcode\":\"M8\",\"PROCESSOR_ARCHITECTURE\":\"AMD64\",\"PROCESSOR_IDENTIFIER\":\"Intel64 Family 6 Model 154 Stepping 4, GenuineIntel\",\"PROCESSOR_LEVEL\":\"6\",\"PROCESSOR_REVISION\":\"9a04\",\"ProgramData\":\"C:\\\\ProgramData\",\"ProgramFiles\":\"C:\\\\Program Files\",\"ProgramFiles(x86)\":\"C:\\\\Program Files (x86)\",\"ProgramW6432\":\"C:\\\\Program Files\",\"PROMPT\":\"$P$G\",\"PSModulePath\":\"C:\\\\Program Files\\\\WindowsPowerShell\\\\Modules;C:\\\\WINDOWS\\\\system32\\\\WindowsPowerShell\\\\v1.0\\\\Modules\",\"PUBLIC\":\"C:\\\\Users\\\\Public\",\"PyCharm Community Edition\":\"C:\\\\Program Files\\\\JetBrains\\\\PyCharm Community Edition 2023.3.4\\\\bin;\",\"RegionCode\":\"APJ\",\"SESSIONNAME\":\"Console\",\"SystemDrive\":\"C:\",\"SystemRoot\":\"C:\\\\WINDOWS\",\"TEMP\":\"C:\\\\Users\\\\suniv\\\\AppData\\\\Local\\\\Temp\",\"TMP\":\"C:\\\\Users\\\\suniv\\\\AppData\\\\Local\\\\Temp\",\"USERDOMAIN\":\"SUNILGR\",\"USERDOMAIN_ROAMINGPROFILE\":\"SUNILGR\",\"USERNAME\":\"suniv\",\"USERPROFILE\":\"C:\\\\Users\\\\suniv\",\"windir\":\"C:\\\\WINDOWS\",\"ZES_ENABLE_SYSMAN\":\"1\",\"TERM_PROGRAM\":\"vscode\",\"TERM_PROGRAM_VERSION\":\"1.2.1\",\"LANG\":\"en_US.UTF-8\",\"COLORTERM\":\"truecolor\",\"GIT_ASKPASS\":\"c:\\\\Users\\\\suniv\\\\AppData\\\\Local\\\\Programs\\\\cursor\\\\resources\\\\app\\\\extensions\\\\git\\\\dist\\\\askpass.sh\",\"VSCODE_GIT_ASKPASS_NODE\":\"c:\\\\Users\\\\suniv\\\\AppData\\\\Local\\\\Programs\\\\cursor\\\\Cursor.exe\",\"VSCODE_GIT_ASKPASS_EXTRA_ARGS\":\"\",\"VSCODE_GIT_ASKPASS_MAIN\":\"c:\\\\Users\\\\suniv\\\\AppData\\\\Local\\\\Programs\\\\cursor\\\\resources\\\\app\\\\extensions\\\\git\\\\dist\\\\askpass-main.js\",\"VSCODE_GIT_IPC_HANDLE\":\"\\\\\\\\.\\\\pipe\\\\vscode-git-54ac410e6b-sock\",\"VSCODE_INJECTION\":\"1\",\"VSCODE_NONCE\":\"979eb19c-fa3b-4e86-8210-64eea9de6b9d\",\"VSCODE_STABLE\":\"1\"},\"executableEnv\":{\"ALLUSERSPROFILE\":\"C:\\\\ProgramData\",\"APPDATA\":\"C:\\\\Users\\\\suniv\\\\AppData\\\\Roaming\",\"asl.log\":\"Destination=file\",\"ChocolateyInstall\":\"C:\\\\ProgramData\\\\chocolatey\",\"ChocolateyLastPathUpdate\":\"133522741943072927\",\"CHROME_CRASHPAD_PIPE_NAME\":\"\\\\\\\\.\\\\pipe\\\\crashpad_31672_ENXZTEBACEFIJQIK\",\"CommonProgramFiles\":\"C:\\\\Program Files\\\\Common Files\",\"CommonProgramFiles(x86)\":\"C:\\\\Program Files (x86)\\\\Common Files\",\"CommonProgramW6432\":\"C:\\\\Program Files\\\\Common Files\",\"COMPUTERNAME\":\"SUNILGR\",\"ComSpec\":\"C:\\\\WINDOWS\\\\system32\\\\cmd.exe\",\"CURSOR_TRACE_ID\":\"5beb2e44206c4a3f96c906741b86db16\",\"DriverData\":\"C:\\\\Windows\\\\System32\\\\Drivers\\\\DriverData\",\"EFC_12232_1592913036\":\"1\",\"ELECTRON_NO_ATTACH_CONSOLE\":\"1\",\"FPS_BROWSER_APP_PROFILE_STRING\":\"Internet Explorer\",\"FPS_BROWSER_USER_PROFILE_STRING\":\"Default\",\"HOMEDRIVE\":\"C:\",\"HOMEPATH\":\"\\\\Users\\\\suniv\",\"IGCCSVC_DB\":\"AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAx8E9cQXDmU2n+ayhxJ9qTwQAAAACAAAAAAAQZgAAAAEAACAAAAATdb354ZOtjEmZG7NABUTAkAHaXZt3gCU/d7uR/zAXRAAAAAAOgAAAAAIAACAAAADpQYRM0VTQAFzv8fE6U5BlODTAjsq3ZxqjnqemBpUgVWAAAADzTxqjgf2isNarWjCJuj60HwKxhot1eJFD7CrU9jmjhpTqImR79jXq8Pdt7zqmWHfDc8xx0ZU1pTLG5Cpy7IBHZyQcU0gqBtaCIitbpKjYhjqo/23OsFceBYC3P3+JIfpAAAAAKHYd/djJzVw3jbj4k6y3VOTas3d22sXRAoKdwHpgSF/J4+8RZxzHA1n03G+olSGQ2Z53CzYLNBjHQe8pkVhnyQ==\",\"LOCALAPPDATA\":\"C:\\\\Users\\\\suniv\\\\AppData\\\\Local\",\"LOGONSERVER\":\"\\\\\\\\SUNILGR\",\"NUMBER_OF_PROCESSORS\":\"12\",\"NVM_HOME\":\"C:\\\\Users\\\\suniv\\\\AppData\\\\Local\\\\nvm\",\"NVM_SYMLINK\":\"C:\\\\nvm4w\\\\nodejs\",\"OneDrive\":\"C:\\\\Users\\\\suniv\\\\OneDrive\",\"OneDriveConsumer\":\"C:\\\\Users\\\\suniv\\\\OneDrive\",\"OnlineServices\":\"Online Services\",\"ORIGINAL_XDG_CURRENT_DESKTOP\":\"undefined\",\"OS\":\"Windows_NT\",\"Path\":\"c:\\\\Users\\\\suniv\\\\AppData\\\\Local\\\\Programs\\\\cursor\\\\resources\\\\app\\\\bin;C:\\\\Python312\\\\Scripts\\\\;C:\\\\Python312\\\\;C:\\\\WINDOWS\\\\system32;C:\\\\WINDOWS;C:\\\\WINDOWS\\\\System32\\\\Wbem;C:\\\\WINDOWS\\\\System32\\\\WindowsPowerShell\\\\v1.0\\\\;C:\\\\WINDOWS\\\\System32\\\\OpenSSH\\\\;C:\\\\MinGW\\\\bin;D:\\\\xampp\\\\php;C:\\\\composer;C:\\\\ProgramData\\\\chocolatey\\\\bin;C:\\\\Program Files\\\\PuTTY\\\\;C:\\\\Program Files\\\\HP\\\\HP One Agent;C:\\\\Users\\\\suniv\\\\AppData\\\\Local\\\\Microsoft\\\\WindowsApps;C:\\\\ProgramData\\\\suniv\\\\GitHubDesktop\\\\bin;C:\\\\Users\\\\suniv\\\\AppData\\\\Roaming\\\\Composer\\\\vendor\\\\bin;C:\\\\Users\\\\suniv\\\\AppData\\\\Roaming\\\\npm;C:\\\\Program Files\\\\JetBrains\\\\PyCharm Community Edition 2023.3.4\\\\bin;C:\\\\WINDOWS\\\\system32;C:\\\\WINDOWS;C:\\\\WINDOWS\\\\System32\\\\Wbem;C:\\\\WINDOWS\\\\System32\\\\WindowsPowerShell\\\\v1.0\\\\;C:\\\\WINDOWS\\\\System32\\\\OpenSSH\\\\;C:\\\\Program Files\\\\cursor\\\\resources\\\\app\\\\bin;C:\\\\Program Files\\\\Git\\\\cmd;%NVM_HOME%;%NVM_SYMLINK%;C:\\\\Program Files (x86)\\\\Windows Kits\\\\10\\\\Windows Performance Toolkit\\\\;C:\\\\Users\\\\suniv\\\\.cargo\\\\bin;C:\\\\Users\\\\suniv\\\\AppData\\\\Local\\\\Microsoft\\\\WindowsApps;C:\\\\Users\\\\suniv\\\\AppData\\\\Local\\\\Programs\\\\Microsoft VS Code\\\\bin;C:\\\\MinGW\\\\bin;C:\\\\ProgramData\\\\suniv\\\\GitHubDesktop\\\\bin;C:\\\\Users\\\\suniv\\\\AppData\\\\Roaming\\\\Composer\\\\vendor\\\\bin;C:\\\\Users\\\\suniv\\\\AppData\\\\Roaming\\\\npm;C:\\\\Program Files\\\\JetBrains\\\\PyCharm Community Edition 2023.3.4\\\\bin;;C:\\\\Users\\\\suniv\\\\AppData\\\\Local\\\\Programs\\\\cursor\\\\resources\\\\app\\\\bin;C:\\\\Users\\\\suniv\\\\.cargo\\\\bin;C:\\\\Program Files\\\\Git\\\\bin;C:\\\\msys64\\\\usr\\\\bin;C:\\\\Users\\\\suniv\\\\AppData\\\\Local\\\\nvm;C:\\\\nvm4w\\\\nodejs;C:\\\\Users\\\\suniv\\\\AppData\\\\Local\\\\nvm;\",\"PATHEXT\":\".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW\",\"platformcode\":\"M8\",\"PROCESSOR_ARCHITECTURE\":\"AMD64\",\"PROCESSOR_IDENTIFIER\":\"Intel64 Family 6 Model 154 Stepping 4, GenuineIntel\",\"PROCESSOR_LEVEL\":\"6\",\"PROCESSOR_REVISION\":\"9a04\",\"ProgramData\":\"C:\\\\ProgramData\",\"ProgramFiles\":\"C:\\\\Program Files\",\"ProgramFiles(x86)\":\"C:\\\\Program Files (x86)\",\"ProgramW6432\":\"C:\\\\Program Files\",\"PROMPT\":\"$P$G\",\"PSModulePath\":\"C:\\\\Program Files\\\\WindowsPowerShell\\\\Modules;C:\\\\WINDOWS\\\\system32\\\\WindowsPowerShell\\\\v1.0\\\\Modules\",\"PUBLIC\":\"C:\\\\Users\\\\Public\",\"PyCharm Community Edition\":\"C:\\\\Program Files\\\\JetBrains\\\\PyCharm Community Edition 2023.3.4\\\\bin;\",\"RegionCode\":\"APJ\",\"SESSIONNAME\":\"Console\",\"SystemDrive\":\"C:\",\"SystemRoot\":\"C:\\\\WINDOWS\",\"TEMP\":\"C:\\\\Users\\\\suniv\\\\AppData\\\\Local\\\\Temp\",\"TMP\":\"C:\\\\Users\\\\suniv\\\\AppData\\\\Local\\\\Temp\",\"USERDOMAIN\":\"SUNILGR\",\"USERDOMAIN_ROAMINGPROFILE\":\"SUNILGR\",\"USERNAME\":\"suniv\",\"USERPROFILE\":\"C:\\\\Users\\\\suniv\",\"VSCODE_CLI\":\"1\",\"VSCODE_CODE_CACHE_PATH\":\"C:\\\\Users\\\\suniv\\\\AppData\\\\Roaming\\\\Cursor\\\\CachedData\\\\031e7e0ff1e2eda9c1a0f5df67d44053b059c5d0\",\"VSCODE_CWD\":\"D:\\\\xampp\\\\htdocs\\\\hm\\\\cursorpoc\",\"VSCODE_IPC_HOOK\":\"\\\\\\\\.\\\\pipe\\\\aa6f8239-1.2.1-main-sock\",\"VSCODE_NLS_CONFIG\":\"{\\\"userLocale\\\":\\\"en-us\\\",\\\"osLocale\\\":\\\"en-in\\\",\\\"resolvedLanguage\\\":\\\"en\\\",\\\"defaultMessagesFile\\\":\\\"c:\\\\\\\\Users\\\\\\\\suniv\\\\\\\\AppData\\\\\\\\Local\\\\\\\\Programs\\\\\\\\cursor\\\\\\\\resources\\\\\\\\app\\\\\\\\out\\\\\\\\nls.messages.json\\\",\\\"locale\\\":\\\"en-us\\\",\\\"availableLanguages\\\":{}}\",\"VSCODE_PID\":\"31672\",\"windir\":\"C:\\\\WINDOWS\",\"ZES_ENABLE_SYSMAN\":\"1\"},\"options\":{\"shellIntegration\":{\"enabled\":true,\"suggestEnabled\":false,\"nonce\":\"979eb19c-fa3b-4e86-8210-64eea9de6b9d\"},\"windowsEnableConpty\":true,\"windowsUseConptyDll\":false,\"environmentVariableCollections\":[[\"vscode.git\",[[\"GIT_ASKPASS\",{\"variable\":\"GIT_ASKPASS\",\"value\":\"c:\\\\Users\\\\suniv\\\\AppData\\\\Local\\\\Programs\\\\cursor\\\\resources\\\\app\\\\extensions\\\\git\\\\dist\\\\askpass.sh\",\"type\":1,\"options\":{\"applyAtProcessCreation\":true,\"applyAtShellIntegration\":false}}],[\"VSCODE_GIT_ASKPASS_NODE\",{\"variable\":\"VSCODE_GIT_ASKPASS_NODE\",\"value\":\"c:\\\\Users\\\\suniv\\\\AppData\\\\Local\\\\Programs\\\\cursor\\\\Cursor.exe\",\"type\":1,\"options\":{\"applyAtProcessCreation\":true,\"applyAtShellIntegration\":false}}],[\"VSCODE_GIT_ASKPASS_EXTRA_ARGS\",{\"variable\":\"VSCODE_GIT_ASKPASS_EXTRA_ARGS\",\"value\":\"\",\"type\":1,\"options\":{\"applyAtProcessCreation\":true,\"applyAtShellIntegration\":false}}],[\"VSCODE_GIT_ASKPASS_MAIN\",{\"variable\":\"VSCODE_GIT_ASKPASS_MAIN\",\"value\":\"c:\\\\Users\\\\suniv\\\\AppData\\\\Local\\\\Programs\\\\cursor\\\\resources\\\\app\\\\extensions\\\\git\\\\dist\\\\askpass-main.js\",\"type\":1,\"options\":{\"applyAtProcessCreation\":true,\"applyAtShellIntegration\":false}}],[\"VSCODE_GIT_IPC_HANDLE\",{\"variable\":\"VSCODE_GIT_IPC_HANDLE\",\"value\":\"\\\\\\\\.\\\\pipe\\\\vscode-git-54ac410e6b-sock\",\"type\":1,\"options\":{\"applyAtProcessCreation\":true,\"applyAtShellIntegration\":false}}]],[[\"\",{\"description\":\"Enables the following features: git auth provider\"}]]]],\"workspaceFolder\":{\"uri\":{\"$mid\":1,\"fsPath\":\"d:\\\\xampp\\\\htdocs\\\\hm-github\\\\cursor-poc\",\"_sep\":1,\"external\":\"file:///d%3A/xampp/htdocs/hm-github/cursor-poc\",\"path\":\"/d:/xampp/htdocs/hm-github/cursor-poc\",\"scheme\":\"file\"},\"name\":\"cursor-poc\",\"index\":0}}},\"unicodeVersion\":\"11\",\"replayEvent\":{\"events\":[{\"cols\":62,\"rows\":19,\"data\":\"      generationUUID: \\u001b[32m'b5f6453e-053b-4271-932b-53ce90695b3a'\\u001b[0m,\\r\\n      type: \\u001b[32m'composer'\\u001b[0m,\\r\\n      textDescription: \\u001b[32m'apply'\\r\\n\\u001b[0m    },\\r\\n    {\\r\\n      unixMs: \\u001b[33m1751860091066\\u001b[0m,\\r\\n      generationUUID: \\u001b[32m'329ece10-8c0d-4789-b32c-17b8a03730dd'\\u001b[0m,\\r\\n      type: \\u001b[32m'apply'\\u001b[0m,\\r\\n      textDescription: \\u001b[32m'style.css'\\r\\n\\u001b[0m    },\\r\\n    {\\r\\n      unixMs: \\u001b[33m1751860179468\\u001b[0m,\\r\\n      generationUUID: \\u001b[32m'a42470c5-bc1b-45ae-98b2-988a3b61b8d3'\\u001b[0m,\\r\\n      type: \\u001b[32m'composer'\\u001b[0m,\\r\\n      textDescription: \\u001b[32m'still the same'\\r\\n\\u001b[0m    },\\r\\n    {\\r\\n      unixMs: \\u001b[33m1751860222317\\u001b[0m,\\r\\n      generationUUID: \\u001b[32m'e23fb19c-c637-4c2f-88a8-677c898fe2da'\\u001b[0m,\\r\\n      type: \\u001b[32m'composer'\\u001b[0m,\\r\\n      textDescription: \\u001b[32m'yes it is same'\\r\\n\\u001b[0m    },\\r\\n    {\\r\\n      unixMs: \\u001b[33m1751860286016\\u001b[0m,\\r\\n      generationUUID: \\u001b[32m'a3166f83-c431-43a9-8c3f-5659e280effa'\\u001b[0m,\\r\\n      type: \\u001b[32m'composer'\\u001b[0m,\\r\\n      textDescription: \\u001b[32m'I think this is cauing th issue :\\\\n'\\r\\n\\u001b[0m    },\\r\\n    {\\r\\n      unixMs: \\u001b[33m1751860302319\\u001b[0m,\\r\\n      generationUUID: \\u001b[32m'fb8fd68f-0cb9-4fcc-8638-09fc4b0a0ff1'\\u001b[0m,\\r\\n      type: \\u001b[32m'composer'\\u001b[0m,\\r\\n      textDescription: \\u001b[32m'fix'\\r\\n\\u001b[0m    },\\r\\n    {\\r\\n      unixMs: \\u001b[33m1751860313841\\u001b[0m,\\r\\n      generationUUID: \\u001b[32m'03224790-7a67-4938-8490-95bcd2f1d4fc'\\u001b[0m,\\r\\n      type: \\u001b[32m'apply'\\u001b[0m,\\r\\n      textDescription: \\u001b[32m'style.css'\\r\\n\\u001b[0m    },\\r\\n    {\\r\\n      unixMs: \\u001b[33m1751860392072\\u001b[0m,\\r\\n      generationUUID: \\u001b[32m'a7ca9214-826b-4f9d-acc3-7e0fc257843b'\\u001b[0m,\\r\\n      type: \\u001b[32m'composer'\\u001b[0m,\\r\\n      textDescription: \\u001b[32m'recuce the logout button size to fix it under header, it is too big'\\r\\n\\u001b[0m    },\\r\\n    {\\r\\n      unixMs: \\u001b[33m1751860400302\\u001b[0m,\\r\\n      generationUUID: \\u001b[32m'8b409e57-82ff-43a1-85ae-7e0303f83825'\\u001b[0m,\\r\\n      type: \\u001b[32m'apply'\\u001b[0m,\\r\\n      textDescription: \\u001b[32m'style.css'\\r\\n\\u001b[0m    },\\r\\n    {\\r\\n      unixMs: \\u001b[33m1751860960277\\u001b[0m,\\r\\n      generationUUID: \\u001b[32m'a27683d9-d16c-4de1-afc5-ceeeed2285a1'\\u001b[0m,\\r\\n      type: \\u001b[32m'composer'\\u001b[0m,\\r\\n      textDescription: \\u001b[32m'loader-overlay is not showing can you look the css once and verify'\\r\\n\\u001b[0m    },\\r\\n    {\\r\\n      unixMs: \\u001b[33m1751860980397\\u001b[0m,\\r\\n      generationUUID: \\u001b[32m'4fbb46eb-35f7-49d9-b69f-f2112d384d0b'\\u001b[0m,\\r\\n      type: \\u001b[32m'apply'\\u001b[0m,\\r\\n      textDescription: \\u001b[32m'style.css'\\r\\n\\u001b[0m    },\\r\\n    {\\r\\n      unixMs: \\u001b[33m1751867855749\\u001b[0m,\\r\\n      generationUUID: \\u001b[32m'418e2acf-ddab-4699-ab1f-44147f18e4fe'\\u001b[0m,\\r\\n      type: \\u001b[32m'composer'\\u001b[0m,\\r\\n      textDescription: \\u001b[32m'i can see some data in this url : \\\\n' \\u001b[0m+\\r\\n        \\u001b[32m'http://localhost:3000/usage-metrics?startDate=2025-06-30&endDate=2025-06-30\\\\n' \\u001b[0m+\\r\\n        \\u001b[32m'\\\\n' \\u001b[0m+\\r\\n        \\u001b[32m'but data not loading can you check is anything breaking'\\r\\n\\u001b[0m    },\\r\\n    {\\r\\n      unixMs: \\u001b[33m1751892431366\\u001b[0m,\\r\\n      generationUUID: \\u001b[32m'ea64599a-d739-4b16-abaa-496a230169c1'\\u001b[0m,\\r\\n      type: \\u001b[32m'composer'\\u001b[0m,\\r\\n      textDescription: \\u001b[32m'Analyze the application and create a readme file for the complete application including inssallation process and run the application'\\r\\n\\u001b[0m    },\\r\\n    {\\r\\n      unixMs: \\u001b[33m1751892626270\\u001b[0m,\\r\\n      generationUUID: \\u001b[32m'ef0e19a1-f8ef-4b12-bf71-05fdfbae213c'\\u001b[0m,\\r\\n      type: \\u001b[32m'composer'\\u001b[0m,\\r\\n      textDescription: \\u001b[32m'Create a readme file and update it'\\r\\n\\u001b[0m    },\\r\\n    {\\r\\n      unixMs: \\u001b[33m1751892658767\\u001b[0m,\\r\\n      generationUUID: \\u001b[32m'f09f3e51-fa24-4211-b55e-00e283a53bf6'\\u001b[0m,\\r\\n      type: \\u001b[32m'apply'\\u001b[0m,\\r\\n      textDescription: \\u001b[32m'README.md'\\r\\n\\u001b[0m    },\\r\\n    ... 100 more items\\r\\n  ],\\r\\n  historyEntries: [\\r\\n    { editor: \\u001b[36m[Object] \\u001b[0m}, { editor: \\u001b[36m[Object] \\u001b[0m},\\r\\n    { editor: \\u001b[36m[Object] \\u001b[0m}, { editor: \\u001b[36m[Object] \\u001b[0m},\\r\\n    { editor: \\u001b[36m[Object] \\u001b[0m}, { editor: \\u001b[36m[Object] \\u001b[0m},\\r\\n    { editor: \\u001b[36m[Object] \\u001b[0m}, { editor: \\u001b[36m[Object] \\u001b[0m},\\r\\n    { editor: \\u001b[36m[Object] \\u001b[0m}, { editor: \\u001b[36m[Object] \\u001b[0m},\\r\\n    { editor: \\u001b[36m[Object] \\u001b[0m}, { editor: \\u001b[36m[Object] \\u001b[0m},\\r\\n    { editor: \\u001b[36m[Object] \\u001b[0m}, { editor: \\u001b[36m[Object] \\u001b[0m},\\r\\n    { editor: \\u001b[36m[Object] \\u001b[0m}, { editor: \\u001b[36m[Object] \\u001b[0m},\\r\\n    { editor: \\u001b[36m[Object] \\u001b[0m}, { editor: \\u001b[36m[Object] \\u001b[0m},\\r\\n    { editor: \\u001b[36m[Object] \\u001b[0m}, { editor: \\u001b[36m[Object] \\u001b[0m},\\r\\n    { editor: \\u001b[36m[Object] \\u001b[0m}, { editor: \\u001b[36m[Object] \\u001b[0m},\\r\\n    { editor: \\u001b[36m[Object] \\u001b[0m}, { editor: \\u001b[36m[Object] \\u001b[0m},\\r\\n    { editor: \\u001b[36m[Object] \\u001b[0m}, { editor: \\u001b[36m[Object] \\u001b[0m},\\r\\n    { editor: \\u001b[36m[Object] \\u001b[0m}, { editor: \\u001b[36m[Object] \\u001b[0m},\\r\\n    { editor: \\u001b[36m[Object] \\u001b[0m}\\r\\n  ]\\r\\n}\\r\\nPS D:\\\\xampp\\\\htdocs\\\\hm-github\\\\cursor-poc>\\u001b[1C\"}],\"commands\":{\"isWindowsPty\":true,\"hasRichCommandDetection\":true,\"commands\":[{\"promptStartLine\":-1,\"startLine\":-1,\"endLine\":-1,\"executedLine\":-1,\"executedX\":52,\"command\":\"npm install\",\"commandLineConfidence\":\"high\",\"isTrusted\":true,\"cwd\":\"D:\\\\xampp\\\\htdocs\\\\hm-github\\\\cursor-poc\",\"exitCode\":0,\"commandStartLineContent\":\"PS D:\\\\xampp\\\\htdocs\\\\hm-github\\\\cursor-poc> npm install\",\"timestamp\":1751893584047,\"duration\":24092},{\"promptStartLine\":-1,\"startLine\":-1,\"endLine\":117,\"executedLine\":-1,\"executedX\":0,\"command\":\"node index.js\",\"commandLineConfidence\":\"high\",\"isTrusted\":true,\"cwd\":\"D:\\\\xampp\\\\htdocs\\\\hm-github\\\\cursor-poc\",\"exitCode\":1,\"commandStartLineContent\":\"PS D:\\\\xampp\\\\htdocs\\\\hm-github\\\\cursor-poc> node index.js\",\"timestamp\":1751897030662,\"duration\":3397709},{\"promptStartLine\":117,\"startLine\":117,\"startX\":0,\"command\":\"\",\"commandLineConfidence\":\"low\",\"isTrusted\":true,\"cwd\":\"D:\\\\xampp\\\\htdocs\\\\hm-github\\\\cursor-poc\",\"timestamp\":0,\"duration\":0}],\"promptInputModel\":{\"modelState\":{\"value\":\"PS D:\\\\xampp\\\\htdocs\\\\hm-github\\\\cursor-poc>\",\"prefix\":\"PS D:\\\\xampp\\\\htdocs\\\\hm-github\\\\cursor-poc>\",\"suffix\":\"\",\"cursorIndex\":40,\"ghostTextIndex\":-1},\"commandStartX\":41,\"continuationPrompt\":\">> \",\"lastUserInput\":\"\"}}},\"timestamp\":1751897032954}]}"
+  },
+  {
+    "key": "lifecyle.lastShutdownReason",
+    "value": "1"
+  },
+  {
+    "key": "memento/workbench.parts.editor",
+    "value": "{\"editorpart.state\":{\"serializedGrid\":{\"root\":{\"type\":\"branch\",\"data\":[{\"type\":\"leaf\",\"data\":{\"id\":0,\"editors\":[{\"id\":\"workbench.editors.files.fileEditorInput\",\"value\":\"{\\\"resourceJSON\\\":{\\\"$mid\\\":1,\\\"fsPath\\\":\\\"d:\\\\\\\\xampp\\\\\\\\htdocs\\\\\\\\hm-github\\\\\\\\cursor-poc\\\\\\\\.gitignore\\\",\\\"_sep\\\":1,\\\"external\\\":\\\"file:///d%3A/xampp/htdocs/hm-github/cursor-poc/.gitignore\\\",\\\"path\\\":\\\"/d:/xampp/htdocs/hm-github/cursor-poc/.gitignore\\\",\\\"scheme\\\":\\\"file\\\"},\\\"encoding\\\":\\\"utf8\\\"}\"},{\"id\":\"workbench.editors.files.fileEditorInput\",\"value\":\"{\\\"resourceJSON\\\":{\\\"$mid\\\":1,\\\"fsPath\\\":\\\"d:\\\\\\\\xampp\\\\\\\\htdocs\\\\\\\\hm-github\\\\\\\\cursor-poc\\\\\\\\README.md\\\",\\\"_sep\\\":1,\\\"external\\\":\\\"file:///d%3A/xampp/htdocs/hm-github/cursor-poc/README.md\\\",\\\"path\\\":\\\"/d:/xampp/htdocs/hm-github/cursor-poc/README.md\\\",\\\"scheme\\\":\\\"file\\\"},\\\"encoding\\\":\\\"utf8\\\"}\"}],\"mru\":[1,0],\"preview\":1},\"size\":328}],\"size\":503},\"orientation\":0,\"width\":503,\"height\":328},\"activeGroup\":0,\"mostRecentActiveGroups\":[0]}}"
+  },
+  {
+    "key": "src.vs.platform.reactivestorage.browser.reactiveStorageServiceImpl.persistentStorage.workspaceUser",
+    "value": "{\"tasksData\":{\"tasksDataSchemaVersion\":1,\"tasks\":[{\"type\":\"draft\",\"taskId\":\"0cebf4a6-d2ea-4a43-8306-60f25e23fa98\",\"instruction\":\"\"}],\"displayedTaskId\":\"0cebf4a6-d2ea-4a43-8306-60f25e23fa98\",\"showTabs\":false,\"activeServerTaskUuids\":[]},\"onboardingMetadata\":{\"shouldAskToIndex\":true,\"shouldHideWarning\":false},\"persistentChatMetadata\":[],\"aiPanePosition\":\"sidebar\",\"shouldRerankByDefault\":false,\"indexingData\":{\"preferredEmbeddingModel\":0},\"composerState\":{\"position\":{\"x\":0,\"y\":0},\"horizontalBarSize\":0,\"tabHeight\":0,\"selectedView\":\"suggested\",\"devToolsPosition\":{\"x\":0,\"y\":0},\"memories\":[],\"isComposerBarChatCollapsed\":false,\"composerBarPosition\":null,\"enableDataHandleDebugging\":false,\"shouldExplicitlyShowFgComposerInBg\":false,\"isDebuggingHumanFeedbackPanelForEditFile\":false},\"isCursorPredictionOutOfRangeIndicatorMinimized2\":true,\"needsComposerInitialOpening\":false,\"approvedProjectMcpServers\":[],\"disabledMcpServers\":[],\"eligibleForSnippetLearning\":false,\"solidJSLeakRecords\":[],\"exampleCodebaseQuestions\":[],\"SPECIAL_KEY_id\":\"caac8c02-2c72-41b5-9ffd-e853f0d7bd68\"}"
+  },
+  {
+    "key": "codelens/cache2",
+    "value": "{\"file:///d%3A/xampp/htdocs/hm-github/cursor-poc/.gitignore\":{\"lineCount\":7,\"lines\":[]},\"file:///d%3A/xampp/htdocs/hm-github/cursor-poc/README.md\":{\"lineCount\":107,\"lines\":[]}}"
+  },
+  {
+    "key": "workbench.backgroundComposer.workspacePersistentData",
+    "value": "{\"setupPath2\":\"default\",\"terminals\":[],\"ranTerminalCommands\":[],\"installScript\":\"\",\"startScript\":\"\",\"currentSetupStep\":\"start-default-vm\",\"furthestSetupStep\":\"start-default-vm\",\"customDockerfileContents\":\"\"}"
+  }
+]

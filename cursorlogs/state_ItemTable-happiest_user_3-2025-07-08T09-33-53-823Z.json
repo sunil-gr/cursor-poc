@@ -1,0 +1,170 @@
+[
+  {
+    "key": "__$__isNewStorageMarker",
+    "value": "true"
+  },
+  {
+    "key": "cursorAuth/workspaceOpenedDate",
+    "value": "2025-07-08T07:30:15.141Z"
+  },
+  {
+    "key": "workbench.explorer.views.state",
+    "value": "{\"notepad\":{\"collapsed\":true,\"isHidden\":true},\"outline\":{\"collapsed\":true,\"isHidden\":true},\"timeline\":{\"collapsed\":true,\"isHidden\":true},\"workbench.explorer.openEditorsView\":{\"collapsed\":false,\"isHidden\":true},\"workbench.explorer.emptyView\":{\"collapsed\":false,\"isHidden\":true}}"
+  },
+  {
+    "key": "workbench.view.search.state",
+    "value": "{\"workbench.view.search\":{\"collapsed\":false,\"isHidden\":true}}"
+  },
+  {
+    "key": "workbench.scm.views.state",
+    "value": "{\"workbench.scm.repositories\":{\"collapsed\":false,\"isHidden\":true},\"workbench.scm\":{\"collapsed\":false,\"isHidden\":true},\"workbench.scm.history\":{\"collapsed\":false,\"isHidden\":true}}"
+  },
+  {
+    "key": "workbench.panel.markers",
+    "value": "{\"workbench.panel.markers.view\":{\"collapsed\":false,\"isHidden\":true}}"
+  },
+  {
+    "key": "workbench.panel.output",
+    "value": "{\"workbench.panel.output\":{\"collapsed\":false,\"isHidden\":true}}"
+  },
+  {
+    "key": "terminal",
+    "value": "{\"terminal\":{\"collapsed\":false,\"isHidden\":true}}"
+  },
+  {
+    "key": "workbench.panel.viewContainersWorkspaceState",
+    "value": "[{\"id\":\"workbench.panel.markers\",\"visible\":true},{\"id\":\"workbench.panel.output\",\"visible\":true},{\"id\":\"workbench.panel.repl\",\"visible\":false},{\"id\":\"terminal\",\"visible\":true},{\"id\":\"workbench.panel.testResults\",\"visible\":false},{\"id\":\"~remote.forwardedPortsContainer\",\"visible\":false},{\"id\":\"refactorPreview\",\"visible\":false}]"
+  },
+  {
+    "key": "workbench.auxiliarybar.initialViewContainers",
+    "value": "[\"workbench.panel.aichat\"]"
+  },
+  {
+    "key": "workbench.auxiliarybar.viewContainersWorkspaceState",
+    "value": "[{\"id\":\"workbench.panel.aichat\",\"visible\":true},{\"id\":\"workbench.panel.composerViewPane2\",\"visible\":false},{\"id\":\"workbench.panel.aipaneaaaiBugFinder\",\"visible\":false},{\"id\":\"workbench.panel.chat\",\"visible\":false},{\"id\":\"workbench.panel.chatEditing\",\"visible\":false}]"
+  },
+  {
+    "key": "workbench.panel.composerChatViewPane",
+    "value": "{\"workbench.panel.aichat.view.c90de60f-21d5-4bdf-96fc-78ae944d7708\":{\"collapsed\":false,\"isHidden\":false,\"size\":706}}"
+  },
+  {
+    "key": "workbench.auxiliarybar.activepanelid",
+    "value": "workbench.panel.aichat"
+  },
+  {
+    "key": "memento/workspaceTrust",
+    "value": "{\"isEmptyWorkspaceTrusted\":true}"
+  },
+  {
+    "key": "output.activechannel",
+    "value": "tasks"
+  },
+  {
+    "key": "debug.selectedroot",
+    "value": "vscode-userdata:/c%3A/Users/suniv/AppData/Roaming/Cursor/User/settings.json"
+  },
+  {
+    "key": "workbench.view.debug.state",
+    "value": "{\"workbench.debug.welcome\":{\"collapsed\":false,\"isHidden\":true},\"workbench.debug.variablesView\":{\"collapsed\":false,\"isHidden\":true},\"workbench.debug.watchExpressionsView\":{\"collapsed\":false,\"isHidden\":true},\"workbench.debug.callStackView\":{\"collapsed\":false,\"isHidden\":true},\"workbench.debug.loadedScriptsView\":{\"collapsed\":true,\"isHidden\":true},\"workbench.debug.breakPointsView\":{\"collapsed\":false,\"isHidden\":true}}"
+  },
+  {
+    "key": "__$__targetStorageMarker",
+    "value": "{\"cursorAuth/workspaceOpenedDate\":1,\"workbench.explorer.views.state\":1,\"workbench.view.search.state\":1,\"workbench.scm.views.state\":1,\"workbench.panel.markers\":1,\"workbench.panel.output\":1,\"terminal\":1,\"workbench.panel.viewContainersWorkspaceState\":1,\"workbench.auxiliarybar.initialViewContainers\":1,\"workbench.auxiliarybar.viewContainersWorkspaceState\":1,\"workbench.panel.composerChatViewPane\":1,\"workbench.auxiliarybar.activepanelid\":1,\"memento/workspaceTrust\":1,\"output.activechannel\":1,\"debug.selectedroot\":1,\"workbench.view.debug.state\":1,\"lifecyle.lastShutdownReason\":1,\"src.vs.platform.reactivestorage.browser.reactiveStorageServiceImpl.persistentStorage.workspaceUser\":0,\"history.entries\":1,\"workbench.view.explorer.numberOfVisibleViews\":1,\"workbench.editor.centered\":1,\"workbench.zenMode.active\":1,\"workbench.zenMode.exitInfo\":1,\"workbench.panel.wasLastMaximized\":1,\"workbench.sideBar.position\":1,\"workbench.panel.position\":1,\"workbench.activityBar.hidden\":1,\"workbench.sideBar.hidden\":1,\"workbench.editor.hidden\":1,\"workbench.panel.hidden\":1,\"workbench.auxiliaryBar.hidden\":1,\"workbench.statusBar.hidden\":1,\"workbench.panel.aichat.numberOfVisibleViews\":1,\"workbench.panel.chat.numberOfVisibleViews\":1,\"aiService.generations\":1,\"aiService.prompts\":1,\"notepad.reactiveStorageId\":1,\"notepadData\":1,\"workbench.backgroundComposer.workspacePersistentData\":1,\"composer.composerData\":1}"
+  },
+  {
+    "key": "lifecyle.lastShutdownReason",
+    "value": "4"
+  },
+  {
+    "key": "src.vs.platform.reactivestorage.browser.reactiveStorageServiceImpl.persistentStorage.workspaceUser",
+    "value": "{\"tasksData\":{\"tasksDataSchemaVersion\":1,\"tasks\":[{\"type\":\"draft\",\"taskId\":\"44854377-0d1a-4357-bc26-2236221c8e46\",\"instruction\":\"\"}],\"displayedTaskId\":\"44854377-0d1a-4357-bc26-2236221c8e46\",\"showTabs\":false,\"activeServerTaskUuids\":[]},\"onboardingMetadata\":{\"shouldAskToIndex\":true,\"shouldHideWarning\":false},\"persistentChatMetadata\":[],\"aiPanePosition\":\"sidebar\",\"shouldRerankByDefault\":false,\"indexingData\":{\"preferredEmbeddingModel\":0},\"composerState\":{\"position\":{\"x\":0,\"y\":0},\"horizontalBarSize\":0,\"tabHeight\":0,\"selectedView\":\"suggested\",\"devToolsPosition\":{\"x\":0,\"y\":0},\"memories\":[],\"isComposerBarChatCollapsed\":false,\"composerBarPosition\":null,\"enableDataHandleDebugging\":false,\"shouldExplicitlyShowFgComposerInBg\":false,\"isDebuggingHumanFeedbackPanelForEditFile\":false},\"isCursorPredictionOutOfRangeIndicatorMinimized2\":true,\"needsComposerInitialOpening\":true,\"approvedProjectMcpServers\":[],\"disabledMcpServers\":[],\"eligibleForSnippetLearning\":false,\"solidJSLeakRecords\":[],\"SPECIAL_KEY_id\":\"882578d4-9899-409f-9e31-95520b317c0a\"}"
+  },
+  {
+    "key": "history.entries",
+    "value": "[]"
+  },
+  {
+    "key": "workbench.view.explorer.numberOfVisibleViews",
+    "value": "4"
+  },
+  {
+    "key": "workbench.editor.centered",
+    "value": "false"
+  },
+  {
+    "key": "workbench.zenMode.active",
+    "value": "false"
+  },
+  {
+    "key": "workbench.zenMode.exitInfo",
+    "value": "{\"transitionedToCenteredEditorLayout\":false,\"transitionedToFullScreen\":false,\"handleNotificationsDoNotDisturbMode\":false,\"wasVisible\":{\"auxiliaryBar\":false,\"panel\":false,\"sideBar\":false}}"
+  },
+  {
+    "key": "workbench.panel.wasLastMaximized",
+    "value": "false"
+  },
+  {
+    "key": "workbench.sideBar.position",
+    "value": "0"
+  },
+  {
+    "key": "workbench.panel.position",
+    "value": "2"
+  },
+  {
+    "key": "workbench.activityBar.hidden",
+    "value": "true"
+  },
+  {
+    "key": "workbench.sideBar.hidden",
+    "value": "true"
+  },
+  {
+    "key": "workbench.editor.hidden",
+    "value": "false"
+  },
+  {
+    "key": "workbench.panel.hidden",
+    "value": "true"
+  },
+  {
+    "key": "workbench.auxiliaryBar.hidden",
+    "value": "true"
+  },
+  {
+    "key": "workbench.statusBar.hidden",
+    "value": "false"
+  },
+  {
+    "key": "workbench.panel.aichat.numberOfVisibleViews",
+    "value": "1"
+  },
+  {
+    "key": "workbench.panel.chat.numberOfVisibleViews",
+    "value": "0"
+  },
+  {
+    "key": "aiService.generations",
+    "value": "[]"
+  },
+  {
+    "key": "aiService.prompts",
+    "value": "[]"
+  },
+  {
+    "key": "notepad.reactiveStorageId",
+    "value": "{\"notepads\":{},\"notepadDataVersion\":0}"
+  },
+  {
+    "key": "notepadData",
+    "value": "{\"notepads\":{}}"
+  },
+  {
+    "key": "workbench.backgroundComposer.workspacePersistentData",
+    "value": "{\"setupPath2\":\"default\",\"terminals\":[],\"ranTerminalCommands\":[],\"installScript\":\"\",\"startScript\":\"\",\"currentSetupStep\":\"start-default-vm\",\"furthestSetupStep\":\"start-default-vm\",\"customDockerfileContents\":\"\"}"
+  },
+  {
+    "key": "composer.composerData",
+    "value": "{\"allComposers\":[{\"type\":\"head\",\"composerId\":\"c90de60f-21d5-4bdf-96fc-78ae944d7708\",\"createdAt\":1751959815169,\"unifiedMode\":\"agent\",\"forceMode\":\"edit\",\"hasUnreadMessages\":false},{\"type\":\"head\",\"composerId\":\"0af6fe40-638c-410f-9a72-b7d132190db6\",\"createdAt\":1751959815170,\"unifiedMode\":\"chat\",\"forceMode\":\"edit\",\"hasUnreadMessages\":false}],\"selectedComposerIds\":[\"c90de60f-21d5-4bdf-96fc-78ae944d7708\"],\"hasMigratedComposerData\":false,\"hasMigratedMultipleComposers\":true}"
+  }
+]

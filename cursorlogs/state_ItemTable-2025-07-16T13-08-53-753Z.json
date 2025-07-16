@@ -1,0 +1,242 @@
+[
+  {
+    "key": "cursorAuth/workspaceOpenedDate",
+    "value": "2025-07-08T15:52:44.990Z"
+  },
+  {
+    "key": "workbench.view.search.state",
+    "value": "{\"workbench.view.search\":{\"collapsed\":false,\"isHidden\":true}}"
+  },
+  {
+    "key": "workbench.scm.views.state",
+    "value": "{\"workbench.scm.repositories\":{\"collapsed\":false,\"isHidden\":true},\"workbench.scm\":{\"collapsed\":false,\"isHidden\":true},\"workbench.scm.history\":{\"collapsed\":false,\"isHidden\":true}}"
+  },
+  {
+    "key": "workbench.panel.markers",
+    "value": "{\"workbench.panel.markers.view\":{\"collapsed\":false,\"isHidden\":true}}"
+  },
+  {
+    "key": "workbench.panel.output",
+    "value": "{\"workbench.panel.output\":{\"collapsed\":false,\"isHidden\":true}}"
+  },
+  {
+    "key": "terminal",
+    "value": "{\"terminal\":{\"collapsed\":false,\"isHidden\":true}}"
+  },
+  {
+    "key": "workbench.auxiliarybar.initialViewContainers",
+    "value": "[\"workbench.panel.aichat\"]"
+  },
+  {
+    "key": "workbench.auxiliarybar.viewContainersWorkspaceState",
+    "value": "[{\"id\":\"workbench.panel.aichat\",\"visible\":true},{\"id\":\"workbench.panel.composerViewPane2\",\"visible\":false},{\"id\":\"workbench.panel.aipaneaaaiBugFinder\",\"visible\":false},{\"id\":\"workbench.panel.chat\",\"visible\":false},{\"id\":\"workbench.panel.chatEditing\",\"visible\":false}]"
+  },
+  {
+    "key": "workbench.auxiliarybar.activepanelid",
+    "value": "workbench.panel.aichat"
+  },
+  {
+    "key": "output.activechannel",
+    "value": "tasks"
+  },
+  {
+    "key": "debug.selectedroot",
+    "value": "file:///d%3A/xampp/htdocs/babyshower/.vscode/launch.json"
+  },
+  {
+    "key": "workbench.view.remote.state",
+    "value": "{\"sshHosts\":{\"collapsed\":false,\"isHidden\":false},\"github.codespaces.explorer\":{\"collapsed\":false,\"isHidden\":false},\"github.codespaces.warnExplorer\":{\"collapsed\":false,\"isHidden\":false},\"github.codespaces.performanceExplorer\":{\"collapsed\":false,\"isHidden\":false}}"
+  },
+  {
+    "key": "workbench.view.extension.github-pull-requests.state",
+    "value": "{\"github:login\":{\"collapsed\":false,\"isHidden\":true},\"pr:github\":{\"collapsed\":false,\"isHidden\":true},\"issues:github\":{\"collapsed\":false,\"isHidden\":true},\"notifications:github\":{\"collapsed\":false,\"isHidden\":true},\"github:conflictResolution\":{\"collapsed\":false,\"isHidden\":true}}"
+  },
+  {
+    "key": "workbench.view.extension.workspaceViewer.state",
+    "value": "{\"workspaceViewer\":{\"collapsed\":false,\"isHidden\":true},\"rHelpPages\":{\"collapsed\":false,\"isHidden\":true},\"rLiveShare\":{\"collapsed\":true,\"isHidden\":true}}"
+  },
+  {
+    "key": "~remote.forwardedPortsContainer",
+    "value": "{\"~remote.forwardedPorts\":{\"collapsed\":false,\"isHidden\":true}}"
+  },
+  {
+    "key": "workbench.panel.repl",
+    "value": "{\"workbench.panel.repl.view\":{\"collapsed\":false,\"isHidden\":true}}"
+  },
+  {
+    "key": "workbench.view.debug.state",
+    "value": "{\"workbench.debug.welcome\":{\"collapsed\":false,\"isHidden\":true},\"workbench.debug.variablesView\":{\"collapsed\":false,\"isHidden\":true},\"workbench.debug.watchExpressionsView\":{\"collapsed\":false,\"isHidden\":true},\"workbench.debug.callStackView\":{\"collapsed\":false,\"isHidden\":true},\"workbench.debug.loadedScriptsView\":{\"collapsed\":true,\"isHidden\":true},\"workbench.debug.breakPointsView\":{\"collapsed\":false,\"isHidden\":true},\"jsBrowserBreakpoints\":{\"collapsed\":true,\"isHidden\":true},\"jsExcludedCallers\":{\"collapsed\":true,\"isHidden\":true},\"jsDebugNetworkTree\":{\"collapsed\":true,\"isHidden\":true},\"CppSshTargetsView\":{\"collapsed\":true,\"isHidden\":true},\"lldb.loadedModules\":{\"collapsed\":true,\"isHidden\":true},\"lldb.excludedCallers\":{\"collapsed\":true,\"isHidden\":true}}"
+  },
+  {
+    "key": "debug.uxstate",
+    "value": "simple"
+  },
+  {
+    "key": "vscode.git",
+    "value": "{\"closedRepositories\":[]}"
+  },
+  {
+    "key": "GitHub.vscode-pull-request-github",
+    "value": "{}"
+  },
+  {
+    "key": "workbench.view.explorer.numberOfVisibleViews",
+    "value": "4"
+  },
+  {
+    "key": "workbench.editor.centered",
+    "value": "false"
+  },
+  {
+    "key": "workbench.zenMode.active",
+    "value": "false"
+  },
+  {
+    "key": "workbench.zenMode.exitInfo",
+    "value": "{\"transitionedToCenteredEditorLayout\":false,\"transitionedToFullScreen\":false,\"handleNotificationsDoNotDisturbMode\":false,\"wasVisible\":{\"auxiliaryBar\":false,\"panel\":false,\"sideBar\":false}}"
+  },
+  {
+    "key": "workbench.panel.wasLastMaximized",
+    "value": "false"
+  },
+  {
+    "key": "workbench.sideBar.position",
+    "value": "0"
+  },
+  {
+    "key": "workbench.panel.position",
+    "value": "2"
+  },
+  {
+    "key": "workbench.activityBar.hidden",
+    "value": "true"
+  },
+  {
+    "key": "workbench.sideBar.hidden",
+    "value": "false"
+  },
+  {
+    "key": "workbench.editor.hidden",
+    "value": "false"
+  },
+  {
+    "key": "workbench.panel.hidden",
+    "value": "true"
+  },
+  {
+    "key": "workbench.statusBar.hidden",
+    "value": "false"
+  },
+  {
+    "key": "workbench.panel.aichat.numberOfVisibleViews",
+    "value": "1"
+  },
+  {
+    "key": "workbench.panel.chat.numberOfVisibleViews",
+    "value": "0"
+  },
+  {
+    "key": "notepad.reactiveStorageId",
+    "value": "{\"notepads\":{},\"notepadDataVersion\":0}"
+  },
+  {
+    "key": "interactive.sessions",
+    "value": "[]"
+  },
+  {
+    "key": "comments.continueOnComments",
+    "value": "[]"
+  },
+  {
+    "key": "workbench.editor.languageDetectionOpenedLanguages.workspace",
+    "value": "[[\"html\",true]]"
+  },
+  {
+    "key": "workbench.explorer.views.state",
+    "value": "{\"notepad\":{\"collapsed\":true,\"isHidden\":true,\"size\":22},\"outline\":{\"collapsed\":true,\"isHidden\":true,\"size\":22},\"timeline\":{\"collapsed\":true,\"isHidden\":true,\"size\":22},\"workbench.explorer.openEditorsView\":{\"collapsed\":false,\"isHidden\":true},\"workbench.explorer.fileView\":{\"collapsed\":false,\"isHidden\":true,\"size\":640},\"npm\":{\"collapsed\":true,\"isHidden\":true}}"
+  },
+  {
+    "key": "aiService.generations",
+    "value": "[{\"unixMs\":1751990074157,\"generationUUID\":\"e2ac4176-3fbb-45af-87a6-ed628e5a6dd9\",\"type\":\"composer\",\"textDescription\":\"Can you read the image and create similar to that?\"},{\"unixMs\":1751990087842,\"generationUUID\":\"6334b6e1-bd56-4b73-a8b4-eae8da575b80\",\"type\":\"composer\",\"textDescription\":\"Can you read the image and create similar to that?\"},{\"unixMs\":1751990109044,\"generationUUID\":\"9fb5f17e-c733-4d2b-bb4e-26ae120879ef\",\"type\":\"composer\",\"textDescription\":\"Its a baby shower invitation creat some sample\"},{\"unixMs\":1751990128729,\"generationUUID\":\"7012b0c7-d9ae-4fa8-844a-605aec8fb1d5\",\"type\":\"apply\",\"textDescription\":\"invitation.html\"},{\"unixMs\":1751990163281,\"generationUUID\":\"da840ece-470c-4f19-98af-ed5811e8fbf4\",\"type\":\"composer\",\"textDescription\":\"add some bachgrod image using 1.jpg\"},{\"unixMs\":1751990169418,\"generationUUID\":\"56f40592-a3b2-4614-b907-0a589daf511a\",\"type\":\"apply\",\"textDescription\":\"invitation.html\"},{\"unixMs\":1751990269858,\"generationUUID\":\"2e35dfa7-507b-4a34-aac1-434dad47a20a\",\"type\":\"composer\",\"textDescription\":\"can you create like this \\\"\\n@https://www.theinvitelady.com/cdn/shop/files/brown_shopify.jpg?v=1722263908 \"},{\"unixMs\":1751990310721,\"generationUUID\":\"33b81b87-5700-4c93-907d-2440c7eb2fb0\",\"type\":\"apply\",\"textDescription\":\"invitation.html\"},{\"unixMs\":1751990345753,\"generationUUID\":\"6aafef6b-1e63-420b-bd25-4e4170044d22\",\"type\":\"composer\",\"textDescription\":\"Can you create this image into html\\n\"},{\"unixMs\":1751990363834,\"generationUUID\":\"a2263357-37fc-4b52-ae6b-7587f5344909\",\"type\":\"composer\",\"textDescription\":\"Can you create this image into html\\n@https://www.theinvitelady.com/cdn/shop/files/brown_shopify.jpg?v=1722263908 \"},{\"unixMs\":1751990381709,\"generationUUID\":\"b6010c3a-1c8c-447d-adc2-ad834c459e31\",\"type\":\"apply\",\"textDescription\":\"invitation.html\"},{\"unixMs\":1751990621583,\"generationUUID\":\"91b78cc9-21b5-421b-938d-d9cc68e067ae\",\"type\":\"composer\",\"textDescription\":\"Can you create html similar to brown_shopify.pdf\"},{\"unixMs\":1751990643096,\"generationUUID\":\"a67d2261-59dd-4af7-bcd8-752a72afc8a4\",\"type\":\"apply\",\"textDescription\":\"invitation.html\"},{\"unixMs\":1751990716122,\"generationUUID\":\"a156b251-8f2e-4b81-818a-1f168fb19e82\",\"type\":\"composer\",\"textDescription\":\"reaad the brown_shopify.pdf anc create a html simialr to that and add the same content and images which is availabel in the pdf\"},{\"unixMs\":1751990760471,\"generationUUID\":\"b2dc5977-0556-43ef-8a25-4974834e4b6c\",\"type\":\"composer\",\"textDescription\":\"Can  you find the brown_shopify.pdf\"},{\"unixMs\":1751990802705,\"generationUUID\":\"2f92797c-0dec-4663-be13-04170aa1366b\",\"type\":\"composer\",\"textDescription\":\"i think you are reading babyshower/babyshower\\n\\nPlease look into the babyshower\"},{\"unixMs\":1751990836748,\"generationUUID\":\"b86f8984-84b8-4fff-810a-11169142b974\",\"type\":\"composer\",\"textDescription\":\"Ok read the pdf now and create a htmel which exact like that\"},{\"unixMs\":1751990867930,\"generationUUID\":\"179bb984-1bff-470f-a081-5781e17be3ad\",\"type\":\"composer\",\"textDescription\":\"sure\"},{\"unixMs\":1751991273944,\"generationUUID\":\"d5ca8650-4ca6-4b45-9340-b45c41ea1806\",\"type\":\"composer\",\"textDescription\":\"include babyshower.png in top and add the congtent belwo and make good desing and modres css\"},{\"unixMs\":1751991287851,\"generationUUID\":\"6e3d2bab-752f-4aec-abd8-1b5abb6a2692\",\"type\":\"apply\",\"textDescription\":\"index.html\"},{\"unixMs\":1751991369463,\"generationUUID\":\"91ffa31c-c36d-4bdb-aaa0-f2f31700a12e\",\"type\":\"composer\",\"textDescription\":\"increase the height of the image and for the content also add the backgroud css as image\"},{\"unixMs\":1751991375335,\"generationUUID\":\"f779a131-2e16-47e2-9541-4e91375f9701\",\"type\":\"apply\",\"textDescription\":\"index.html\"},{\"unixMs\":1751991437043,\"generationUUID\":\"b7d88ffd-d8f1-425e-a9bb-8bdea5c4a75c\",\"type\":\"composer\",\"textDescription\":\"image shoudd not repeat, it should be single image\"},{\"unixMs\":1751991442418,\"generationUUID\":\"04a4f7f6-df75-4ef8-aa57-79e101168409\",\"type\":\"apply\",\"textDescription\":\"index.html\"},{\"unixMs\":1751991742410,\"generationUUID\":\"882ba900-00c6-4aef-869b-28320fe9b529\",\"type\":\"composer\",\"textDescription\":\"remove all inline css and add proper desing for the content which is little messed\"},{\"unixMs\":1751991750963,\"generationUUID\":\"d734dd02-b23c-41ca-aff0-5ff53257f843\",\"type\":\"apply\",\"textDescription\":\"index.html\"},{\"unixMs\":1751992045134,\"generationUUID\":\"1f9d2d1e-0aa7-4090-9ea0-d25effd32331\",\"type\":\"composer\",\"textDescription\":\"add some difffernt font which stylish look like italic\"},{\"unixMs\":1751992055744,\"generationUUID\":\"8194b37d-59fa-4a60-a964-d38ab92cf031\",\"type\":\"apply\",\"textDescription\":\"index.html\"},{\"unixMs\":1751992364645,\"generationUUID\":\"3b5a814f-e197-4e30-a387-cb81dd6fc052\",\"type\":\"composer\",\"textDescription\":\"can we use some other font family and style for this\"},{\"unixMs\":1751992374528,\"generationUUID\":\"cc6eea41-17a5-4c2d-be5d-7f5b0ab15384\",\"type\":\"apply\",\"textDescription\":\"index.html\"},{\"unixMs\":1751992406653,\"generationUUID\":\"67f32f6f-4ae8-4cc2-83e5-feb9290fae4e\",\"type\":\"composer\",\"textDescription\":\"can you use some other font family to this too\"},{\"unixMs\":1751992413548,\"generationUUID\":\"6a2290d3-3979-435c-9bdb-25960eea2f34\",\"type\":\"apply\",\"textDescription\":\"index.html\"},{\"unixMs\":1751992431170,\"generationUUID\":\"1fd8ada6-2433-4abe-90a4-edc732f3ac6e\",\"type\":\"composer\",\"textDescription\":\"revert to previous version\"},{\"unixMs\":1751992436317,\"generationUUID\":\"8309eb63-9743-4cb3-853a-df6538f57119\",\"type\":\"apply\",\"textDescription\":\"index.html\"},{\"unixMs\":1751992618642,\"generationUUID\":\"8d200682-837a-491c-a6f9-20d64afea43e\",\"type\":\"composer\",\"textDescription\":\"add a location font icon \"},{\"unixMs\":1751992627196,\"generationUUID\":\"df7e0054-e8e8-46cc-baed-4a93230844a3\",\"type\":\"apply\",\"textDescription\":\"index.html\"},{\"unixMs\":1751992671203,\"generationUUID\":\"2a20ddd5-38b4-42e2-ab47-e719f94a8711\",\"type\":\"composer\",\"textDescription\":\"add a date and time iocn using font\"},{\"unixMs\":1751992676079,\"generationUUID\":\"4a01eda2-ca1c-47e2-9bb1-43c6b351da1d\",\"type\":\"apply\",\"textDescription\":\"index.html\"},{\"unixMs\":1751992750431,\"generationUUID\":\"55c51703-f248-4e12-ac31-db6e950408b5\",\"type\":\"composer\",\"textDescription\":\"give proper spacing and padding and make it goog font family and similar color as title\"},{\"unixMs\":1751992756920,\"generationUUID\":\"035ad0cd-8d27-403e-942a-eccce2c29aea\",\"type\":\"apply\",\"textDescription\":\"index.html\"},{\"unixMs\":1751993353433,\"generationUUID\":\"29f03061-b1b3-4375-9f5e-fc7016e1e185\",\"type\":\"composer\",\"textDescription\":\"can you add someother font family for this\"},{\"unixMs\":1751993362834,\"generationUUID\":\"bf5dc48b-7337-4e2f-b91d-44b99981265e\",\"type\":\"apply\",\"textDescription\":\"index.html\"},{\"unixMs\":1751993381727,\"generationUUID\":\"48c5b421-145d-4a4b-85c2-9e8d8d72fa76\",\"type\":\"composer\",\"textDescription\":\"some stylis and little lesser fint family\"},{\"unixMs\":1751993393885,\"generationUUID\":\"0d20f2e2-a804-4027-bc87-49ace3e15572\",\"type\":\"apply\",\"textDescription\":\"index.html\"},{\"unixMs\":1751993887042,\"generationUUID\":\"ed7f38a3-1109-4ac2-9fbd-4d6696f6c33c\",\"type\":\"composer\",\"textDescription\":\"given an option to export to image \"},{\"unixMs\":1751993897829,\"generationUUID\":\"45412bec-adad-4666-86a3-e80bc90cab4d\",\"type\":\"apply\",\"textDescription\":\"index.html\"},{\"unixMs\":1751993928325,\"generationUUID\":\"5fa7d5bd-244f-4c8e-b20a-e497a615d3d8\",\"type\":\"composer\",\"textDescription\":\"Uncaught ReferenceError: html2canvas is not defined\\n    at HTMLButtonElement.<anonymous> (babyshower/:126:13)\"},{\"unixMs\":1751993942359,\"generationUUID\":\"c539d5af-0150-489d-be90-864d6de1aa0e\",\"type\":\"apply\",\"textDescription\":\"index.html\"},{\"unixMs\":1751994038695,\"generationUUID\":\"1f21e96c-d0d8-4f68-9b6c-dd5b6773d8da\",\"type\":\"composer\",\"textDescription\":\"While exporting an image the border radius is not coming\"},{\"unixMs\":1751994046948,\"generationUUID\":\"860c2c21-3691-45c8-8768-10948d2e7cb5\",\"type\":\"apply\",\"textDescription\":\"index.html\"},{\"unixMs\":1751994221842,\"generationUUID\":\"34a18ab1-9d0c-49b2-924b-af95b72b8f55\",\"type\":\"composer\",\"textDescription\":\"While exporting it is loosing the quality, please keep the proepr quality\"},{\"unixMs\":1751994228842,\"generationUUID\":\"1516a0bb-4d78-43e8-b5fd-05ae99eab7e8\",\"type\":\"apply\",\"textDescription\":\"index.html\"},{\"unixMs\":1751997188435,\"generationUUID\":\"30555d97-ec42-408f-9fd1-b15cf377b0df\",\"type\":\"composer\",\"textDescription\":\"add some start to both end and reduce the opacity ifn the star\"},{\"unixMs\":1751997204185,\"generationUUID\":\"a07c4e51-a496-4cff-8ac7-a213c96683e1\",\"type\":\"apply\",\"textDescription\":\"index.html\"},{\"unixMs\":1751997275908,\"generationUUID\":\"9c7aafcf-ac43-45c7-8c95-23e4d0888d57\",\"type\":\"composer\",\"textDescription\":\"i have asked to add the star inline of invitation-details\"},{\"unixMs\":1751997286104,\"generationUUID\":\"05bc56a4-366c-4ce9-96be-32b3f9e018e3\",\"type\":\"apply\",\"textDescription\":\"index.html\"},{\"unixMs\":1751997554797,\"generationUUID\":\"7c593eab-8530-49c7-a9a1-49ab6b4a2c9d\",\"type\":\"composer\",\"textDescription\":\"is there anything else we can improve analyze and suggest\"},{\"unixMs\":1751997684293,\"generationUUID\":\"1c946212-dc75-440f-83e0-8b7a9863d910\",\"type\":\"composer\",\"textDescription\":\"Lets do it one by one :\\nSubtle Divider:\\nAdd a soft, thin divider (e.g., a gold or pastel line) between the name and the date/address for extra elegance.\\nShadow/Glow for Name:\\nAdd a very subtle text-shadow to the .full-name for a touch of depth.\\nStar Animation:\\nAnimate the inline stars with a gentle fade-in or shimmer on page load for a magical effect.\"},{\"unixMs\":1751997696649,\"generationUUID\":\"c43b4d7e-6e6b-4244-bbbe-5647f6913fab\",\"type\":\"apply\",\"textDescription\":\"index.html\"},{\"unixMs\":1751997831143,\"generationUUID\":\"515a4be7-4386-4823-a504-d36085a02079\",\"type\":\"composer\",\"textDescription\":\"5. Decorative Touches\\nBackground Pattern:\\nAdd a very subtle, repeating background pattern (e.g., soft dots or florals) to the invitation-wrapper for extra charm.\\nFloral/Leaf SVG Corners:\\nAdd decorative SVGs to the corners or edges for a more premium, bespoke look.\"},{\"unixMs\":1751997864218,\"generationUUID\":\"00d95eff-dfa4-4fdb-86c2-093b021760ea\",\"type\":\"apply\",\"textDescription\":\"index.html\"},{\"unixMs\":1751998352675,\"generationUUID\":\"7bffac09-823c-4263-934e-e177da57ef84\",\"type\":\"composer\",\"textDescription\":\"can you add the proepr css for this image inline\"},{\"unixMs\":1751998364294,\"generationUUID\":\"3359c3a7-7644-4925-b57f-a737f5eecef0\",\"type\":\"apply\",\"textDescription\":\"index.html\"},{\"unixMs\":1751998675713,\"generationUUID\":\"920bd8f8-0e34-4414-b6ec-3600ee3c1366\",\"type\":\"composer\",\"textDescription\":\"can you add a small qr code for this and add the same color combination\"},{\"unixMs\":1751998689057,\"generationUUID\":\"8dcf3b3b-262a-4e4b-8666-c38090527bfe\",\"type\":\"apply\",\"textDescription\":\"index.html\"},{\"unixMs\":1751998867859,\"generationUUID\":\"d1d5cbb1-adec-4765-91c0-1686ce1f174a\",\"type\":\"composer\",\"textDescription\":\"How to add a text and map link like\\n\\nSunday, July 27 2025, 11:00 am Onwards\\nfrom Shilpa Sunil\\n\\nLink : @https://maps.app.goo.gl/fiXAVQtiRs2AFLF6A \"},{\"unixMs\":1751998896872,\"generationUUID\":\"ab637ad6-2bae-4719-9ef6-64b5e2a7018e\",\"type\":\"composer\",\"textDescription\":\"apply\"},{\"unixMs\":1751998910164,\"generationUUID\":\"c07c9bf3-33f9-432f-b0e7-938631e507f2\",\"type\":\"apply\",\"textDescription\":\"index.html\"},{\"unixMs\":1751998955117,\"generationUUID\":\"b06f6a85-49ad-49ab-98ff-b963468487e8\",\"type\":\"composer\",\"textDescription\":\"revert \"},{\"unixMs\":1751998966886,\"generationUUID\":\"e0243d7c-93c2-4ac1-8564-ad54f0103433\",\"type\":\"apply\",\"textDescription\":\"index.html\"},{\"unixMs\":1751999082876,\"generationUUID\":\"0693f085-6bc3-405c-8d89-b519104b22a3\",\"type\":\"composer\",\"textDescription\":\"qr code is overlapping the address section can you align it properly\"},{\"unixMs\":1751999090376,\"generationUUID\":\"5d277a86-12be-45fa-9bef-9254fdc1c812\",\"type\":\"apply\",\"textDescription\":\"index.html\"},{\"unixMs\":1751999127722,\"generationUUID\":\"181f5783-f568-46fc-99c4-b5a7065ef486\",\"type\":\"composer\",\"textDescription\":\"can you make this address and qr code in single row using flex\"},{\"unixMs\":1751999141182,\"generationUUID\":\"649151e2-c5dd-4401-9efc-68a8d826bb5a\",\"type\":\"apply\",\"textDescription\":\"index.html\"},{\"unixMs\":1751999189425,\"generationUUID\":\"e21973d8-61eb-4287-9f1b-0a01d5efed36\",\"type\":\"composer\",\"textDescription\":\"revert\"},{\"unixMs\":1751999206528,\"generationUUID\":\"c5641f13-e32c-41e0-a137-20acea7a0fb0\",\"type\":\"apply\",\"textDescription\":\"index.html\"},{\"unixMs\":1751999259427,\"generationUUID\":\"698f7d41-d33a-4702-89d4-421d49779fbb\",\"type\":\"composer\",\"textDescription\":\"can you bring these two section in one row using flex\"},{\"unixMs\":1751999268476,\"generationUUID\":\"b6386095-cf7a-4413-af8c-d862ff164284\",\"type\":\"apply\",\"textDescription\":\"index.html\"},{\"unixMs\":1751999285316,\"generationUUID\":\"a1b26c22-cf35-4fad-b703-4f98c87c7970\",\"type\":\"composer\",\"textDescription\":\"revert\"},{\"unixMs\":1751999295304,\"generationUUID\":\"dc665313-4b4a-4c33-879f-e2e588b73610\",\"type\":\"apply\",\"textDescription\":\"index.html\"},{\"unixMs\":1751999386106,\"generationUUID\":\"d503f57a-c077-4caf-b126-d3406a28685b\",\"type\":\"composer\",\"textDescription\":\"can you make this in single row\"},{\"unixMs\":1751999402904,\"generationUUID\":\"10061b59-3f9e-4bdc-a452-3ac7833387db\",\"type\":\"apply\",\"textDescription\":\"index.html\"},{\"unixMs\":1751999571922,\"generationUUID\":\"c3cec586-2cb3-40ed-862b-8ad0a1ae0212\",\"type\":\"composer\",\"textDescription\":\"For the hr divider line can you dow some styling like flower or curve style\"},{\"unixMs\":1751999587853,\"generationUUID\":\"ab553e1c-b572-41f1-a0d4-101d7f2a88bf\",\"type\":\"composer\",\"textDescription\":\"accept\"},{\"unixMs\":1751999599082,\"generationUUID\":\"55541cd9-ee02-4d2c-83c4-329cbba17c91\",\"type\":\"apply\",\"textDescription\":\"index.html\"},{\"unixMs\":1751999624787,\"generationUUID\":\"ce5bbaac-d2ad-4f45-adfe-8d3ce38b199e\",\"type\":\"composer\",\"textDescription\":\"revert\"},{\"unixMs\":1751999636849,\"generationUUID\":\"807a9b0c-8f97-4c2a-b77c-cb4bf87c821b\",\"type\":\"apply\",\"textDescription\":\"index.html\"},{\"unixMs\":1751999681185,\"generationUUID\":\"f266a700-321f-4a17-b144-029ad8516fc1\",\"type\":\"composer\",\"textDescription\":\"can you add small dot in the middle of hr \"},{\"unixMs\":1751999693599,\"generationUUID\":\"8b45b8f6-9804-47d8-b20b-07540ca9e553\",\"type\":\"composer\",\"textDescription\":\"apply \"},{\"unixMs\":1751999700083,\"generationUUID\":\"f80e8ad7-3c80-4458-b9e1-2d202f264b0f\",\"type\":\"apply\",\"textDescription\":\"index.html\"},{\"unixMs\":1751999733637,\"generationUUID\":\"5de25b85-dba5-4510-b72f-a9a9ebb2f978\",\"type\":\"composer\",\"textDescription\":\"instead of dot can you make it heart and one star\"},{\"unixMs\":1751999755668,\"generationUUID\":\"e9550001-1157-458f-8dd7-cf18e8490201\",\"type\":\"apply\",\"textDescription\":\"index.html\"},{\"unixMs\":1751999967101,\"generationUUID\":\"9a50dac3-585f-4818-8cd7-79e268ee60e6\",\"type\":\"composer\",\"textDescription\":\"can we add some plain text along with link\"},{\"unixMs\":1751999980097,\"generationUUID\":\"4a2f7fe3-7a1b-4156-843b-ab43d43f1616\",\"type\":\"composer\",\"textDescription\":\"es\"},{\"unixMs\":1751999987446,\"generationUUID\":\"4902c878-761c-40b9-b356-a9c55715bacb\",\"type\":\"apply\",\"textDescription\":\"index.html\"},{\"unixMs\":1752000002620,\"generationUUID\":\"1a4e390b-6a5e-4e34-9e3f-390c8ecf0603\",\"type\":\"composer\",\"textDescription\":\"revert\"},{\"unixMs\":1752000009111,\"generationUUID\":\"4523264f-7b46-4528-96ad-cbc15b55965b\",\"type\":\"apply\",\"textDescription\":\"index.html\"},{\"unixMs\":1752000034243,\"generationUUID\":\"f5333e9b-d4ee-4cb4-af26-40c2392b98ca\",\"type\":\"composer\",\"textDescription\":\"i asked to add a text and a linkafter qr code is scxanned\"},{\"unixMs\":1752000058732,\"generationUUID\":\"eec9f4d4-8ccb-4c6a-9cc6-2cd65bc6a180\",\"type\":\"composer\",\"textDescription\":\"apply\"},{\"unixMs\":1752000067423,\"generationUUID\":\"b5451910-d614-490c-8dd0-28aaff55d98f\",\"type\":\"apply\",\"textDescription\":\"index.html\"}]"
+  },
+  {
+    "key": "aiService.prompts",
+    "value": "[{\"text\":\"read the 1.jpg and create a html similar to this with same content and color combination,\\n\\nWe should be able to update the content\",\"commandType\":4},{\"text\":\"Can you read the image and create similar to that?\",\"commandType\":4},{\"text\":\"Its a baby shower invitation creat some sample\",\"commandType\":4},{\"text\":\"add some bachgrod image using 1.jpg\",\"commandType\":4},{\"text\":\"can you create like this \\\"\\n@https://www.theinvitelady.com/cdn/shop/files/brown_shopify.jpg?v=1722263908 \",\"commandType\":4},{\"text\":\"Can you create this image into html\\n\",\"commandType\":4},{\"text\":\"Can you create this image into html\\n@https://www.theinvitelady.com/cdn/shop/files/brown_shopify.jpg?v=1722263908 \",\"commandType\":4},{\"text\":\"Can you create html similar to brown_shopify.pdf\",\"commandType\":4},{\"text\":\"reaad the brown_shopify.pdf anc create a html simialr to that and add the same content and images which is availabel in the pdf\",\"commandType\":4},{\"text\":\"Can  you find the brown_shopify.pdf\",\"commandType\":4},{\"text\":\"i think you are reading babyshower/babyshower\\n\\nPlease look into the babyshower\",\"commandType\":4},{\"text\":\"Ok read the pdf now and create a htmel which exact like that\",\"commandType\":4},{\"text\":\"sure\",\"commandType\":4},{\"text\":\"include babyshower.png in top and add the congtent belwo and make good desing and modres css\",\"commandType\":4},{\"text\":\"increase the height of the image and for the content also add the backgroud css as image\",\"commandType\":4},{\"text\":\"image shoudd not repeat, it should be single image\",\"commandType\":4},{\"text\":\"remove all inline css and add proper desing for the content which is little messed\",\"commandType\":4},{\"text\":\"add some difffernt font which stylish look like italic\",\"commandType\":4},{\"text\":\"can we use some other font family and style for this\",\"commandType\":4},{\"text\":\"can you use some other font family to this too\",\"commandType\":4},{\"text\":\"revert to previous version\",\"commandType\":4},{\"text\":\"add a location font icon \",\"commandType\":4},{\"text\":\"add a date and time iocn using font\",\"commandType\":4},{\"text\":\"give proper spacing and padding and make it goog font family and similar color as title\",\"commandType\":4},{\"text\":\"can you add someother font family for this\",\"commandType\":4},{\"text\":\"some stylis and little lesser fint family\",\"commandType\":4},{\"text\":\"given an option to export to image \",\"commandType\":4},{\"text\":\"Uncaught ReferenceError: html2canvas is not defined\\n    at HTMLButtonElement.<anonymous> (babyshower/:126:13)\",\"commandType\":4},{\"text\":\"While exporting an image the border radius is not coming\",\"commandType\":4},{\"text\":\"While exporting it is loosing the quality, please keep the proepr quality\",\"commandType\":4},{\"text\":\"add some start to both end and reduce the opacity ifn the star\",\"commandType\":4},{\"text\":\"i have asked to add the star inline of invitation-details\",\"commandType\":4},{\"text\":\"is there anything else we can improve analyze and suggest\",\"commandType\":4},{\"text\":\"Lets do it one by one :\\nSubtle Divider:\\nAdd a soft, thin divider (e.g., a gold or pastel line) between the name and the date/address for extra elegance.\\nShadow/Glow for Name:\\nAdd a very subtle text-shadow to the .full-name for a touch of depth.\\nStar Animation:\\nAnimate the inline stars with a gentle fade-in or shimmer on page load for a magical effect.\",\"commandType\":4},{\"text\":\"5. Decorative Touches\\nBackground Pattern:\\nAdd a very subtle, repeating background pattern (e.g., soft dots or florals) to the invitation-wrapper for extra charm.\\nFloral/Leaf SVG Corners:\\nAdd decorative SVGs to the corners or edges for a more premium, bespoke look.\",\"commandType\":4},{\"text\":\"can you add the proepr css for this image inline\",\"commandType\":4},{\"text\":\"can you add a small qr code for this and add the same color combination\",\"commandType\":4},{\"text\":\"How to add a text and map link like\\n\\nSunday, July 27 2025, 11:00 am Onwards\\nfrom Shilpa Sunil\\n\\nLink : @https://maps.app.goo.gl/fiXAVQtiRs2AFLF6A \",\"commandType\":4},{\"text\":\"apply\",\"commandType\":4},{\"text\":\"revert \",\"commandType\":4},{\"text\":\"qr code is overlapping the address section can you align it properly\",\"commandType\":4},{\"text\":\"can you make this address and qr code in single row using flex\",\"commandType\":4},{\"text\":\"revert\",\"commandType\":4},{\"text\":\"can you bring these two section in one row using flex\",\"commandType\":4},{\"text\":\"revert\",\"commandType\":4},{\"text\":\"can you make this in single row\",\"commandType\":4},{\"text\":\"For the hr divider line can you dow some styling like flower or curve style\",\"commandType\":4},{\"text\":\"accept\",\"commandType\":4},{\"text\":\"revert\",\"commandType\":4},{\"text\":\"can you add small dot in the middle of hr \",\"commandType\":4},{\"text\":\"apply \",\"commandType\":4},{\"text\":\"instead of dot can you make it heart and one star\",\"commandType\":4},{\"text\":\"can we add some plain text along with link\",\"commandType\":4},{\"text\":\"es\",\"commandType\":4},{\"text\":\"revert\",\"commandType\":4},{\"text\":\"i asked to add a text and a linkafter qr code is scxanned\",\"commandType\":4},{\"text\":\"apply\",\"commandType\":4}]"
+  },
+  {
+    "key": "workbench.auxiliaryBar.hidden",
+    "value": "true"
+  },
+  {
+    "key": "workbench.find.history",
+    "value": "[\".invitation-details\",\".invitation-header img\",\".divider\",\"0px\",\"3\",\"360\",\".address-qr-row\",\"divi\",\".invitation-details-row\",\".divider-heart-star\"]"
+  },
+  {
+    "key": "workbench.backgroundComposer.workspacePersistentData",
+    "value": "{\"setupPath2\":\"default\",\"terminals\":[],\"ranTerminalCommands\":[],\"installScript\":\"\",\"startScript\":\"\",\"currentSetupStep\":\"start-default-vm\",\"furthestSetupStep\":\"start-default-vm\",\"customDockerfileContents\":\"\",\"cachedSelectedGitState\":{\"ref\":\"master\",\"continueRef\":\"master\",\"baseRef\":\"master\",\"autoBranch\":true}}"
+  },
+  {
+    "key": "terminal.integrated.layoutInfo",
+    "value": "{\"workspaceId\":\"2fdd4823f70035bbefcb2d69617384a4\",\"tabs\":[]}"
+  },
+  {
+    "key": "__$__isNewStorageMarker",
+    "value": "false"
+  },
+  {
+    "key": "workbench.panel.composerChatViewPane",
+    "value": "{\"workbench.panel.aichat.view.7d86ed98-1abe-463b-b92a-48a3c9f9557d\":{\"collapsed\":false,\"isHidden\":false,\"size\":706},\"workbench.panel.aichat.view.9b568784-f4c3-4d95-ae7a-98445d9db442\":{\"collapsed\":false,\"isHidden\":false,\"size\":579}}"
+  },
+  {
+    "key": "workbench.panel.viewContainersWorkspaceState",
+    "value": "[{\"id\":\"workbench.panel.markers\",\"visible\":true},{\"id\":\"workbench.panel.output\",\"visible\":true},{\"id\":\"workbench.panel.repl\",\"visible\":true},{\"id\":\"terminal\",\"visible\":true},{\"id\":\"workbench.panel.testResults\",\"visible\":false},{\"id\":\"~remote.forwardedPortsContainer\",\"visible\":true},{\"id\":\"refactorPreview\",\"visible\":false}]"
+  },
+  {
+    "key": "terminal.integrated.environmentVariableCollectionsV2",
+    "value": "[{\"extensionIdentifier\":\"vscode.git\",\"collection\":[[\"GIT_ASKPASS\",{\"variable\":\"GIT_ASKPASS\",\"value\":\"c:\\\\Users\\\\suniv\\\\AppData\\\\Local\\\\Programs\\\\cursor\\\\resources\\\\app\\\\extensions\\\\git\\\\dist\\\\askpass.sh\",\"type\":1,\"options\":{\"applyAtProcessCreation\":true,\"applyAtShellIntegration\":false}}],[\"VSCODE_GIT_ASKPASS_NODE\",{\"variable\":\"VSCODE_GIT_ASKPASS_NODE\",\"value\":\"c:\\\\Users\\\\suniv\\\\AppData\\\\Local\\\\Programs\\\\cursor\\\\Cursor.exe\",\"type\":1,\"options\":{\"applyAtProcessCreation\":true,\"applyAtShellIntegration\":false}}],[\"VSCODE_GIT_ASKPASS_EXTRA_ARGS\",{\"variable\":\"VSCODE_GIT_ASKPASS_EXTRA_ARGS\",\"value\":\"\",\"type\":1,\"options\":{\"applyAtProcessCreation\":true,\"applyAtShellIntegration\":false}}],[\"VSCODE_GIT_ASKPASS_MAIN\",{\"variable\":\"VSCODE_GIT_ASKPASS_MAIN\",\"value\":\"c:\\\\Users\\\\suniv\\\\AppData\\\\Local\\\\Programs\\\\cursor\\\\resources\\\\app\\\\extensions\\\\git\\\\dist\\\\askpass-main.js\",\"type\":1,\"options\":{\"applyAtProcessCreation\":true,\"applyAtShellIntegration\":false}}],[\"VSCODE_GIT_IPC_HANDLE\",{\"variable\":\"VSCODE_GIT_IPC_HANDLE\",\"value\":\"\\\\\\\\.\\\\pipe\\\\vscode-git-b7aad17540-sock\",\"type\":1,\"options\":{\"applyAtProcessCreation\":true,\"applyAtShellIntegration\":false}}]],\"description\":[[\"\",{\"description\":\"Enables the following features: git auth provider\"}]]}]"
+  },
+  {
+    "key": "anysphere.cursor-retrieval",
+    "value": "{\"cursor-retrieval-state-version\":1,\"map/c6f7755817513524b4fd1d5a2cc2517aaec220ff1292d6d08a1d4253ba5a7941-babyshower/repoKeys\":{\"repoName\":\"22452224-20c8-499b-a1fd-f56bd912f880\",\"orthogonalTransformationSeed\":8568124645505125,\"pathEncryptionKey\":\"RYs3Fi3B0_W8bnb1kSdkbvJmzcqQFXrILz3iyWfJaRM\",\"pathEncryptionScheme\":\"aes-256-ctr\",\"canUpdateKey\":false},\"map/c6f7755817513524b4fd1d5a2cc2517aaec220ff1292d6d08a1d4253ba5a7941-babyshower/google-oauth2|user_01JE9GMZAZSQBF883XR5KV60FJ/indexingStatus\":{\"globalStatus\":{\"case\":\"synced\",\"numFiles\":2},\"progress\":100}}"
+  },
+  {
+    "key": "memento/workbench.parts.editor",
+    "value": "{\"editorpart.state\":{\"serializedGrid\":{\"root\":{\"type\":\"branch\",\"data\":[{\"type\":\"leaf\",\"data\":{\"id\":0,\"editors\":[{\"id\":\"workbench.editors.files.fileEditorInput\",\"value\":\"{\\\"resourceJSON\\\":{\\\"$mid\\\":1,\\\"fsPath\\\":\\\"d:\\\\\\\\xampp\\\\\\\\htdocs\\\\\\\\babyshower\\\\\\\\index.html\\\",\\\"_sep\\\":1,\\\"external\\\":\\\"file:///d%3A/xampp/htdocs/babyshower/index.html\\\",\\\"path\\\":\\\"/D:/xampp/htdocs/babyshower/index.html\\\",\\\"scheme\\\":\\\"file\\\"},\\\"encoding\\\":\\\"utf8\\\"}\"}],\"mru\":[0]},\"size\":741}],\"size\":1058},\"orientation\":0,\"width\":1058,\"height\":741},\"activeGroup\":0,\"mostRecentActiveGroups\":[0]}}"
+  },
+  {
+    "key": "history.entries",
+    "value": "[{\"editor\":{\"resource\":\"file:///d%3A/xampp/htdocs/babyshower/index.html\",\"forceFile\":true,\"options\":{\"override\":\"default\"}}},{\"editor\":{\"resource\":\"file:///d%3A/xampp/htdocs/babyshower/babyshower/index%20copy.html\",\"forceFile\":true,\"options\":{\"override\":\"default\"}}}]"
+  },
+  {
+    "key": "workbench.explorer.treeViewState",
+    "value": "{\"focus\":[\"file:///d%3A/xampp/htdocs/babyshower::file:///d%3A/xampp/htdocs/babyshower/index.html\"],\"selection\":[\"file:///d%3A/xampp/htdocs/babyshower::file:///d%3A/xampp/htdocs/babyshower/index.html\"],\"expanded\":[],\"scrollTop\":0}"
+  },
+  {
+    "key": "notepadData",
+    "value": "{\"notepads\":{},\"notepadDataVersion\":0}"
+  },
+  {
+    "key": "composer.composerData",
+    "value": "{\"allComposers\":[{\"type\":\"head\",\"composerId\":\"9b568784-f4c3-4d95-ae7a-98445d9db442\",\"createdAt\":1752075109736,\"unifiedMode\":\"agent\",\"forceMode\":\"edit\",\"hasUnreadMessages\":false},{\"type\":\"head\",\"composerId\":\"7d86ed98-1abe-463b-b92a-48a3c9f9557d\",\"name\":\"Create HTML from image content\",\"lastUpdatedAt\":1752000075508,\"createdAt\":1751989965039,\"unifiedMode\":\"agent\",\"forceMode\":\"edit\",\"hasUnreadMessages\":false},{\"type\":\"head\",\"composerId\":\"7bffdc03-fa65-4c69-88a8-11078dc7c0d5\",\"createdAt\":1751989965039,\"unifiedMode\":\"chat\",\"forceMode\":\"edit\",\"hasUnreadMessages\":false}],\"selectedComposerIds\":[\"9b568784-f4c3-4d95-ae7a-98445d9db442\"],\"hasMigratedComposerData\":true,\"hasMigratedMultipleComposers\":true}"
+  },
+  {
+    "key": "memento/workbench.editors.files.textFileEditor",
+    "value": "{\"textEditorViewState\":[[\"file:///d%3A/xampp/htdocs/babyshower/babyshower/invitation.html\",{\"0\":{\"cursorState\":[{\"inSelectionMode\":false,\"selectionStart\":{\"lineNumber\":115,\"column\":1},\"position\":{\"lineNumber\":115,\"column\":1}}],\"viewState\":{\"scrollLeft\":0,\"firstPosition\":{\"lineNumber\":90,\"column\":1},\"firstPositionDeltaTop\":-13},\"contributionsState\":{\"editor.contrib.folding\":{\"collapsedRegions\":[{\"startLineNumber\":8,\"endLineNumber\":80,\"isCollapsed\":true,\"source\":0,\"checksum\":-272745}],\"lineCount\":115,\"provider\":\"syntax\",\"foldedImports\":false},\"editor.contrib.wordHighlighter\":false}}}],[\"file:///d%3A/xampp/htdocs/babyshower/babyshower/index%20copy.html\",{\"0\":{\"cursorState\":[{\"inSelectionMode\":false,\"selectionStart\":{\"lineNumber\":1,\"column\":1},\"position\":{\"lineNumber\":1,\"column\":1}}],\"viewState\":{\"scrollLeft\":0,\"firstPosition\":{\"lineNumber\":1,\"column\":1},\"firstPositionDeltaTop\":0},\"contributionsState\":{\"editor.contrib.findController\":{\"widgetViewZoneVisible\":false,\"scrollTop\":0},\"editor.contrib.folding\":{\"lineCount\":138,\"provider\":\"syntax\",\"foldedImports\":false},\"editor.contrib.wordHighlighter\":false}}}],[\"file:///d%3A/xampp/htdocs/babyshower/babyshower/index.html\",{\"0\":{\"cursorState\":[{\"inSelectionMode\":false,\"selectionStart\":{\"lineNumber\":252,\"column\":51},\"position\":{\"lineNumber\":252,\"column\":51}}],\"viewState\":{\"scrollLeft\":0,\"firstPosition\":{\"lineNumber\":228,\"column\":1},\"firstPositionDeltaTop\":-16},\"contributionsState\":{\"editor.contrib.findController\":{\"widgetViewZoneVisible\":false,\"scrollTop\":4438},\"editor.contrib.folding\":{\"lineCount\":272,\"provider\":\"syntax\",\"foldedImports\":false},\"editor.contrib.wordHighlighter\":false}}}],[\"file:///d%3A/xampp/htdocs/babyshower/index.html\",{\"0\":{\"cursorState\":[{\"inSelectionMode\":true,\"selectionStart\":{\"lineNumber\":205,\"column\":17},\"position\":{\"lineNumber\":205,\"column\":96}}],\"viewState\":{\"scrollLeft\":0,\"firstPosition\":{\"lineNumber\":195,\"column\":1},\"firstPositionDeltaTop\":0},\"contributionsState\":{\"editor.contrib.folding\":{\"collapsedRegions\":[{\"startLineNumber\":9,\"endLineNumber\":194,\"isCollapsed\":true,\"source\":0,\"checksum\":-272745}],\"lineCount\":272,\"provider\":\"syntax\",\"foldedImports\":false},\"editor.contrib.wordHighlighter\":false}}}]]}"
+  },
+  {
+    "key": "__$__targetStorageMarker",
+    "value": "{\"cursorAuth/workspaceOpenedDate\":1,\"workbench.explorer.views.state\":1,\"workbench.view.search.state\":1,\"workbench.scm.views.state\":1,\"workbench.panel.markers\":1,\"workbench.panel.output\":1,\"terminal\":1,\"workbench.panel.viewContainersWorkspaceState\":1,\"workbench.auxiliarybar.initialViewContainers\":1,\"workbench.auxiliarybar.viewContainersWorkspaceState\":1,\"workbench.panel.composerChatViewPane\":1,\"workbench.auxiliarybar.activepanelid\":1,\"workbench.explorer.treeViewState\":1,\"output.activechannel\":1,\"debug.selectedroot\":1,\"workbench.view.debug.state\":1,\"workbench.view.remote.state\":1,\"workbench.view.extension.github-pull-requests.state\":1,\"workbench.view.extension.workspaceViewer.state\":1,\"~remote.forwardedPortsContainer\":1,\"workbench.panel.repl\":1,\"debug.uxstate\":1,\"terminal.integrated.environmentVariableCollectionsV2\":1,\"vscode.git\":1,\"anysphere.cursor-retrieval\":1,\"GitHub.vscode-pull-request-github\":1,\"aiService.generations\":1,\"src.vs.platform.reactivestorage.browser.reactiveStorageServiceImpl.persistentStorage.workspaceUser\":0,\"history.entries\":1,\"workbench.view.explorer.numberOfVisibleViews\":1,\"workbench.editor.centered\":1,\"workbench.zenMode.active\":1,\"workbench.zenMode.exitInfo\":1,\"workbench.panel.wasLastMaximized\":1,\"workbench.sideBar.position\":1,\"workbench.panel.position\":1,\"workbench.activityBar.hidden\":1,\"workbench.sideBar.hidden\":1,\"workbench.editor.hidden\":1,\"workbench.panel.hidden\":1,\"workbench.auxiliaryBar.hidden\":1,\"workbench.statusBar.hidden\":1,\"workbench.panel.aichat.numberOfVisibleViews\":1,\"workbench.panel.chat.numberOfVisibleViews\":1,\"aiService.prompts\":1,\"notepad.reactiveStorageId\":1,\"interactive.sessions\":1,\"notepadData\":1,\"comments.continueOnComments\":0,\"composer.composerData\":1,\"workbench.editor.languageDetectionOpenedLanguages.workspace\":1,\"memento/workbench.editors.files.textFileEditor\":1,\"memento/workbench.parts.editor\":0,\"workbench.find.history\":0,\"codelens/cache2\":1,\"workbench.backgroundComposer.workspacePersistentData\":1,\"terminal.integrated.layoutInfo\":1,\"lifecyle.lastShutdownReason\":1}"
+  },
+  {
+    "key": "lifecyle.lastShutdownReason",
+    "value": "1"
+  },
+  {
+    "key": "src.vs.platform.reactivestorage.browser.reactiveStorageServiceImpl.persistentStorage.workspaceUser",
+    "value": "{\"tasksData\":{\"tasksDataSchemaVersion\":1,\"tasks\":[{\"type\":\"draft\",\"taskId\":\"3f4f6d99-e9d3-46f3-93c6-dbcd4c50bc63\",\"instruction\":\"\"}],\"displayedTaskId\":\"3f4f6d99-e9d3-46f3-93c6-dbcd4c50bc63\",\"showTabs\":false,\"activeServerTaskUuids\":[]},\"onboardingMetadata\":{\"shouldAskToIndex\":true,\"shouldHideWarning\":false},\"persistentChatMetadata\":[],\"aiPanePosition\":\"sidebar\",\"shouldRerankByDefault\":false,\"indexingData\":{\"preferredEmbeddingModel\":0},\"composerState\":{\"position\":{\"x\":0,\"y\":0},\"horizontalBarSize\":0,\"tabHeight\":0,\"selectedView\":\"suggested\",\"devToolsPosition\":{\"x\":0,\"y\":0},\"memories\":[],\"isComposerBarChatCollapsed\":false,\"composerBarPosition\":null,\"enableDataHandleDebugging\":false,\"shouldExplicitlyShowFgComposerInBg\":false,\"isDebuggingHumanFeedbackPanelForEditFile\":false},\"isCursorPredictionOutOfRangeIndicatorMinimized2\":true,\"needsComposerInitialOpening\":false,\"approvedProjectMcpServers\":[],\"disabledMcpServers\":[],\"eligibleForSnippetLearning\":true,\"solidJSLeakRecords\":[],\"exampleCodebaseQuestions\":[],\"SPECIAL_KEY_id\":\"07043393-8012-4576-bf94-e51ed6859a42\"}"
+  },
+  {
+    "key": "codelens/cache2",
+    "value": "{\"file:///d%3A/xampp/htdocs/babyshower/babyshower/invitation.html\":{\"lineCount\":115,\"lines\":[]},\"file:///d%3A/xampp/htdocs/babyshower/babyshower/index%20copy.html\":{\"lineCount\":138,\"lines\":[]},\"file:///d%3A/xampp/htdocs/babyshower/babyshower/index.html\":{\"lineCount\":272,\"lines\":[]},\"file:///d%3A/xampp/htdocs/babyshower/index.html\":{\"lineCount\":272,\"lines\":[]}}"
+  }
+]
