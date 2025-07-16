@@ -1,0 +1,202 @@
+[
+  {
+    "key": "workbench.panel.markers",
+    "value": "{\"workbench.panel.markers.view\":{\"collapsed\":false,\"isHidden\":true}}"
+  },
+  {
+    "key": "workbench.panel.output",
+    "value": "{\"workbench.panel.output\":{\"collapsed\":false,\"isHidden\":true}}"
+  },
+  {
+    "key": "terminal",
+    "value": "{\"terminal\":{\"collapsed\":false,\"isHidden\":true}}"
+  },
+  {
+    "key": "workbench.view.search.state",
+    "value": "{\"workbench.view.search\":{\"collapsed\":false,\"isHidden\":true}}"
+  },
+  {
+    "key": "debug.selectedroot",
+    "value": "file:///d%3A/xampp/htdocs/utravel/.vscode/launch.json"
+  },
+  {
+    "key": "workbench.view.debug.state",
+    "value": "{\"workbench.debug.welcome\":{\"collapsed\":false,\"isHidden\":true},\"workbench.debug.variablesView\":{\"collapsed\":false,\"isHidden\":true},\"workbench.debug.watchExpressionsView\":{\"collapsed\":false,\"isHidden\":true},\"workbench.debug.callStackView\":{\"collapsed\":false,\"isHidden\":true},\"workbench.debug.loadedScriptsView\":{\"collapsed\":true,\"isHidden\":true},\"workbench.debug.breakPointsView\":{\"collapsed\":false,\"isHidden\":true},\"jsBrowserBreakpoints\":{\"collapsed\":true,\"isHidden\":true},\"jsExcludedCallers\":{\"collapsed\":true,\"isHidden\":true},\"CppSshTargetsView\":{\"collapsed\":true,\"isHidden\":true},\"lldb.loadedModules\":{\"collapsed\":true,\"isHidden\":true},\"lldb.excludedCallers\":{\"collapsed\":true,\"isHidden\":true}}"
+  },
+  {
+    "key": "output.activechannel",
+    "value": "tasks"
+  },
+  {
+    "key": "~remote.forwardedPortsContainer",
+    "value": "{\"~remote.forwardedPorts\":{\"collapsed\":false,\"isHidden\":true}}"
+  },
+  {
+    "key": "workbench.panel.repl",
+    "value": "{\"workbench.panel.repl.view\":{\"collapsed\":false,\"isHidden\":true}}"
+  },
+  {
+    "key": "debug.uxstate",
+    "value": "simple"
+  },
+  {
+    "key": "workbench.view.explorer.numberOfVisibleViews",
+    "value": "3"
+  },
+  {
+    "key": "comments.continueOnComments",
+    "value": "[]"
+  },
+  {
+    "key": "interactive.sessions",
+    "value": "[]"
+  },
+  {
+    "key": "workbench.view.search.numberOfVisibleViews",
+    "value": "1"
+  },
+  {
+    "key": "workbench.editor.centered",
+    "value": "false"
+  },
+  {
+    "key": "workbench.zenMode.active",
+    "value": "false"
+  },
+  {
+    "key": "workbench.zenMode.exitInfo",
+    "value": "{\"transitionedToCenteredEditorLayout\":false,\"transitionedToFullScreen\":false,\"handleNotificationsDoNotDisturbMode\":false,\"wasVisible\":{\"auxiliaryBar\":false,\"panel\":false,\"sideBar\":false}}"
+  },
+  {
+    "key": "workbench.panel.wasLastMaximized",
+    "value": "false"
+  },
+  {
+    "key": "workbench.sideBar.position",
+    "value": "0"
+  },
+  {
+    "key": "workbench.panel.position",
+    "value": "2"
+  },
+  {
+    "key": "workbench.activityBar.hidden",
+    "value": "false"
+  },
+  {
+    "key": "workbench.editor.hidden",
+    "value": "false"
+  },
+  {
+    "key": "workbench.panel.hidden",
+    "value": "true"
+  },
+  {
+    "key": "workbench.auxiliaryBar.hidden",
+    "value": "true"
+  },
+  {
+    "key": "workbench.statusBar.hidden",
+    "value": "false"
+  },
+  {
+    "key": "__$__isNewStorageMarker",
+    "value": "false"
+  },
+  {
+    "key": "memento/workbench.editors.textResourceEditor",
+    "value": "{\"textEditorViewState\":[]}"
+  },
+  {
+    "key": "workbench.sideBar.hidden",
+    "value": "false"
+  },
+  {
+    "key": "workbench.panel.chat",
+    "value": "{\"workbench.panel.chat.view.copilot\":{\"collapsed\":false,\"isHidden\":true}}"
+  },
+  {
+    "key": "workbench.scm.views.state",
+    "value": "{\"workbench.scm.repositories\":{\"collapsed\":false,\"isHidden\":true},\"workbench.scm\":{\"collapsed\":false,\"isHidden\":true},\"workbench.scm.history\":{\"collapsed\":false,\"isHidden\":true}}"
+  },
+  {
+    "key": "workbench.auxiliarybar.viewContainersWorkspaceState",
+    "value": "[{\"id\":\"workbench.panel.chatEditing\",\"visible\":false},{\"id\":\"workbench.panel.chat\",\"visible\":true}]"
+  },
+  {
+    "key": "chat.ChatSessionStore.index",
+    "value": "{\"version\":1,\"entries\":{}}"
+  },
+  {
+    "key": "workbench.view.remote.state",
+    "value": "{\"github.codespaces.explorer\":{\"collapsed\":false,\"isHidden\":false},\"github.codespaces.warnExplorer\":{\"collapsed\":false,\"isHidden\":false},\"github.codespaces.performanceExplorer\":{\"collapsed\":false,\"isHidden\":false}}"
+  },
+  {
+    "key": "workbench.view.extension.github-pull-requests.state",
+    "value": "{\"github:login\":{\"collapsed\":false,\"isHidden\":true},\"pr:github\":{\"collapsed\":false,\"isHidden\":true},\"issues:github\":{\"collapsed\":false,\"isHidden\":true},\"github:conflictResolution\":{\"collapsed\":false,\"isHidden\":true},\"notifications:github\":{\"collapsed\":true,\"isHidden\":true}}"
+  },
+  {
+    "key": "GitHub.vscode-pull-request-github",
+    "value": "{\"hasMigratedQueries\":true,\"hasMigratedDefaultQueries4\":true}"
+  },
+  {
+    "key": "terminal.integrated.environmentVariableCollectionsV2",
+    "value": "[{\"extensionIdentifier\":\"GitHub.copilot-chat\",\"collection\":[[\"PATH\",{\"variable\":\"PATH\",\"value\":\";c:\\\\Users\\\\suniv\\\\AppData\\\\Roaming\\\\Code\\\\User\\\\globalStorage\\\\github.copilot-chat\\\\debugCommand\",\"type\":2,\"options\":{\"applyAtProcessCreation\":true,\"applyAtShellIntegration\":false}}]],\"description\":[[\"\",{\"description\":\"Enables use of the `copilot-debug` command in the terminal.\"}]]}]"
+  },
+  {
+    "key": "workbench.activity.viewletsWorkspaceState",
+    "value": "[{\"id\":\"workbench.view.explorer\",\"visible\":true},{\"id\":\"workbench.view.search\",\"visible\":true},{\"id\":\"workbench.view.scm\",\"visible\":true},{\"id\":\"workbench.view.debug\",\"visible\":true},{\"id\":\"workbench.view.extensions\",\"visible\":true},{\"id\":\"workbench.view.remote\",\"visible\":true},{\"id\":\"workbench.view.extension.test\",\"visible\":false},{\"id\":\"workbench.view.extension.references-view\",\"visible\":false},{\"id\":\"workbench.view.extension.cmake-view\",\"visible\":false},{\"id\":\"workbench.view.extension.github-pull-requests\",\"visible\":true},{\"id\":\"workbench.view.extension.github-pull-request\",\"visible\":false},{\"id\":\"workbench.view.extension.copilot-chat\",\"visible\":false},{\"id\":\"workbench.panel.chatSidebar\",\"visible\":false},{\"id\":\"workbench.view.editSessions\",\"visible\":false},{\"id\":\"workbench.view.sync\",\"visible\":false},{\"id\":\"userDataProfiles\",\"visible\":false}]"
+  },
+  {
+    "key": "workbench.panel.viewContainersWorkspaceState",
+    "value": "[{\"id\":\"workbench.panel.markers\",\"visible\":true},{\"id\":\"workbench.panel.output\",\"visible\":true},{\"id\":\"workbench.panel.repl\",\"visible\":true},{\"id\":\"workbench.panel.testResults\",\"visible\":false},{\"id\":\"terminal\",\"visible\":true},{\"id\":\"~remote.forwardedPortsContainer\",\"visible\":true},{\"id\":\"refactorPreview\",\"visible\":false}]"
+  },
+  {
+    "key": "workbench.search.history",
+    "value": "{\"search\":[\"curl\",\"curl_err\",\"get_greeting_text\",\"n get_greeting_text\"]}"
+  },
+  {
+    "key": "memento/workbench.view.search",
+    "value": "{\"query.contentPattern\":\"n get_greeting_text\",\"query.regex\":false,\"query.wholeWords\":false,\"query.caseSensitive\":false,\"query.isInNotebookMarkdownInput\":true,\"query.isInNotebookMarkdownPreview\":true,\"query.isInNotebookCellInput\":true,\"query.isInNotebookCellOutput\":true,\"query.folderExclusions\":\"\",\"query.folderIncludes\":\"\",\"query.useExcludesAndIgnoreFiles\":true,\"query.preserveCase\":false,\"query.onlyOpenEditors\":false,\"view.showReplace\":true,\"view.treeLayout\":false,\"query.replaceText\":\"\"}"
+  },
+  {
+    "key": "workbench.explorer.treeViewState",
+    "value": "{\"focus\":[\"file:///d%3A/xampp/htdocs/utravel::file:///d%3A/xampp/htdocs/utravel/engine/modules/common/views/theme_01/general/left_menu.php\"],\"selection\":[\"file:///d%3A/xampp/htdocs/utravel::file:///d%3A/xampp/htdocs/utravel/engine/modules/common/views/theme_01/general/left_menu.php\"],\"expanded\":[\"file:///d%3A/xampp/htdocs/utravel::file:///d%3A/xampp/htdocs/utravel/Reference\",\"file:///d%3A/xampp/htdocs/utravel::file:///d%3A/xampp/htdocs/utravel/Reference/v1\",\"file:///d%3A/xampp/htdocs/utravel::file:///d%3A/xampp/htdocs/utravel/Reference/v1/application\",\"file:///d%3A/xampp/htdocs/utravel::file:///d%3A/xampp/htdocs/utravel/Reference/v1/application/views\",\"file:///d%3A/xampp/htdocs/utravel::file:///d%3A/xampp/htdocs/utravel/Reference/v1/application/views/general\",\"file:///d%3A/xampp/htdocs/utravel::file:///d%3A/xampp/htdocs/utravel/engine\",\"file:///d%3A/xampp/htdocs/utravel::file:///d%3A/xampp/htdocs/utravel/engine/modules\",\"file:///d%3A/xampp/htdocs/utravel::file:///d%3A/xampp/htdocs/utravel/engine/modules/core\",\"file:///d%3A/xampp/htdocs/utravel::file:///d%3A/xampp/htdocs/utravel/engine/modules/core/views\",\"file:///d%3A/xampp/htdocs/utravel::file:///d%3A/xampp/htdocs/utravel/engine/modules/core/views/theme_01\",\"file:///d%3A/xampp/htdocs/utravel::file:///d%3A/xampp/htdocs/utravel/engine/modules/core/views/theme_01/login\",\"file:///d%3A/xampp/htdocs/utravel::file:///d%3A/xampp/htdocs/utravel/engine/modules/core/views/theme_01/dashboard\",\"file:///d%3A/xampp/htdocs/utravel::file:///d%3A/xampp/htdocs/utravel/engine/modules/core/controllers\",\"file:///d%3A/xampp/htdocs/utravel::file:///d%3A/xampp/htdocs/utravel/engine/modules/common\",\"file:///d%3A/xampp/htdocs/utravel::file:///d%3A/xampp/htdocs/utravel/engine/modules/common/views\",\"file:///d%3A/xampp/htdocs/utravel::file:///d%3A/xampp/htdocs/utravel/engine/modules/common/views/theme_01\",\"file:///d%3A/xampp/htdocs/utravel::file:///d%3A/xampp/htdocs/utravel/engine/modules/common/views/theme_01/general\",\"file:///d%3A/xampp/htdocs/utravel::file:///d%3A/xampp/htdocs/utravel/engine/helpers\",\"file:///d%3A/xampp/htdocs/utravel::file:///d%3A/xampp/htdocs/utravel/engine/config\"],\"scrollTop\":560}"
+  },
+  {
+    "key": "workbench.find.history",
+    "value": "[\"CORE_SECURITY\",\"get_greeting_text\",\"admin_type\",\"sidebar_id\",\"STATE\",\"sidebar_name\",\"sidebar_icon\",\"sidebar_link\",\"side\",\"module_link\\\":\\\"\\\",\",\"\\\"module_link\\\":\\\"\\\",\",\"sidebar_admin_link\"]"
+  },
+  {
+    "key": "workbench.replace.history",
+    "value": "[\"user_type_code\",\"module_id\",\"A\",\"ADMIN\",\"module_name\",\"module_icon\",\",\",\"module_link\"]"
+  },
+  {
+    "key": "workbench.editor.languageDetectionOpenedLanguages.workspace",
+    "value": "[[\"xml\",true],[\"html\",true],[\"plaintext\",true],[\"json\",true],[\"php\",true]]"
+  },
+  {
+    "key": "workbench.explorer.views.state",
+    "value": "{\"outline\":{\"collapsed\":true,\"isHidden\":true,\"size\":22},\"timeline\":{\"collapsed\":true,\"isHidden\":true,\"size\":22},\"workbench.explorer.openEditorsView\":{\"collapsed\":false,\"isHidden\":true},\"workbench.explorer.fileView\":{\"collapsed\":true,\"isHidden\":true,\"size\":816},\"npm\":{\"collapsed\":true,\"isHidden\":true}}"
+  },
+  {
+    "key": "history.entries",
+    "value": "[{\"editor\":{\"resource\":\"file:///d%3A/xampp/htdocs/mgnrega/nrega/modules/common/views/theme_01/general/load_js.php\",\"forceFile\":true,\"options\":{\"override\":\"default\"}}},{\"editor\":{\"resource\":\"file:///d%3A/xampp/htdocs/utravel/Reference/v1/application/views/general/load_js.php\",\"forceFile\":true,\"options\":{\"override\":\"default\"}}},{\"editor\":{\"resource\":\"file:///d%3A/xampp/htdocs/utravel/engine/modules/common/views/theme_01/general/left_menu.php\",\"forceFile\":true,\"options\":{\"override\":\"default\"}}},{\"editor\":{\"resource\":\"file:///c%3A/Users/suniv/Downloads/sidebar_details.json\",\"forceFile\":true,\"options\":{\"override\":\"default\"}}},{\"editor\":{\"resource\":\"file:///d%3A/xampp/htdocs/utravel/engine/config/constants.php\",\"forceFile\":true,\"options\":{\"override\":\"default\"}}},{\"editor\":{\"resource\":\"file:///d%3A/xampp/htdocs/utravel/engine/modules/common/views/theme_01/general/load_dt_css.php\",\"forceFile\":true,\"options\":{\"override\":\"default\"}}},{\"editor\":{\"resource\":\"file:///d%3A/xampp/htdocs/utravel/engine/modules/core/views/theme_01/login/login.php\",\"forceFile\":true,\"options\":{\"override\":\"default\"}}},{\"editor\":{\"resource\":\"file:///d%3A/xampp/htdocs/utravel/engine/modules/core/controllers/Dashboard.php\",\"forceFile\":true,\"options\":{\"override\":\"default\"}}},{\"editor\":{\"resource\":\"file:///d%3A/xampp/htdocs/utravel/engine/modules/common/views/theme_01/general/footer.php\",\"forceFile\":true,\"options\":{\"override\":\"default\"}}},{\"editor\":{\"resource\":\"file:///d%3A/xampp/htdocs/utravel/engine/helpers/services_helper.php\",\"forceFile\":true,\"options\":{\"override\":\"default\"}}},{\"editor\":{\"resource\":\"file:///d%3A/xampp/htdocs/utravel/engine/config/autoload.php\",\"forceFile\":true,\"options\":{\"override\":\"default\"}}},{\"editor\":{\"resource\":\"file:///d%3A/xampp/htdocs/utravel/engine/helpers/login_helper.php\",\"forceFile\":true,\"options\":{\"override\":\"default\"}}},{\"editor\":{\"resource\":\"file:///d%3A/xampp/htdocs/utravel/engine/helpers/api_helper.php\",\"forceFile\":true,\"options\":{\"override\":\"default\"}}},{\"editor\":{\"resource\":\"file:///d%3A/xampp/htdocs/utravel/engine/modules/common/views/theme_01/general/header.php\",\"forceFile\":true,\"options\":{\"override\":\"default\"}}},{\"editor\":{\"resource\":\"file:///d%3A/xampp/htdocs/utravel/engine/modules/core/views/theme_01/dashboard/home_page.php\",\"forceFile\":true,\"options\":{\"override\":\"default\"}}},{\"editor\":{\"resource\":\"file:///d%3A/xampp/htdocs/utravel/engine/modules/core/controllers/Login.php\",\"forceFile\":true,\"options\":{\"override\":\"default\"}}},{\"editor\":{\"resource\":\"file:///d%3A/xampp/htdocs/utravel/engine/modules/common/views/theme_01/security/secuity_script.php\",\"forceFile\":true,\"options\":{\"override\":\"default\"}}},{\"editor\":{\"resource\":\"file:///d%3A/xampp/htdocs/utravel/engine/modules/common/views/theme_01/general/load_css.php\",\"forceFile\":true,\"options\":{\"override\":\"default\"}}},{\"editor\":{\"resource\":\"file:///d%3A/xampp/htdocs/utravel/engine/modules/core/models/Settings_model.php\",\"forceFile\":true,\"options\":{\"override\":\"default\"}}},{\"editor\":{\"resource\":\"file:///d%3A/xampp/htdocs/utravel/Airseat/index.html\",\"forceFile\":true,\"options\":{\"override\":\"default\"}}},{\"editor\":{\"resource\":\"file:///d%3A/xampp/htdocs/utravel/v1/application/helpers/sabre_helper.php\",\"forceFile\":true,\"options\":{\"override\":\"default\"}}},{\"editor\":{\"resource\":\"file:///c%3A/Users/suniv/OneDrive/Desktop/SessionCreateRQ.xml\",\"forceFile\":true,\"options\":{\"override\":\"default\"}}},{\"editor\":{\"resource\":\"file:///c%3A/Users/suniv/OneDrive/Desktop/SessionCreateRS.xml\",\"forceFile\":true,\"options\":{\"override\":\"default\"}}}]"
+  },
+  {
+    "key": "memento/workbench.editors.files.textFileEditor",
+    "value": "{\"textEditorViewState\":[[\"file:///c%3A/Users/suniv/OneDrive/Desktop/SessionCreateRS.xml\",{\"0\":{\"cursorState\":[{\"inSelectionMode\":true,\"selectionStart\":{\"lineNumber\":28,\"column\":26},\"position\":{\"lineNumber\":28,\"column\":47}}],\"viewState\":{\"scrollLeft\":0,\"firstPosition\":{\"lineNumber\":1,\"column\":1},\"firstPositionDeltaTop\":0},\"contributionsState\":{\"editor.contrib.folding\":{\"lineCount\":34,\"provider\":\"indent\",\"foldedImports\":false},\"editor.contrib.wordHighlighter\":false,\"editor.contrib.findController\":{\"widgetViewZoneVisible\":false,\"scrollTop\":0}}}}],[\"file:///c%3A/Users/suniv/OneDrive/Desktop/SessionCreateRQ.xml\",{\"0\":{\"cursorState\":[{\"inSelectionMode\":true,\"selectionStart\":{\"lineNumber\":1,\"column\":1},\"position\":{\"lineNumber\":39,\"column\":21}}],\"viewState\":{\"scrollLeft\":0,\"firstPosition\":{\"lineNumber\":4,\"column\":1},\"firstPositionDeltaTop\":-2},\"contributionsState\":{\"editor.contrib.folding\":{\"lineCount\":39,\"provider\":\"indent\",\"foldedImports\":false},\"editor.contrib.wordHighlighter\":false,\"editor.contrib.findController\":{\"widgetViewZoneVisible\":false,\"scrollTop\":59}}}}],[\"file:///d%3A/xampp/htdocs/utravel/v1/application/helpers/sabre_helper.php\",{\"0\":{\"cursorState\":[{\"inSelectionMode\":false,\"selectionStart\":{\"lineNumber\":1858,\"column\":1},\"position\":{\"lineNumber\":1858,\"column\":1}}],\"viewState\":{\"scrollLeft\":0,\"firstPosition\":{\"lineNumber\":1847,\"column\":1},\"firstPositionDeltaTop\":-18},\"contributionsState\":{\"editor.contrib.folding\":{\"lineCount\":1878,\"provider\":\"indent\",\"foldedImports\":false},\"editor.contrib.wordHighlighter\":false,\"editor.contrib.findController\":{\"widgetViewZoneVisible\":false,\"scrollTop\":35092}}}}],[\"file:///d%3A/xampp/htdocs/utravel/Airseat/index.html\",{\"0\":{\"cursorState\":[{\"inSelectionMode\":false,\"selectionStart\":{\"lineNumber\":72,\"column\":25},\"position\":{\"lineNumber\":72,\"column\":25}}],\"viewState\":{\"scrollLeft\":0,\"firstPosition\":{\"lineNumber\":56,\"column\":1},\"firstPositionDeltaTop\":-5},\"contributionsState\":{\"editor.contrib.folding\":{\"collapsedRegions\":[{\"startLineNumber\":78,\"endLineNumber\":107,\"isCollapsed\":true,\"source\":0,\"checksum\":466266},{\"startLineNumber\":110,\"endLineNumber\":115,\"isCollapsed\":true,\"source\":0,\"checksum\":-332314},{\"startLineNumber\":117,\"endLineNumber\":150,\"isCollapsed\":true,\"source\":0,\"checksum\":-84271},{\"startLineNumber\":152,\"endLineNumber\":186,\"isCollapsed\":true,\"source\":0,\"checksum\":-84271},{\"startLineNumber\":188,\"endLineNumber\":215,\"isCollapsed\":true,\"source\":0,\"checksum\":-84271},{\"startLineNumber\":217,\"endLineNumber\":243,\"isCollapsed\":true,\"source\":0,\"checksum\":-84271}],\"lineCount\":812,\"provider\":\"syntax\",\"foldedImports\":false},\"editor.contrib.wordHighlighter\":true,\"editor.contrib.findController\":{\"widgetViewZoneVisible\":false,\"scrollTop\":1112}}}}],[\"file:///d%3A/xampp/htdocs/utravel/engine/modules/core/models/Settings_model.php\",{\"0\":{\"cursorState\":[{\"inSelectionMode\":true,\"selectionStart\":{\"lineNumber\":9,\"column\":4},\"position\":{\"lineNumber\":15,\"column\":65}}],\"viewState\":{\"scrollLeft\":0,\"firstPosition\":{\"lineNumber\":1,\"column\":1},\"firstPositionDeltaTop\":0},\"contributionsState\":{\"editor.contrib.folding\":{\"lineCount\":217,\"provider\":\"indent\",\"foldedImports\":false},\"editor.contrib.wordHighlighter\":false}}}],[\"file:///d%3A/xampp/htdocs/utravel/engine/modules/common/views/theme_01/general/load_css.php\",{\"0\":{\"cursorState\":[{\"inSelectionMode\":true,\"selectionStart\":{\"lineNumber\":1,\"column\":1},\"position\":{\"lineNumber\":22,\"column\":1}}],\"viewState\":{\"scrollLeft\":0,\"firstPosition\":{\"lineNumber\":1,\"column\":1},\"firstPositionDeltaTop\":0},\"contributionsState\":{\"editor.contrib.folding\":{\"lineCount\":22,\"provider\":\"indent\",\"foldedImports\":false},\"editor.contrib.wordHighlighter\":false}}}],[\"file:///d%3A/xampp/htdocs/utravel/engine/modules/common/views/theme_01/security/secuity_script.php\",{\"0\":{\"cursorState\":[{\"inSelectionMode\":false,\"selectionStart\":{\"lineNumber\":26,\"column\":1},\"position\":{\"lineNumber\":26,\"column\":1}}],\"viewState\":{\"scrollLeft\":0,\"firstPosition\":{\"lineNumber\":1,\"column\":1},\"firstPositionDeltaTop\":0},\"contributionsState\":{\"editor.contrib.folding\":{\"lineCount\":26,\"provider\":\"indent\",\"foldedImports\":false},\"editor.contrib.wordHighlighter\":false}}}],[\"file:///d%3A/xampp/htdocs/utravel/engine/modules/core/controllers/Login.php\",{\"0\":{\"cursorState\":[{\"inSelectionMode\":false,\"selectionStart\":{\"lineNumber\":52,\"column\":7},\"position\":{\"lineNumber\":52,\"column\":7}}],\"viewState\":{\"scrollLeft\":0,\"firstPosition\":{\"lineNumber\":32,\"column\":1},\"firstPositionDeltaTop\":-11},\"contributionsState\":{\"editor.contrib.folding\":{\"lineCount\":251,\"provider\":\"indent\",\"foldedImports\":false},\"editor.contrib.wordHighlighter\":false}}}],[\"file:///d%3A/xampp/htdocs/utravel/engine/modules/core/views/theme_01/dashboard/home_page.php\",{\"0\":{\"cursorState\":[{\"inSelectionMode\":true,\"selectionStart\":{\"lineNumber\":165,\"column\":15},\"position\":{\"lineNumber\":25,\"column\":9}}],\"viewState\":{\"scrollLeft\":0,\"firstPosition\":{\"lineNumber\":1,\"column\":1},\"firstPositionDeltaTop\":0},\"contributionsState\":{\"editor.contrib.folding\":{\"collapsedRegions\":[{\"startLineNumber\":28,\"endLineNumber\":164,\"isCollapsed\":true,\"source\":0,\"checksum\":-348806}],\"lineCount\":198,\"provider\":\"indent\",\"foldedImports\":false},\"editor.contrib.wordHighlighter\":false}}}],[\"file:///d%3A/xampp/htdocs/utravel/engine/modules/common/views/theme_01/general/header.php\",{\"0\":{\"cursorState\":[{\"inSelectionMode\":true,\"selectionStart\":{\"lineNumber\":44,\"column\":90},\"position\":{\"lineNumber\":44,\"column\":107}}],\"viewState\":{\"scrollLeft\":0,\"firstPosition\":{\"lineNumber\":21,\"column\":1},\"firstPositionDeltaTop\":-18},\"contributionsState\":{\"editor.contrib.folding\":{\"lineCount\":159,\"provider\":\"indent\",\"foldedImports\":false},\"editor.contrib.wordHighlighter\":false}}}],[\"file:///d%3A/xampp/htdocs/utravel/engine/helpers/api_helper.php\",{\"0\":{\"cursorState\":[{\"inSelectionMode\":false,\"selectionStart\":{\"lineNumber\":16,\"column\":44},\"position\":{\"lineNumber\":16,\"column\":44}}],\"viewState\":{\"scrollLeft\":0,\"firstPosition\":{\"lineNumber\":253,\"column\":1},\"firstPositionDeltaTop\":0},\"contributionsState\":{\"editor.contrib.findController\":{\"widgetViewZoneVisible\":false,\"scrollTop\":4821},\"editor.contrib.folding\":{\"lineCount\":253,\"provider\":\"indent\",\"foldedImports\":false},\"editor.contrib.wordHighlighter\":false}}}],[\"file:///d%3A/xampp/htdocs/utravel/engine/helpers/login_helper.php\",{\"0\":{\"cursorState\":[{\"inSelectionMode\":false,\"selectionStart\":{\"lineNumber\":1,\"column\":1},\"position\":{\"lineNumber\":1,\"column\":1}}],\"viewState\":{\"scrollLeft\":0,\"firstPosition\":{\"lineNumber\":85,\"column\":1},\"firstPositionDeltaTop\":-4},\"contributionsState\":{\"editor.contrib.findController\":{\"widgetViewZoneVisible\":false,\"scrollTop\":1633},\"editor.contrib.folding\":{\"lineCount\":94,\"provider\":\"indent\",\"foldedImports\":false},\"editor.contrib.wordHighlighter\":false}}}],[\"file:///d%3A/xampp/htdocs/utravel/engine/config/autoload.php\",{\"0\":{\"cursorState\":[{\"inSelectionMode\":false,\"selectionStart\":{\"lineNumber\":84,\"column\":3},\"position\":{\"lineNumber\":84,\"column\":3}}],\"viewState\":{\"scrollLeft\":15,\"firstPosition\":{\"lineNumber\":61,\"column\":1},\"firstPositionDeltaTop\":-10},\"contributionsState\":{\"editor.contrib.findController\":{\"widgetViewZoneVisible\":false,\"scrollTop\":1183},\"editor.contrib.folding\":{\"lineCount\":137,\"provider\":\"indent\",\"foldedImports\":false},\"editor.contrib.wordHighlighter\":false}}}],[\"file:///d%3A/xampp/htdocs/utravel/engine/helpers/services_helper.php\",{\"0\":{\"cursorState\":[{\"inSelectionMode\":false,\"selectionStart\":{\"lineNumber\":23,\"column\":3},\"position\":{\"lineNumber\":23,\"column\":3}}],\"viewState\":{\"scrollLeft\":0,\"firstPosition\":{\"lineNumber\":8,\"column\":1},\"firstPositionDeltaTop\":-17},\"contributionsState\":{\"editor.contrib.findController\":{\"widgetViewZoneVisible\":false,\"scrollTop\":183},\"editor.contrib.folding\":{\"lineCount\":167,\"foldedImports\":false},\"editor.contrib.wordHighlighter\":false}}}],[\"file:///d%3A/xampp/htdocs/utravel/engine/modules/common/views/theme_01/general/footer.php\",{\"0\":{\"cursorState\":[{\"inSelectionMode\":true,\"selectionStart\":{\"lineNumber\":1,\"column\":1},\"position\":{\"lineNumber\":6,\"column\":1}}],\"viewState\":{\"scrollLeft\":0,\"firstPosition\":{\"lineNumber\":1,\"column\":1},\"firstPositionDeltaTop\":0},\"contributionsState\":{\"editor.contrib.findController\":{\"widgetViewZoneVisible\":false,\"scrollTop\":33},\"editor.contrib.folding\":{\"lineCount\":6,\"foldedImports\":false},\"editor.contrib.wordHighlighter\":false}}}],[\"file:///d%3A/xampp/htdocs/utravel/engine/modules/core/controllers/Dashboard.php\",{\"0\":{\"cursorState\":[{\"inSelectionMode\":false,\"selectionStart\":{\"lineNumber\":1,\"column\":1},\"position\":{\"lineNumber\":1,\"column\":1}}],\"viewState\":{\"scrollLeft\":0,\"firstPosition\":{\"lineNumber\":1,\"column\":1},\"firstPositionDeltaTop\":0},\"contributionsState\":{\"editor.contrib.findController\":{\"widgetViewZoneVisible\":false,\"scrollTop\":33},\"editor.contrib.folding\":{\"lineCount\":56,\"foldedImports\":false},\"editor.contrib.wordHighlighter\":false}}}],[\"file:///d%3A/xampp/htdocs/utravel/engine/modules/core/views/theme_01/login/login.php\",{\"0\":{\"cursorState\":[{\"inSelectionMode\":true,\"selectionStart\":{\"lineNumber\":1,\"column\":1},\"position\":{\"lineNumber\":111,\"column\":1}}],\"viewState\":{\"scrollLeft\":0,\"firstPosition\":{\"lineNumber\":1,\"column\":1},\"firstPositionDeltaTop\":0},\"contributionsState\":{\"editor.contrib.findController\":{\"widgetViewZoneVisible\":false,\"scrollTop\":33},\"editor.contrib.folding\":{\"lineCount\":111,\"foldedImports\":false},\"editor.contrib.wordHighlighter\":false}}}],[\"file:///d%3A/xampp/htdocs/utravel/engine/modules/common/views/theme_01/general/load_dt_css.php\",{\"0\":{\"cursorState\":[{\"inSelectionMode\":false,\"selectionStart\":{\"lineNumber\":1,\"column\":1},\"position\":{\"lineNumber\":1,\"column\":1}}],\"viewState\":{\"scrollLeft\":0,\"firstPosition\":{\"lineNumber\":1,\"column\":1},\"firstPositionDeltaTop\":0},\"contributionsState\":{\"editor.contrib.findController\":{\"widgetViewZoneVisible\":false,\"scrollTop\":33},\"editor.contrib.folding\":{\"lineCount\":12,\"foldedImports\":false},\"editor.contrib.wordHighlighter\":false}}}],[\"file:///d%3A/xampp/htdocs/utravel/engine/config/constants.php\",{\"0\":{\"cursorState\":[{\"inSelectionMode\":true,\"selectionStart\":{\"lineNumber\":114,\"column\":64},\"position\":{\"lineNumber\":91,\"column\":1}}],\"viewState\":{\"scrollLeft\":0,\"firstPosition\":{\"lineNumber\":75,\"column\":1},\"firstPositionDeltaTop\":-4},\"contributionsState\":{\"editor.contrib.findController\":{\"widgetViewZoneVisible\":false,\"scrollTop\":1443},\"editor.contrib.folding\":{\"lineCount\":166,\"foldedImports\":false},\"editor.contrib.wordHighlighter\":false}}}],[\"file:///c%3A/Users/suniv/Downloads/sidebar_details.json\",{\"0\":{\"cursorState\":[{\"inSelectionMode\":false,\"selectionStart\":{\"lineNumber\":10,\"column\":2},\"position\":{\"lineNumber\":10,\"column\":2}}],\"viewState\":{\"scrollLeft\":0,\"firstPosition\":{\"lineNumber\":1,\"column\":1},\"firstPositionDeltaTop\":0},\"contributionsState\":{\"editor.contrib.findController\":{\"widgetViewZoneVisible\":false,\"scrollTop\":0},\"editor.contrib.folding\":{\"lineCount\":10,\"provider\":\"syntax\",\"foldedImports\":false},\"editor.contrib.wordHighlighter\":false}}}],[\"file:///d%3A/xampp/htdocs/utravel/engine/modules/common/views/theme_01/general/left_menu.php\",{\"0\":{\"cursorState\":[{\"inSelectionMode\":false,\"selectionStart\":{\"lineNumber\":40,\"column\":52},\"position\":{\"lineNumber\":40,\"column\":52}}],\"viewState\":{\"scrollLeft\":0,\"firstPosition\":{\"lineNumber\":29,\"column\":1},\"firstPositionDeltaTop\":-18},\"contributionsState\":{\"editor.contrib.findController\":{\"widgetViewZoneVisible\":false,\"scrollTop\":550},\"editor.contrib.folding\":{\"collapsedRegions\":[{\"startLineNumber\":54,\"endLineNumber\":85,\"isCollapsed\":true,\"source\":0,\"checksum\":325731}],\"lineCount\":89,\"provider\":\"indent\",\"foldedImports\":false},\"editor.contrib.wordHighlighter\":true}}}],[\"file:///d%3A/xampp/htdocs/utravel/Reference/v1/application/views/general/load_js.php\",{\"0\":{\"cursorState\":[{\"inSelectionMode\":true,\"selectionStart\":{\"lineNumber\":3,\"column\":96},\"position\":{\"lineNumber\":1,\"column\":1}}],\"viewState\":{\"scrollLeft\":0,\"firstPosition\":{\"lineNumber\":27,\"column\":1},\"firstPositionDeltaTop\":-6},\"contributionsState\":{\"editor.contrib.findController\":{\"widgetViewZoneVisible\":false,\"scrollTop\":500},\"editor.contrib.folding\":{\"lineCount\":34,\"foldedImports\":false},\"editor.contrib.wordHighlighter\":false}}}],[\"file:///d%3A/xampp/htdocs/mgnrega/nrega/modules/common/views/theme_01/general/load_js.php\",{\"0\":{\"cursorState\":[{\"inSelectionMode\":true,\"selectionStart\":{\"lineNumber\":28,\"column\":11},\"position\":{\"lineNumber\":1,\"column\":2}}],\"viewState\":{\"scrollLeft\":0,\"firstPosition\":{\"lineNumber\":1,\"column\":1},\"firstPositionDeltaTop\":0},\"contributionsState\":{\"editor.contrib.findController\":{\"widgetViewZoneVisible\":false,\"scrollTop\":0},\"editor.contrib.folding\":{\"lineCount\":29,\"provider\":\"indent\",\"foldedImports\":false},\"editor.contrib.wordHighlighter\":false}}}]]}"
+  },
+  {
+    "key": "__$__targetStorageMarker",
+    "value": "{\"workbench.panel.markers\":1,\"workbench.panel.output\":1,\"terminal\":1,\"workbench.explorer.views.state\":1,\"workbench.scm.views.state\":1,\"workbench.view.search.state\":1,\"workbench.activity.viewletsWorkspaceState\":1,\"workbench.panel.viewContainersWorkspaceState\":1,\"workbench.explorer.treeViewState\":1,\"workbench.view.extension.github-pull-requests.state\":1,\"debug.selectedroot\":1,\"workbench.view.debug.state\":1,\"output.activechannel\":1,\"~remote.forwardedPortsContainer\":1,\"workbench.panel.repl\":1,\"debug.uxstate\":1,\"GitHub.vscode-pull-request-github\":1,\"workbench.editor.languageDetectionOpenedLanguages.workspace\":1,\"history.entries\":1,\"workbench.view.explorer.numberOfVisibleViews\":1,\"comments.continueOnComments\":0,\"interactive.sessions\":1,\"memento/workbench.editors.files.textFileEditor\":1,\"workbench.search.history\":0,\"memento/workbench.view.search\":1,\"workbench.view.search.numberOfVisibleViews\":1,\"memento/workbench.editors.textResourceEditor\":1,\"workbench.editor.centered\":1,\"workbench.zenMode.active\":1,\"workbench.zenMode.exitInfo\":1,\"workbench.panel.wasLastMaximized\":1,\"workbench.sideBar.position\":1,\"workbench.panel.position\":1,\"workbench.activityBar.hidden\":1,\"workbench.sideBar.hidden\":1,\"workbench.editor.hidden\":1,\"workbench.panel.hidden\":1,\"workbench.auxiliaryBar.hidden\":1,\"workbench.statusBar.hidden\":1,\"workbench.panel.chat\":1,\"workbench.auxiliarybar.viewContainersWorkspaceState\":1,\"chat.ChatSessionStore.index\":1,\"workbench.view.remote.state\":1,\"terminal.integrated.environmentVariableCollectionsV2\":1,\"workbench.find.history\":0,\"codelens/cache2\":1,\"workbench.replace.history\":0,\"lifecyle.lastShutdownReason\":1}"
+  },
+  {
+    "key": "lifecyle.lastShutdownReason",
+    "value": "1"
+  },
+  {
+    "key": "codelens/cache2",
+    "value": "{\"file:///d%3A/xampp/htdocs/utravel/engine/modules/core/models/Settings_model.php\":{\"lineCount\":217,\"lines\":[]},\"file:///d%3A/xampp/htdocs/utravel/engine/modules/common/views/theme_01/general/load_css.php\":{\"lineCount\":22,\"lines\":[]},\"file:///d%3A/xampp/htdocs/utravel/engine/modules/common/views/theme_01/security/secuity_script.php\":{\"lineCount\":26,\"lines\":[]},\"file:///d%3A/xampp/htdocs/utravel/engine/modules/core/controllers/Login.php\":{\"lineCount\":251,\"lines\":[]},\"file:///d%3A/xampp/htdocs/utravel/engine/modules/core/views/theme_01/dashboard/home_page.php\":{\"lineCount\":198,\"lines\":[]},\"file:///d%3A/xampp/htdocs/utravel/engine/modules/common/views/theme_01/general/header.php\":{\"lineCount\":159,\"lines\":[]},\"file:///d%3A/xampp/htdocs/utravel/engine/helpers/api_helper.php\":{\"lineCount\":253,\"lines\":[]},\"file:///d%3A/xampp/htdocs/utravel/engine/helpers/login_helper.php\":{\"lineCount\":94,\"lines\":[]},\"file:///d%3A/xampp/htdocs/utravel/engine/config/autoload.php\":{\"lineCount\":137,\"lines\":[]},\"file:///d%3A/xampp/htdocs/utravel/engine/helpers/services_helper.php\":{\"lineCount\":167,\"lines\":[]},\"file:///d%3A/xampp/htdocs/utravel/engine/modules/common/views/theme_01/general/footer.php\":{\"lineCount\":6,\"lines\":[]},\"file:///d%3A/xampp/htdocs/utravel/engine/modules/core/controllers/Dashboard.php\":{\"lineCount\":56,\"lines\":[]},\"file:///d%3A/xampp/htdocs/utravel/engine/modules/core/views/theme_01/login/login.php\":{\"lineCount\":111,\"lines\":[]},\"file:///d%3A/xampp/htdocs/utravel/engine/modules/common/views/theme_01/general/load_dt_css.php\":{\"lineCount\":12,\"lines\":[]},\"file:///d%3A/xampp/htdocs/utravel/engine/config/constants.php\":{\"lineCount\":166,\"lines\":[]},\"file:///c%3A/Users/suniv/Downloads/sidebar_details.json\":{\"lineCount\":10,\"lines\":[]},\"file:///d%3A/xampp/htdocs/utravel/engine/modules/common/views/theme_01/general/left_menu.php\":{\"lineCount\":89,\"lines\":[]},\"file:///d%3A/xampp/htdocs/utravel/Reference/v1/application/views/general/load_js.php\":{\"lineCount\":34,\"lines\":[]},\"file:///d%3A/xampp/htdocs/mgnrega/nrega/modules/common/views/theme_01/general/load_js.php\":{\"lineCount\":29,\"lines\":[]}}"
+  }
+]

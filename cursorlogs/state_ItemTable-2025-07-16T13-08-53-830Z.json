@@ -1,0 +1,226 @@
+[
+  {
+    "key": "cursorAuth/workspaceOpenedDate",
+    "value": "2025-06-26T09:25:04.202Z"
+  },
+  {
+    "key": "workbench.view.search.state",
+    "value": "{\"workbench.view.search\":{\"collapsed\":false,\"isHidden\":true}}"
+  },
+  {
+    "key": "workbench.scm.views.state",
+    "value": "{\"workbench.scm.repositories\":{\"collapsed\":false,\"isHidden\":true},\"workbench.scm\":{\"collapsed\":false,\"isHidden\":true},\"workbench.scm.history\":{\"collapsed\":false,\"isHidden\":true}}"
+  },
+  {
+    "key": "workbench.panel.markers",
+    "value": "{\"workbench.panel.markers.view\":{\"collapsed\":false,\"isHidden\":true}}"
+  },
+  {
+    "key": "workbench.panel.output",
+    "value": "{\"workbench.panel.output\":{\"collapsed\":false,\"isHidden\":true}}"
+  },
+  {
+    "key": "workbench.auxiliarybar.initialViewContainers",
+    "value": "[\"workbench.panel.aichat\"]"
+  },
+  {
+    "key": "workbench.auxiliarybar.viewContainersWorkspaceState",
+    "value": "[{\"id\":\"workbench.panel.aichat\",\"visible\":true},{\"id\":\"workbench.panel.composerViewPane2\",\"visible\":false},{\"id\":\"workbench.panel.aipaneaaaiBugFinder\",\"visible\":false},{\"id\":\"workbench.panel.chat\",\"visible\":false},{\"id\":\"workbench.panel.chatEditing\",\"visible\":false}]"
+  },
+  {
+    "key": "debug.selectedroot",
+    "value": "file:///c%3A/Users/suniv/Downloads/cursor-poc/.vscode/launch.json"
+  },
+  {
+    "key": "workbench.auxiliarybar.activepanelid",
+    "value": "workbench.panel.aichat"
+  },
+  {
+    "key": "output.activechannel",
+    "value": "tasks"
+  },
+  {
+    "key": "workbench.view.remote.state",
+    "value": "{\"github.codespaces.explorer\":{\"collapsed\":false,\"isHidden\":false},\"github.codespaces.warnExplorer\":{\"collapsed\":false,\"isHidden\":false},\"github.codespaces.performanceExplorer\":{\"collapsed\":false,\"isHidden\":false}}"
+  },
+  {
+    "key": "workbench.view.extension.github-pull-requests.state",
+    "value": "{\"github:login\":{\"collapsed\":false,\"isHidden\":true},\"pr:github\":{\"collapsed\":false,\"isHidden\":true},\"issues:github\":{\"collapsed\":false,\"isHidden\":true},\"notifications:github\":{\"collapsed\":false,\"isHidden\":true},\"github:conflictResolution\":{\"collapsed\":false,\"isHidden\":true}}"
+  },
+  {
+    "key": "workbench.view.extension.workspaceViewer.state",
+    "value": "{\"workspaceViewer\":{\"collapsed\":false,\"isHidden\":true},\"rHelpPages\":{\"collapsed\":false,\"isHidden\":true},\"rLiveShare\":{\"collapsed\":true,\"isHidden\":true}}"
+  },
+  {
+    "key": "~remote.forwardedPortsContainer",
+    "value": "{\"~remote.forwardedPorts\":{\"collapsed\":false,\"isHidden\":true}}"
+  },
+  {
+    "key": "workbench.explorer.views.state",
+    "value": "{\"notepad\":{\"collapsed\":true,\"isHidden\":true,\"size\":22},\"outline\":{\"collapsed\":true,\"isHidden\":true,\"size\":22},\"timeline\":{\"collapsed\":true,\"isHidden\":true,\"size\":22},\"workbench.explorer.openEditorsView\":{\"collapsed\":false,\"isHidden\":true},\"workbench.explorer.fileView\":{\"collapsed\":false,\"isHidden\":true,\"size\":640},\"npm\":{\"collapsed\":true,\"isHidden\":true}}"
+  },
+  {
+    "key": "workbench.panel.composerChatViewPane",
+    "value": "{\"workbench.panel.aichat.view.af17768c-891a-4f47-a5da-a82a05452671\":{\"collapsed\":false,\"isHidden\":false,\"size\":706},\"workbench.panel.aichat.view.38d2f030-7265-41ef-a1a3-8c6e4ff9b68d\":{\"collapsed\":false,\"isHidden\":false}}"
+  },
+  {
+    "key": "workbench.panel.repl",
+    "value": "{\"workbench.panel.repl.view\":{\"collapsed\":false,\"isHidden\":true}}"
+  },
+  {
+    "key": "workbench.view.debug.state",
+    "value": "{\"workbench.debug.welcome\":{\"collapsed\":false,\"isHidden\":true},\"workbench.debug.variablesView\":{\"collapsed\":false,\"isHidden\":true},\"workbench.debug.watchExpressionsView\":{\"collapsed\":false,\"isHidden\":true},\"workbench.debug.callStackView\":{\"collapsed\":false,\"isHidden\":true},\"workbench.debug.loadedScriptsView\":{\"collapsed\":true,\"isHidden\":true},\"workbench.debug.breakPointsView\":{\"collapsed\":false,\"isHidden\":true},\"jsBrowserBreakpoints\":{\"collapsed\":true,\"isHidden\":true},\"jsExcludedCallers\":{\"collapsed\":true,\"isHidden\":true},\"jsDebugNetworkTree\":{\"collapsed\":true,\"isHidden\":true},\"CppSshTargetsView\":{\"collapsed\":true,\"isHidden\":true},\"lldb.loadedModules\":{\"collapsed\":true,\"isHidden\":true},\"lldb.excludedCallers\":{\"collapsed\":true,\"isHidden\":true}}"
+  },
+  {
+    "key": "debug.uxstate",
+    "value": "simple"
+  },
+  {
+    "key": "vscode.git",
+    "value": "{\"closedRepositories\":[]}"
+  },
+  {
+    "key": "GitHub.vscode-pull-request-github",
+    "value": "{}"
+  },
+  {
+    "key": "history.entries",
+    "value": "[]"
+  },
+  {
+    "key": "workbench.view.explorer.numberOfVisibleViews",
+    "value": "4"
+  },
+  {
+    "key": "workbench.editor.centered",
+    "value": "false"
+  },
+  {
+    "key": "workbench.zenMode.active",
+    "value": "false"
+  },
+  {
+    "key": "workbench.zenMode.exitInfo",
+    "value": "{\"transitionedToCenteredEditorLayout\":false,\"transitionedToFullScreen\":false,\"handleNotificationsDoNotDisturbMode\":false,\"wasVisible\":{\"auxiliaryBar\":false,\"panel\":false,\"sideBar\":false}}"
+  },
+  {
+    "key": "workbench.panel.wasLastMaximized",
+    "value": "false"
+  },
+  {
+    "key": "workbench.sideBar.position",
+    "value": "0"
+  },
+  {
+    "key": "workbench.panel.position",
+    "value": "2"
+  },
+  {
+    "key": "workbench.activityBar.hidden",
+    "value": "true"
+  },
+  {
+    "key": "workbench.sideBar.hidden",
+    "value": "false"
+  },
+  {
+    "key": "workbench.editor.hidden",
+    "value": "false"
+  },
+  {
+    "key": "workbench.auxiliaryBar.hidden",
+    "value": "false"
+  },
+  {
+    "key": "workbench.statusBar.hidden",
+    "value": "false"
+  },
+  {
+    "key": "notepad.reactiveStorageId",
+    "value": "{\"notepads\":{},\"notepadDataVersion\":0}"
+  },
+  {
+    "key": "interactive.sessions",
+    "value": "[]"
+  },
+  {
+    "key": "workbench.panel.aichat.numberOfVisibleViews",
+    "value": "1"
+  },
+  {
+    "key": "comments.continueOnComments",
+    "value": "[]"
+  },
+  {
+    "key": "chat.editing.autosaveDisabled",
+    "value": "[]"
+  },
+  {
+    "key": "workbench.backgroundComposer.workspacePersistentData",
+    "value": "{\"setupPath2\":\"default\",\"terminals\":[],\"ranTerminalCommands\":[],\"installScript\":\"\",\"startScript\":\"\",\"currentSetupStep\":\"start-default-vm\",\"furthestSetupStep\":\"start-default-vm\",\"customDockerfileContents\":\"\",\"cachedSelectedGitState\":{\"type\":\"ref\",\"ref\":\"master\"}}"
+  },
+  {
+    "key": "__$__isNewStorageMarker",
+    "value": "false"
+  },
+  {
+    "key": "workbench.panel.viewContainersWorkspaceState",
+    "value": "[{\"id\":\"workbench.panel.markers\",\"visible\":true},{\"id\":\"workbench.panel.output\",\"visible\":true},{\"id\":\"workbench.panel.repl\",\"visible\":true},{\"id\":\"terminal\",\"visible\":true},{\"id\":\"workbench.panel.testResults\",\"visible\":false},{\"id\":\"~remote.forwardedPortsContainer\",\"visible\":true},{\"id\":\"refactorPreview\",\"visible\":false}]"
+  },
+  {
+    "key": "terminal.integrated.environmentVariableCollectionsV2",
+    "value": "[{\"extensionIdentifier\":\"vscode.git\",\"collection\":[[\"GIT_ASKPASS\",{\"variable\":\"GIT_ASKPASS\",\"value\":\"c:\\\\Users\\\\suniv\\\\AppData\\\\Local\\\\Programs\\\\cursor\\\\resources\\\\app\\\\extensions\\\\git\\\\dist\\\\askpass.sh\",\"type\":1,\"options\":{\"applyAtProcessCreation\":true,\"applyAtShellIntegration\":false}}],[\"VSCODE_GIT_ASKPASS_NODE\",{\"variable\":\"VSCODE_GIT_ASKPASS_NODE\",\"value\":\"c:\\\\Users\\\\suniv\\\\AppData\\\\Local\\\\Programs\\\\cursor\\\\Cursor.exe\",\"type\":1,\"options\":{\"applyAtProcessCreation\":true,\"applyAtShellIntegration\":false}}],[\"VSCODE_GIT_ASKPASS_EXTRA_ARGS\",{\"variable\":\"VSCODE_GIT_ASKPASS_EXTRA_ARGS\",\"value\":\"\",\"type\":1,\"options\":{\"applyAtProcessCreation\":true,\"applyAtShellIntegration\":false}}],[\"VSCODE_GIT_ASKPASS_MAIN\",{\"variable\":\"VSCODE_GIT_ASKPASS_MAIN\",\"value\":\"c:\\\\Users\\\\suniv\\\\AppData\\\\Local\\\\Programs\\\\cursor\\\\resources\\\\app\\\\extensions\\\\git\\\\dist\\\\askpass-main.js\",\"type\":1,\"options\":{\"applyAtProcessCreation\":true,\"applyAtShellIntegration\":false}}],[\"VSCODE_GIT_IPC_HANDLE\",{\"variable\":\"VSCODE_GIT_IPC_HANDLE\",\"value\":\"\\\\\\\\.\\\\pipe\\\\vscode-git-8f37a6bb41-sock\",\"type\":1,\"options\":{\"applyAtProcessCreation\":true,\"applyAtShellIntegration\":false}}]],\"description\":[[\"\",{\"description\":\"Enables the following features: git auth provider\"}]]}]"
+  },
+  {
+    "key": "anysphere.cursor-retrieval",
+    "value": "{\"cursor-retrieval-state-version\":1,\"map/1882a138cabb396f396f01aefc664905bedb3c4b6f7695765c0071de7a8cfb82-cursor-poc/repoKeys\":{\"repoName\":\"087df3dd-af14-4c2e-909a-6a987c5ef132\",\"orthogonalTransformationSeed\":8212004981933115,\"pathEncryptionKey\":\"RYs3Fi3B0_W8bnb1kSdkbvJmzcqQFXrILz3iyWfJaRM\",\"pathEncryptionScheme\":\"aes-256-ctr\",\"canUpdateKey\":false},\"map/1882a138cabb396f396f01aefc664905bedb3c4b6f7695765c0071de7a8cfb82-cursor-poc/google-oauth2|user_01JE9GMZAZSQBF883XR5KV60FJ/indexingStatus\":{\"globalStatus\":{\"case\":\"synced\",\"numFiles\":1},\"progress\":100}}"
+  },
+  {
+    "key": "workbench.explorer.treeViewState",
+    "value": "{\"focus\":[\"file:///c%3A/Users/suniv/Downloads/cursor-poc::file:///c%3A/Users/suniv/Downloads/cursor-poc/collection.anki2\"],\"selection\":[],\"expanded\":[],\"scrollTop\":0}"
+  },
+  {
+    "key": "notepadData",
+    "value": "{\"notepads\":{},\"notepadDataVersion\":0}"
+  },
+  {
+    "key": "terminal",
+    "value": "{\"terminal\":{\"collapsed\":false,\"isHidden\":true,\"size\":852}}"
+  },
+  {
+    "key": "workbench.panel.hidden",
+    "value": "false"
+  },
+  {
+    "key": "terminal.numberOfVisibleViews",
+    "value": "1"
+  },
+  {
+    "key": "aiService.generations",
+    "value": "[{\"unixMs\":1750929926629,\"generationUUID\":\"17eff389-1a1b-49d8-ae26-19dc712106c2\",\"type\":\"composer\",\"textDescription\":\"load sql file in terminal\"},{\"unixMs\":1751296302470,\"generationUUID\":\"5010dab8-7345-4dba-8952-399d276ac873\",\"type\":\"composer\",\"textDescription\":\"how to read the sql data from collection.anki2\"},{\"unixMs\":1751296354335,\"generationUUID\":\"93f29a20-f05e-4c67-9c1f-044e4190b9c0\",\"type\":\"composer\",\"textDescription\":\"ITs in the same directorly\"},{\"unixMs\":1751296477587,\"generationUUID\":\"6f60e377-2673-48c4-9bc0-195eba3ff562\",\"type\":\"composer\",\"textDescription\":\"\"},{\"unixMs\":1751296553326,\"generationUUID\":\"12395727-5232-49cc-ba46-31698150a5cd\",\"type\":\"composer\",\"textDescription\":\"how to load this schema collectionb.anki2 in sqlitei2.exe \"},{\"unixMs\":1751296602350,\"generationUUID\":\"449bbb4a-22e1-45b5-8124-1e2d1091dcd5\",\"type\":\"composer\",\"textDescription\":\"i meant after running then sqllite3.exe from widwon what are the commands which we can run to \"}]"
+  },
+  {
+    "key": "aiService.prompts",
+    "value": "[{\"text\":\"load sql file in terminal\",\"commandType\":4},{\"text\":\"how to read the sql data from collection.anki2\",\"commandType\":4},{\"text\":\"ITs in the same directorly\",\"commandType\":4},{\"text\":\"\",\"commandType\":4},{\"text\":\"how to load this schema collectionb.anki2 in sqlitei2.exe \",\"commandType\":4},{\"text\":\"i meant after running then sqllite3.exe from widwon what are the commands which we can run to \",\"commandType\":4}]"
+  },
+  {
+    "key": "composer.composerData",
+    "value": "{\"allComposers\":[{\"type\":\"head\",\"composerId\":\"af17768c-891a-4f47-a5da-a82a05452671\",\"name\":\"Load sql file in terminal\",\"lastUpdatedAt\":1751296602350,\"createdAt\":1750929904235,\"unifiedMode\":\"agent\",\"forceMode\":\"edit\"},{\"type\":\"head\",\"composerId\":\"01804d85-9c1f-46ac-b822-775f0a208ad2\",\"createdAt\":1750929904235,\"unifiedMode\":\"chat\",\"forceMode\":\"edit\"}],\"selectedComposerIds\":[\"af17768c-891a-4f47-a5da-a82a05452671\"],\"hasMigratedComposerData\":true,\"hasMigratedMultipleComposers\":true}"
+  },
+  {
+    "key": "__$__targetStorageMarker",
+    "value": "{\"cursorAuth/workspaceOpenedDate\":1,\"workbench.explorer.views.state\":1,\"workbench.view.search.state\":1,\"workbench.scm.views.state\":1,\"workbench.panel.markers\":1,\"workbench.panel.output\":1,\"terminal\":1,\"workbench.panel.viewContainersWorkspaceState\":1,\"workbench.auxiliarybar.initialViewContainers\":1,\"workbench.auxiliarybar.viewContainersWorkspaceState\":1,\"workbench.panel.composerChatViewPane\":1,\"workbench.explorer.treeViewState\":1,\"debug.selectedroot\":1,\"workbench.view.debug.state\":1,\"workbench.auxiliarybar.activepanelid\":1,\"output.activechannel\":1,\"workbench.view.remote.state\":1,\"workbench.view.extension.github-pull-requests.state\":1,\"workbench.view.extension.workspaceViewer.state\":1,\"~remote.forwardedPortsContainer\":1,\"workbench.panel.repl\":1,\"debug.uxstate\":1,\"terminal.integrated.environmentVariableCollectionsV2\":1,\"vscode.git\":1,\"anysphere.cursor-retrieval\":1,\"GitHub.vscode-pull-request-github\":1,\"aiService.generations\":1,\"src.vs.platform.reactivestorage.browser.reactiveStorageServiceImpl.persistentStorage.workspaceUser\":0,\"history.entries\":1,\"workbench.view.explorer.numberOfVisibleViews\":1,\"workbench.editor.centered\":1,\"workbench.zenMode.active\":1,\"workbench.zenMode.exitInfo\":1,\"workbench.panel.wasLastMaximized\":1,\"workbench.sideBar.position\":1,\"workbench.panel.position\":1,\"workbench.activityBar.hidden\":1,\"workbench.sideBar.hidden\":1,\"workbench.editor.hidden\":1,\"workbench.panel.hidden\":1,\"workbench.auxiliaryBar.hidden\":1,\"workbench.statusBar.hidden\":1,\"notepad.reactiveStorageId\":1,\"aiService.prompts\":1,\"interactive.sessions\":1,\"notepadData\":1,\"workbench.panel.aichat.numberOfVisibleViews\":1,\"comments.continueOnComments\":0,\"composer.composerData\":1,\"chat.editing.autosaveDisabled\":1,\"workbench.backgroundComposer.workspacePersistentData\":1,\"terminal.integrated.layoutInfo\":1,\"terminal.numberOfVisibleViews\":1,\"lifecyle.lastShutdownReason\":1}"
+  },
+  {
+    "key": "lifecyle.lastShutdownReason",
+    "value": "1"
+  },
+  {
+    "key": "src.vs.platform.reactivestorage.browser.reactiveStorageServiceImpl.persistentStorage.workspaceUser",
+    "value": "{\"tasksData\":{\"tasksDataSchemaVersion\":1,\"tasks\":[{\"type\":\"draft\",\"taskId\":\"804898c9-e254-4525-9d92-c69d2447d465\",\"instruction\":\"\"}],\"displayedTaskId\":\"804898c9-e254-4525-9d92-c69d2447d465\",\"showTabs\":false,\"activeServerTaskUuids\":[]},\"onboardingMetadata\":{\"shouldAskToIndex\":true,\"shouldHideWarning\":false},\"persistentChatMetadata\":[],\"aiPanePosition\":\"sidebar\",\"shouldRerankByDefault\":false,\"indexingData\":{\"preferredEmbeddingModel\":0},\"composerState\":{\"position\":{\"x\":0,\"y\":0},\"horizontalBarSize\":0,\"tabHeight\":0,\"selectedView\":\"suggested\",\"devToolsPosition\":{\"x\":0,\"y\":0},\"memories\":[],\"isComposerBarChatCollapsed\":false,\"composerBarPosition\":null,\"enableDataHandleDebugging\":false,\"shouldExplicitlyShowFgComposerInBg\":false},\"isCursorPredictionOutOfRangeIndicatorMinimized2\":true,\"needsComposerInitialOpening\":false,\"approvedProjectMcpServers\":[],\"disabledMcpServers\":[],\"eligibleForSnippetLearning\":true,\"solidJSLeakRecords\":[],\"exampleCodebaseQuestions\":[],\"SPECIAL_KEY_id\":\"e2908bc5-3019-4748-8207-6115ba76abad\"}"
+  },
+  {
+    "key": "terminal.integrated.layoutInfo",
+    "value": "{\"workspaceId\":\"ac8a968b7ccb1bec5879fb46c9ae46d1\",\"tabs\":[]}"
+  }
+]

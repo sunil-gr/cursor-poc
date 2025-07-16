@@ -16,6 +16,16 @@
       </div>
     </div>
     
+    <!-- Heatmap Activity Section -->
+    <div class="metric-card">
+      <h3>Cursor Usage Heatmap</h3>
+      <p>Shows hours spent in Cursor, hours spent on prompts, and idle hours, with red-based color coding for each state.</p>
+      <div class="chart-wrapper">
+        <canvas id="cursorUsageHeatmap"></canvas>
+        <div id="cursorUsageHeatmapWarning" style="display:none;color:red;text-align:center;margin-top:1em;"></div>
+      </div>
+    </div>
+    
     <!-- Performance Metrics Section -->
     <div class="metric-card">
       <h3>Performance Metrics</h3>
@@ -67,6 +77,33 @@
       <p>Monitor the frequency of tab acceptance actions, indicating user interaction with AI-generated code suggestions.</p>
       <div class="chart-wrapper">
         <canvas id="tabAcceptanceChart"></canvas>
+      </div>
+    </div>
+
+    <!-- User Activity Timeline Section -->
+    <div class="metric-card">
+      <h3>User Activity Timeline</h3>
+      <p>Daily and hourly activity patterns showing prompts sent, generations received, and overall user engagement over time.</p>
+      <div class="chart-wrapper">
+        <canvas id="userActivityTimelineChart"></canvas>
+      </div>
+    </div>
+
+    <!-- AI Response Type Distribution Section -->
+    <div class="metric-card">
+      <h3>AI Response Type Distribution</h3>
+      <p>Breakdown of AI generation types (composer, apply, chat) showing interaction patterns and response preferences.</p>
+      <div class="chart-wrapper">
+        <canvas id="aiResponseTypesChart"></canvas>
+      </div>
+    </div>
+
+    <!-- Terminal Command Analysis Section -->
+    <div class="metric-card">
+      <h3>Terminal Command Analysis</h3>
+      <p>Analysis of most used terminal commands, execution patterns, and development workflow optimization insights.</p>
+      <div class="chart-wrapper">
+        <canvas id="terminalCommandChart"></canvas>
       </div>
     </div>
   </div>

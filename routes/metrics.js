@@ -229,6 +229,15 @@ router.get('/api/metrics/composer-data', metricsController.getComposerDataMetric
 router.get('/api/metrics/line-changes', metricsController.getLineChangesFromChat);
 router.get('/api/metrics/tab-acceptance', metricsController.getTabAcceptanceData);
 
+// New endpoints for high-priority graphs
+router.get('/api/metrics/user-activity-timeline', metricsController.getUserActivityTimeline);
+router.get('/api/metrics/ai-response-types', metricsController.getAIResponseTypeDistribution);
+router.get('/api/metrics/file-activity-heatmap', metricsController.getFileActivityHeatmap);
+router.get('/api/metrics/terminal-command-analysis', metricsController.getTerminalCommandAnalysis);
+
+// Test endpoint for debugging
+router.get('/api/metrics/test-ai-response-types', metricsController.testAIResponseTypes);
+
 // Dashboard page - Modified to only read existing logs without regenerating
 router.get('/usage-metrics', async (req, res) => {
   const { startDate, endDate } = req.query;
@@ -687,13 +696,13 @@ router.get('/usage-metrics/graph', async (req, res) => {
     const { getAllMetrics } = require('../controllers/logProcessor');
     const metricsData = getAllMetrics(start, end);
     
+    metricsData.startDate = start.toISOString();
+    metricsData.endDate = end.toISOString();
     res.render('usage_metric_graph', {
       title: 'Usage Metrics Graph',
       bodyClass: 'dashboard-bg',
       session: req.session,
       metricsData,
-      startDate: start.toISOString().slice(0,10),
-      endDate: end.toISOString().slice(0,10),
       user: user || ''
     });
   } catch (err) {
@@ -708,5 +717,8 @@ router.get('/usage-metrics/graph', async (req, res) => {
     });
   }
 });
+
+// Heatmap Activity API endpoint
+router.get('/api/metrics/heatmap-activity', metricsController.getHeatmapActivity);
 
 module.exports = router; 

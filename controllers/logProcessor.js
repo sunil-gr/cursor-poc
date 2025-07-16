@@ -767,6 +767,7 @@ function extractAIServiceMetrics(logs) {
                             isoTs = new Date(ts).toISOString();
                         }
                     }
+                    
                     return {
                         description: g.textDescription ? (g.textDescription.substring(0, 100) + (g.textDescription.length > 100 ? '...' : '')) : 'No description',
                         type: g.type || 'unknown',
@@ -783,6 +784,7 @@ function extractAIServiceMetrics(logs) {
                     aiMetrics.generationTypes[type] = (aiMetrics.generationTypes[type] || 0) + 1;
                 });
             } catch (e) {
+                console.error('Error parsing aiService.generations:', e);
                 // Ignore parsing errors
             }
         }
