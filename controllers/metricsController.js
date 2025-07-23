@@ -78,6 +78,7 @@ function getUsageMetricsData(req, res) {
     // Aggregate data from all logs, filter by data date
     let prompts = [], generations = [], historyEntries = [], languages = [];
     let composerData = null, searchHistory = null, aichatViews = 0, terminalViews = 0;
+    const allUniqueLanguages = new Set();
     for (const log of allLogs) {
       const logData = JSON.parse(fs.readFileSync(log.path, 'utf-8'));
       const logStat = fs.statSync(log.path);
@@ -126,13 +127,15 @@ function getUsageMetricsData(req, res) {
       historyEntries = historyEntries.concat(getVal('history.entries') || []);
       const langs = getVal('workbench.editor.languageDetectionOpenedLanguages.workspace') || [];
       langs.forEach(l => {
-        if (!languages.some(existing => existing[0] === l[0])) languages.push(l);
+        allUniqueLanguages.add(l[0]);
       });
       if (!composerData) composerData = getVal('composer.composerData');
       if (!searchHistory) searchHistory = getVal('workbench.search.history');
       aichatViews = Math.max(aichatViews, parseInt(getVal('workbench.panel.aichat.numberOfVisibleViews') || 0));
       terminalViews = Math.max(terminalViews, parseInt(getVal('workbench.numberOfVisibleViews') || 0));
     }
+    // Now aggregate all unique languages and their counts
+    languages = Array.from(allUniqueLanguages).map(lang => [lang, 1]);
     prompts = prompts.reverse();
     generations = generations.reverse();
     historyEntries = historyEntries.reverse();
@@ -156,11 +159,17 @@ function getUsageMetricsData(req, res) {
       }
       return {
         prompt: prompt.text || '',
+        category: categorizePrompt(prompt.text || ''),
         status: matchedGen ? 'Accepted' : 'Rejected',
         response: matchedGen ? (matchedGen.textDescription || matchedGen.description || '') : '',
         responseRaw: matchedGen || null
       };
     });
+    
+    // Debug log for promptAcceptanceReport category field
+    if (promptAcceptanceReport && promptAcceptanceReport.length > 0) {
+      console.log('DEBUG promptAcceptanceReport[0]:', promptAcceptanceReport[0]);
+    }
     
     // Check if there's any meaningful data
     const hasMeaningfulData = prompts.length > 0 || generations.length > 0 || 
@@ -215,7 +224,29 @@ function getUsageMetricsData(req, res) {
       terminalViews,
       promptAcceptanceReport: limitedPromptAcceptanceReport,
       sensitiveResults: limitedSensitiveResults,
-      aiServiceMetrics: limitedAiServiceMetrics
+      aiServiceMetrics: limitedAiServiceMetrics,
+      performanceMetrics: {
+        responseTimesCount: data.performanceMetrics?.responseTimes ? data.performanceMetrics.responseTimes.length : 0,
+        errorRatesCount: data.performanceMetrics?.errorRates ? data.performanceMetrics.errorRates.length : 0,
+        fileOperationsCount: data.performanceMetrics?.fileOperations ? data.performanceMetrics.fileOperations.length : 0,
+        workspaceActivity: data.performanceMetrics?.workspaceActivity || {
+          totalFiles: 0,
+          uniqueFileTypes: 0,
+          editorStates: 0
+        },
+        searchActivity: data.performanceMetrics?.searchActivity || {
+          searchQueries: 0,
+          findHistory: 0
+        },
+        terminalActivity: data.performanceMetrics?.terminalActivity || {
+          terminalSessions: 0
+        },
+        composerActivity: data.performanceMetrics?.composerActivity || {
+          totalComposers: 0,
+          activeComposers: 0
+        },
+        promptsCount: prompts.length
+      }
     };
     res.json(response);
   } catch (err) {
@@ -678,25 +709,20 @@ async function getAIResponseTypeDistribution(req, res) {
     }
 
     // Analyze generation types
-    const typeDistribution = {};
+    // Use aiServiceMetrics.generationTypes directly for typeDistribution
+    const typeDistribution = { ...data.aiServiceMetrics.generationTypes };
     const typeByDate = {};
-    
-    // Process each generation and log the type field
-    data.aiServiceMetrics.recentGenerations.forEach((gen, index) => {
-      // The type field should be directly available from the processed data
-      const type = gen.type || 'unknown';
-      
-      // Count by type
-      typeDistribution[type] = (typeDistribution[type] || 0) + 1;
-      
-      // Count by date
-      const date = gen.timestamp ? gen.timestamp.split('T')[0] : 'unknown';
-      if (!typeByDate[date]) {
-        typeByDate[date] = {};
-      }
-      typeByDate[date][type] = (typeByDate[date][type] || 0) + 1;
-    });
-    
+    // Optionally, still build typeByDate from recentGenerations if needed
+    if (data.aiServiceMetrics.recentGenerations) {
+      data.aiServiceMetrics.recentGenerations.forEach((gen, index) => {
+        const type = gen.type || 'unknown';
+        const date = gen.timestamp ? gen.timestamp.split('T')[0] : 'unknown';
+        if (!typeByDate[date]) {
+          typeByDate[date] = {};
+        }
+        typeByDate[date][type] = (typeByDate[date][type] || 0) + 1;
+      });
+    }
     // Create readable labels for the chart
     const readableLabels = {
       'composer': 'Composer',
@@ -706,7 +732,6 @@ async function getAIResponseTypeDistribution(req, res) {
       'generate': 'Generate',
       'unknown': 'Unknown'
     };
-    
     const chartData = {
       labels: Object.keys(typeDistribution).map(type => readableLabels[type] || type),
       datasets: [{
@@ -718,17 +743,15 @@ async function getAIResponseTypeDistribution(req, res) {
         borderColor: '#fff'
       }]
     };
-    
     const response = {
       success: true,
       data: {
         typeDistribution,
         typeByDate,
-        totalGenerations: data.aiServiceMetrics.recentGenerations.length,
+        totalGenerations: data.aiServiceMetrics.totalGenerations,
         chartData
       }
     };
-    
     res.json(response);
     
   } catch (error) {
@@ -1017,6 +1040,24 @@ async function getHeatmapActivity(req, res) {
   } catch (err) {
     res.status(500).json({ success: false, error: err.message });
   }
+}
+
+// Add categorizePrompt function (same as in dashboard.js)
+function categorizePrompt(promptText) {
+  if (!promptText) return 'Other';
+  const text = promptText.toLowerCase();
+  if (/code|function|class|method|variable|refactor|bug|fix|error|exception/.test(text)) return 'Code';
+  if (/test|unit test|integration test|coverage/.test(text)) return 'Testing';
+  if (/doc|documentation|comment|explain|describe/.test(text)) return 'Documentation';
+  if (/install|setup|config|configuration|env|environment|dependency|package/.test(text)) return 'Setup';
+  if (/deploy|build|release|pipeline|ci|cd/.test(text)) return 'DevOps';
+  if (/performance|optimi[sz]e|speed|slow|fast/.test(text)) return 'Performance';
+  if (/ui|ux|interface|design|layout|style|css|html/.test(text)) return 'UI/UX';
+  if (/database|sql|query|schema|migration/.test(text)) return 'Database';
+  if (/api|endpoint|request|response|http|rest|graphql/.test(text)) return 'API';
+  if (/ai|ml|machine learning|model|data science/.test(text)) return 'AI/ML';
+  if (/project|task|ticket|issue|story|epic/.test(text)) return 'Project Mgmt';
+  return 'Other';
 }
 
 module.exports = {

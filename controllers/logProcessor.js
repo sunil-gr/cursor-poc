@@ -722,6 +722,9 @@ function extractAIServiceMetrics(logs) {
         recentGenerations: []
     };
 
+    let hasValidGenerationType = false;
+    let fallbackPromptTypes = {};
+
     logs.forEach(log => {
         if (log.key === 'aiService.prompts') {
             try {
@@ -731,7 +734,6 @@ function extractAIServiceMetrics(logs) {
                     // Add fallback timestamp if none exists
                     const fallbackTimestamp = Date.now() - (index * 1000); // Each prompt gets a slightly earlier timestamp
                     const timestamp = p.timestamp || p.unixMs || p.createdAt || p.date || p.time || fallbackTimestamp;
-                    
                     return {
                         text: p.text ? (p.text.substring(0, 100) + (p.text.length > 100 ? '...' : '')) : 'No text',
                         commandType: p.commandType || 'unknown',
@@ -742,9 +744,9 @@ function extractAIServiceMetrics(logs) {
                         time: p.time || timestamp
                     };
                 });
-                
                 prompts.forEach(prompt => {
                     const type = prompt.commandType || 'unknown';
+                    fallbackPromptTypes[type] = (fallbackPromptTypes[type] || 0) + 1;
                     aiMetrics.promptTypes[type] = (aiMetrics.promptTypes[type] || 0) + 1;
                 });
             } catch (e) {
@@ -767,10 +769,17 @@ function extractAIServiceMetrics(logs) {
                             isoTs = new Date(ts).toISOString();
                         }
                     }
-                    
+                    // Debug log for type field
+                    // console.log('GENERATION OBJECT:', g);
+                    // Normalize type
+                    let normType = 'unknown';
+                    if (g.type && typeof g.type === 'string') {
+                        normType = g.type.trim().toLowerCase();
+                        if (normType !== 'unknown') hasValidGenerationType = true;
+                    }
                     return {
                         description: g.textDescription ? (g.textDescription.substring(0, 100) + (g.textDescription.length > 100 ? '...' : '')) : 'No description',
-                        type: g.type || 'unknown',
+                        type: normType,
                         timestamp: isoTs,
                         // Optionally include original fields for debugging
                         originalTimestamp: g.timestamp,
@@ -778,16 +787,29 @@ function extractAIServiceMetrics(logs) {
                         originalCreatedAt: g.createdAt
                     };
                 });
-                
                 generations.forEach(gen => {
-                    const type = gen.type || 'unknown';
-                    aiMetrics.generationTypes[type] = (aiMetrics.generationTypes[type] || 0) + 1;
+                    let normType = 'unknown';
+                    if (gen.type && typeof gen.type === 'string') {
+                        normType = gen.type.trim().toLowerCase();
+                        if (normType !== 'unknown') hasValidGenerationType = true;
+                    }
+                    aiMetrics.generationTypes[normType] = (aiMetrics.generationTypes[normType] || 0) + 1;
                 });
             } catch (e) {
-                console.error('Error parsing aiService.generations:', e);
                 // Ignore parsing errors
             }
         }
+    });
+
+    // If no valid generation type, use promptTypes as fallback for generationTypes
+    if (!hasValidGenerationType && Object.keys(fallbackPromptTypes).length > 0) {
+        aiMetrics.generationTypes = { ...fallbackPromptTypes };
+    }
+
+    // Debug log for generationTypes and promptTypes
+    console.log('DEBUG AI Response Type Distribution:', {
+        generationTypes: aiMetrics.generationTypes,
+        promptTypes: aiMetrics.promptTypes
     });
 
     return aiMetrics;
@@ -1260,11 +1282,36 @@ function scanLogsForSensitiveInfo() {
         // Find context (show a snippet around the keyword)
         const idx = entryStr.indexOf(keyword);
         const context = entryStr.substring(Math.max(0, idx - 30), idx + keyword.length + 30);
+        // Try to extract file path
+        let filePath = '';
+        if (entry && entry.editor && entry.editor.resource) {
+          filePath = entry.editor.resource;
+        } else if (entry.value && typeof entry.value === 'string') {
+          // Try to extract file:///... from value
+          const match = entry.value.match(/file:\/\/\/[^"'\s]+/);
+          if (match) filePath = match[0];
+        }
+        if (!filePath) {
+          // Try to infer a section from entry.key
+          if (entry.key) {
+            if (entry.key.toLowerCase().includes('prompt')) filePath = 'Prompts';
+            else if (entry.key.toLowerCase().includes('editor')) filePath = 'Editor History';
+            else if (entry.key.toLowerCase().includes('workspace')) filePath = 'Workspace Settings';
+            else if (entry.key.toLowerCase().includes('search')) filePath = 'Search';
+            else if (entry.key.toLowerCase().includes('terminal')) filePath = 'Terminal';
+            else if (entry.key.toLowerCase().includes('git')) filePath = 'Git';
+            else if (entry.key.toLowerCase().includes('panel')) filePath = 'Panel';
+            else if (entry.key.toLowerCase().includes('view')) filePath = 'View';
+            else filePath = 'Unknown Section';
+          } else {
+            filePath = 'Unknown Section';
+          }
+        }
         results.push({
           keyword,
           context,
           entry: entry.key || '',
-          file: entry.logFile || '',
+          filePath
         });
       }
     });
@@ -1364,52 +1411,37 @@ function extractTabAcceptanceData(logs) {
   };
 
   try {
+    const uniqueChatComposerIds = new Set();
+    const chatComposersByDate = {};
     logs.forEach(log => {
-      // Each log is an array of {key, value} objects
       if (Array.isArray(log)) {
         log.forEach(entry => {
-          if (entry.key === 'aiService.generations' && entry.value) {
+          if (entry.key === 'composer.composerData' && entry.value) {
             try {
-              const generations = JSON.parse(entry.value);
-              if (Array.isArray(generations)) {
-                generations.forEach(generation => {
-                  if (generation.type === 'composer') {
-                    // Count this as a tab acceptance
-                    tabAcceptanceData.totalTabsAccepted++;
-                    
-                    // Add to timeline
-                    const timestamp = generation.unixMs || generation.timestamp || Date.now();
-                    const date = new Date(timestamp);
-                    const dateKey = date.toISOString().split('T')[0];
-                    
-                    // Count by date
-                    tabAcceptanceData.tabsAcceptedByDate[dateKey] = (tabAcceptanceData.tabsAcceptedByDate[dateKey] || 0) + 1;
-                    
-                    // Count by type
-                    const type = generation.type || 'unknown';
-                    tabAcceptanceData.tabsAcceptedByType[type] = (tabAcceptanceData.tabsAcceptedByType[type] || 0) + 1;
-                    
-                    // Count by file if available
-                    if (generation.file) {
-                      tabAcceptanceData.tabsAcceptedByFile[generation.file] = (tabAcceptanceData.tabsAcceptedByFile[generation.file] || 0) + 1;
+              const composerData = JSON.parse(entry.value);
+              if (composerData && Array.isArray(composerData.allComposers)) {
+                composerData.allComposers.forEach(composer => {
+                  if (composer.unifiedMode === 'chat' && composer.composerId) {
+                    uniqueChatComposerIds.add(composer.composerId);
+                    // By date
+                    const date = composer.createdAt ? new Date(composer.createdAt) : null;
+                    if (date) {
+                      const dateKey = date.toISOString().split('T')[0];
+                      if (!chatComposersByDate[dateKey]) chatComposersByDate[dateKey] = new Set();
+                      chatComposersByDate[dateKey].add(composer.composerId);
                     }
-                    
-                    // Add to timeline
-                    tabAcceptanceData.tabsAcceptedTimeline.push({
-                      timestamp: timestamp,
-                      date: dateKey,
-                      type: type,
-                      file: generation.file || 'unknown'
-                    });
                   }
                 });
               }
-            } catch (parseError) {
-              // Ignore parsing errors
-            }
+            } catch (e) { /* ignore */ }
           }
         });
       }
+    });
+    // Set total and per-date counts
+    tabAcceptanceData.totalTabsAccepted = uniqueChatComposerIds.size;
+    Object.entries(chatComposersByDate).forEach(([date, set]) => {
+      tabAcceptanceData.tabsAcceptedByDate[date] = set.size;
     });
   } catch (error) {
     // Ignore parsing errors
@@ -1434,5 +1466,6 @@ module.exports = {
   filterLogsByDateRange,
   scanLogsForSensitiveInfo,
   extractLineChangesFromChat,
-  extractTabAcceptanceData
+  extractTabAcceptanceData,
+  SENSITIVE_KEYWORDS
 }; 

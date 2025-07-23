@@ -33,6 +33,21 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Initialize all charts
     initializeCharts();
+
+    // Add filter button event listener
+    const applyFilterBtn = document.getElementById('applyFilterBtn');
+    if (applyFilterBtn) {
+        applyFilterBtn.addEventListener('click', function() {
+            const startDate = document.getElementById('startDate').value;
+            const endDate = document.getElementById('endDate').value;
+            const user = document.getElementById('user').value;
+            const params = new URLSearchParams();
+            if (startDate) params.append('startDate', startDate);
+            if (endDate) params.append('endDate', endDate);
+            if (user) params.append('user', user);
+            window.location.search = params.toString();
+        });
+    }
 });
 
 /**
@@ -73,6 +88,57 @@ function initializeCharts() {
     createUserActivityTimelineChart();
     createAIResponseTypesChart();
     createTerminalCommandChart();
+
+    // After initializing all charts, calculate and display prompt acceptance ratio
+    displayPromptAcceptanceRatio();
+}
+
+function displayPromptAcceptanceRatio() {
+    // Use metricsData.promptAcceptanceReport if available
+    const ctx = document.getElementById('promptAcceptanceRatioChart').getContext('2d');
+    if (!metricsData || !metricsData.promptAcceptanceReport) {
+        new Chart(ctx, {
+            type: 'pie',
+            data: {
+                labels: ['No data'],
+                datasets: [{ data: [1], backgroundColor: ['#ccc'] }]
+            },
+            options: { plugins: { legend: { display: true } } }
+        });
+        return;
+    }
+    const report = metricsData.promptAcceptanceReport;
+    let accepted = 0, rejected = 0;
+    report.forEach(item => {
+        if (item.status === 'Accepted') accepted++;
+        else if (item.status === 'Rejected') rejected++;
+    });
+    new Chart(ctx, {
+        type: 'pie',
+        data: {
+            labels: ['Accepted', 'Rejected'],
+            datasets: [{
+                data: [accepted, rejected],
+                backgroundColor: ['#36A2EB', '#FF6384'],
+                borderWidth: 2,
+                borderColor: '#fff'
+            }]
+        },
+        options: {
+            plugins: {
+                legend: { display: true },
+                tooltip: {
+                    callbacks: {
+                        label: function(context) {
+                            const label = context.label || '';
+                            const value = context.parsed;
+                            return `${label}: ${value}`;
+                        }
+                    }
+                }
+            }
+        }
+    });
 }
 
 function createGenerationHeatmap(generations) {
@@ -355,7 +421,7 @@ function createPerformanceChart(performanceMetrics) {
         const perf = performanceMetrics;
         const labels = [
             'Issues Detected',
-            'File Activity',
+            // 'File Activity', // Commented out
             'Workspace Files',
             'Search Queries',
             'Terminal Sessions',
@@ -364,7 +430,7 @@ function createPerformanceChart(performanceMetrics) {
         ];
         const perfData = [
             perf.errorRates ? perf.errorRates.length : 0,
-            perf.fileOperations ? perf.fileOperations.length : 0,
+            // perf.fileOperations ? perf.fileOperations.length : 0, // Commented out
             perf.workspaceActivity && perf.workspaceActivity.totalFiles ? perf.workspaceActivity.totalFiles : 0,
             perf.searchActivity && perf.searchActivity.searchQueries ? perf.searchActivity.searchQueries : 0,
             perf.terminalActivity && perf.terminalActivity.terminalSessions ? perf.terminalActivity.terminalSessions : 0,
@@ -395,7 +461,7 @@ function createPerformanceChart(performanceMetrics) {
                 maintainAspectRatio: false,
                 plugins: {
                     legend: { display: false },
-                    title: { display: true, text: 'Performance Metrics' }
+                    title: { display: true, text: 'Usage Metrics' }
                 },
                 scales: {
                     y: { beginAtZero: true, ticks: { precision: 0 } }
@@ -427,7 +493,7 @@ function createSensitiveDataChart(sensitiveKeywordCounts) {
                 data: {
                     labels: labels,
                     datasets: [{
-                        label: 'Sensitive Keyword Count',
+                        label: 'Keyword Count',
                         data: chartData,
                         backgroundColor: 'rgba(255, 99, 132, 0.5)',
                         borderColor: 'rgba(255, 99, 132, 1)',
@@ -439,7 +505,7 @@ function createSensitiveDataChart(sensitiveKeywordCounts) {
                     maintainAspectRatio: false,
                     plugins: {
                         legend: { display: false },
-                        title: { display: true, text: 'Sensitive Keyword Distribution' }
+                        title: { display: true, text: 'Keyword Distribution' }
                     },
                     scales: {
                         y: { beginAtZero: true, ticks: { precision: 0 } }
@@ -463,7 +529,7 @@ function createSectionPieChart(data) {
 
     // Gather counts for each section
     const sectionLabels = [
-        'Sensitive Data Report',
+        'Keyword Data Report',
         'Most Common Prompts',
         'Recent Prompts',
         'Recent Generations',

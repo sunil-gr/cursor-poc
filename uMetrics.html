@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>aiService.prompts Analysis Summary</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-chart-matrix@3.2.0/dist/chartjs-chart-matrix.min.js"></script>
+  <style>
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(120deg, #f0f4f8 0%, #e9eafc 100%);
+      color: #2c3e50;
+    }
+    .container {
+      max-width: 900px;
+      margin: 40px auto;
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 4px 24px rgba(44, 62, 80, 0.08);
+      padding: 2.5em 2em 2em 2em;
+    }
+    h1, h2, h3 {
+      color: #2d3a4a;
+      margin-top: 0;
+    }
+    h1 {
+      font-size: 2.2em;
+      margin-bottom: 0.5em;
+    }
+    h2 {
+      margin-top: 2em;
+      font-size: 1.4em;
+      border-bottom: 2px solid #e9eafc;
+      padding-bottom: 0.3em;
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin-bottom: 2em;
+      background: #fafbff;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(44, 62, 80, 0.03);
+    }
+    th, td {
+      border: 1px solid #e9eafc;
+      padding: 10px 14px;
+      text-align: left;
+    }
+    th {
+      background: #e9eafc;
+      font-weight: 600;
+    }
+    tr:nth-child(even) {
+      background: #f5f7fa;
+    }
+    .explanation {
+      background: #fffbe6;
+      border-left: 4px solid #f1c40f;
+      padding: 1em 1.5em;
+      margin-bottom: 2em;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(241, 196, 15, 0.05);
+    }
+    .theme {
+      font-weight: bold;
+      color: #2980b9;
+    }
+    .pie-chart-container, .heatmap-container, .timeline-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 2em;
+    }
+    .pie-chart-container h3, .heatmap-container h3, .timeline-container h3 {
+      margin-bottom: 1em;
+      color: #2d3a4a;
+    }
+    .chart-explanation {
+      max-width: 600px;
+      margin: 0 auto 1.5em auto;
+      color: #555;
+      font-size: 1em;
+      text-align: center;
+    }
+    @media (max-width: 600px) {
+      .container { padding: 1em; }
+      table, th, td { font-size: 0.95em; }
+      canvas { max-width: 100% !important; height: auto !important; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Analysis of <code>aiService.prompts</code> Usage</h1>
+
+    <div class="explanation">
+      <h2>What is <code>aiService.prompts</code>?</h2>
+      <p>
+        The <code>aiService.prompts</code> key in your cursorlogs stores a list of prompts sent to the LLM (Large Language Model) during your session. Each prompt contains a <code>text</code> (the user's message or request) and a <code>commandType</code> (which is always 4 in your log, likely indicating a standard user prompt).
+      </p>
+      <p>
+        These prompts reflect the interactive troubleshooting and guidance process you followed, especially around Node.js, NVM (Node Version Manager), and Angular project setup.
+      </p>
+    </div>
+
+    <h2>Prompt Content Analysis</h2>
+    <ul>
+      <li>
+        <span class="theme">Project Setup &amp; Analysis:</span>
+        <ul>
+          <li>Example: <em>analyze the v5 folder sturcture and give the commands to run the application</em></li>
+          <li>Purpose: Requesting the LLM to inspect a project directory and provide setup/run instructions.</li>
+        </ul>
+      </li>
+      <li>
+        <span class="theme">NVM/Node Version Management:</span>
+        <ul>
+          <li>Example: <em>if i install older version of nvm it will effect other application right where it needs higher version</em> (repeated multiple times)</li>
+          <li>Purpose: Expressing concern about how changing Node versions might impact other applications.</li>
+        </ul>
+      </li>
+      <li>
+        <span class="theme">Command Execution Requests:</span>
+        <ul>
+          <li>Examples: <em>can you run those</em>, <em>can you insatll nvm</em>, <em>can you install nvm</em></li>
+          <li>Purpose: Asking the LLM to execute or guide through installation commands.</li>
+        </ul>
+      </li>
+      <li>
+        <span class="theme">Status/Progress Updates:</span>
+        <ul>
+          <li>Examples: <em>Done</em>, <em>try now</em>, <em>Whats the error</em></li>
+          <li>Purpose: Checking if previous steps succeeded or failed, and requesting error details.</li>
+        </ul>
+      </li>
+      <li>
+        <span class="theme">File/Installation Troubleshooting:</span>
+        <ul>
+          <li>Examples: <em>I can see the zip file in the provided path</em>, <em>any other altenative steps</em>, <em>Can not we fix the current issue</em>, <em>i could not see any quarantining file</em></li>
+          <li>Purpose: Reporting findings, asking for alternatives, or clarifying issues.</li>
+        </ul>
+      </li>
+      <li>
+        <span class="theme">Retry/Iteration:</span>
+        <ul>
+          <li>Example: <em>can you try it now once again</em> (repeated several times)</li>
+          <li>Purpose: Iteratively retrying troubleshooting steps.</li>
+        </ul>
+      </li>
+      <li>
+        <span class="theme">Version/Manual Installation Suggestions:</span>
+        <ul>
+          <li>Examples: <em>can not we try other version to insayll and try once to see the exact issue</em>, <em>can we di it by extarction manully to insatll from there</em></li>
+          <li>Purpose: Suggesting different versions or manual installation as a workaround.</li>
+        </ul>
+      </li>
+      <li>
+        <span class="theme">Abandoning the Process:</span>
+        <ul>
+          <li>Example: <em>Ok leave it , we can do it later</em></li>
+          <li>Purpose: Indicating to stop or pause the troubleshooting process.</li>
+        </ul>
+      </li>
+    </ul>
+
+    <div class="pie-chart-container">
+      <h3>Prompt Usage Distribution</h3>
+      <div class="chart-explanation">This pie chart shows the proportion of each prompt theme used during the troubleshooting session.</div>
+      <canvas id="promptPieChart" width="380" height="380"></canvas>
+    </div>
+
+    <div class="heatmap-container" style="display:none">
+      <h3>Prompt Type Heatmap by Session Step</h3>
+      <div class="chart-explanation">The heatmap below visualizes how frequently each prompt type was used at different stages of the session. Darker colors indicate higher frequency.</div>
+      <canvas id="promptHeatmap" width="600" height="260"></canvas>
+    </div>
+
+    <div class="timeline-container" style="display:none">
+      <h3>Prompt Timeline</h3>
+      <div class="chart-explanation">This timeline shows the sequence and type of each prompt as the session progressed.</div>
+      <canvas id="promptTimeline" width="700" height="120"></canvas>
+    </div>
+
+    <h2>Prompt Usage Table</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Prompt Theme</th>
+          <th>Example(s)</th>
+          <th>Frequency/Notes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Project Setup/Analysis</td>
+          <td>analyze folder, give commands</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>NVM/Node Version Concerns</td>
+          <td>if i install older version of nvm...</td>
+          <td>5+ (repeated)</td>
+        </tr>
+        <tr>
+          <td>Command Execution/Install</td>
+          <td>can you run those, can you install nvm</td>
+          <td>4+</td>
+        </tr>
+        <tr>
+          <td>Status/Progress</td>
+          <td>Done, try now, Whats the error</td>
+          <td>5+</td>
+        </tr>
+        <tr>
+          <td>Troubleshooting/Alternatives</td>
+          <td>any other altenative steps, can not we fix the current issue</td>
+          <td>3+</td>
+        </tr>
+        <tr>
+          <td>Retry/Iteration</td>
+          <td>can you try it now once again</td>
+          <td>5+ (repeated)</td>
+        </tr>
+        <tr>
+          <td>Manual/Version Suggestion</td>
+          <td>try other version, extract manually</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>Abandon/Stop</td>
+          <td>Ok leave it , we can do it later</td>
+          <td>1</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>Complete Explanation</h2>
+    <div class="explanation">
+      <p>
+        The <code>aiService.prompts</code> key logs a sequence of user prompts to the LLM, reflecting a troubleshooting session for Node.js/NVM/Angular project setup. The prompts show a pattern of requesting setup help, expressing concerns about version compatibility, asking for command execution, iteratively retrying steps, seeking alternative/manual solutions, and finally pausing the process.
+      </p>
+      <p>
+        This log demonstrates the LLM being used as a real-time assistant for technical problem-solving, with prompts evolving as the troubleshooting progresses. The user interacts with the LLM in a conversational, iterative manner, adapting the approach based on the feedback and errors encountered during the setup and installation process.
+      </p>
+      <p>
+        In summary, <strong>prompt usage is focused on interactive, step-by-step technical troubleshooting</strong>, especially around Node.js environment setup, with the LLM being used as a real-time assistant for both guidance and error resolution.
+      </p>
+    </div>
+  </div>
+  <script>
+    // Pie chart data based on the Prompt Usage Table
+    const promptLabels = [
+      'Project Setup/Analysis',
+      'NVM/Node Version Concerns',
+      'Command Execution/Install',
+      'Status/Progress',
+      'Troubleshooting/Alternatives',
+      'Retry/Iteration',
+      'Manual/Version Suggestion',
+      'Abandon/Stop'
+    ];
+    const promptCounts = [1, 5, 4, 5, 3, 5, 2, 1];
+    const promptColors = [
+      '#4F8EF7', '#F7B32B', '#53D769', '#FF5E57', '#A259F7', '#2D98DA', '#F97F51', '#778CA3'
+    ];
+    // Pie Chart
+    const pieData = {
+      labels: promptLabels,
+      datasets: [{
+        data: promptCounts,
+        backgroundColor: promptColors,
+        borderColor: '#fff',
+        borderWidth: 2
+      }]
+    };
+    const pieConfig = {
+      type: 'pie',
+      data: pieData,
+      options: {
+        responsive: false,
+        plugins: {
+          legend: {
+            position: 'right',
+            labels: {
+              font: { size: 15 },
+              color: '#2c3e50'
+            }
+          },
+          tooltip: {
+            callbacks: {
+              label: function(context) {
+                let label = context.label || '';
+                let value = context.parsed;
+                return `${label}: ${value}`;
+              }
+            }
+          }
+        }
+      }
+    };
+
+    // Simulated prompt sequence for heatmap and timeline
+    // (Order and type, based on the summary and typical troubleshooting flow)
+    const promptSequence = [
+      0, // Project Setup/Analysis
+      1, 1, 1, 1, 1, // NVM/Node Version Concerns
+      2, 2, 2, 2, // Command Execution/Install
+      3, 3, 3, 3, 3, // Status/Progress
+      4, 4, 4, // Troubleshooting/Alternatives
+      5, 5, 5, 5, 5, // Retry/Iteration
+      6, 6, // Manual/Version Suggestion
+      7 // Abandon/Stop
+    ];
+    // For heatmap, group steps into bins (e.g., every 5 prompts = 1 group)
+    const binSize = 5;
+    const numBins = Math.ceil(promptSequence.length / binSize);
+    const heatmapData = [];
+    for (let i = 0; i < promptLabels.length; i++) {
+      for (let j = 0; j < numBins; j++) {
+        // Count occurrences of prompt type i in bin j
+        let count = 0;
+        for (let k = j * binSize; k < (j + 1) * binSize && k < promptSequence.length; k++) {
+          if (promptSequence[k] === i) count++;
+        }
+        heatmapData.push({
+          x: j,
+          y: i,
+          v: count
+        });
+      }
+    }
+    // Heatmap Chart
+    const heatmapConfig = {
+      type: 'matrix',
+      data: {
+        datasets: [{
+          label: 'Prompt Type Heatmap',
+          data: heatmapData,
+          backgroundColor: function(ctx) {
+            const value = ctx.dataset.data[ctx.dataIndex].v;
+            if (value === 0) return '#e9eafc';
+            // Color scale: light to dark blue
+            const alpha = 0.2 + 0.15 * value;
+            return `rgba(79, 142, 247, ${alpha})`;
+          },
+          width: ({chart}) => (chart.chartArea || {}).width / numBins - 4,
+          height: ({chart}) => (chart.chartArea || {}).height / promptLabels.length - 4,
+          borderWidth: 1,
+          borderColor: '#fff',
+        }]
+      },
+      options: {
+        responsive: false,
+        plugins: {
+          legend: { display: false },
+          tooltip: {
+            callbacks: {
+              title: (ctx) => `Step Group: ${ctx[0].raw.x + 1}`,
+              label: (ctx) => `${promptLabels[ctx.raw.y]}: ${ctx.raw.v}`
+            }
+          }
+        },
+        scales: {
+          x: {
+            type: 'linear',
+            position: 'bottom',
+            min: 0,
+            max: numBins - 1,
+            ticks: {
+              callback: v => `#${v + 1}`,
+              stepSize: 1,
+              color: '#2c3e50',
+              font: { size: 13 }
+            },
+            title: {
+              display: true,
+              text: 'Session Step Group',
+              color: '#2c3e50',
+              font: { size: 14, weight: 'bold' }
+            },
+            grid: { display: false }
+          },
+          y: {
+            type: 'category',
+            labels: promptLabels,
+            offset: true,
+            grid: { display: false },
+            ticks: {
+              color: '#2c3e50',
+              font: { size: 13 }
+            }
+          }
+        }
+      }
+    };
+
+    // Timeline Chart (Scatter)
+    const timelineData = promptSequence.map((type, idx) => ({
+      x: idx + 1,
+      y: type,
+      backgroundColor: promptColors[type],
+      borderColor: '#fff',
+      radius: 10
+    }));
+    const timelineConfig = {
+      type: 'scatter',
+      data: {
+        datasets: [{
+          label: 'Prompt Timeline',
+          data: timelineData,
+          pointBackgroundColor: timelineData.map(d => d.backgroundColor),
+          pointBorderColor: timelineData.map(d => d.borderColor),
+          pointRadius: 10,
+          showLine: false
+        }]
+      },
+      options: {
+        responsive: false,
+        plugins: {
+          legend: { display: false },
+          tooltip: {
+            callbacks: {
+              title: ctx => `Step: ${ctx[0].parsed.x}`,
+              label: ctx => `${promptLabels[ctx.parsed.y]}`
+            }
+          }
+        },
+        scales: {
+          x: {
+            type: 'linear',
+            min: 1,
+            max: promptSequence.length,
+            title: {
+              display: true,
+              text: 'Prompt Sequence Step',
+              color: '#2c3e50',
+              font: { size: 14, weight: 'bold' }
+            },
+            ticks: {
+              color: '#2c3e50',
+              font: { size: 13 },
+              stepSize: 1
+            },
+            grid: { display: false }
+          },
+          y: {
+            type: 'category',
+            labels: promptLabels,
+            offset: true,
+            grid: { display: false },
+            title: {
+              display: true,
+              text: 'Prompt Type',
+              color: '#2c3e50',
+              font: { size: 14, weight: 'bold' }
+            },
+            ticks: {
+              color: '#2c3e50',
+              font: { size: 13 }
+            }
+          }
+        }
+      }
+    };
+
+    window.onload = function() {
+      // Pie
+      const ctxPie = document.getElementById('promptPieChart').getContext('2d');
+      new Chart(ctxPie, pieConfig);
+      // Heatmap
+      const ctxHeat = document.getElementById('promptHeatmap').getContext('2d');
+      new Chart(ctxHeat, heatmapConfig);
+      // Timeline
+      const ctxTimeline = document.getElementById('promptTimeline').getContext('2d');
+      new Chart(ctxTimeline, timelineConfig);
+    };
+  </script>
+</body>
+</html> 

@@ -86,7 +86,7 @@ cursorpoc/
 
 ## Customization
 
-- **Add new sensitive keywords:**  
+- **Add new keywords:**  
   Edit the `SENSITIVE_KEYWORDS` array in `controllers/logProcessor.js`.
 
 - **Change dashboard layout or add new charts:**  

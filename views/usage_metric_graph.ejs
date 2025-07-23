@@ -5,6 +5,16 @@
     <a href="/usage-metrics" class="dashboard-back-btn">&larr; Back to Dashboard</a>
   </div>
   
+  <!-- <form id="metricsFilterForm" style="display: flex; gap: 1em; align-items: center; margin-bottom: 2em;">
+    <label for="startDate">Start Date:</label>
+    <input type="date" id="startDate" name="startDate" value="<%= startDate || '' %>">
+    <label for="endDate">End Date:</label>
+    <input type="date" id="endDate" name="endDate" value="<%= endDate || '' %>">
+    <label for="user">User:</label>
+    <input type="text" id="user" name="user" placeholder="All" value="<%= user || '' %>">
+    <button type="button" id="applyFilterBtn" class="btn btn-primary">Apply Filter</button>
+  </form> -->
+
   <div class="metrics-grid">
     <!-- Generations Heatmap Section -->
     <div class="metric-card">
@@ -17,6 +27,7 @@
     </div>
     
     <!-- Heatmap Activity Section -->
+    <!-- 
     <div class="metric-card">
       <h3>Cursor Usage Heatmap</h3>
       <p>Shows hours spent in Cursor, hours spent on prompts, and idle hours, with red-based color coding for each state.</p>
@@ -25,20 +36,30 @@
         <div id="cursorUsageHeatmapWarning" style="display:none;color:red;text-align:center;margin-top:1em;"></div>
       </div>
     </div>
+     -->
     
-    <!-- Performance Metrics Section -->
-    <div class="metric-card">
-      <h3>Performance Metrics</h3>
+    <!-- Usage Metrics Section -->
+    <!-- <div class="metric-card">
+      <h3>Usage Metrics</h3>
       <p>Overview of system performance indicators including file activity, search queries, and terminal sessions.</p>
       <div class="chart-wrapper">
         <canvas id="performanceChart"></canvas>
+      </div>
+    </div> -->
+    
+    <!-- Ratio of Accepted to Rejected Prompts Section -->
+    <div class="metric-card">
+      <h3>Prompt Acceptance Ratio</h3>
+      <p>Ratio of accepted to rejected prompts in the selected period.</p>
+      <div class="chart-wrapper" style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 250px;">
+        <canvas id="promptAcceptanceRatioChart" width="300" height="300"></canvas>
       </div>
     </div>
     
     <!-- Sensitive Data Report Section -->
     <div class="metric-card">
-      <h3>Sensitive Data Report</h3>
-      <p>Analysis of potentially sensitive information found in the logs, including passwords, tokens, and credentials.</p>
+      <h3>Keywords Data Report</h3>
+      <p>Analysis of potentially keywords information found in the logs, including passwords, tokens, and credentials.</p>
       <div class="chart-wrapper">
         <canvas id="sensitiveChart"></canvas>
       </div>
@@ -81,6 +102,7 @@
     </div>
 
     <!-- User Activity Timeline Section -->
+     <!--
     <div class="metric-card">
       <h3>User Activity Timeline</h3>
       <p>Daily and hourly activity patterns showing prompts sent, generations received, and overall user engagement over time.</p>
@@ -88,6 +110,7 @@
         <canvas id="userActivityTimelineChart"></canvas>
       </div>
     </div>
+    -->
 
     <!-- AI Response Type Distribution Section -->
     <div class="metric-card">
@@ -108,6 +131,84 @@
     </div>
   </div>
 
+  <!-- Leaderboard Section -->
+  <div class="metric-card" style="margin-top: 2em;">
+    <h3>Leaderboard Analysis</h3>
+    <p>Top users by prompts accepted and rejected (with acceptance percentage).</p>
+    <div style="display: flex; gap: 1em; flex-wrap: wrap; align-items: stretch; justify-content: space-between;">
+      <div style="flex: 1 1 0; min-width: 0; background: #f8fafd; border-radius: 8px 0 0 8px; padding: 1em 0.5em; display: flex; flex-direction: column; justify-content: center;">
+        <table style="width:100%; font-size: 0.95em; margin-bottom: 2em;" id="leaderboardTable" class="datatable">
+          <thead>
+            <tr><th>Rank</th><th>User</th><th>Accepted</th><th>Rejected</th><th>Accepted %</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>1</td><td>user1</td><td>42</td><td>8</td><td>84%</td></tr>
+            <tr><td>2</td><td>user2</td><td>35</td><td>15</td><td>70%</td></tr>
+            <tr><td>3</td><td>user3</td><td>28</td><td>12</td><td>70%</td></tr>
+            <tr><td>4</td><td>user4</td><td>20</td><td>10</td><td>67%</td></tr>
+            <tr><td>5</td><td>user5</td><td>15</td><td>15</td><td>50%</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div style="flex: 1 1 0; min-width: 0; background: #f8fafd; border-radius: 0 8px 8px 0; padding: 1.5em 1em; display: flex; flex-direction: column; justify-content: center; min-height: 320px; box-shadow: 0 2px 8px rgba(33,123,187,0.07);">
+        <div style="width: 100%; height: 100%; min-height: 300px; display: flex; align-items: center; justify-content: center;">
+          <canvas id="leaderboardChart" style="width: 100% !important; height: 280px !important;"></canvas>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Placeholder leaderboard data
+      var users = ['user1', 'user2', 'user3', 'user4', 'user5'];
+      var accepted = [42, 35, 28, 20, 15];
+      var rejected = [8, 15, 12, 10, 15];
+      var total = accepted.map(function(a, i) { return a + rejected[i]; });
+      var percent = accepted.map(function(a, i) { return total[i] ? Math.round((a / total[i]) * 100) : 0; });
+      var ctx = document.getElementById('leaderboardChart').getContext('2d');
+      new Chart(ctx, {
+        type: 'bar',
+        data: {
+          labels: users,
+          datasets: [
+            {
+              label: 'Accepted',
+              data: accepted,
+              backgroundColor: '#1976d2',
+              stack: 'Stack 0',
+            },
+            {
+              label: 'Rejected',
+              data: rejected,
+              backgroundColor: '#e57373',
+              stack: 'Stack 0',
+            }
+          ]
+        },
+        options: {
+          indexAxis: 'y',
+          responsive: true,
+          plugins: {
+            legend: { display: true },
+            title: { display: true, text: 'Leaderboard (Prompts Accepted vs Rejected)' },
+            tooltip: {
+              callbacks: {
+                afterBody: function(context) {
+                  var i = context[0].dataIndex;
+                  return 'Accepted %: ' + percent[i] + '%';
+                }
+              }
+            }
+          },
+          scales: {
+            x: { beginAtZero: true, title: { display: true, text: 'Prompt Count' } },
+            y: { title: { display: true, text: 'User' } }
+          }
+        }
+      });
+    });
+  </script>
   <!-- Chart.js Matrix plugin required for heatmap -->
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.js"></script>
   <script>

@@ -6,7 +6,7 @@ const router = express.Router();
 // Import requireLogin directly from the controller for authentication middleware
 const { requireLogin } = require('../controllers/loginController');
 const metricsController = require('../controllers/metricsController');
-const { processAllStateVscdbRecursive, getAllMetrics, scanLogsForSensitiveInfo } = require('../controllers/logProcessor');
+const { processAllStateVscdbRecursive, getAllMetrics, scanLogsForSensitiveInfo, SENSITIVE_KEYWORDS } = require('../controllers/logProcessor');
 
 // Protect all /usage-metrics routes
 router.use('/usage-metrics', requireLogin);
@@ -135,7 +135,8 @@ router.get('/api/metrics', async (req, res) => {
       
       // Performance Metrics - only the counts that are displayed
       performanceMetrics: {
-        responseTimesCount: data.performanceMetrics?.responseTimes ? data.performanceMetrics.responseTimes.length : 0,
+        // responseTimesCount: data.performanceMetrics?.promptsCount ? data.performanceMetrics.promptsCount : 0,
+        responseTimesCount: data.prompts?.length || 0,
         errorRatesCount: data.performanceMetrics?.errorRates ? data.performanceMetrics.errorRates.length : 0,
         fileOperationsCount: data.performanceMetrics?.fileOperations ? data.performanceMetrics.fileOperations.length : 0,
         workspaceActivity: data.performanceMetrics?.workspaceActivity || {
@@ -401,6 +402,7 @@ router.get('/usage-metrics', async (req, res) => {
     }
     return {
       prompt: prompt.text || '',
+      category: categorizePrompt(prompt.text || ''),
       status: matchedGen ? 'Accepted' : 'Rejected',
       response: matchedGen ? (matchedGen.textDescription || matchedGen.description || '') : '',
       responseRaw: matchedGen || null
@@ -419,7 +421,8 @@ router.get('/usage-metrics', async (req, res) => {
     startDate,
     endDate,
     user: req.query.user || '',
-    noLogsFound: false
+    noLogsFound: false,
+    sensitiveKeywords: SENSITIVE_KEYWORDS
   });
 });
 
@@ -649,6 +652,7 @@ router.get('/usage-metrics/prompt-acceptance', async (req, res) => {
     }
     return {
       prompt: prompt.text || '',
+      category: categorizePrompt(prompt.text || ''),
       status: matchedGen ? 'Accepted' : 'Rejected',
       response: matchedGen ? (matchedGen.textDescription || matchedGen.description || '') : '',
       responseRaw: matchedGen || null
@@ -670,7 +674,9 @@ router.get('/usage-metrics/graph', async (req, res) => {
   try {
     // Use the same date/user logic as dashboard
     let start, end;
-    const { startDate, endDate, user } = req.query;
+    let startDate = req.query.startDate || '';
+    let endDate = req.query.endDate || '';
+    const { user } = req.query;
     if (startDate && endDate) {
       start = new Date(startDate);
       end = new Date(endDate);
@@ -690,12 +696,38 @@ router.get('/usage-metrics/graph', async (req, res) => {
       start = new Date();
       start.setDate(start.getDate() - 5); // Default to last 5 days
       end = new Date();
+      // Set startDate and endDate as strings for the template
+      startDate = start.toISOString().slice(0, 10);
+      endDate = end.toISOString().slice(0, 10);
     }
     
     // Use getAllMetrics directly instead of the controller
     const { getAllMetrics } = require('../controllers/logProcessor');
     const metricsData = getAllMetrics(start, end);
-    
+    // Add prompt acceptance report to metricsData (same logic as dashboard)
+    const prompts = metricsData.prompts || [];
+    const generations = metricsData.generations || [];
+    const promptAcceptanceReport = prompts.map((prompt, idx) => {
+      let matchedGen = null;
+      if (prompt.text) {
+        matchedGen = generations.find(gen => {
+          if (gen.textDescription && gen.textDescription.includes(prompt.text)) return true;
+          if (gen.description && gen.description.includes(prompt.text)) return true;
+          return false;
+        });
+      }
+      if (!matchedGen && generations[idx]) {
+        matchedGen = generations[idx];
+      }
+      return {
+        prompt: prompt.text || '',
+        category: categorizePrompt(prompt.text || ''),
+        status: matchedGen ? 'Accepted' : 'Rejected',
+        response: matchedGen ? (matchedGen.textDescription || matchedGen.description || '') : '',
+        responseRaw: matchedGen || null
+      };
+    });
+    metricsData.promptAcceptanceReport = promptAcceptanceReport; // Use full data, not .slice(-10)
     metricsData.startDate = start.toISOString();
     metricsData.endDate = end.toISOString();
     res.render('usage_metric_graph', {
@@ -703,6 +735,8 @@ router.get('/usage-metrics/graph', async (req, res) => {
       bodyClass: 'dashboard-bg',
       session: req.session,
       metricsData,
+      startDate,
+      endDate,
       user: user || ''
     });
   } catch (err) {
@@ -720,5 +754,23 @@ router.get('/usage-metrics/graph', async (req, res) => {
 
 // Heatmap Activity API endpoint
 router.get('/api/metrics/heatmap-activity', metricsController.getHeatmapActivity);
+
+// Add categorizePrompt function (same as in dashboard.js and metricsController.js)
+function categorizePrompt(promptText) {
+  if (!promptText) return 'Other';
+  const text = promptText.toLowerCase();
+  if (/code|function|class|method|variable|refactor|bug|fix|error|exception/.test(text)) return 'Code';
+  if (/test|unit test|integration test|coverage/.test(text)) return 'Testing';
+  if (/doc|documentation|comment|explain|describe/.test(text)) return 'Documentation';
+  if (/install|setup|config|configuration|env|environment|dependency|package/.test(text)) return 'Setup';
+  if (/deploy|build|release|pipeline|ci|cd/.test(text)) return 'DevOps';
+  if (/performance|optimi[sz]e|speed|slow|fast/.test(text)) return 'Performance';
+  if (/ui|ux|interface|design|layout|style|css|html/.test(text)) return 'UI/UX';
+  if (/database|sql|query|schema|migration/.test(text)) return 'Database';
+  if (/api|endpoint|request|response|http|rest|graphql/.test(text)) return 'API';
+  if (/ai|ml|machine learning|model|data science/.test(text)) return 'AI/ML';
+  if (/project|task|ticket|issue|story|epic/.test(text)) return 'Project Mgmt';
+  return 'Other';
+}
 
 module.exports = router; 

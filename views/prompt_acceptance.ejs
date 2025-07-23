@@ -9,13 +9,15 @@
     <% if (records && records.length) { %>
       <table style="width:100%; font-size: 0.95em;" id="promptAcceptanceAllTable">
         <thead>
-          <tr><th>#</th><th>Prompt</th><th>Status</th><th>Response</th></tr>
+          <tr><th>#</th><th>Prompt</th><th>Category</th><th>Type</th><th>Status</th><th>Response</th></tr>
         </thead>
         <tbody>
           <% records.forEach(function(item, idx) { %>
             <tr>
               <td><%= idx+1 %></td>
               <td><%= item.prompt %></td>
+              <td><%= item.category || '-' %></td>
+              <td><%= item.responseRaw && item.responseRaw.type ? item.responseRaw.type : '-' %></td>
               <td><%= item.status %></td>
               <td>
                 <% if (item.status === 'Accepted') { %>
@@ -40,6 +42,8 @@
       <pre id="modalResponseContent" style="white-space:pre-wrap; word-break:break-all; background:#f5f5f5; padding:1em; border-radius:4px; max-height:400px; overflow:auto;"></pre>
     </div>
   </div>
+  <!-- DataTables CSS -->
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css" />
 </div>
 <script>
 (function addPromptAcceptanceBtnStyles() {
@@ -147,4 +151,19 @@ function attachPromptAcceptanceModalListeners() {
   }
 }
 document.addEventListener('DOMContentLoaded', attachPromptAcceptanceModalListeners);
-</script> 
+</script>
+  <!-- DataTables JS -->
+  <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+  <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      if (window.jQuery) {
+        $('#promptAcceptanceAllTable').DataTable({
+          pageLength: 15,
+          lengthMenu: [5, 10, 15, 25, 50, 100],
+          order: [[0, 'asc']],
+          responsive: true
+        });
+      }
+    });
+  </script> 
