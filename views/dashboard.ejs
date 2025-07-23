@@ -74,6 +74,7 @@
   <% } else { %>
   
   <!-- System & Network Information Section -->
+  <% if(false) { %>
   <div class="section-card">
     <h2>System & Network Information</h2>
     <div class="system-network-grid">
@@ -120,81 +121,51 @@
       </div>
     </div>
   </div>
-  
+  <% } %>
   <!-- Performance Metrics Section (Summary Grid) -->
   <div class="section-card">
-    <h2>Performance Metrics</h2>
+    <h2>Usage Metrics</h2>
     <div id="performanceMetrics" class="performance-grid">
       <div class="metric-item">
         <span class="metric-label">AI Interactions:</span>
         <span id="responseTimes" class="metric-value">-</span>
       </div>
-      <div class="metric-item">
+      <!-- <div class="metric-item">
         <span class="metric-label">Issues Detected:</span>
         <span id="errorRate" class="metric-value">-</span>
-      </div>
-      <div class="metric-item">
-        <span class="metric-label">File Activity:</span>
-        <span id="fileOperations" class="metric-value">-</span>
-      </div>
+      </div> -->
       <div class="metric-item">
         <span class="metric-label">Workspace Files:</span>
         <span id="workspaceFiles" class="metric-value">-</span>
       </div>
       <div class="metric-item">
+        <span class="metric-label">File Operations:</span>
+        <span id="fileOperations" class="metric-value">-</span>
+      </div>
+      <!-- <div class="metric-item">
         <span class="metric-label">Search Queries:</span>
         <span id="searchQueries" class="metric-value">-</span>
-      </div>
-      <div class="metric-item">
+      </div> -->
+      <!-- <div class="metric-item">
         <span class="metric-label">Terminal Sessions:</span>
         <span id="terminalSessions" class="metric-value">-</span>
-      </div>
+      </div> -->
       <div class="metric-item">
         <span class="metric-label">Composer Sessions:</span>
         <span id="composerSessions" class="metric-value">-</span>
       </div>
-      <div class="metric-item">
+      <!-- <div class="metric-item">
         <span class="metric-label">Editor States:</span>
         <span id="editorStates" class="metric-value">-</span>
-      </div>
+      </div> -->
     </div>
   </div>
 
 
-  
-  <!-- Sensitive Data Report (List) Section -->
-  <div class="section-card">
-    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1em;">
-      <h2>Sensitive Data Report (List)</h2>
-      <% if (metricsData && metricsData.sensitiveResults && metricsData.sensitiveResults.length > 0) { %>
-        <a href="/usage-metrics/sensitive-report" class="view-more-btn">View All</a>
-      <% } %>
-    </div>
-    <% if (metricsData && metricsData.sensitiveResults && metricsData.sensitiveResults.length) { %>
-      <table style="width:100%; font-size: 0.95em;" id="sensitiveTable" class="datatable">
-        <thead>
-          <tr><th>#</th><th>Keyword</th><th>Context</th><th>Entry</th></tr>
-        </thead>
-        <tbody>
-          <% metricsData.sensitiveResults.slice().reverse().slice(0, 10).forEach(function(finding, idx) { %>
-            <tr>
-              <td><%= idx+1 %></td>
-              <td><%= finding.keyword %></td>
-              <td><%= finding.context %></td>
-              <td><%= finding.entry %></td>
-            </tr>
-          <% }); %>
-        </tbody>
-      </table>
-    <% } else { %>
-      <div class="no-data-message">No sensitive data found in logs.</div>
-    <% } %>
-  </div>
-  
   <!-- Prompt Acceptance Report Section -->
   <div class="section-card">
     <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1em;">
-      <h2>Prompt Acceptance Report</h2>
+      <h2>Prompts Report</h2>
       <% if (metricsData && metricsData.promptAcceptanceReport && metricsData.promptAcceptanceReport.length > 0) { %>
         <a href="/usage-metrics/prompt-acceptance" class="view-more-btn">View All</a>
       <% } %>
@@ -202,13 +173,15 @@
     <% if (metricsData && metricsData.promptAcceptanceReport && metricsData.promptAcceptanceReport.length) { %>
       <table style="width:100%; font-size: 0.95em;" id="promptAcceptanceTable" class="datatable">
         <thead>
-          <tr><th>#</th><th>Prompt</th><th>Status</th><th>Response</th></tr>
+          <tr><th>#</th><th>Prompt</th><!-- <th>Category</th> --> <th>Type</th><th>Status</th><th>Response</th></tr>
         </thead>
         <tbody>
           <% metricsData.promptAcceptanceReport.slice().reverse().slice(0, 10).forEach(function(item, idx) { %>
             <tr>
               <td><%= idx+1 %></td>
               <td><%= item.prompt %></td>
+              <!-- <td><%= item.category || '-' %></td> -->
+              <td><%= item.responseRaw && item.responseRaw.type ? item.responseRaw.type : '-' %></td>
               <td><%= item.status %></td>
               <td>
                 <% if (item.status === 'Accepted') { %>
@@ -225,40 +198,56 @@
       <div class="no-data-message">No prompt acceptance data found in logs.</div>
     <% } %>
   </div>
-
-  <!-- Modal Dialog for Viewing Response -->
-  <div id="responseModal" class="modal" style="display:none; position:fixed; z-index:9999; left:0; top:0; width:100vw; height:100vh; background:rgba(0,0,0,0.4); align-items:center; justify-content:center;">
-    <div class="modal-content" style="background:#fff; padding:2em; border-radius:8px; max-width:600px; margin:5vh auto; position:relative;">
-      <span id="closeModalBtn" style="position:absolute; top:10px; right:20px; font-size:1.5em; cursor:pointer;">&times;</span>
-      <h3>Prompt Response</h3>
-      <pre id="modalResponseContent" style="white-space:pre-wrap; word-break:break-all; background:#f5f5f5; padding:1em; border-radius:4px; max-height:400px; overflow:auto;"></pre>
+  
+  <!-- Sensitive Data Report (List) Section -->
+  <% if(true) { %>
+  <div class="section-card">
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1em;">
+      <h2 style="margin: 0;">Keywords Data Report (List)</h2>
+      <div style="display: flex; align-items: center; gap: 1em; justify-content: flex-end;">
+        <span class="info-icon" id="sensitiveKeywordsInfoIcon" title="Show sensitive keywords">
+          <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" style="display:inline-block;vertical-align:middle;">
+            <circle cx="14" cy="14" r="13" fill="#217dbb" stroke="#b3d6f5" stroke-width="2"/>
+            <text x="14" y="19" text-anchor="middle" font-size="16" font-family="Arial, Helvetica, sans-serif" fill="#fff" font-weight="bold">i</text>
+          </svg>
+        </span>
+        <% if (metricsData && metricsData.sensitiveResults && metricsData.sensitiveResults.length > 0) { %>
+          <a href="/usage-metrics/sensitive-report" class="view-more-btn">View All</a>
+        <% } %>
+      </div>
     </div>
+    <% if (metricsData && metricsData.sensitiveResults && metricsData.sensitiveResults.length > 0) { %>
+      <table style="width:100%; font-size: 0.95em;" id="sensitiveTable" class="datatable">
+        <thead>
+          <tr><th>#</th><th>Keyword</th><th>Section</th><!-- <th>File Path</th> --></tr>
+        </thead>
+        <tbody>
+          <% metricsData.sensitiveResults.slice().reverse().slice(0, 10).forEach(function(finding, idx) { %>
+            <tr>
+              <td><%= idx+1 %></td>
+              <td><%= finding.keyword %></td>
+              <td><%= finding.context %></td>
+              <!-- <td><%= finding.filePath || '-' %></td> -->
+            </tr>
+          <% }); %>
+        </tbody>
+      </table>
+    <% } else { %>
+      <div class="no-data-message">No Keywords data found in logs.</div>
+    <% } %>
   </div>
-  
-
-  
-  <div class="section-card">
-    <h2>Most Common Prompts</h2>
-    <div id="commonPrompts" class="common-prompts-tags"></div>
-  </div>
-  <div class="section-card">
-    <table id="promptsTable">
-      <thead><tr><th>#</th><th>Prompt</th><th>Category</th><th>Type</th></tr></thead>
-      <tbody></tbody>
-    </table>
-  </div>
-  
+  <% } %>
   <!-- Combined Section: Recent Generations & Recent Files Opened/Edited -->
   <div class="dashboard-row" style="display: flex; flex-wrap: wrap; gap: 2em; margin-bottom: 2em;">
-    <div class="dashboard-col" style="flex: 0 1 55%; min-width: 250px;">
+    <!-- <div class="dashboard-col" style="flex: 0 1 100%; min-width: 250px;">
       <div class="section-card">
         <table id="generationsTable">
           <thead><tr><th>#</th><th>Description</th><th>Type</th><th>Time</th></tr></thead>
           <tbody></tbody>
         </table>
       </div>
-    </div>
-    <div class="dashboard-col" style="flex: 0 1 40%; min-width: 120px;">
+    </div> -->
+    <div class="dashboard-col" style="flex: 0 1 100%; min-width: 120px;">
       <div class="section-card">
         <table id="filesTable">
           <thead><tr><th>#</th><th>File</th></tr></thead>
@@ -351,5 +340,117 @@
   }
   .connection-link:hover {
     text-decoration: underline;
+  }
+  .info-icon {
+    cursor: pointer;
+    margin-left: 0.5em;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: transparent;
+    transition: box-shadow 0.2s, background 0.2s;
+    box-shadow: 0 0 0 rgba(33,123,187,0);
+    padding: 0;
+  }
+  .info-icon svg {
+    display: block;
+    border-radius: 50%;
+    transition: box-shadow 0.2s, background 0.2s;
+  }
+  .info-icon:hover svg {
+    box-shadow: 0 2px 8px rgba(33,123,187,0.25);
+    background: #1976d2;
+  }
+</style> 
+<!-- Modal for Sensitive Keywords Info (true dialog, overlays page) -->
+<div id="sensitiveKeywordsModal" class="modal" style="display:none; position:fixed; z-index:9999; left:0; top:0; width:100vw; height:100vh; background:rgba(0,0,0,0.4); align-items:center; justify-content:center;" data-keywords='["username","user","password","pass","database","db","token","jwt","secret","credential","auth","security","access","apikey","api_key","refresh","session","cookie","bearer"]'>
+  <div class="modal-content" style="background:#fff; padding:2em; border-radius:8px; max-width:600px; margin:10vh auto; position:relative;">
+    <span class="close" id="closeSensitiveKeywordsModal">&times;</span>
+    <h3>Keywords Used</h3>
+    <p>These are the keywords the system uses to scan your logs for potentially keyword information. If any of these keywords are found, they will be highlighted in the report below.</p>
+    <div id="sensitiveKeywordsTags" class="tags-container">
+      <!-- Tags will be populated by JS -->
+    </div>
+  </div>
+</div>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var infoIcon = document.getElementById('sensitiveKeywordsInfoIcon');
+    var modal = document.getElementById('sensitiveKeywordsModal');
+    var closeBtn = document.getElementById('closeSensitiveKeywordsModal');
+    if (infoIcon && modal && closeBtn) {
+      infoIcon.onclick = function() { modal.style.display = 'flex'; };
+      closeBtn.onclick = function() { modal.style.display = 'none'; };
+      window.onclick = function(event) { if (event.target == modal) { modal.style.display = 'none'; } };
+      // Populate tags
+      var tagsContainer = document.getElementById('sensitiveKeywordsTags');
+      var keywords = [];
+      var dataAttr = modal.getAttribute('data-keywords');
+      try {
+        keywords = dataAttr ? JSON.parse(dataAttr) : [];
+      } catch (e) { keywords = []; }
+      if (Array.isArray(keywords) && keywords.length > 0) {
+        tagsContainer.innerHTML = '';
+        keywords.forEach(function(kw) {
+          var tag = document.createElement('span');
+          tag.className = 'tag';
+          tag.textContent = kw;
+          tagsContainer.appendChild(tag);
+        });
+      } else {
+        tagsContainer.innerHTML = '<span style="color:#888;">No keywords found.</span>';
+      }
+    }
+  });
+</script>
+<style>
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.4);
+    align-items: center;
+    justify-content: center;
+  }
+  .modal-content {
+    background: #fff;
+    padding: 2em;
+    border-radius: 8px;
+    max-width: 600px;
+    margin: 10vh auto;
+    position: relative;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  }
+  .close {
+    color: #aaa;
+    position: absolute;
+    top: 10px;
+    right: 18px;
+    font-size: 1.5em;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  .close:hover {
+    color: #333;
+  }
+  .tags-container {
+    margin-top: 1em;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5em;
+  }
+  .tag {
+    background: #e3f2fd;
+    color: #1976d2;
+    border-radius: 16px;
+    padding: 0.3em 1em;
+    font-size: 0.95em;
+    display: inline-block;
+    margin-bottom: 0.3em;
   }
 </style> 

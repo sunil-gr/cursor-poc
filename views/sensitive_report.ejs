@@ -6,20 +6,64 @@
   </div>
   <div class="section-card">
     <h2>Keyword Counts</h2>
-    <ul style="columns: 2; -webkit-columns: 2; -moz-columns: 2;">
-      <% Object.entries(keywordCounts).forEach(([keyword, count]) => { %>
-        <% if (count > 0) { %>
-          <li><%= keyword %>: <%= count %></li>
-        <% } %>
-      <% }) %>
-    </ul>
+    <div class="keyword-counts-card">
+      <strong style="font-size: 1.1em;">Keyword Counts:</strong>
+      <div class="keyword-counts-list">
+        <% Object.keys(keywordCounts).forEach(function(keyword) { %>
+          <div class="keyword-count-item">
+            <span class="keyword-badge"><%= keyword %></span>
+            <span class="count-badge"><%= keywordCounts[keyword] %></span>
+          </div>
+        <% }); %>
+      </div>
+    </div>
+    <style>
+      .keyword-counts-card {
+        background: #f8fafd;
+        border: 1px solid #e3eaf3;
+        border-radius: 8px;
+        padding: 1.2em 1em 1em 1em;
+        margin-bottom: 1.5em;
+        box-shadow: 0 2px 8px rgba(33,123,187,0.07);
+      }
+      .keyword-counts-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.7em 2em;
+        margin-top: 0.7em;
+      }
+      .keyword-count-item {
+        display: flex;
+        align-items: center;
+        min-width: 160px;
+        margin-bottom: 0.2em;
+      }
+      .keyword-badge {
+        background: #1976d2;
+        color: #fff;
+        border-radius: 12px;
+        padding: 0.2em 0.9em;
+        font-size: 1em;
+        font-weight: 500;
+        margin-right: 0.7em;
+        letter-spacing: 0.02em;
+      }
+      .count-badge {
+        background: #e3f2fd;
+        color: #1976d2;
+        border-radius: 10px;
+        padding: 0.2em 0.7em;
+        font-size: 0.98em;
+        font-weight: 600;
+      }
+    </style>
   </div>
   <div class="section-card">
     <h2>All Sensitive Findings (<%= results.length %>)</h2>
     <% if (results && results.length) { %>
-      <table style="width:100%; font-size: 0.95em;">
+      <table id="sensitiveTable" style="width:100%; font-size: 0.95em;">
         <thead>
-          <tr><th>#</th><th>Keyword</th><th>Context</th><th>Entry</th></tr>
+          <tr><th>#</th><th>Keyword</th><th>Section </th><!-- <th>Entry</th>--></tr>
         </thead>
         <tbody>
           <% results.forEach(function(finding, idx) { %>
@@ -27,7 +71,7 @@
               <td><%= idx+1 %></td>
               <td><%= finding.keyword %></td>
               <td><%= finding.context %></td>
-              <td><%= finding.entry %></td>
+              <!-- <td><%= finding.entry %></td> -->
             </tr>
           <% }) %>
         </tbody>
@@ -36,4 +80,21 @@
       <div style="color: #4caf50;">No sensitive data found in logs.</div>
     <% } %>
   </div>
-</div> 
+</div>
+<!-- DataTables CSS -->
+<link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css" />
+<!-- DataTables JS -->
+<script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+<script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    if (window.jQuery) {
+      $('#sensitiveTable').DataTable({
+        pageLength: 15,
+        lengthMenu: [5, 10, 15, 25, 50, 100],
+        order: [[0, 'asc']],
+        responsive: true
+      });
+    }
+  });
+</script> 

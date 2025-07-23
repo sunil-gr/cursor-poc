@@ -1,0 +1,242 @@
+[
+  {
+    "key": "__$__isNewStorageMarker",
+    "value": "true"
+  },
+  {
+    "key": "cursorAuth/workspaceOpenedDate",
+    "value": "2025-07-07T13:13:48.631Z"
+  },
+  {
+    "key": "workbench.view.search.state",
+    "value": "{\"workbench.view.search\":{\"collapsed\":false,\"isHidden\":true}}"
+  },
+  {
+    "key": "workbench.scm.views.state",
+    "value": "{\"workbench.scm.repositories\":{\"collapsed\":false,\"isHidden\":true},\"workbench.scm\":{\"collapsed\":false,\"isHidden\":true},\"workbench.scm.history\":{\"collapsed\":false,\"isHidden\":true}}"
+  },
+  {
+    "key": "workbench.panel.markers",
+    "value": "{\"workbench.panel.markers.view\":{\"collapsed\":false,\"isHidden\":true}}"
+  },
+  {
+    "key": "workbench.panel.output",
+    "value": "{\"workbench.panel.output\":{\"collapsed\":false,\"isHidden\":true}}"
+  },
+  {
+    "key": "terminal",
+    "value": "{\"terminal\":{\"collapsed\":false,\"isHidden\":true}}"
+  },
+  {
+    "key": "workbench.auxiliarybar.initialViewContainers",
+    "value": "[\"workbench.panel.aichat\"]"
+  },
+  {
+    "key": "workbench.auxiliarybar.viewContainersWorkspaceState",
+    "value": "[{\"id\":\"workbench.panel.aichat\",\"visible\":true},{\"id\":\"workbench.panel.composerViewPane2\",\"visible\":false},{\"id\":\"workbench.panel.aipaneaaaiBugFinder\",\"visible\":false},{\"id\":\"workbench.panel.chat\",\"visible\":false},{\"id\":\"workbench.panel.chatEditing\",\"visible\":false}]"
+  },
+  {
+    "key": "workbench.panel.composerChatViewPane",
+    "value": "{\"workbench.panel.aichat.view.2fb38145-1f33-4577-b8f9-a3536de99c93\":{\"collapsed\":false,\"isHidden\":false,\"size\":706}}"
+  },
+  {
+    "key": "workbench.auxiliarybar.activepanelid",
+    "value": "workbench.panel.aichat"
+  },
+  {
+    "key": "workbench.view.remote.state",
+    "value": "{\"sshHosts\":{\"collapsed\":false,\"isHidden\":false},\"github.codespaces.explorer\":{\"collapsed\":false,\"isHidden\":false},\"github.codespaces.warnExplorer\":{\"collapsed\":false,\"isHidden\":false},\"github.codespaces.performanceExplorer\":{\"collapsed\":false,\"isHidden\":false}}"
+  },
+  {
+    "key": "workbench.view.extension.github-pull-requests.state",
+    "value": "{\"github:login\":{\"collapsed\":false,\"isHidden\":true},\"pr:github\":{\"collapsed\":false,\"isHidden\":true},\"issues:github\":{\"collapsed\":false,\"isHidden\":true},\"notifications:github\":{\"collapsed\":false,\"isHidden\":true},\"github:conflictResolution\":{\"collapsed\":false,\"isHidden\":true}}"
+  },
+  {
+    "key": "workbench.view.extension.workspaceViewer.state",
+    "value": "{\"workspaceViewer\":{\"collapsed\":false,\"isHidden\":true},\"rHelpPages\":{\"collapsed\":false,\"isHidden\":true},\"rLiveShare\":{\"collapsed\":true,\"isHidden\":true}}"
+  },
+  {
+    "key": "workbench.explorer.views.state",
+    "value": "{\"notepad\":{\"collapsed\":true,\"isHidden\":true},\"outline\":{\"collapsed\":true,\"isHidden\":true,\"size\":22},\"timeline\":{\"collapsed\":true,\"isHidden\":true,\"size\":22},\"workbench.explorer.openEditorsView\":{\"collapsed\":false,\"isHidden\":true},\"workbench.explorer.fileView\":{\"collapsed\":false,\"isHidden\":true},\"npm\":{\"collapsed\":true,\"isHidden\":true}}"
+  },
+  {
+    "key": "debug.selectedroot",
+    "value": "file:///d%3A/xampp/htdocs/hm-github/smiles-project-planner/.vscode/launch.json"
+  },
+  {
+    "key": "workbench.view.debug.state",
+    "value": "{\"workbench.debug.welcome\":{\"collapsed\":false,\"isHidden\":true},\"workbench.debug.variablesView\":{\"collapsed\":false,\"isHidden\":true},\"workbench.debug.watchExpressionsView\":{\"collapsed\":false,\"isHidden\":true},\"workbench.debug.callStackView\":{\"collapsed\":false,\"isHidden\":true},\"workbench.debug.loadedScriptsView\":{\"collapsed\":true,\"isHidden\":true},\"workbench.debug.breakPointsView\":{\"collapsed\":false,\"isHidden\":true},\"jsBrowserBreakpoints\":{\"collapsed\":true,\"isHidden\":true},\"jsExcludedCallers\":{\"collapsed\":true,\"isHidden\":true},\"jsDebugNetworkTree\":{\"collapsed\":true,\"isHidden\":true},\"CppSshTargetsView\":{\"collapsed\":true,\"isHidden\":true},\"lldb.loadedModules\":{\"collapsed\":true,\"isHidden\":true},\"lldb.excludedCallers\":{\"collapsed\":true,\"isHidden\":true}}"
+  },
+  {
+    "key": "output.activechannel",
+    "value": "tasks"
+  },
+  {
+    "key": "~remote.forwardedPortsContainer",
+    "value": "{\"~remote.forwardedPorts\":{\"collapsed\":false,\"isHidden\":true}}"
+  },
+  {
+    "key": "workbench.panel.repl",
+    "value": "{\"workbench.panel.repl.view\":{\"collapsed\":false,\"isHidden\":true}}"
+  },
+  {
+    "key": "workbench.panel.viewContainersWorkspaceState",
+    "value": "[{\"id\":\"workbench.panel.markers\",\"visible\":true},{\"id\":\"workbench.panel.output\",\"visible\":true},{\"id\":\"workbench.panel.repl\",\"visible\":true},{\"id\":\"terminal\",\"visible\":true},{\"id\":\"workbench.panel.testResults\",\"visible\":false},{\"id\":\"~remote.forwardedPortsContainer\",\"visible\":true},{\"id\":\"refactorPreview\",\"visible\":false}]"
+  },
+  {
+    "key": "debug.uxstate",
+    "value": "simple"
+  },
+  {
+    "key": "vscode.git",
+    "value": "{\"closedRepositories\":[]}"
+  },
+  {
+    "key": "terminal.integrated.environmentVariableCollectionsV2",
+    "value": "[{\"extensionIdentifier\":\"vscode.git\",\"collection\":[[\"GIT_ASKPASS\",{\"variable\":\"GIT_ASKPASS\",\"value\":\"c:\\\\Users\\\\suniv\\\\AppData\\\\Local\\\\Programs\\\\cursor\\\\resources\\\\app\\\\extensions\\\\git\\\\dist\\\\askpass.sh\",\"type\":1,\"options\":{\"applyAtProcessCreation\":true,\"applyAtShellIntegration\":false}}],[\"VSCODE_GIT_ASKPASS_NODE\",{\"variable\":\"VSCODE_GIT_ASKPASS_NODE\",\"value\":\"c:\\\\Users\\\\suniv\\\\AppData\\\\Local\\\\Programs\\\\cursor\\\\Cursor.exe\",\"type\":1,\"options\":{\"applyAtProcessCreation\":true,\"applyAtShellIntegration\":false}}],[\"VSCODE_GIT_ASKPASS_EXTRA_ARGS\",{\"variable\":\"VSCODE_GIT_ASKPASS_EXTRA_ARGS\",\"value\":\"\",\"type\":1,\"options\":{\"applyAtProcessCreation\":true,\"applyAtShellIntegration\":false}}],[\"VSCODE_GIT_ASKPASS_MAIN\",{\"variable\":\"VSCODE_GIT_ASKPASS_MAIN\",\"value\":\"c:\\\\Users\\\\suniv\\\\AppData\\\\Local\\\\Programs\\\\cursor\\\\resources\\\\app\\\\extensions\\\\git\\\\dist\\\\askpass-main.js\",\"type\":1,\"options\":{\"applyAtProcessCreation\":true,\"applyAtShellIntegration\":false}}],[\"VSCODE_GIT_IPC_HANDLE\",{\"variable\":\"VSCODE_GIT_IPC_HANDLE\",\"value\":\"\\\\\\\\.\\\\pipe\\\\vscode-git-c94f0fbde3-sock\",\"type\":1,\"options\":{\"applyAtProcessCreation\":true,\"applyAtShellIntegration\":false}}]],\"description\":[[\"\",{\"description\":\"Enables the following features: git auth provider\"}]]}]"
+  },
+  {
+    "key": "GitHub.vscode-pull-request-github",
+    "value": "{}"
+  },
+  {
+    "key": "workbench.view.explorer.numberOfVisibleViews",
+    "value": "4"
+  },
+  {
+    "key": "workbench.editor.centered",
+    "value": "false"
+  },
+  {
+    "key": "workbench.zenMode.active",
+    "value": "false"
+  },
+  {
+    "key": "workbench.zenMode.exitInfo",
+    "value": "{\"transitionedToCenteredEditorLayout\":false,\"transitionedToFullScreen\":false,\"handleNotificationsDoNotDisturbMode\":false,\"wasVisible\":{\"auxiliaryBar\":false,\"panel\":false,\"sideBar\":false}}"
+  },
+  {
+    "key": "workbench.panel.wasLastMaximized",
+    "value": "false"
+  },
+  {
+    "key": "workbench.sideBar.position",
+    "value": "0"
+  },
+  {
+    "key": "workbench.panel.position",
+    "value": "2"
+  },
+  {
+    "key": "workbench.activityBar.hidden",
+    "value": "true"
+  },
+  {
+    "key": "workbench.sideBar.hidden",
+    "value": "false"
+  },
+  {
+    "key": "workbench.editor.hidden",
+    "value": "false"
+  },
+  {
+    "key": "workbench.panel.hidden",
+    "value": "true"
+  },
+  {
+    "key": "workbench.statusBar.hidden",
+    "value": "false"
+  },
+  {
+    "key": "workbench.panel.aichat.numberOfVisibleViews",
+    "value": "1"
+  },
+  {
+    "key": "workbench.panel.chat.numberOfVisibleViews",
+    "value": "0"
+  },
+  {
+    "key": "aiService.generations",
+    "value": "[]"
+  },
+  {
+    "key": "aiService.prompts",
+    "value": "[]"
+  },
+  {
+    "key": "notepad.reactiveStorageId",
+    "value": "{\"notepads\":{},\"notepadDataVersion\":0}"
+  },
+  {
+    "key": "interactive.sessions",
+    "value": "[]"
+  },
+  {
+    "key": "notepadData",
+    "value": "{\"notepads\":{}}"
+  },
+  {
+    "key": "scm:view:visibleRepositories",
+    "value": "{\"all\":[\"git:Git:file:///d%3A/xampp/htdocs/hm-github/smiles-project-planner\"],\"sortKey\":\"discoveryTime\",\"visible\":[0]}"
+  },
+  {
+    "key": "comments.continueOnComments",
+    "value": "[]"
+  },
+  {
+    "key": "composer.composerData",
+    "value": "{\"allComposers\":[{\"type\":\"head\",\"composerId\":\"2fb38145-1f33-4577-b8f9-a3536de99c93\",\"createdAt\":1751894028656,\"unifiedMode\":\"agent\",\"forceMode\":\"edit\",\"hasUnreadMessages\":false},{\"type\":\"head\",\"composerId\":\"d0b1acc6-2f66-4528-91df-a625138b5632\",\"createdAt\":1751894028656,\"unifiedMode\":\"chat\",\"forceMode\":\"edit\",\"hasUnreadMessages\":false}],\"selectedComposerIds\":[\"2fb38145-1f33-4577-b8f9-a3536de99c93\"],\"hasMigratedComposerData\":false,\"hasMigratedMultipleComposers\":true}"
+  },
+  {
+    "key": "workbench.editor.languageDetectionOpenedLanguages.workspace",
+    "value": "[[\"ignore\",true],[\"gcc-md\",true]]"
+  },
+  {
+    "key": "history.entries",
+    "value": "[{\"editor\":{\"resource\":\"file:///d%3A/xampp/htdocs/hm-github/smiles-project-planner/README.md\",\"forceFile\":true,\"options\":{\"override\":\"default\"}}},{\"editor\":{\"resource\":\"file:///d%3A/xampp/htdocs/hm-github/smiles-project-planner/.gitignore\",\"forceFile\":true,\"options\":{\"override\":\"default\"}}}]"
+  },
+  {
+    "key": "workbench.explorer.treeViewState",
+    "value": "{\"focus\":[\"file:///d%3A/xampp/htdocs/hm-github/smiles-project-planner::file:///d%3A/xampp/htdocs/hm-github/smiles-project-planner/README.md\"],\"selection\":[\"file:///d%3A/xampp/htdocs/hm-github/smiles-project-planner::file:///d%3A/xampp/htdocs/hm-github/smiles-project-planner/README.md\"],\"expanded\":[],\"scrollTop\":0}"
+  },
+  {
+    "key": "memento/workbench.editors.files.textFileEditor",
+    "value": "{\"textEditorViewState\":[[\"file:///d%3A/xampp/htdocs/hm-github/smiles-project-planner/.gitignore\",{\"0\":{\"cursorState\":[{\"inSelectionMode\":false,\"selectionStart\":{\"lineNumber\":1,\"column\":8},\"position\":{\"lineNumber\":1,\"column\":8}}],\"viewState\":{\"scrollLeft\":0,\"firstPosition\":{\"lineNumber\":1,\"column\":1},\"firstPositionDeltaTop\":0},\"contributionsState\":{\"editor.contrib.folding\":{\"lineCount\":1,\"provider\":\"indent\",\"foldedImports\":false},\"editor.contrib.wordHighlighter\":false}}}],[\"file:///d%3A/xampp/htdocs/hm-github/smiles-project-planner/README.md\",{\"0\":{\"cursorState\":[{\"inSelectionMode\":true,\"selectionStart\":{\"lineNumber\":1,\"column\":25},\"position\":{\"lineNumber\":1,\"column\":3}}],\"viewState\":{\"scrollLeft\":0,\"firstPosition\":{\"lineNumber\":1,\"column\":1},\"firstPositionDeltaTop\":0},\"contributionsState\":{\"editor.contrib.folding\":{\"lineCount\":131,\"provider\":\"indent\",\"foldedImports\":false},\"editor.contrib.wordHighlighter\":false}}}]]}"
+  },
+  {
+    "key": "memento/workbench.parts.editor",
+    "value": "{\"editorpart.state\":{\"serializedGrid\":{\"root\":{\"type\":\"branch\",\"data\":[{\"type\":\"leaf\",\"data\":{\"id\":0,\"editors\":[{\"id\":\"workbench.editors.files.fileEditorInput\",\"value\":\"{\\\"resourceJSON\\\":{\\\"$mid\\\":1,\\\"fsPath\\\":\\\"d:\\\\\\\\xampp\\\\\\\\htdocs\\\\\\\\hm-github\\\\\\\\smiles-project-planner\\\\\\\\.gitignore\\\",\\\"_sep\\\":1,\\\"external\\\":\\\"file:///d%3A/xampp/htdocs/hm-github/smiles-project-planner/.gitignore\\\",\\\"path\\\":\\\"/d:/xampp/htdocs/hm-github/smiles-project-planner/.gitignore\\\",\\\"scheme\\\":\\\"file\\\"},\\\"encoding\\\":\\\"utf8\\\"}\"},{\"id\":\"workbench.editors.files.fileEditorInput\",\"value\":\"{\\\"resourceJSON\\\":{\\\"$mid\\\":1,\\\"fsPath\\\":\\\"d:\\\\\\\\xampp\\\\\\\\htdocs\\\\\\\\hm-github\\\\\\\\smiles-project-planner\\\\\\\\README.md\\\",\\\"_sep\\\":1,\\\"external\\\":\\\"file:///d%3A/xampp/htdocs/hm-github/smiles-project-planner/README.md\\\",\\\"path\\\":\\\"/d:/xampp/htdocs/hm-github/smiles-project-planner/README.md\\\",\\\"scheme\\\":\\\"file\\\"},\\\"encoding\\\":\\\"utf8\\\"}\"}],\"mru\":[1,0],\"preview\":1},\"size\":741}],\"size\":1066},\"orientation\":0,\"width\":1066,\"height\":741},\"activeGroup\":0,\"mostRecentActiveGroups\":[0]}}"
+  },
+  {
+    "key": "workbench.auxiliaryBar.hidden",
+    "value": "true"
+  },
+  {
+    "key": "anysphere.cursor-retrieval",
+    "value": "{\"cursor-retrieval-state-version\":1,\"map/00af563565973cc483f57104e378281310aed09491e78703a3cd2437028ba41a-smiles-project-planner/repoKeys\":{\"repoName\":\"84e3d06e-7e90-4d4a-bc75-f76e110f4bda\",\"orthogonalTransformationSeed\":257790955283249,\"pathEncryptionKey\":\"RYs3Fi3B0_W8bnb1kSdkbvJmzcqQFXrILz3iyWfJaRM\",\"pathEncryptionScheme\":\"aes-256-ctr\",\"canUpdateKey\":false},\"map/00af563565973cc483f57104e378281310aed09491e78703a3cd2437028ba41a-smiles-project-planner/google-oauth2|user_01JE9GMZAZSQBF883XR5KV60FJ/indexingStatus\":{\"globalStatus\":{\"case\":\"synced\",\"numFiles\":8},\"progress\":100}}"
+  },
+  {
+    "key": "__$__targetStorageMarker",
+    "value": "{\"cursorAuth/workspaceOpenedDate\":1,\"workbench.explorer.views.state\":1,\"workbench.view.search.state\":1,\"workbench.scm.views.state\":1,\"workbench.panel.markers\":1,\"workbench.panel.output\":1,\"terminal\":1,\"workbench.panel.viewContainersWorkspaceState\":1,\"workbench.auxiliarybar.initialViewContainers\":1,\"workbench.auxiliarybar.viewContainersWorkspaceState\":1,\"workbench.panel.composerChatViewPane\":1,\"workbench.auxiliarybar.activepanelid\":1,\"workbench.explorer.treeViewState\":1,\"workbench.view.remote.state\":1,\"workbench.view.extension.github-pull-requests.state\":1,\"workbench.view.extension.workspaceViewer.state\":1,\"debug.selectedroot\":1,\"workbench.view.debug.state\":1,\"output.activechannel\":1,\"~remote.forwardedPortsContainer\":1,\"workbench.panel.repl\":1,\"debug.uxstate\":1,\"terminal.integrated.environmentVariableCollectionsV2\":1,\"vscode.git\":1,\"workbench.editor.languageDetectionOpenedLanguages.workspace\":1,\"anysphere.cursor-retrieval\":1,\"GitHub.vscode-pull-request-github\":1,\"memento/workbench.parts.editor\":0,\"src.vs.platform.reactivestorage.browser.reactiveStorageServiceImpl.persistentStorage.workspaceUser\":0,\"history.entries\":1,\"workbench.view.explorer.numberOfVisibleViews\":1,\"workbench.editor.centered\":1,\"workbench.zenMode.active\":1,\"workbench.zenMode.exitInfo\":1,\"workbench.panel.wasLastMaximized\":1,\"workbench.sideBar.position\":1,\"workbench.panel.position\":1,\"workbench.activityBar.hidden\":1,\"workbench.sideBar.hidden\":1,\"workbench.editor.hidden\":1,\"workbench.panel.hidden\":1,\"workbench.auxiliaryBar.hidden\":1,\"workbench.statusBar.hidden\":1,\"workbench.panel.aichat.numberOfVisibleViews\":1,\"workbench.panel.chat.numberOfVisibleViews\":1,\"aiService.generations\":1,\"aiService.prompts\":1,\"notepad.reactiveStorageId\":1,\"interactive.sessions\":1,\"notepadData\":1,\"scm:view:visibleRepositories\":1,\"comments.continueOnComments\":0,\"memento/workbench.editors.files.textFileEditor\":1,\"composer.composerData\":1,\"lifecyle.lastShutdownReason\":1,\"codelens/cache2\":1,\"workbench.backgroundComposer.workspacePersistentData\":1,\"terminal.integrated.layoutInfo\":1}"
+  },
+  {
+    "key": "lifecyle.lastShutdownReason",
+    "value": "1"
+  },
+  {
+    "key": "src.vs.platform.reactivestorage.browser.reactiveStorageServiceImpl.persistentStorage.workspaceUser",
+    "value": "{\"tasksData\":{\"tasksDataSchemaVersion\":1,\"tasks\":[{\"type\":\"draft\",\"taskId\":\"91f59390-1a43-4e01-99a5-6bb693d0c77a\",\"instruction\":\"\"}],\"displayedTaskId\":\"91f59390-1a43-4e01-99a5-6bb693d0c77a\",\"showTabs\":false,\"activeServerTaskUuids\":[]},\"onboardingMetadata\":{\"shouldAskToIndex\":true,\"shouldHideWarning\":false},\"persistentChatMetadata\":[],\"aiPanePosition\":\"sidebar\",\"shouldRerankByDefault\":false,\"indexingData\":{\"preferredEmbeddingModel\":0},\"composerState\":{\"position\":{\"x\":0,\"y\":0},\"horizontalBarSize\":0,\"tabHeight\":0,\"selectedView\":\"suggested\",\"devToolsPosition\":{\"x\":0,\"y\":0},\"memories\":[],\"isComposerBarChatCollapsed\":false,\"composerBarPosition\":null,\"enableDataHandleDebugging\":false,\"shouldExplicitlyShowFgComposerInBg\":false,\"isDebuggingHumanFeedbackPanelForEditFile\":false},\"isCursorPredictionOutOfRangeIndicatorMinimized2\":true,\"needsComposerInitialOpening\":false,\"approvedProjectMcpServers\":[],\"disabledMcpServers\":[],\"eligibleForSnippetLearning\":false,\"solidJSLeakRecords\":[],\"exampleCodebaseQuestions\":[],\"SPECIAL_KEY_id\":\"0668af90-673b-45d7-a592-43d50a207a18\"}"
+  },
+  {
+    "key": "codelens/cache2",
+    "value": "{\"file:///d%3A/xampp/htdocs/hm-github/smiles-project-planner/.gitignore\":{\"lineCount\":1,\"lines\":[]},\"file:///d%3A/xampp/htdocs/hm-github/smiles-project-planner/README.md\":{\"lineCount\":131,\"lines\":[]}}"
+  },
+  {
+    "key": "workbench.backgroundComposer.workspacePersistentData",
+    "value": "{\"setupPath2\":\"default\",\"terminals\":[],\"ranTerminalCommands\":[],\"installScript\":\"\",\"startScript\":\"\",\"currentSetupStep\":\"start-default-vm\",\"furthestSetupStep\":\"start-default-vm\",\"customDockerfileContents\":\"\"}"
+  },
+  {
+    "key": "terminal.integrated.layoutInfo",
+    "value": "{\"workspaceId\":\"e031cdfcbd1c273fd903d123d8d98bdd\",\"tabs\":[]}"
+  }
+]

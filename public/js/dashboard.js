@@ -427,7 +427,10 @@ document.addEventListener('DOMContentLoaded', function() {
       <thead>
         <tr>
           <th>#</th>
-          <th>File</th>
+          <th>File Path</th>
+          <th>File Type</th>
+          <th>Last Modified</th>
+          <th>Actions</th>
         </tr>
       </thead>
       <tbody></tbody>
@@ -436,34 +439,61 @@ document.addEventListener('DOMContentLoaded', function() {
     const tbody = table.querySelector('tbody');
     
     if (!files || files.length === 0) {
-      tbody.innerHTML = '<tr><td colspan="2" class="text-center">No files found</td></tr>';
+      tbody.innerHTML = '<tr><td colspan="5" class="text-center">No files found</td></tr>';
       return;
     }
     
-    // Use all files since API already provides the last 10 (most recent)
-    const recentFiles = files;
-    
     // Add recent files to table
-    recentFiles.forEach((file, index) => {
+    files.forEach((file, index) => {
       const row = document.createElement('tr');
       // Handle different file object structures
       let fileName = 'Unknown file';
+      let filePath = '';
       if (typeof file === 'string') {
         fileName = file;
+        filePath = file;
       } else if (file && typeof file === 'object') {
         if (file.fileName) {
           fileName = file.fileName;
+          filePath = file.path || file.fileName;
         } else if (file.path) {
           fileName = file.path.split('/').pop() || file.path;
+          filePath = file.path;
         } else if (file.editor && file.editor.resource) {
           fileName = file.editor.resource;
+          filePath = file.editor.resource;
         } else {
-          fileName = JSON.stringify(file);
+          fileName = 'Unknown file';
+          filePath = JSON.stringify(file);
+        }
+      }
+      // File type
+      let fileType = 'Unknown';
+      if (filePath) {
+        const parts = filePath.split('.');
+        fileType = parts.length > 1 ? parts[parts.length - 1].toUpperCase() : 'No Extension';
+      }
+      // Last modified
+      let lastModified = 'Unknown';
+      if (file.lastModified || file.timestamp) {
+        const timestamp = file.lastModified || file.timestamp;
+        if (typeof timestamp === 'number') {
+          lastModified = new Date(timestamp).toLocaleString();
+        } else if (typeof timestamp === 'string') {
+          const date = new Date(timestamp);
+          if (!isNaN(date.getTime())) {
+            lastModified = date.toLocaleString();
+          }
         }
       }
       row.innerHTML = `
         <td>${index + 1}</td>
-        <td>${fileName}</td>
+        <td title="${filePath}">${fileName}</td>
+        <td><span class="badge badge-info">${fileType}</span></td>
+        <td>${lastModified}</td>
+        <td>
+          <button class="btn btn-sm btn-outline-primary" onclick="navigator.clipboard.writeText('${filePath.replace(/'/g, "\\'")}')">Copy Path</button>
+        </td>
       `;
       tbody.appendChild(row);
     });
@@ -973,7 +1003,7 @@ document.addEventListener('DOMContentLoaded', function() {
         if (responseTimesElement) {
           const responseTimesCount = data.performanceMetrics.responseTimesCount || 0;
           responseTimesElement.textContent = responseTimesCount > 0 ? 
-            `${responseTimesCount} AI interactions tracked` : 'No AI interactions tracked';
+            `${responseTimesCount} AI Prompts Tracked` : 'No AI Prompts Tracked';
         }
         
         if (errorRateElement) {
@@ -985,7 +1015,7 @@ document.addEventListener('DOMContentLoaded', function() {
         if (fileOperationsElement) {
           const fileOpsCount = data.performanceMetrics.fileOperationsCount || 0;
           fileOperationsElement.textContent = fileOpsCount > 0 ? 
-            `${fileOpsCount} files accessed` : 'No file activity tracked';
+            `${fileOpsCount} files operations done` : 'No file activity tracked';
         }
         
         if (workspaceFilesElement) {
@@ -993,7 +1023,8 @@ document.addEventListener('DOMContentLoaded', function() {
           const totalFiles = workspaceActivity.totalFiles || 0;
           const uniqueFileTypes = workspaceActivity.uniqueFileTypes || 0;
           workspaceFilesElement.textContent = totalFiles > 0 ? 
-            `${totalFiles} files (${uniqueFileTypes} types)` : 'No workspace files tracked';
+            // `${totalFiles} files (${uniqueFileTypes} types)` : 'No workspace files tracked';
+            `${totalFiles} files accessed` : 'No workspace files tracked';
         }
         
         if (searchQueriesElement) {
@@ -1133,8 +1164,8 @@ document.addEventListener('DOMContentLoaded', function() {
         responsive: true,
         pageLength: 10,
         language: {
-          search: "Search sensitive data:",
-          info: "Showing _TOTAL_ sensitive entries"
+          search: "Keyword data:",
+          info: "Showing _TOTAL_ keyword entries"
         }
       });
     }

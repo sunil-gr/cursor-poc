@@ -1,0 +1,242 @@
+[
+  {
+    "key": "cursorAuth/workspaceOpenedDate",
+    "value": "2025-07-21T04:34:08.914Z"
+  },
+  {
+    "key": "workbench.view.search.state",
+    "value": "{\"workbench.view.search\":{\"collapsed\":false,\"isHidden\":true}}"
+  },
+  {
+    "key": "workbench.scm.views.state",
+    "value": "{\"workbench.scm.repositories\":{\"collapsed\":false,\"isHidden\":true},\"workbench.scm\":{\"collapsed\":false,\"isHidden\":true},\"workbench.scm.history\":{\"collapsed\":false,\"isHidden\":true}}"
+  },
+  {
+    "key": "workbench.panel.markers",
+    "value": "{\"workbench.panel.markers.view\":{\"collapsed\":false,\"isHidden\":true}}"
+  },
+  {
+    "key": "workbench.panel.output",
+    "value": "{\"workbench.panel.output\":{\"collapsed\":false,\"isHidden\":true}}"
+  },
+  {
+    "key": "workbench.auxiliarybar.initialViewContainers",
+    "value": "[\"workbench.panel.aichat\"]"
+  },
+  {
+    "key": "workbench.auxiliarybar.viewContainersWorkspaceState",
+    "value": "[{\"id\":\"workbench.panel.aichat\",\"visible\":true},{\"id\":\"workbench.panel.composerViewPane2\",\"visible\":false},{\"id\":\"workbench.panel.aipaneaaaiBugFinder\",\"visible\":false},{\"id\":\"workbench.panel.chat\",\"visible\":false},{\"id\":\"workbench.panel.chatEditing\",\"visible\":false}]"
+  },
+  {
+    "key": "workbench.auxiliarybar.activepanelid",
+    "value": "workbench.panel.aichat"
+  },
+  {
+    "key": "workbench.view.remote.state",
+    "value": "{\"sshHosts\":{\"collapsed\":false,\"isHidden\":false},\"github.codespaces.explorer\":{\"collapsed\":false,\"isHidden\":false},\"github.codespaces.warnExplorer\":{\"collapsed\":false,\"isHidden\":false},\"github.codespaces.performanceExplorer\":{\"collapsed\":false,\"isHidden\":false}}"
+  },
+  {
+    "key": "workbench.view.extension.github-pull-requests.state",
+    "value": "{\"github:login\":{\"collapsed\":false,\"isHidden\":true},\"pr:github\":{\"collapsed\":false,\"isHidden\":true},\"issues:github\":{\"collapsed\":false,\"isHidden\":true},\"notifications:github\":{\"collapsed\":false,\"isHidden\":true},\"github:conflictResolution\":{\"collapsed\":false,\"isHidden\":true}}"
+  },
+  {
+    "key": "workbench.view.extension.workspaceViewer.state",
+    "value": "{\"workspaceViewer\":{\"collapsed\":false,\"isHidden\":true},\"rHelpPages\":{\"collapsed\":false,\"isHidden\":true},\"rLiveShare\":{\"collapsed\":true,\"isHidden\":true}}"
+  },
+  {
+    "key": "debug.selectedroot",
+    "value": "file:///c%3A/inetpub/wwwroot/asp-classic/.vscode/launch.json"
+  },
+  {
+    "key": "workbench.view.debug.state",
+    "value": "{\"workbench.debug.welcome\":{\"collapsed\":false,\"isHidden\":true},\"workbench.debug.variablesView\":{\"collapsed\":false,\"isHidden\":true},\"workbench.debug.watchExpressionsView\":{\"collapsed\":false,\"isHidden\":true},\"workbench.debug.callStackView\":{\"collapsed\":false,\"isHidden\":true},\"workbench.debug.loadedScriptsView\":{\"collapsed\":true,\"isHidden\":true},\"workbench.debug.breakPointsView\":{\"collapsed\":false,\"isHidden\":true},\"jsBrowserBreakpoints\":{\"collapsed\":true,\"isHidden\":true},\"jsExcludedCallers\":{\"collapsed\":true,\"isHidden\":true},\"jsDebugNetworkTree\":{\"collapsed\":true,\"isHidden\":true},\"CppSshTargetsView\":{\"collapsed\":true,\"isHidden\":true},\"lldb.loadedModules\":{\"collapsed\":true,\"isHidden\":true},\"lldb.excludedCallers\":{\"collapsed\":true,\"isHidden\":true}}"
+  },
+  {
+    "key": "output.activechannel",
+    "value": "tasks"
+  },
+  {
+    "key": "~remote.forwardedPortsContainer",
+    "value": "{\"~remote.forwardedPorts\":{\"collapsed\":false,\"isHidden\":true}}"
+  },
+  {
+    "key": "workbench.panel.repl",
+    "value": "{\"workbench.panel.repl.view\":{\"collapsed\":false,\"isHidden\":true}}"
+  },
+  {
+    "key": "debug.uxstate",
+    "value": "simple"
+  },
+  {
+    "key": "vscode.git",
+    "value": "{\"closedRepositories\":[]}"
+  },
+  {
+    "key": "GitHub.vscode-pull-request-github",
+    "value": "{}"
+  },
+  {
+    "key": "anysphere.cursor-retrieval",
+    "value": "{\"cursor-retrieval-state-version\":1,\"map/278719ec19bca23abe9ff66b799231d9512d6d5fabfef03a2fcc36c8d70c2bb8-asp-classic/repoKeys\":{\"repoName\":\"79f8242e-15d1-4b0d-bb6e-9e9bcf19a5e4\",\"orthogonalTransformationSeed\":8770819651718171,\"pathEncryptionKey\":\"RYs3Fi3B0_W8bnb1kSdkbvJmzcqQFXrILz3iyWfJaRM\",\"pathEncryptionScheme\":\"aes-256-ctr\",\"canUpdateKey\":false},\"map/278719ec19bca23abe9ff66b799231d9512d6d5fabfef03a2fcc36c8d70c2bb8-asp-classic/google-oauth2|user_01JE9GMZAZSQBF883XR5KV60FJ/indexingStatus\":{\"globalStatus\":{\"case\":\"synced\",\"numFiles\":6},\"progress\":100}}"
+  },
+  {
+    "key": "workbench.editor.languageDetectionOpenedLanguages.workspace",
+    "value": "[[\"plaintext\",true]]"
+  },
+  {
+    "key": "history.entries",
+    "value": "[{\"editor\":{\"resource\":\"file:///c%3A/inetpub/wwwroot/asp-classic/Utilities\",\"forceFile\":true,\"options\":{\"override\":\"default\"}}}]"
+  },
+  {
+    "key": "workbench.view.explorer.numberOfVisibleViews",
+    "value": "4"
+  },
+  {
+    "key": "workbench.editor.centered",
+    "value": "false"
+  },
+  {
+    "key": "workbench.zenMode.active",
+    "value": "false"
+  },
+  {
+    "key": "workbench.zenMode.exitInfo",
+    "value": "{\"transitionedToCenteredEditorLayout\":false,\"transitionedToFullScreen\":false,\"handleNotificationsDoNotDisturbMode\":false,\"wasVisible\":{\"auxiliaryBar\":false,\"panel\":false,\"sideBar\":false}}"
+  },
+  {
+    "key": "workbench.panel.wasLastMaximized",
+    "value": "false"
+  },
+  {
+    "key": "workbench.sideBar.position",
+    "value": "0"
+  },
+  {
+    "key": "workbench.panel.position",
+    "value": "2"
+  },
+  {
+    "key": "workbench.activityBar.hidden",
+    "value": "true"
+  },
+  {
+    "key": "workbench.sideBar.hidden",
+    "value": "false"
+  },
+  {
+    "key": "workbench.editor.hidden",
+    "value": "false"
+  },
+  {
+    "key": "workbench.panel.hidden",
+    "value": "false"
+  },
+  {
+    "key": "workbench.auxiliaryBar.hidden",
+    "value": "false"
+  },
+  {
+    "key": "workbench.statusBar.hidden",
+    "value": "false"
+  },
+  {
+    "key": "workbench.panel.aichat.numberOfVisibleViews",
+    "value": "1"
+  },
+  {
+    "key": "workbench.panel.chat.numberOfVisibleViews",
+    "value": "0"
+  },
+  {
+    "key": "notepad.reactiveStorageId",
+    "value": "{\"notepads\":{},\"notepadDataVersion\":0}"
+  },
+  {
+    "key": "interactive.sessions",
+    "value": "[]"
+  },
+  {
+    "key": "comments.continueOnComments",
+    "value": "[]"
+  },
+  {
+    "key": "memento/workbench.editors.files.textFileEditor",
+    "value": "{\"textEditorViewState\":[[\"file:///c%3A/inetpub/wwwroot/asp-classic/Utilities\",{\"0\":{\"cursorState\":[{\"inSelectionMode\":false,\"selectionStart\":{\"lineNumber\":1,\"column\":1},\"position\":{\"lineNumber\":1,\"column\":1}}],\"viewState\":{\"scrollLeft\":0,\"firstPosition\":{\"lineNumber\":1,\"column\":1},\"firstPositionDeltaTop\":0},\"contributionsState\":{\"editor.contrib.folding\":{\"lineCount\":176,\"foldedImports\":false},\"editor.contrib.wordHighlighter\":false}}}]]}"
+  },
+  {
+    "key": "terminal.numberOfVisibleViews",
+    "value": "1"
+  },
+  {
+    "key": "workbench.explorer.views.state",
+    "value": "{\"notepad\":{\"collapsed\":true,\"isHidden\":true,\"size\":22},\"outline\":{\"collapsed\":true,\"isHidden\":true,\"size\":22},\"timeline\":{\"collapsed\":true,\"isHidden\":true,\"size\":22},\"workbench.explorer.openEditorsView\":{\"collapsed\":false,\"isHidden\":true},\"workbench.explorer.fileView\":{\"collapsed\":false,\"isHidden\":true,\"size\":799},\"npm\":{\"collapsed\":true,\"isHidden\":true}}"
+  },
+  {
+    "key": "terminal",
+    "value": "{\"terminal\":{\"collapsed\":false,\"isHidden\":true,\"size\":720}}"
+  },
+  {
+    "key": "workbench.panel.composerChatViewPane",
+    "value": "{\"workbench.panel.aichat.view.df92f058-a53b-4dac-9fcf-76f976d27b0c\":{\"collapsed\":false,\"isHidden\":false,\"size\":865}}"
+  },
+  {
+    "key": "workbench.explorer.treeViewState",
+    "value": "{\"focus\":[\"file:///c%3A/inetpub/wwwroot/asp-classic::file:///c%3A/inetpub/wwwroot/asp-classic/Security.asp\"],\"selection\":[\"file:///c%3A/inetpub/wwwroot/asp-classic::file:///c%3A/inetpub/wwwroot/asp-classic/Utilities\"],\"expanded\":[],\"scrollTop\":0}"
+  },
+  {
+    "key": "aiService.generations",
+    "value": "[{\"unixMs\":1753072467190,\"generationUUID\":\"39c347a7-36f8-4cae-be93-6bf239b8f08a\",\"type\":\"composer\",\"textDescription\":\"analyze this application and give the run cmmandas\"},{\"unixMs\":1753072559321,\"generationUUID\":\"74e193a0-eb04-482b-892a-2995eae2514b\",\"type\":\"composer\",\"textDescription\":\"\"},{\"unixMs\":1753072653757,\"generationUUID\":\"c95c7663-8ace-4391-9554-40bf6f313ff8\",\"type\":\"composer\",\"textDescription\":\"Most likely causes:\\nIt is possible that a handler mapping is missing. By default, the static file handler processes all content.\\nThe feature you are trying to use may not be installed.\\nThe appropriate MIME map is not enabled for the Web site or application. (Warning: Do not create a MIME map for content that users should not download, such as .ASPX pages or .config files.)\\nIf ASP.NET is not installed.\"},{\"unixMs\":1753072720280,\"generationUUID\":\"d5f0e8ef-018a-45d1-9aec-7d25967b571b\",\"type\":\"composer\",\"textDescription\":\"Error: 50\\n\\nThe operation is complete but IIS-ASP feature was not enabled.\\nA required parent feature may not be enabled. You can use the /enable-feature /all option to automatically enable each parent feature from the following list. If the parent feature(s) are already enabled, refer to the log file for further diagnostics.\\nIIS-ISAPIExtensions\"},{\"unixMs\":1753072867277,\"generationUUID\":\"62e8af69-983c-44ee-b244-0c911413f379\",\"type\":\"composer\",\"textDescription\":\"http://localhost/asp-classic/Security.asp coming as emtpy\"}]"
+  },
+  {
+    "key": "aiService.prompts",
+    "value": "[{\"text\":\"analyze this application and give the run cmmandas\",\"commandType\":4},{\"text\":\"\",\"commandType\":4},{\"text\":\"Most likely causes:\\nIt is possible that a handler mapping is missing. By default, the static file handler processes all content.\\nThe feature you are trying to use may not be installed.\\nThe appropriate MIME map is not enabled for the Web site or application. (Warning: Do not create a MIME map for content that users should not download, such as .ASPX pages or .config files.)\\nIf ASP.NET is not installed.\",\"commandType\":4},{\"text\":\"Error: 50\\n\\nThe operation is complete but IIS-ASP feature was not enabled.\\nA required parent feature may not be enabled. You can use the /enable-feature /all option to automatically enable each parent feature from the following list. If the parent feature(s) are already enabled, refer to the log file for further diagnostics.\\nIIS-ISAPIExtensions\",\"commandType\":4},{\"text\":\"http://localhost/asp-classic/Security.asp coming as emtpy\",\"commandType\":4}]"
+  },
+  {
+    "key": "codelens/cache2",
+    "value": "{\"file:///c%3A/inetpub/wwwroot/asp-classic/Utilities\":{\"lineCount\":176,\"lines\":[]}}"
+  },
+  {
+    "key": "workbench.backgroundComposer.workspacePersistentData",
+    "value": "{\"setupPath2\":\"default\",\"terminals\":[],\"ranTerminalCommands\":[],\"installScript\":\"\",\"startScript\":\"\",\"currentSetupStep\":\"start-default-vm\",\"furthestSetupStep\":\"start-default-vm\",\"customDockerfileContents\":\"\",\"cachedSelectedGitState\":{\"ref\":\"master\",\"continueRef\":\"master\",\"baseRef\":\"master\",\"autoBranch\":true}}"
+  },
+  {
+    "key": "__$__isNewStorageMarker",
+    "value": "false"
+  },
+  {
+    "key": "terminal.integrated.layoutInfo",
+    "value": "{\"workspaceId\":\"50f31ccdf73a38057f8e865b8870867c\",\"tabs\":[{\"isActive\":true,\"activePersistentProcessId\":1,\"terminals\":[{\"relativeSize\":1,\"terminal\":1}]}]}"
+  },
+  {
+    "key": "notepadData",
+    "value": "{\"notepads\":{},\"notepadDataVersion\":0}"
+  },
+  {
+    "key": "composer.composerData",
+    "value": "{\"allComposers\":[{\"type\":\"head\",\"composerId\":\"df92f058-a53b-4dac-9fcf-76f976d27b0c\",\"name\":\"Analyze application and provide run commands\",\"lastUpdatedAt\":1753072875569,\"createdAt\":1753072448940,\"unifiedMode\":\"agent\",\"forceMode\":\"edit\",\"hasUnreadMessages\":false},{\"type\":\"head\",\"composerId\":\"ab2489fa-5899-43f2-b850-a6ff894514dc\",\"createdAt\":1753072448941,\"unifiedMode\":\"chat\",\"forceMode\":\"edit\",\"hasUnreadMessages\":false}],\"selectedComposerIds\":[\"df92f058-a53b-4dac-9fcf-76f976d27b0c\"],\"hasMigratedComposerData\":true,\"hasMigratedMultipleComposers\":true}"
+  },
+  {
+    "key": "workbench.panel.viewContainersWorkspaceState",
+    "value": "[{\"id\":\"workbench.panel.markers\",\"visible\":true},{\"id\":\"workbench.panel.output\",\"visible\":true},{\"id\":\"workbench.panel.repl\",\"visible\":true},{\"id\":\"terminal\",\"visible\":true},{\"id\":\"workbench.panel.testResults\",\"visible\":false},{\"id\":\"~remote.forwardedPortsContainer\",\"visible\":true},{\"id\":\"refactorPreview\",\"visible\":false}]"
+  },
+  {
+    "key": "terminal.integrated.environmentVariableCollectionsV2",
+    "value": "[]"
+  },
+  {
+    "key": "__$__targetStorageMarker",
+    "value": "{\"cursorAuth/workspaceOpenedDate\":1,\"workbench.explorer.views.state\":1,\"workbench.view.search.state\":1,\"workbench.scm.views.state\":1,\"workbench.panel.markers\":1,\"workbench.panel.output\":1,\"terminal\":1,\"workbench.panel.viewContainersWorkspaceState\":1,\"workbench.auxiliarybar.initialViewContainers\":1,\"workbench.auxiliarybar.viewContainersWorkspaceState\":1,\"workbench.panel.composerChatViewPane\":1,\"workbench.auxiliarybar.activepanelid\":1,\"workbench.explorer.treeViewState\":1,\"workbench.view.remote.state\":1,\"workbench.view.extension.github-pull-requests.state\":1,\"workbench.view.extension.workspaceViewer.state\":1,\"debug.selectedroot\":1,\"workbench.view.debug.state\":1,\"output.activechannel\":1,\"~remote.forwardedPortsContainer\":1,\"workbench.panel.repl\":1,\"debug.uxstate\":1,\"terminal.integrated.environmentVariableCollectionsV2\":1,\"vscode.git\":1,\"anysphere.cursor-retrieval\":1,\"GitHub.vscode-pull-request-github\":1,\"aiService.generations\":1,\"workbench.editor.languageDetectionOpenedLanguages.workspace\":1,\"src.vs.platform.reactivestorage.browser.reactiveStorageServiceImpl.persistentStorage.workspaceUser\":0,\"history.entries\":1,\"workbench.view.explorer.numberOfVisibleViews\":1,\"workbench.editor.centered\":1,\"workbench.zenMode.active\":1,\"workbench.zenMode.exitInfo\":1,\"workbench.panel.wasLastMaximized\":1,\"workbench.sideBar.position\":1,\"workbench.panel.position\":1,\"workbench.activityBar.hidden\":1,\"workbench.sideBar.hidden\":1,\"workbench.editor.hidden\":1,\"workbench.panel.hidden\":1,\"workbench.auxiliaryBar.hidden\":1,\"workbench.statusBar.hidden\":1,\"workbench.panel.aichat.numberOfVisibleViews\":1,\"workbench.panel.chat.numberOfVisibleViews\":1,\"aiService.prompts\":1,\"notepad.reactiveStorageId\":1,\"interactive.sessions\":1,\"notepadData\":1,\"comments.continueOnComments\":0,\"memento/workbench.editors.files.textFileEditor\":1,\"terminal.numberOfVisibleViews\":1,\"composer.composerData\":1,\"codelens/cache2\":1,\"workbench.backgroundComposer.workspacePersistentData\":1,\"terminal.integrated.layoutInfo\":1,\"terminal.integrated.bufferState\":1,\"lifecyle.lastShutdownReason\":1}"
+  },
+  {
+    "key": "terminal.integrated.bufferState",
+    "value": "{\"version\":1,\"state\":[{\"id\":1,\"shellLaunchConfig\":{\"shellIntegrationEnvironmentReporting\":false,\"icon\":{\"id\":\"terminal-powershell\"},\"executable\":\"C:\\\\WINDOWS\\\\System32\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe\",\"useShellEnvironment\":true,\"cwd\":\"C:\\\\inetpub\\\\wwwroot\\\\asp-classic\",\"initialText\":\"PS C:\\\\inetpub\\\\wwwroot\\\\asp-classic> \\u001b[93mGet-WindowsFeature \\u001b[90m-Name \\u001b[37mWeb-Server\\r\\n\\u001b[91mGet-WindowsFeature : The term 'Get-WindowsFeature' is \\r\\nnot recognized as the name of a cmdlet, function, script \\r\\nfile, or operable program. Check the spelling of the \\r\\nname, or if a path was included, verify that the path is \\r\\ncorrect and try again.\\r\\nAt line:1 char:1\\r\\n+ Get-WindowsFeature -Name Web-Server\\r\\n+ ~~~~~~~~~~~~~~~~~~\\r\\n    + CategoryInfo          : ObjectNotFound: (Get-Windo \\r\\n   wsFeature:String) [], CommandNotFoundException\\r\\n    + FullyQualifiedErrorId : CommandNotFoundException\\r\\n \\r\\n\\u001b[0mPS C:\\\\inetpub\\\\wwwroot\\\\asp-classic> \\u001b[93miisreset \\u001b[37m/start\\r\\n\\r\\n\\u001b[0mor local group of\\r\\nthe remote computer or to the domain administrator global group.\\r\\nPS C:\\\\inetpub\\\\wwwroot\\\\asp-classic> \\u001b[93minetmgr\\r\\n\\u001b[91minetmgr : The term 'inetmgr' is not recognized as the\\r\\nname of a cmdlet, function, script file, or operable\\r\\nprogram. Check the spelling of the name, or if a path\\r\\n    + CategoryInfo          : ObjectNotFound: (inetmgr:S\\r\\n   tring) [], CommandNotFoundException\\r\\n    + FullyQualifiedErrorId : CommandNotFoundException\\r\\n\\r\\n\\u001b[0mPS C:\\\\inetpub\\\\wwwroot\\\\asp-classic> \\u001b[93mdism \\u001b[37m/online /enable-feature /featurename:IIS-ManagementConsole\\r\\n\\r\\n\\u001b[0mError: 740\\r\\n\\r\\nElevated permissions are required to run DISM.\\r\\nUse an elevated command prompt to complete these tasks.\\r\\nPS C:\\\\inetpub\\\\wwwroot\\\\asp-classic>\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\u001b[35C \\u001b[93m           \\u001b[12D\\u001b[0m\\r\\n\\u001b[0m\\u001b[7m * \\u001b[0;104m History restored \\u001b[0m\\n\\r\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\u001b[H\"},\"processDetails\":{\"id\":1,\"title\":\"powershell\",\"titleSource\":2,\"pid\":7844,\"workspaceId\":\"50f31ccdf73a38057f8e865b8870867c\",\"workspaceName\":\"asp-classic\",\"cwd\":\"C:\\\\inetpub\\\\wwwroot\\\\asp-classic\",\"isOrphan\":false,\"icon\":{\"id\":\"terminal-powershell\"},\"environmentVariableCollections\":[[\"vscode.git\",[[\"GIT_ASKPASS\",{\"variable\":\"GIT_ASKPASS\",\"value\":\"c:\\\\Users\\\\suniv\\\\AppData\\\\Local\\\\Programs\\\\cursor\\\\resources\\\\app\\\\extensions\\\\git\\\\dist\\\\askpass.sh\",\"type\":1,\"options\":{\"applyAtProcessCreation\":true,\"applyAtShellIntegration\":false}}],[\"VSCODE_GIT_ASKPASS_NODE\",{\"variable\":\"VSCODE_GIT_ASKPASS_NODE\",\"value\":\"C:\\\\Users\\\\suniv\\\\AppData\\\\Local\\\\Programs\\\\cursor\\\\Cursor.exe\",\"type\":1,\"options\":{\"applyAtProcessCreation\":true,\"applyAtShellIntegration\":false}}],[\"VSCODE_GIT_ASKPASS_EXTRA_ARGS\",{\"variable\":\"VSCODE_GIT_ASKPASS_EXTRA_ARGS\",\"value\":\"\",\"type\":1,\"options\":{\"applyAtProcessCreation\":true,\"applyAtShellIntegration\":false}}],[\"VSCODE_GIT_ASKPASS_MAIN\",{\"variable\":\"VSCODE_GIT_ASKPASS_MAIN\",\"value\":\"c:\\\\Users\\\\suniv\\\\AppData\\\\Local\\\\Programs\\\\cursor\\\\resources\\\\app\\\\extensions\\\\git\\\\dist\\\\askpass-main.js\",\"type\":1,\"options\":{\"applyAtProcessCreation\":true,\"applyAtShellIntegration\":false}}],[\"VSCODE_GIT_IPC_HANDLE\",{\"variable\":\"VSCODE_GIT_IPC_HANDLE\",\"value\":\"\\\\\\\\.\\\\pipe\\\\vscode-git-ee6998c83a-sock\",\"type\":1,\"options\":{\"applyAtProcessCreation\":true,\"applyAtShellIntegration\":false}}]],[[\"\",{\"description\":\"Enables the following features: git auth provider\"}]]]],\"hasChildProcesses\":false,\"shellIntegrationNonce\":\"9bc96d1c-7350-4c74-8dab-55a69e7182e6\"},\"processLaunchConfig\":{\"env\":{\"ALLUSERSPROFILE\":\"C:\\\\ProgramData\",\"APPDATA\":\"C:\\\\Users\\\\suniv\\\\AppData\\\\Roaming\",\"asl.log\":\"Destination=file\",\"ChocolateyInstall\":\"C:\\\\ProgramData\\\\chocolatey\",\"ChocolateyLastPathUpdate\":\"133522741943072927\",\"CHROME_CRASHPAD_PIPE_NAME\":\"\\\\\\\\.\\\\pipe\\\\crashpad_11176_LUKDQUIDGAQTSAZW\",\"CommonProgramFiles\":\"C:\\\\Program Files\\\\Common Files\",\"CommonProgramFiles(x86)\":\"C:\\\\Program Files (x86)\\\\Common Files\",\"CommonProgramW6432\":\"C:\\\\Program Files\\\\Common Files\",\"COMPUTERNAME\":\"SUNILGR\",\"ComSpec\":\"C:\\\\WINDOWS\\\\system32\\\\cmd.exe\",\"CURSOR_TRACE_ID\":\"fdc7115e063342d59503e3ecc49af76b\",\"DriverData\":\"C:\\\\Windows\\\\System32\\\\Drivers\\\\DriverData\",\"EFC_11948_1592913036\":\"1\",\"HOMEDRIVE\":\"C:\",\"HOMEPATH\":\"\\\\Users\\\\suniv\",\"IGCCSVC_DB\":\"AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAx8E9cQXDmU2n+ayhxJ9qTwQAAAACAAAAAAAQZgAAAAEAACAAAAATdb354ZOtjEmZG7NABUTAkAHaXZt3gCU/d7uR/zAXRAAAAAAOgAAAAAIAACAAAADpQYRM0VTQAFzv8fE6U5BlODTAjsq3ZxqjnqemBpUgVWAAAADzTxqjgf2isNarWjCJuj60HwKxhot1eJFD7CrU9jmjhpTqImR79jXq8Pdt7zqmWHfDc8xx0ZU1pTLG5Cpy7IBHZyQcU0gqBtaCIitbpKjYhjqo/23OsFceBYC3P3+JIfpAAAAAKHYd/djJzVw3jbj4k6y3VOTas3d22sXRAoKdwHpgSF/J4+8RZxzHA1n03G+olSGQ2Z53CzYLNBjHQe8pkVhnyQ==\",\"LOCALAPPDATA\":\"C:\\\\Users\\\\suniv\\\\AppData\\\\Local\",\"LOGONSERVER\":\"\\\\\\\\SUNILGR\",\"NUMBER_OF_PROCESSORS\":\"12\",\"NVM_HOME\":\"C:\\\\Users\\\\suniv\\\\AppData\\\\Local\\\\nvm\",\"NVM_SYMLINK\":\"C:\\\\nvm4w\\\\nodejs\",\"OneDrive\":\"C:\\\\Users\\\\suniv\\\\OneDrive\",\"OneDriveConsumer\":\"C:\\\\Users\\\\suniv\\\\OneDrive\",\"OnlineServices\":\"Online Services\",\"ORIGINAL_XDG_CURRENT_DESKTOP\":\"undefined\",\"OS\":\"Windows_NT\",\"Path\":\"c:\\\\Users\\\\suniv\\\\AppData\\\\Local\\\\Programs\\\\cursor\\\\resources\\\\app\\\\bin;C:\\\\Python312\\\\Scripts\\\\;C:\\\\Python312\\\\;C:\\\\WINDOWS\\\\system32;C:\\\\WINDOWS;C:\\\\WINDOWS\\\\System32\\\\Wbem;C:\\\\WINDOWS\\\\System32\\\\WindowsPowerShell\\\\v1.0\\\\;C:\\\\WINDOWS\\\\System32\\\\OpenSSH\\\\;C:\\\\MinGW\\\\bin;D:\\\\xampp\\\\php;C:\\\\composer;C:\\\\ProgramData\\\\chocolatey\\\\bin;C:\\\\Program Files\\\\PuTTY\\\\;C:\\\\Program Files\\\\HP\\\\HP One Agent;C:\\\\Users\\\\suniv\\\\AppData\\\\Local\\\\Microsoft\\\\WindowsApps;C:\\\\ProgramData\\\\suniv\\\\GitHubDesktop\\\\bin;C:\\\\Users\\\\suniv\\\\AppData\\\\Roaming\\\\Composer\\\\vendor\\\\bin;C:\\\\Users\\\\suniv\\\\AppData\\\\Roaming\\\\npm;C:\\\\Program Files\\\\JetBrains\\\\PyCharm Community Edition 2023.3.4\\\\bin;C:\\\\WINDOWS\\\\system32;C:\\\\WINDOWS;C:\\\\WINDOWS\\\\System32\\\\Wbem;C:\\\\WINDOWS\\\\System32\\\\WindowsPowerShell\\\\v1.0\\\\;C:\\\\WINDOWS\\\\System32\\\\OpenSSH\\\\;C:\\\\Program Files\\\\cursor\\\\resources\\\\app\\\\bin;C:\\\\Program Files\\\\Git\\\\cmd;%NVM_HOME%;%NVM_SYMLINK%;C:\\\\Program Files (x86)\\\\Windows Kits\\\\10\\\\Windows Performance Toolkit\\\\;C:\\\\Users\\\\suniv\\\\.cargo\\\\bin;C:\\\\Users\\\\suniv\\\\AppData\\\\Local\\\\Microsoft\\\\WindowsApps;C:\\\\Users\\\\suniv\\\\AppData\\\\Local\\\\Programs\\\\Microsoft VS Code\\\\bin;C:\\\\MinGW\\\\bin;C:\\\\ProgramData\\\\suniv\\\\GitHubDesktop\\\\bin;C:\\\\Users\\\\suniv\\\\AppData\\\\Roaming\\\\Composer\\\\vendor\\\\bin;C:\\\\Users\\\\suniv\\\\AppData\\\\Roaming\\\\npm;C:\\\\Program Files\\\\JetBrains\\\\PyCharm Community Edition 2023.3.4\\\\bin;;C:\\\\Users\\\\suniv\\\\AppData\\\\Local\\\\Programs\\\\cursor\\\\resources\\\\app\\\\bin;C:\\\\Users\\\\suniv\\\\.cargo\\\\bin;C:\\\\Program Files\\\\Git\\\\bin;C:\\\\msys64\\\\usr\\\\bin;C:\\\\Users\\\\suniv\\\\AppData\\\\Local\\\\nvm;C:\\\\nvm4w\\\\nodejs;C:\\\\Users\\\\suniv\\\\AppData\\\\Local\\\\nvm;\",\"PATHEXT\":\".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW\",\"platformcode\":\"M8\",\"PROCESSOR_ARCHITECTURE\":\"AMD64\",\"PROCESSOR_IDENTIFIER\":\"Intel64 Family 6 Model 154 Stepping 4, GenuineIntel\",\"PROCESSOR_LEVEL\":\"6\",\"PROCESSOR_REVISION\":\"9a04\",\"ProgramData\":\"C:\\\\ProgramData\",\"ProgramFiles\":\"C:\\\\Program Files\",\"ProgramFiles(x86)\":\"C:\\\\Program Files (x86)\",\"ProgramW6432\":\"C:\\\\Program Files\",\"PSModulePath\":\"C:\\\\Program Files\\\\WindowsPowerShell\\\\Modules;C:\\\\WINDOWS\\\\system32\\\\WindowsPowerShell\\\\v1.0\\\\Modules\",\"PUBLIC\":\"C:\\\\Users\\\\Public\",\"PyCharm Community Edition\":\"C:\\\\Program Files\\\\JetBrains\\\\PyCharm Community Edition 2023.3.4\\\\bin;\",\"RegionCode\":\"APJ\",\"SESSIONNAME\":\"Console\",\"SystemDrive\":\"C:\",\"SystemRoot\":\"C:\\\\WINDOWS\",\"TEMP\":\"C:\\\\Users\\\\suniv\\\\AppData\\\\Local\\\\Temp\",\"TMP\":\"C:\\\\Users\\\\suniv\\\\AppData\\\\Local\\\\Temp\",\"USERDOMAIN\":\"SUNILGR\",\"USERDOMAIN_ROAMINGPROFILE\":\"SUNILGR\",\"USERNAME\":\"suniv\",\"USERPROFILE\":\"C:\\\\Users\\\\suniv\",\"windir\":\"C:\\\\WINDOWS\",\"ZES_ENABLE_SYSMAN\":\"1\",\"TERM_PROGRAM\":\"vscode\",\"TERM_PROGRAM_VERSION\":\"1.2.4\",\"LANG\":\"en_US.UTF-8\",\"COLORTERM\":\"truecolor\",\"GIT_ASKPASS\":\"c:\\\\Users\\\\suniv\\\\AppData\\\\Local\\\\Programs\\\\cursor\\\\resources\\\\app\\\\extensions\\\\git\\\\dist\\\\askpass.sh\",\"VSCODE_GIT_ASKPASS_NODE\":\"C:\\\\Users\\\\suniv\\\\AppData\\\\Local\\\\Programs\\\\cursor\\\\Cursor.exe\",\"VSCODE_GIT_ASKPASS_EXTRA_ARGS\":\"\",\"VSCODE_GIT_ASKPASS_MAIN\":\"c:\\\\Users\\\\suniv\\\\AppData\\\\Local\\\\Programs\\\\cursor\\\\resources\\\\app\\\\extensions\\\\git\\\\dist\\\\askpass-main.js\",\"VSCODE_GIT_IPC_HANDLE\":\"\\\\\\\\.\\\\pipe\\\\vscode-git-ee6998c83a-sock\",\"VSCODE_INJECTION\":\"1\",\"VSCODE_NONCE\":\"9bc96d1c-7350-4c74-8dab-55a69e7182e6\",\"VSCODE_STABLE\":\"1\"},\"executableEnv\":{\"ALLUSERSPROFILE\":\"C:\\\\ProgramData\",\"APPDATA\":\"C:\\\\Users\\\\suniv\\\\AppData\\\\Roaming\",\"asl.log\":\"Destination=file\",\"ChocolateyInstall\":\"C:\\\\ProgramData\\\\chocolatey\",\"ChocolateyLastPathUpdate\":\"133522741943072927\",\"CHROME_CRASHPAD_PIPE_NAME\":\"\\\\\\\\.\\\\pipe\\\\crashpad_7340_VDUXFQZSOTCCKLYS\",\"CommonProgramFiles\":\"C:\\\\Program Files\\\\Common Files\",\"CommonProgramFiles(x86)\":\"C:\\\\Program Files (x86)\\\\Common Files\",\"CommonProgramW6432\":\"C:\\\\Program Files\\\\Common Files\",\"COMPUTERNAME\":\"SUNILGR\",\"ComSpec\":\"C:\\\\WINDOWS\\\\system32\\\\cmd.exe\",\"CURSOR_TRACE_ID\":\"f009a856521b4373a26140c7e68fb1ef\",\"DriverData\":\"C:\\\\Windows\\\\System32\\\\Drivers\\\\DriverData\",\"EFC_12276_1592913036\":\"1\",\"FPS_BROWSER_APP_PROFILE_STRING\":\"Internet Explorer\",\"FPS_BROWSER_USER_PROFILE_STRING\":\"Default\",\"HOMEDRIVE\":\"C:\",\"HOMEPATH\":\"\\\\Users\\\\suniv\",\"IGCCSVC_DB\":\"AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAx8E9cQXDmU2n+ayhxJ9qTwQAAAACAAAAAAAQZgAAAAEAACAAAAATdb354ZOtjEmZG7NABUTAkAHaXZt3gCU/d7uR/zAXRAAAAAAOgAAAAAIAACAAAADpQYRM0VTQAFzv8fE6U5BlODTAjsq3ZxqjnqemBpUgVWAAAADzTxqjgf2isNarWjCJuj60HwKxhot1eJFD7CrU9jmjhpTqImR79jXq8Pdt7zqmWHfDc8xx0ZU1pTLG5Cpy7IBHZyQcU0gqBtaCIitbpKjYhjqo/23OsFceBYC3P3+JIfpAAAAAKHYd/djJzVw3jbj4k6y3VOTas3d22sXRAoKdwHpgSF/J4+8RZxzHA1n03G+olSGQ2Z53CzYLNBjHQe8pkVhnyQ==\",\"LOCALAPPDATA\":\"C:\\\\Users\\\\suniv\\\\AppData\\\\Local\",\"LOGONSERVER\":\"\\\\\\\\SUNILGR\",\"NUMBER_OF_PROCESSORS\":\"12\",\"NVM_HOME\":\"C:\\\\Users\\\\suniv\\\\AppData\\\\Local\\\\nvm\",\"NVM_SYMLINK\":\"C:\\\\nvm4w\\\\nodejs\",\"OneDrive\":\"C:\\\\Users\\\\suniv\\\\OneDrive\",\"OneDriveConsumer\":\"C:\\\\Users\\\\suniv\\\\OneDrive\",\"OnlineServices\":\"Online Services\",\"ORIGINAL_XDG_CURRENT_DESKTOP\":\"undefined\",\"OS\":\"Windows_NT\",\"Path\":\"c:\\\\Users\\\\suniv\\\\AppData\\\\Local\\\\Programs\\\\cursor\\\\resources\\\\app\\\\bin;C:\\\\Python312\\\\Scripts\\\\;C:\\\\Python312\\\\;C:\\\\WINDOWS\\\\system32;C:\\\\WINDOWS;C:\\\\WINDOWS\\\\System32\\\\Wbem;C:\\\\WINDOWS\\\\System32\\\\WindowsPowerShell\\\\v1.0\\\\;C:\\\\WINDOWS\\\\System32\\\\OpenSSH\\\\;C:\\\\MinGW\\\\bin;D:\\\\xampp\\\\php;C:\\\\composer;C:\\\\ProgramData\\\\chocolatey\\\\bin;C:\\\\Program Files\\\\PuTTY\\\\;C:\\\\Program Files\\\\HP\\\\HP One Agent;C:\\\\Users\\\\suniv\\\\AppData\\\\Local\\\\Microsoft\\\\WindowsApps;C:\\\\ProgramData\\\\suniv\\\\GitHubDesktop\\\\bin;C:\\\\Users\\\\suniv\\\\AppData\\\\Roaming\\\\Composer\\\\vendor\\\\bin;C:\\\\Users\\\\suniv\\\\AppData\\\\Roaming\\\\npm;C:\\\\Program Files\\\\JetBrains\\\\PyCharm Community Edition 2023.3.4\\\\bin;C:\\\\WINDOWS\\\\system32;C:\\\\WINDOWS;C:\\\\WINDOWS\\\\System32\\\\Wbem;C:\\\\WINDOWS\\\\System32\\\\WindowsPowerShell\\\\v1.0\\\\;C:\\\\WINDOWS\\\\System32\\\\OpenSSH\\\\;C:\\\\Program Files\\\\cursor\\\\resources\\\\app\\\\bin;C:\\\\Program Files\\\\Git\\\\cmd;%NVM_HOME%;%NVM_SYMLINK%;C:\\\\Program Files (x86)\\\\Windows Kits\\\\10\\\\Windows Performance Toolkit\\\\;C:\\\\Users\\\\suniv\\\\.cargo\\\\bin;C:\\\\Users\\\\suniv\\\\AppData\\\\Local\\\\Microsoft\\\\WindowsApps;C:\\\\Users\\\\suniv\\\\AppData\\\\Local\\\\Programs\\\\Microsoft VS Code\\\\bin;C:\\\\MinGW\\\\bin;C:\\\\ProgramData\\\\suniv\\\\GitHubDesktop\\\\bin;C:\\\\Users\\\\suniv\\\\AppData\\\\Roaming\\\\Composer\\\\vendor\\\\bin;C:\\\\Users\\\\suniv\\\\AppData\\\\Roaming\\\\npm;C:\\\\Program Files\\\\JetBrains\\\\PyCharm Community Edition 2023.3.4\\\\bin;;C:\\\\Users\\\\suniv\\\\AppData\\\\Local\\\\Programs\\\\cursor\\\\resources\\\\app\\\\bin;C:\\\\Users\\\\suniv\\\\.cargo\\\\bin;C:\\\\Program Files\\\\Git\\\\bin;C:\\\\msys64\\\\usr\\\\bin;C:\\\\Users\\\\suniv\\\\AppData\\\\Local\\\\nvm;C:\\\\nvm4w\\\\nodejs;C:\\\\Users\\\\suniv\\\\AppData\\\\Local\\\\nvm;\",\"PATHEXT\":\".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW\",\"platformcode\":\"M8\",\"PROCESSOR_ARCHITECTURE\":\"AMD64\",\"PROCESSOR_IDENTIFIER\":\"Intel64 Family 6 Model 154 Stepping 4, GenuineIntel\",\"PROCESSOR_LEVEL\":\"6\",\"PROCESSOR_REVISION\":\"9a04\",\"ProgramData\":\"C:\\\\ProgramData\",\"ProgramFiles\":\"C:\\\\Program Files\",\"ProgramFiles(x86)\":\"C:\\\\Program Files (x86)\",\"ProgramW6432\":\"C:\\\\Program Files\",\"PSModulePath\":\"C:\\\\Program Files\\\\WindowsPowerShell\\\\Modules;C:\\\\WINDOWS\\\\system32\\\\WindowsPowerShell\\\\v1.0\\\\Modules\",\"PUBLIC\":\"C:\\\\Users\\\\Public\",\"PyCharm Community Edition\":\"C:\\\\Program Files\\\\JetBrains\\\\PyCharm Community Edition 2023.3.4\\\\bin;\",\"RegionCode\":\"APJ\",\"SESSIONNAME\":\"Console\",\"SystemDrive\":\"C:\",\"SystemRoot\":\"C:\\\\WINDOWS\",\"TEMP\":\"C:\\\\Users\\\\suniv\\\\AppData\\\\Local\\\\Temp\",\"TMP\":\"C:\\\\Users\\\\suniv\\\\AppData\\\\Local\\\\Temp\",\"USERDOMAIN\":\"SUNILGR\",\"USERDOMAIN_ROAMINGPROFILE\":\"SUNILGR\",\"USERNAME\":\"suniv\",\"USERPROFILE\":\"C:\\\\Users\\\\suniv\",\"VSCODE_CODE_CACHE_PATH\":\"C:\\\\Users\\\\suniv\\\\AppData\\\\Roaming\\\\Cursor\\\\CachedData\\\\a8e95743c5268be73767c46944a71f4465d05c90\",\"VSCODE_CWD\":\"C:\\\\Users\\\\suniv\\\\AppData\\\\Local\\\\Programs\\\\cursor\",\"VSCODE_IPC_HOOK\":\"\\\\\\\\.\\\\pipe\\\\aa6f8239-1.2.4-main-sock\",\"VSCODE_NLS_CONFIG\":\"{\\\"userLocale\\\":\\\"en-us\\\",\\\"osLocale\\\":\\\"en-in\\\",\\\"resolvedLanguage\\\":\\\"en\\\",\\\"defaultMessagesFile\\\":\\\"C:\\\\\\\\Users\\\\\\\\suniv\\\\\\\\AppData\\\\\\\\Local\\\\\\\\Programs\\\\\\\\cursor\\\\\\\\resources\\\\\\\\app\\\\\\\\out\\\\\\\\nls.messages.json\\\",\\\"locale\\\":\\\"en-us\\\",\\\"availableLanguages\\\":{}}\",\"VSCODE_PID\":\"7340\",\"windir\":\"C:\\\\WINDOWS\",\"ZES_ENABLE_SYSMAN\":\"1\",\"__COMPAT_LAYER\":\"DetectorsAppHealth\"},\"options\":{\"shellIntegration\":{\"enabled\":true,\"suggestEnabled\":false,\"nonce\":\"9bc96d1c-7350-4c74-8dab-55a69e7182e6\"},\"windowsEnableConpty\":true,\"windowsUseConptyDll\":false,\"environmentVariableCollections\":[[\"vscode.git\",[[\"GIT_ASKPASS\",{\"variable\":\"GIT_ASKPASS\",\"value\":\"c:\\\\Users\\\\suniv\\\\AppData\\\\Local\\\\Programs\\\\cursor\\\\resources\\\\app\\\\extensions\\\\git\\\\dist\\\\askpass.sh\",\"type\":1,\"options\":{\"applyAtProcessCreation\":true,\"applyAtShellIntegration\":false}}],[\"VSCODE_GIT_ASKPASS_NODE\",{\"variable\":\"VSCODE_GIT_ASKPASS_NODE\",\"value\":\"C:\\\\Users\\\\suniv\\\\AppData\\\\Local\\\\Programs\\\\cursor\\\\Cursor.exe\",\"type\":1,\"options\":{\"applyAtProcessCreation\":true,\"applyAtShellIntegration\":false}}],[\"VSCODE_GIT_ASKPASS_EXTRA_ARGS\",{\"variable\":\"VSCODE_GIT_ASKPASS_EXTRA_ARGS\",\"value\":\"\",\"type\":1,\"options\":{\"applyAtProcessCreation\":true,\"applyAtShellIntegration\":false}}],[\"VSCODE_GIT_ASKPASS_MAIN\",{\"variable\":\"VSCODE_GIT_ASKPASS_MAIN\",\"value\":\"c:\\\\Users\\\\suniv\\\\AppData\\\\Local\\\\Programs\\\\cursor\\\\resources\\\\app\\\\extensions\\\\git\\\\dist\\\\askpass-main.js\",\"type\":1,\"options\":{\"applyAtProcessCreation\":true,\"applyAtShellIntegration\":false}}],[\"VSCODE_GIT_IPC_HANDLE\",{\"variable\":\"VSCODE_GIT_IPC_HANDLE\",\"value\":\"\\\\\\\\.\\\\pipe\\\\vscode-git-ee6998c83a-sock\",\"type\":1,\"options\":{\"applyAtProcessCreation\":true,\"applyAtShellIntegration\":false}}]],[[\"\",{\"description\":\"Enables the following features: git auth provider\"}]]]],\"workspaceFolder\":{\"uri\":{\"$mid\":1,\"fsPath\":\"c:\\\\inetpub\\\\wwwroot\\\\asp-classic\",\"_sep\":1,\"external\":\"file:///c%3A/inetpub/wwwroot/asp-classic\",\"path\":\"/c:/inetpub/wwwroot/asp-classic\",\"scheme\":\"file\"},\"name\":\"asp-classic\",\"index\":0}}},\"unicodeVersion\":\"11\",\"replayEvent\":{\"events\":[{\"cols\":91,\"rows\":17,\"data\":\"PS C:\\\\inetpub\\\\wwwroot\\\\asp-classic> \\u001b[93mGet-WindowsFeature \\u001b[90m-Name \\u001b[37mWeb-Server\\r\\n\\u001b[91mGet-WindowsFeature : The term 'Get-WindowsFeature' is \\r\\nnot recognized as the name of a cmdlet, function, script \\r\\nfile, or operable program. Check the spelling of the \\r\\nname, or if a path was included, verify that the path is \\r\\ncorrect and try again.\\r\\nAt line:1 char:1\\r\\n+ Get-WindowsFeature -Name Web-Server\\r\\n+ ~~~~~~~~~~~~~~~~~~\\r\\n    + CategoryInfo          : ObjectNotFound: (Get-Windo \\r\\n   wsFeature:String) [], CommandNotFoundException\\r\\n    + FullyQualifiedErrorId : CommandNotFoundException\\r\\n \\r\\n\\u001b[0mPS C:\\\\inetpub\\\\wwwroot\\\\asp-classic> \\u001b[93miisreset \\u001b[37m/start\\r\\n\\r\\n\\u001b[0mor local group of\\r\\nthe remote computer or to the domain administrator global group.\\r\\nPS C:\\\\inetpub\\\\wwwroot\\\\asp-classic> \\u001b[93minetmgr\\r\\n\\u001b[91minetmgr : The term 'inetmgr' is not recognized as the\\r\\nname of a cmdlet, function, script file, or operable\\r\\nprogram. Check the spelling of the name, or if a path\\r\\n    + CategoryInfo          : ObjectNotFound: (inetmgr:S\\r\\n   tring) [], CommandNotFoundException\\r\\n    + FullyQualifiedErrorId : CommandNotFoundException\\r\\n\\r\\n\\u001b[0mPS C:\\\\inetpub\\\\wwwroot\\\\asp-classic> \\u001b[93mdism \\u001b[37m/online /enable-feature /featurename:IIS-ManagementConsole\\r\\n\\r\\n\\u001b[0mError: 740\\r\\n\\r\\nElevated permissions are required to run DISM.\\r\\nUse an elevated command prompt to complete these tasks.\\r\\nPS C:\\\\inetpub\\\\wwwroot\\\\asp-classic>\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\u001b[35C \\u001b[93m           \\r\\n\\u001b[39;7m * \\u001b[104;27m History restored \\u001b[0m\\r\\n\\r\\nPS C:\\\\inetpub\\\\wwwroot\\\\asp-classic> \\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\u001b[15A\\u001b[35C\"}],\"commands\":{\"isWindowsPty\":true,\"hasRichCommandDetection\":true,\"commands\":[{\"promptStartLine\":40,\"startLine\":40,\"startX\":35,\"command\":\"\",\"commandLineConfidence\":\"low\",\"isTrusted\":true,\"cwd\":\"C:\\\\inetpub\\\\wwwroot\\\\asp-classic\",\"timestamp\":0,\"duration\":0}],\"promptInputModel\":{\"modelState\":{\"value\":\"\",\"prefix\":\"\",\"suffix\":\"\",\"cursorIndex\":0,\"ghostTextIndex\":-1},\"commandStartX\":35,\"continuationPrompt\":\">> \",\"lastUserInput\":\"\"}}},\"timestamp\":1753073599816}]}"
+  },
+  {
+    "key": "lifecyle.lastShutdownReason",
+    "value": "4"
+  },
+  {
+    "key": "src.vs.platform.reactivestorage.browser.reactiveStorageServiceImpl.persistentStorage.workspaceUser",
+    "value": "{\"tasksData\":{\"tasksDataSchemaVersion\":1,\"tasks\":[{\"type\":\"draft\",\"taskId\":\"78441dd5-e207-48e6-82cc-653b37ceb444\",\"instruction\":\"\"}],\"displayedTaskId\":\"78441dd5-e207-48e6-82cc-653b37ceb444\",\"showTabs\":false,\"activeServerTaskUuids\":[]},\"onboardingMetadata\":{\"shouldAskToIndex\":true,\"shouldHideWarning\":false},\"persistentChatMetadata\":[],\"aiPanePosition\":\"sidebar\",\"shouldRerankByDefault\":false,\"indexingData\":{\"preferredEmbeddingModel\":0},\"composerState\":{\"position\":{\"x\":0,\"y\":0},\"horizontalBarSize\":0,\"tabHeight\":0,\"selectedView\":\"suggested\",\"devToolsPosition\":{\"x\":0,\"y\":0},\"memories\":[],\"isComposerBarChatCollapsed\":false,\"composerBarPosition\":null,\"enableDataHandleDebugging\":false,\"shouldExplicitlyShowFgComposerInBg\":false,\"isDebuggingHumanFeedbackPanelForEditFile\":false},\"isCursorPredictionOutOfRangeIndicatorMinimized2\":true,\"needsComposerInitialOpening\":false,\"approvedProjectMcpServers\":[],\"disabledMcpServers\":[],\"eligibleForSnippetLearning\":false,\"solidJSLeakRecords\":[],\"exampleCodebaseQuestions\":[],\"SPECIAL_KEY_id\":\"60fca9d7-0eab-4e88-af6d-e4968c54f365\"}"
+  }
+]
