@@ -173,14 +173,14 @@
     <% if (metricsData && metricsData.promptAcceptanceReport && metricsData.promptAcceptanceReport.length) { %>
       <table style="width:100%; font-size: 0.95em;" id="promptAcceptanceTable" class="datatable">
         <thead>
-          <tr><th>#</th><th>Prompt</th><th>Category</th><th>Type</th><th>Status</th><th>Response</th></tr>
+          <tr><th>#</th><th>Prompt</th><!-- <th>Category</th> --> <th>Type</th><th>Status</th><th>Response</th></tr>
         </thead>
         <tbody>
           <% metricsData.promptAcceptanceReport.slice().reverse().slice(0, 10).forEach(function(item, idx) { %>
             <tr>
               <td><%= idx+1 %></td>
               <td><%= item.prompt %></td>
-              <td><%= item.category || '-' %></td>
+              <!-- <td><%= item.category || '-' %></td> -->
               <td><%= item.responseRaw && item.responseRaw.type ? item.responseRaw.type : '-' %></td>
               <td><%= item.status %></td>
               <td>
@@ -219,7 +219,7 @@
     <% if (metricsData && metricsData.sensitiveResults && metricsData.sensitiveResults.length > 0) { %>
       <table style="width:100%; font-size: 0.95em;" id="sensitiveTable" class="datatable">
         <thead>
-          <tr><th>#</th><th>Keyword</th><th>Context</th><!-- <th>File Path</th> --></tr>
+          <tr><th>#</th><th>Keyword</th><th>Section</th><!-- <th>File Path</th> --></tr>
         </thead>
         <tbody>
           <% metricsData.sensitiveResults.slice().reverse().slice(0, 10).forEach(function(finding, idx) { %>

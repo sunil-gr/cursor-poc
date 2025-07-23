@@ -9,14 +9,14 @@
     <% if (records && records.length) { %>
       <table style="width:100%; font-size: 0.95em;" id="promptAcceptanceAllTable">
         <thead>
-          <tr><th>#</th><th>Prompt</th><th>Category</th><th>Type</th><th>Status</th><th>Response</th></tr>
+          <tr><th>#</th><th>Prompt</th><!-- <th>Category</th> --> <th>Type</th><th>Status</th><th>Response</th></tr>
         </thead>
         <tbody>
           <% records.forEach(function(item, idx) { %>
             <tr>
               <td><%= idx+1 %></td>
               <td><%= item.prompt %></td>
-              <td><%= item.category || '-' %></td>
+              <!-- <td><%= item.category || '-' %></td> -->
               <td><%= item.responseRaw && item.responseRaw.type ? item.responseRaw.type : '-' %></td>
               <td><%= item.status %></td>
               <td>

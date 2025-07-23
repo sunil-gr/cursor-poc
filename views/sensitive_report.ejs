@@ -63,7 +63,7 @@
     <% if (results && results.length) { %>
       <table id="sensitiveTable" style="width:100%; font-size: 0.95em;">
         <thead>
-          <tr><th>#</th><th>Keyword</th><th>Context</th><th>Entry</th></tr>
+          <tr><th>#</th><th>Keyword</th><th>Section </th><!-- <th>Entry</th>--></tr>
         </thead>
         <tbody>
           <% results.forEach(function(finding, idx) { %>
@@ -71,7 +71,7 @@
               <td><%= idx+1 %></td>
               <td><%= finding.keyword %></td>
               <td><%= finding.context %></td>
-              <td><%= finding.entry %></td>
+              <!-- <td><%= finding.entry %></td> -->
             </tr>
           <% }) %>
         </tbody>
