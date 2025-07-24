@@ -78,7 +78,8 @@ function getUsageMetricsData(req, res) {
     // Aggregate data from all logs, filter by data date
     let prompts = [], generations = [], historyEntries = [], languages = [];
     let composerData = null, searchHistory = null, aichatViews = 0, terminalViews = 0;
-    const allUniqueLanguages = new Set();
+    // Count all languages by frequency
+    const languageCounts = {};
     for (const log of allLogs) {
       const logData = JSON.parse(fs.readFileSync(log.path, 'utf-8'));
       const logStat = fs.statSync(log.path);
@@ -127,18 +128,70 @@ function getUsageMetricsData(req, res) {
       historyEntries = historyEntries.concat(getVal('history.entries') || []);
       const langs = getVal('workbench.editor.languageDetectionOpenedLanguages.workspace') || [];
       langs.forEach(l => {
-        allUniqueLanguages.add(l[0]);
+        if (!l[0]) return;
+        languageCounts[l[0]] = (languageCounts[l[0]] || 0) + 1;
       });
       if (!composerData) composerData = getVal('composer.composerData');
       if (!searchHistory) searchHistory = getVal('workbench.search.history');
       aichatViews = Math.max(aichatViews, parseInt(getVal('workbench.panel.aichat.numberOfVisibleViews') || 0));
       terminalViews = Math.max(terminalViews, parseInt(getVal('workbench.numberOfVisibleViews') || 0));
     }
-    // Now aggregate all unique languages and their counts
-    languages = Array.from(allUniqueLanguages).map(lang => [lang, 1]);
+    // Now aggregate all languages and their counts
+    languages = Object.entries(languageCounts);
     prompts = prompts.reverse();
     generations = generations.reverse();
     historyEntries = historyEntries.reverse();
+    
+    // Aggregate coding activity by language from history.entries
+    const extensionToLanguage = {
+      js: 'JavaScript',
+      jsx: 'JavaScript',
+      ts: 'TypeScript',
+      tsx: 'TypeScript',
+      py: 'Python',
+      java: 'Java',
+      rb: 'Ruby',
+      php: 'PHP',
+      cs: 'C#',
+      cpp: 'C++',
+      c: 'C',
+      go: 'Go',
+      rs: 'Rust',
+      swift: 'Swift',
+      kt: 'Kotlin',
+      m: 'Objective-C',
+      scala: 'Scala',
+      sh: 'Shell',
+      html: 'HTML',
+      css: 'CSS',
+      scss: 'SCSS',
+      less: 'LESS',
+      json: 'JSON',
+      xml: 'XML',
+      yaml: 'YAML',
+      yml: 'YAML',
+      md: 'Markdown',
+      sql: 'SQL',
+      dart: 'Dart',
+      vue: 'Vue',
+      svelte: 'Svelte',
+      pl: 'Perl',
+      r: 'R',
+      tex: 'LaTeX',
+      // Add more as needed
+    };
+    const codingLanguageCounts = {};
+    historyEntries.forEach(entry => {
+      let file = entry.editor?.resource || entry.path || '';
+      let ext = file.split('.').pop().toLowerCase();
+      if (!ext || ext === file) return; // skip files with no extension
+      let lang = extensionToLanguage[ext] || ext.toUpperCase();
+      codingLanguageCounts[lang] = (codingLanguageCounts[lang] || 0) + 1;
+    });
+    
+    // After building codingLanguageCounts, log the result for debugging
+    const codingLanguagesArr = Object.entries(codingLanguageCounts);
+    console.log('DEBUG codingLanguages:', codingLanguagesArr);
     
     // Prompt Acceptance Report Aggregation
     // For each prompt, determine if it was accepted (has a matching response in generations)
@@ -220,6 +273,7 @@ function getUsageMetricsData(req, res) {
       historyEntries: limitArr(historyEntries),
       searchHistory: limitArr(searchHistory),
       languages: limitArr(languages),
+      codingLanguages: codingLanguagesArr,
       aichatViews,
       terminalViews,
       promptAcceptanceReport: limitedPromptAcceptanceReport,

@@ -1162,6 +1162,25 @@ function getAllMetrics(startDate, endDate) {
         }
     });
 
+    // Aggregate coding activity by language from historyEntries
+    const extensionToLanguage = {
+      js: 'JavaScript', jsx: 'JavaScript', ts: 'TypeScript', tsx: 'TypeScript', py: 'Python', java: 'Java', rb: 'Ruby', php: 'PHP', cs: 'C#', cpp: 'C++', c: 'C', go: 'Go', rs: 'Rust', swift: 'Swift', kt: 'Kotlin', m: 'Objective-C', scala: 'Scala', sh: 'Shell', html: 'HTML', css: 'CSS', scss: 'SCSS', less: 'LESS', json: 'JSON', xml: 'XML', yaml: 'YAML', yml: 'YAML', md: 'Markdown', sql: 'SQL', dart: 'Dart', vue: 'Vue', svelte: 'Svelte', pl: 'Perl', r: 'R', tex: 'LaTeX'
+    };
+    const codingLanguageCounts = {};
+    historyEntries.forEach(entry => {
+      let file = entry.editor?.resource || entry.path || '';
+      let ext = file.split('.').pop().toLowerCase();
+      if (!ext || ext === file) return; // skip files with no extension
+      let lang = extensionToLanguage[ext] || ext.toUpperCase();
+      codingLanguageCounts[lang] = (codingLanguageCounts[lang] || 0) + 1;
+    });
+    // Limit to top 10 languages by usage
+    const codingLanguages = Object.entries(codingLanguageCounts)
+      .sort((a, b) => b[1] - a[1])
+      .slice(0, 10);
+    // Debug log for codingLanguages
+    console.log('DEBUG codingLanguages (getAllMetrics):', codingLanguages);
+
     // Filter out empty or meaningless metrics
     const filteredMetrics = {};
 
@@ -1259,6 +1278,8 @@ function getAllMetrics(startDate, endDate) {
     filteredMetrics.prompts = prompts;
     filteredMetrics.generations = generations;
     filteredMetrics.historyEntries = historyEntries;
+    // Always include codingLanguages
+    filteredMetrics.codingLanguages = codingLanguages;
 
     return filteredMetrics;
 }

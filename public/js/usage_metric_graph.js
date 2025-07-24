@@ -76,7 +76,12 @@ function initializeCharts() {
     }
 
     // Render the languages chart if data is available
-    if (metricsData && metricsData.devEnvironment && metricsData.devEnvironment.languageDetection) {
+    // Prefer codingLanguages (actual coding activity) if available
+    if (metricsData && metricsData.codingLanguages && metricsData.codingLanguages.length > 0) {
+        createLanguagesChart(metricsData.codingLanguages);
+    } else if (metricsData && metricsData.languages && metricsData.languages.length > 0) {
+        createLanguagesChart(metricsData.languages);
+    } else if (metricsData && metricsData.devEnvironment && metricsData.devEnvironment.languageDetection) {
         createLanguagesChart(metricsData.devEnvironment.languageDetection);
     }
 

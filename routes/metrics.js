@@ -704,6 +704,8 @@ router.get('/usage-metrics/graph', async (req, res) => {
     // Use getAllMetrics directly instead of the controller
     const { getAllMetrics } = require('../controllers/logProcessor');
     const metricsData = getAllMetrics(start, end);
+    // Debug log for codingLanguages
+    console.log('DEBUG codingLanguages (graph route):', metricsData.codingLanguages);
     // Add prompt acceptance report to metricsData (same logic as dashboard)
     const prompts = metricsData.prompts || [];
     const generations = metricsData.generations || [];
